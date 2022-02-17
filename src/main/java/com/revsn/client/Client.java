@@ -19,7 +19,6 @@ import javax.crypto.*;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
-import org.jsoup.HttpStatusException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
@@ -30,8 +29,6 @@ public class Client {
     private CipherOutputStream ciOut;
 
     private Cipher cipher;
-
-    private int counter = 5;
 
     private String[] address = new String[2];
 
@@ -45,11 +42,12 @@ public class Client {
 
     public Client(UUID uniUuid) {
         this.uniqueID = uniUuid;
+
     }
 
     private boolean init() {
-        try {
-            if(!connExists) {
+        if(!connExists) {
+            try {
                 System.out.println("INIT");
                 this.reqSock = new Socket(address[0], Integer.parseInt(address[1]));
 
@@ -65,15 +63,19 @@ public class Client {
                 connExists = true;
 
                 return true;
-            } else {
-                ciOut.flush();
-                return true;
+            } catch(IOException | InvalidKeyException | InvalidAlgorithmParameterException | NoSuchPaddingException e) {
+                System.out.println("catch in init");
+                initDone = false;
+                return false;
             }
 
-        } catch(IOException | InvalidKeyException | InvalidAlgorithmParameterException | NoSuchPaddingException e) {
-            System.out.println("catch in init");
-            initDone = false;
-            return false;
+        } else {
+            try {
+                ciOut.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return false; 
         }
     }
 
@@ -87,7 +89,6 @@ public class Client {
             e.printStackTrace();
         }
     }
-
 
     private boolean checkTrig() throws IOException {
         //Go for webserver and extract IP, Port and Key. Then set and use the stuff

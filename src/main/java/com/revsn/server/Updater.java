@@ -16,8 +16,6 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
 
-import org.jsoup.Connection.Base;
-
 public class Updater {
     private int method;
 
