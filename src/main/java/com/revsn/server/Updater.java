@@ -16,8 +16,6 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
 
-import org.jsoup.Connection.Base;
-
 public class Updater {
     private int method;
 
@@ -63,7 +61,7 @@ public class Updater {
         if(this.method == 1 || this.method == 3) {
             System.out.println("Use method 2 next time douchebag");
         }
-        KeyGenerator keyGenerator = KeyGenerator.getInstance("AES/CBC/PKCS5Padding");
+        KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
         keyGenerator.init(n);
         SecretKey key = keyGenerator.generateKey();
         return key;

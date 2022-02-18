@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+import javax.crypto.SecretKey;
+import javax.crypto.spec.IvParameterSpec;
+
 public class Listener implements Runnable {
     private ServerSocket serverSocket;
     private Server server;
@@ -14,6 +17,7 @@ public class Listener implements Runnable {
         try {
             serverSocket = new ServerSocket(server.getPort());
             server.setRunning(true);
+            System.out.println("ServerSocket izda");
 
         }
         catch (IOException e) {
@@ -27,6 +31,7 @@ public class Listener implements Runnable {
         while(server.isRunning()) {
             try {
                 Socket connection = serverSocket.accept();
+                System.out.println("Connection local port: " + connection.getLocalPort());
 
                 Handler connectionHandler = new Handler(server,connection);
                 
@@ -36,6 +41,7 @@ public class Listener implements Runnable {
 
             }
             catch (IOException e) {
+                System.out.println("Error in Thread");
                 server.setRunning(false);
             }
         }
