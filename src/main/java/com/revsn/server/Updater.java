@@ -3,6 +3,7 @@ package com.revsn.server;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
+import java.security.Key;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
@@ -16,50 +17,49 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Updater {
+    protected static final Logger parentLogger = LogManager.getLogger();
+    private Logger LOG = parentLogger;
+    
     private int method;
 
     private String output;
 
     private String[] address = new String[2];
     private String password;
+    private String salt;
 
     private SecretKey key;
     private IvParameterSpec iv;
 
-    public Updater(String ip, int port, String password) {
+    public Updater(String ip, int port, String password, String salt) {
         address[0] = ip;
         address[1] = Integer.toString(port);
         this.password = password;
+        this.salt = salt;
 
         method = 1;
     }
 
-    public Updater(String ip, int port) {
-        address[0] = ip;
-        address[1] = Integer.toString(port);
-
-        method = 2;
-    }
-
     public Updater(String password) {
         this.password = password;
-
+        //To update AES Encryption only
         method = 3;
     }
 
-    public SecretKey generateKeyFromGivenPassAndSalt(String salt) throws NoSuchAlgorithmException, InvalidKeySpecException {
+    public SecretKey generateKey() throws NoSuchAlgorithmException, InvalidKeySpecException {
         SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
-        KeySpec spec = new PBEKeySpec(this.password.toCharArray(), salt.getBytes(), 65536, 256);
-        SecretKey key = new SecretKeySpec(factory.generateSecret(spec)
+        KeySpec spec = new PBEKeySpec(this.password.toCharArray(), this.salt.getBytes(), 65536, 256);
+        SecretKeySpec key = new SecretKeySpec(factory.generateSecret(spec)
             .getEncoded(), "AES");
-
         return key;
     }
 
     public SecretKey generateKeyRandom(int n) throws NoSuchAlgorithmException {
         if(this.method == 1 || this.method == 3) {
-            System.out.println("Use method 2 next time douchebag");
         }
         KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
         keyGenerator.init(n);
