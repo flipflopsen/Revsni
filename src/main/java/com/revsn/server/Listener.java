@@ -4,10 +4,14 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import javax.crypto.SecretKey;
-import javax.crypto.spec.IvParameterSpec;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-public class Listener implements Runnable {
+@Deprecated
+public class Listener implements Runnable{
+    protected static final Logger parentLogger = LogManager.getLogger();
+    private Logger LOG = parentLogger;
+    
     private ServerSocket serverSocket;
     private Server server;
 
@@ -17,7 +21,7 @@ public class Listener implements Runnable {
         try {
             serverSocket = new ServerSocket(server.getPort());
             server.setRunning(true);
-            System.out.println("ServerSocket izda");
+            LOG.debug("ServerSocket izda");
 
         }
         catch (IOException e) {
@@ -31,17 +35,19 @@ public class Listener implements Runnable {
         while(server.isRunning()) {
             try {
                 Socket connection = serverSocket.accept();
-                System.out.println("Connection local port: " + connection.getLocalPort());
+                LOG.debug("Connection local port: " + connection.getLocalPort());
 
                 Handler connectionHandler = new Handler(server,connection);
+
+                server.addObserver(connectionHandler);
                 
                 //Add connection somehow to Server
 
-                System.out.println("Connection received from " + connection.getInetAddress().getHostName());
+                LOG.debug("Connection received from " + connection.getInetAddress().getHostName());
 
             }
             catch (IOException e) {
-                System.out.println("Error in Thread");
+                LOG.debug("Error in Thread");
                 server.setRunning(false);
             }
         }

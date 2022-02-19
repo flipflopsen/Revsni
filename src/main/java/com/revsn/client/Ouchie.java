@@ -1,13 +1,13 @@
 package com.revsn.client;
 
-import javax.imageio.ImageIO;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.*;
-import java.nio.file.Files;
 import java.util.UUID;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Ouchie {
+
+    protected static final Logger parentLogger = LogManager.getLogger();
+    private Logger LOG = parentLogger;
     
     public static void main(String[] args) {
         /*
