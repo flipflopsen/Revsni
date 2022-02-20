@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Server",
+            "request": "launch",
+            "mainClass": "com.revsni.server.Server",
+            "projectName": "revsn"
+        },
+        {
+            "type": "java",
+            "name": "Launch HTTPServer",
+            "request": "launch",
+            "mainClass": "com.revsni.server.HTTPServer",
+            "projectName": "revsn"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ouchie",
+            "request": "launch",
+            "mainClass": "com.revsni.client.Ouchie",
+            "projectName": "revsn"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
