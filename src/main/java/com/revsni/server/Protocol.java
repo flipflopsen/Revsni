@@ -37,6 +37,7 @@ public class Protocol {
             String message  = new String(cipherDec.doFinal(Base64.getDecoder()
                 .decode((String) msg)));
             System.out.println("\n" + message);
+            System.out.print("Revsn [TCP] » ");
             return true;
         } catch (IllegalBlockSizeException | BadPaddingException e) {
             e.printStackTrace();

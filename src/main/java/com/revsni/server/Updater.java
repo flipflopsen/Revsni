@@ -31,6 +31,7 @@ public class Updater {
     private String[] address = new String[2];
     private String password;
     private String salt;
+    private String shellType;
 
     private SecretKey key;
     private IvParameterSpec iv;
@@ -40,6 +41,7 @@ public class Updater {
         address[1] = Integer.toString(port);
         this.password = password;
         this.salt = salt;
+        this.shellType = "TCP";
 
         method = 1;
     }
@@ -48,6 +50,7 @@ public class Updater {
         this.password = password;
         //To update AES Encryption only
         method = 3;
+        this.shellType = "TCP";
     }
 
     public SecretKey generateKey() throws NoSuchAlgorithmException, InvalidKeySpecException {
@@ -76,7 +79,7 @@ public class Updater {
 
     public String generateOutputString() {
         output = null;
-        output = address[0] + ";" + address[1] + ";" + Base64.getEncoder().encodeToString(key.getEncoded()) + ";" + Base64.getEncoder().encodeToString(iv.getIV());
+        output = address[0] + ";" + address[1] + ";" + Base64.getEncoder().encodeToString(shellType.getBytes()) + ";" + Base64.getEncoder().encodeToString(key.getEncoded()) + ";" + Base64.getEncoder().encodeToString(iv.getIV());
         return output;
     }
 
@@ -98,6 +101,10 @@ public class Updater {
 
     public void setIv(IvParameterSpec iv) {
         this.iv = iv;
+    }
+
+    public void setShellType(String type) {
+        this.shellType = type;
     }
 
 }

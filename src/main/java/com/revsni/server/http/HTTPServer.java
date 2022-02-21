@@ -9,12 +9,13 @@ import org.apache.http.impl.bootstrap.HttpServer;
 import org.apache.http.impl.bootstrap.ServerBootstrap;
 
 public class HTTPServer {
-    public static HttpServer server;
+    public volatile static HttpServer server;
     int port;
-    public HTTPHandler handler;
+    public volatile HTTPHandler handler;
     
     public void main(int port, HTTPHandler handler) {
         try {
+            System.out.println("HTTP Server started on port: " + port);
             server.start();
             server.awaitTermination(Long.MAX_VALUE, TimeUnit.DAYS);
         } catch (Exception e) {
@@ -23,6 +24,7 @@ public class HTTPServer {
         Runtime.getRuntime().addShutdownHook(new Thread() {
           @Override
           public void run() {
+            System.out.println("HTTP Server stopped");
             server.shutdown(5, TimeUnit.SECONDS);
           }
         });
@@ -51,7 +53,7 @@ public class HTTPServer {
         return this.handler;
     }
 
-    public void addCommand(String command) {
-        this.handler.addCommand(command);
+    public void sendCommand(String command) {
+        this.handler.sendCommand(command);
     }
 }
