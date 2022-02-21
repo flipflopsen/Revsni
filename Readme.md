@@ -14,6 +14,7 @@ Last but not least it will implement a builder in order to create different type
   - AES encryption in CBC mode
 
 ### Shell types (Interchangeable)
+  - TCP
   - HTTP
   - Asynchronous HTTP
 
