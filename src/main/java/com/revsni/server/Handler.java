@@ -16,7 +16,7 @@ import org.apache.logging.log4j.Logger;
 @Deprecated 
 public class Handler implements Observer {
     protected static final Logger parentLogger = LogManager.getLogger();
-    private Logger LOG = parentLogger;
+    //private Logger LOG = parentLogger;
 	
     private ObjectInputStream dataIn;
     private ObjectOutputStream dataOut;

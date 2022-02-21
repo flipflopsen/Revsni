@@ -8,14 +8,12 @@ import javax.crypto.spec.IvParameterSpec;
 public class HTTPShell {
     volatile HTTPHandler handler;
     volatile HTTPServer server = new HTTPServer();
-    volatile int port = 8081;
-    private SecretKey key;
-    private IvParameterSpec iv;
+    private volatile int port;
 
 
-    public HTTPShell(SecretKey key, IvParameterSpec iv) throws IOException {
-        this.key = key;
-        this.iv = iv;
+    public HTTPShell(SecretKey key, IvParameterSpec iv, int portIn) throws IOException {
+        final int port = portIn;
+        this.port = port;
         handler = new HTTPHandler(key, iv);
         server.setHandler(handler);
         server.setup(port);
@@ -39,5 +37,9 @@ public class HTTPShell {
 
     public boolean getConnInf() {
         return handler.getConnInf();
+    }
+
+    public int getPort() {
+        return this.port;
     }
 }

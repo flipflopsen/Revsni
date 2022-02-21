@@ -17,7 +17,7 @@ import org.apache.logging.log4j.Logger;
 @Deprecated
 public class Protocol {
     protected static final Logger parentLogger = LogManager.getLogger();
-    private Logger LOG = parentLogger;
+    //private Logger LOG = parentLogger;
     private Cipher cipherDec;
     private Cipher cipherEnc;
     private SecretKeySpec spec;

@@ -7,7 +7,7 @@ import org.apache.logging.log4j.Logger;
 public class Ouchie {
 
     protected static final Logger parentLogger = LogManager.getLogger();
-    private Logger LOG = parentLogger;
+    //private Logger LOG = parentLogger;
     
     public static void main(String[] args) {
         /*

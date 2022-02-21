@@ -8,7 +8,6 @@ import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 import java.util.Observable;
 
-import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
 
@@ -29,7 +28,7 @@ public class Server extends Observable {
     //private String salt;
     //private String pass;
     //private String ip;
-    private int port;
+    private volatile int port;
     private SecretKey key;
     private IvParameterSpec iv;
     private boolean first = true;
@@ -123,6 +122,7 @@ public class Server extends Observable {
 
                     switch(message) {
                         case("help"): printHelp(); break;
+                        case("usage"): printUsage(); break;
                         case("configure"): printConfigure(); break;
                         case("switch"): printSwitch(); break;
                         case("mode"): printMode(); break;
@@ -130,16 +130,19 @@ public class Server extends Observable {
                         case("exit"): System.exit(0); break;
                         case("encryption"): printEncryption(); break;
                         case("switchHTTP"): 
-                            httpShell = new HTTPShell(key, iv);
-                            updater.setShellType("HTTP");
+                            System.out.print("Specify a Port on which HTTP-Server should listen on: ");
+                            int port = Integer.parseInt(bufferedReader.readLine());
+                            httpShell = new HTTPShell(key, iv, port);
+                            updater.setShellType("HTTP", String.valueOf(httpShell.getPort()));
                             updater.generateOutputString();
+                            updater.writeOut();
                             notifyObservers("httpSw");
                             shellType = "HTTP";
                             if(httpShell.getConnInf()) {
                                 shellType = "HTTP";
                             } else {
                                 System.out.println("Failed to switch shell to HTTP!");
-                                updater.setShellType("TCP");
+                                updater.setShellType("TCP", String.valueOf(this.port));
                                 shellType = "TCP";
                             }
                         

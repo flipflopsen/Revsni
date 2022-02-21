@@ -13,8 +13,8 @@ import org.apache.http.HttpResponse;
 import org.apache.http.protocol.HttpContext;
 import org.apache.http.protocol.HttpRequestHandler;
 
-import java.util.ArrayList;
-import java.util.List;
+//import java.util.ArrayList;
+//import java.util.List;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -27,14 +27,14 @@ import javax.crypto.spec.SecretKeySpec;
 import org.apache.commons.codec.binary.Base64;
 
 public class HTTPHandler implements HttpRequestHandler {
-    private volatile List<String> commands = new ArrayList<>();
+    //private volatile List<String> commands = new ArrayList<>();
     private volatile String answerCommands;
     private volatile boolean est = false;
     private SecretKey key;
     private IvParameterSpec iv;
     private Cipher cipherDec;
     private Cipher cipherEnc;
-    private volatile boolean gotAnswer;
+    //private volatile boolean gotAnswer;
 
     protected static final StringEntity http404 = new StringEntity("<html><body><h1>Not found</h1></body></html>", ContentType.create("text/html", "UTF-8"));
 
@@ -60,7 +60,6 @@ public class HTTPHandler implements HttpRequestHandler {
         String respo = command;
         try {
             answerCommands = new String(Base64.encodeBase64String(cipherEnc.doFinal(respo.getBytes())));
-            gotAnswer = false;
             System.out.println("Waiting for Response..");
             respo = "";
         } catch (IllegalBlockSizeException | BadPaddingException e) {
@@ -75,7 +74,6 @@ public class HTTPHandler implements HttpRequestHandler {
         if(request.getRequestLine().getMethod().toUpperCase().contains("GET") && request.getRequestLine().getUri().contains("lit")) {
             if(request.getHeaders("Cookie") != null) {
                 cookie = request.getHeaders("Cookie")[0].getValue();
-                gotAnswer = true;
 
                 if(cookie.length() > 1) {
 
