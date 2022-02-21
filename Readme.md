@@ -13,6 +13,10 @@ Last but not least it will implement a builder in order to create different type
   - Socket based communication between Server and Client through TCP
   - AES encryption in CBC mode
 
+### Shell types (Interchangeable)
+  - HTTP
+  - Asynchronous HTTP
+
 ## Planned
 
 ### General
@@ -22,15 +26,12 @@ Last but not least it will implement a builder in order to create different type
   - Handlers
   - Websites (for authentic HTTP asynchronous stuff)
 
-- Manupilation of traffic's origin
 - Interchangeable shells
 - Interchangeable and nestable encryption
 
 ### Shell types
   - UDP
-  - HTTP
   - HTTPS
-  - Asynchronous HTTP
   - Asynchronous HTTPS
   - DNS
 
