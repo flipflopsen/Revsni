@@ -8,14 +8,19 @@ import org.apache.http.config.SocketConfig;
 import org.apache.http.impl.bootstrap.HttpServer;
 import org.apache.http.impl.bootstrap.ServerBootstrap;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class HTTPServer {
+    Logger logger = LogManager.getLogger(getClass());
+    
     public volatile static HttpServer server;
     int port;
     public volatile HTTPHandler handler;
     
     public void main(int port, HTTPHandler handler) {
         try {
-            System.out.println("HTTP Server started on port: " + port);
+            logger.info("HTTP Server started on port: " + port);
             server.start();
             server.awaitTermination(Long.MAX_VALUE, TimeUnit.DAYS);
         } catch (Exception e) {
@@ -24,7 +29,7 @@ public class HTTPServer {
         Runtime.getRuntime().addShutdownHook(new Thread() {
           @Override
           public void run() {
-            System.out.println("HTTP Server stopped");
+            logger.info("HTTP Server stopped");
             server.shutdown(5, TimeUnit.SECONDS);
           }
         });
@@ -49,7 +54,7 @@ public class HTTPServer {
         this.handler = handler;
     }
 
-    public HTTPHandler geHandler() {
+    public HTTPHandler getHandler() {
         return this.handler;
     }
 

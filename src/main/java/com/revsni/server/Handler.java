@@ -15,7 +15,8 @@ import org.apache.logging.log4j.Logger;
 
 @Deprecated 
 public class Handler implements Observer {
-    protected static final Logger parentLogger = LogManager.getLogger();
+    Logger logger = LogManager.getLogger(getClass());
+
     //private Logger LOG = parentLogger;
 	
     private ObjectInputStream dataIn;
@@ -63,12 +64,12 @@ public class Handler implements Observer {
         }
         catch(IOException ioException) {
             String error = "Connection Was Lost While Writing - " + connection.getRemoteSocketAddress();
-            System.out.println(error);
+            logger.info(error);
         }
     }
 
     private void closeConnection() {
-        System.out.println("Closing Connection - " + connection.getRemoteSocketAddress());
+        logger.info("Closing Connection - " + connection.getRemoteSocketAddress());
 
         try {
             dataIn.close();
@@ -93,7 +94,7 @@ public class Handler implements Observer {
     }
 
     private void receiveMessages() {
-        System.out.println("Waiting for response");
+        logger.info("Waiting for response");
 
         boolean done = false;
         while (!done) {
@@ -107,7 +108,7 @@ public class Handler implements Observer {
             catch (IOException | ClassNotFoundException e) {
                 done = true;
                 String error = "Connection Was Lost While Reading - " + connection.getRemoteSocketAddress();
-                System.out.println(error);
+                logger.info(error);
                 server.deleteObserver(this);
             }
         }

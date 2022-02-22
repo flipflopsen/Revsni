@@ -1,0 +1,896 @@
+2022-02-22 22:20:14,085 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(226) |> 127.0.0.1
+2022-02-22 22:20:14,088 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(236) |> CheckTrigTrue
+2022-02-22 22:20:14,088 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(555) |> Passed checktrig
+2022-02-22 22:20:14,089 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(90) |> INIT
+2022-02-22 22:20:14,089 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(94) |> 127.0.0.1 
+2022-02-22 22:20:14,089 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(95) |> 1331
+2022-02-22 22:20:14,102 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(259) |> Send message :b1708bb0-7d3f-407c-ab20-10c873756bb3: just arrived to vacation!
+2022-02-22 22:20:19,443 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(259) |> Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+2022-02-22 22:20:29,450 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(259) |> Send message :Connection gets reset because EOF Exception on Client
+2022-02-22 22:20:30,453 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(226) |> 127.0.0.1
+2022-02-22 22:20:30,454 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(236) |> CheckTrigTrue
+2022-02-22 22:20:30,454 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(555) |> Passed checktrig
+2022-02-22 22:20:30,455 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(90) |> INIT
+2022-02-22 22:20:30,455 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(94) |> 127.0.0.1 
+2022-02-22 22:20:30,455 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(95) |> 1331
+2022-02-22 22:20:30,456 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(108) |> catch in init
+2022-02-22 22:23:39,855 |  INFO |            main |              c.r.s.Server |                   c.r.s.Server(120) |> Enter 'help' if you dont know what to do.
+
+
+2022-02-22 22:23:39,855 |  INFO |            main |              c.r.s.Server |                   c.r.s.Server(120) |> Enter 'help' if you dont know what to do.
+
+
+2022-02-22 22:23:56,995 |  INFO |        Thread-0 |            c.r.s.Protocol |                 c.r.s.Protocol(43) |> 
+e531cfff-7fed-4d6a-8502-27a2f413180d: just arrived to vacation!
+2022-02-22 22:23:56,995 |  INFO |        Thread-0 |            c.r.s.Protocol |                 c.r.s.Protocol(43) |> 
+e531cfff-7fed-4d6a-8502-27a2f413180d: just arrived to vacation!
+2022-02-22 22:24:07,395 |  INFO |            main |             c.r.s.Handler |                  c.r.s.Handler(97) |> Waiting for response
+2022-02-22 22:24:07,395 |  INFO |            main |             c.r.s.Handler |                  c.r.s.Handler(97) |> Waiting for response
+2022-02-22 22:24:07,414 |  INFO |            main |            c.r.s.Protocol |                 c.r.s.Protocol(43) |> 
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+2022-02-22 22:24:07,414 |  INFO |            main |            c.r.s.Protocol |                 c.r.s.Protocol(43) |> 
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+.Client |                   c.r.c.Client(86) |> Init started!
+2022-02-22 22:23:56,953 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(90) |> INIT
+2022-02-22 22:23:56,953 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(90) |> INIT
+2022-02-22 22:23:56,953 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(94) |> 127.0.0.1 
+2022-02-22 22:23:56,953 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(94) |> 127.0.0.1 
+2022-02-22 22:23:56,954 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(95) |> 1331
+2022-02-22 22:23:56,954 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(95) |> 1331
+2022-02-22 22:23:56,968 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(259) |> Send message :e531cfff-7fed-4d6a-8502-27a2f413180d: just arrived to vacation!
+2022-02-22 22:23:56,968 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(259) |> Send message :e531cfff-7fed-4d6a-8502-27a2f413180d: just arrived to vacation!
+2022-02-22 22:24:07,395 |  INFO |            main |              c.r.c.Client |                   c.r.c.Client(344) |> ls
+2022-02-22 22:24:07,395 |  INFO |            main |              c.r.c.Client |                   c.r.c.Client(344) |> ls
+2022-02-22 22:24:07,413 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(259) |> Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+2022-02-22 22:24:07,413 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(259) |> Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+2022-02-22 22:24:31,383 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(259) |> Send message :Connection gets reset because EOF Exception on Client
+2022-02-22 22:24:31,383 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(259) |> Send message :Connection gets reset because EOF Exception on Client
+2022-02-22 22:24:32,387 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(226) |> 127.0.0.1
+2022-02-22 22:24:32,387 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(226) |> 127.0.0.1
+2022-02-22 22:24:32,388 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(236) |> CheckTrigTrue
+2022-02-22 22:24:32,388 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(236) |> CheckTrigTrue
+2022-02-22 22:24:32,389 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(555) |> Passed checktrig
+2022-02-22 22:24:32,389 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(555) |> Passed checktrig
+2022-02-22 22:24:32,389 |  INFO |            main |              c.r.c.Client |                   c.r.c.Client(86) |> Init started!
+2022-02-22 22:24:32,389 |  INFO |            main |              c.r.c.Client |                   c.r.c.Client(86) |> Init started!
+2022-02-22 22:24:32,389 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(90) |> INIT
+2022-02-22 22:24:32,389 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(90) |> INIT
+2022-02-22 22:24:32,390 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(94) |> 127.0.0.1 
+2022-02-22 22:24:32,390 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(94) |> 127.0.0.1 
+2022-02-22 22:24:32,390 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(95) |> 1331
+2022-02-22 22:24:32,390 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(95) |> 1331
+2022-02-22 22:24:32,391 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(108) |> catch in init
+2022-02-22 22:24:32,391 | ERROR |            main |              c.r.c.Client |                   c.r.c.Client(108) |> catch in init
+2022-02-22 22:25:04,532| INFO|           main|             c.r.s.Server|                  c.r.s.Server(120)|> Enter 'help' if you dont know what to do.
+
+
+2022-02-22 22:25:04,532| INFO|           main|             c.r.s.Server|                  c.r.s.Server(120)|> Enter 'help' if you dont know what to do.
+
+
+2022-02-22 22:25:51,883| INFO| main|             c.r.s.Server|   c.r.s.Server(120)|> Enter 'help' if you dont know what to do.
+
+
+2022-02-22 22:25:51,883| INFO| main|             c.r.s.Server|   c.r.s.Server(120)|> Enter 'help' if you dont know what to do.
+
+
+2022-02-22 22:26:20,171| INFO| main|   c.r.s.Server|   c.r.s.Server(120)|> Enter 'help' if you dont know what to do.
+
+
+2022-02-22 22:26:20,171| INFO| main|   c.r.s.Server|   c.r.s.Server(120)|> Enter 'help' if you dont know what to do.
+
+
+2022-02-22 22:27:36,376|INFO%2.5|%3.0|   c.r.s.Server|   c.r.s.Server(120)|> Enter 'help' if you dont know what to do.
+
+
+2022-02-22 22:27:36,376|INFO%2.5|%3.0|   c.r.s.Server|   c.r.s.Server(120)|> Enter 'help' if you dont know what to do.
+
+
+2022-02-22 22:28:01,762|INFO||   c.r.s.Server|   c.r.s.Server(120)|> Enter 'help' if you dont know what to do.
+
+
+2022-02-22 22:28:01,762|INFO||   c.r.s.Server|   c.r.s.Server(120)|> Enter 'help' if you dont know what to do.
+
+
+2022-02-22 22:28:41,399|INFO| main|   c.r.s.Server|   c.r.s.Server(120)|> Enter 'help' if you dont know what to do.
+
+
+2022-02-22 22:28:41,399|INFO| main|   c.r.s.Server|   c.r.s.Server(120)|> Enter 'help' if you dont know what to do.
+
+
+2022-02-22 22:29:27,681|INFO| main|r.s.Server(120)|> Enter 'help' if you dont know what to do.
+
+
+2022-02-22 22:29:27,681|INFO| main|r.s.Server(120)|> Enter 'help' if you dont know what to do.
+
+
+2022-02-22 22:29:43,345|INFO|ead-0|s.Protocol(43)|> 
+b9e696ba-f0b2-465c-8bc1-f157b247aa2b: just arrived to vacation!
+2022-02-22 22:29:43,345|INFO|ead-0|s.Protocol(43)|> 
+b9e696ba-f0b2-465c-8bc1-f157b247aa2b: just arrived to vacation!
+2022-02-22 22:29:56,950|INFO| main|.s.Handler(97)|> Waiting for response
+2022-02-22 22:29:56,950|INFO| main|.s.Handler(97)|> Waiting for response
+2022-02-22 22:29:56,970|INFO| main|s.Protocol(43)|> 
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+2022-02-22 22:29:56,970|INFO| main|s.Protocol(43)|> 
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+2022-02-22 22:30:16,423|INFO| main|.s.Handler(97)|> Waiting for response
+2022-02-22 22:30:16,423|INFO| main|.s.Handler(97)|> Waiting for response
+2022-02-22 22:30:16,423|INFO|ead-1|HTTPServer(23)|> HTTP Server started on port: 8000
+2022-02-22 22:30:16,423|INFO|ead-1|HTTPServer(23)|> HTTP Server started on port: 8000
+2022-02-22 22:30:16,645|INFO| main|.s.Handler(111)|> Connection Was Lost While Reading - localhost/127.0.0.1:35654
+2022-02-22 22:30:16,645|INFO| main|.s.Handler(111)|> Connection Was Lost While Reading - localhost/127.0.0.1:35654
+o vacation!
+2022-02-22 22:29:56,951|INFO| main|r.c.Client(344)|> ls
+2022-02-22 22:29:56,951|INFO| main|r.c.Client(344)|> ls
+2022-02-22 22:29:56,969|ERROR| main|r.c.Client(259)|> Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+2022-02-22 22:29:56,969|ERROR| main|r.c.Client(259)|> Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+2022-02-22 22:30:16,423|INFO| main|r.c.Client(344)|> httpSw
+2022-02-22 22:30:16,423|INFO| main|r.c.Client(344)|> httpSw
+2022-02-22 22:30:16,426|ERROR| main|r.c.Client(226)|> 127.0.0.1
+2022-02-22 22:30:16,426|ERROR| main|r.c.Client(226)|> 127.0.0.1
+2022-02-22 22:30:16,427|ERROR| main|r.c.Client(236)|> CheckTrigTrue
+2022-02-22 22:30:16,427|ERROR| main|r.c.Client(236)|> CheckTrigTrue
+2022-02-22 22:30:16,427|INFO| main|r.c.Client(86)|> Init started!
+2022-02-22 22:30:16,427|INFO| main|r.c.Client(86)|> Init started!
+2022-02-22 22:30:16,645|INFO| main|r.c.Client(344)|> whoami
+2022-02-22 22:30:16,645|INFO| main|r.c.Client(344)|> whoami
+2022-02-22 22:30:16,647|ERROR| main|r.c.Client(259)|> Send message :shorida
+
+2022-02-22 22:30:16,647|ERROR| main|r.c.Client(259)|> Send message :shorida
+
+2022-02-22 22:30:16,649|INFO| main|r.c.Client(274)|> http://127.0.0.1:8000/lit
+2022-02-22 22:30:16,649|INFO| main|r.c.Client(274)|> http://127.0.0.1:8000/lit
+2022-02-22 22:30:36,654|INFO| main|r.c.Client(418)|> No instructions
+2022-02-22 22:30:36,654|INFO| main|r.c.Client(418)|> No instructions
+2022-02-22 22:32:27,446|ERROR| main|r.c.Client(226)|> 127.0.0.1
+2022-02-22 22:32:27,446|ERROR| main|r.c.Client(226)|> 127.0.0.1
+2022-02-22 22:32:27,451|ERROR| main|r.c.Client(236)|> CheckTrigTrue
+2022-02-22 22:32:27,451|ERROR| main|r.c.Client(236)|> CheckTrigTrue
+2022-02-22 22:32:27,451|ERROR| main|r.c.Client(555)|> Passed checktrig
+2022-02-22 22:32:27,451|ERROR| main|r.c.Client(555)|> Passed checktrig
+2022-02-22 22:32:28,455|ERROR| main|r.c.Client(226)|> 127.0.0.1
+2022-02-22 22:32:28,455|ERROR| main|r.c.Client(226)|> 127.0.0.1
+2022-02-22 22:32:28,455|ERROR| main|r.c.Client(236)|> CheckTrigTrue
+2022-02-22 22:32:28,455|ERROR| main|r.c.Client(236)|> CheckTrigTrue
+2022-02-22 22:32:28,456|ERROR| main|r.c.Client(555)|> Passed checktrig
+2022-02-22 22:32:28,456|ERROR| main|r.c.Client(555)|> Passed checktrig
+2022-02-22 22:32:29,458|ERROR| main|r.c.Client(226)|> 127.0.0.1
+2022-02-22 22:32:29,458|ERROR| main|r.c.Client(226)|> 127.0.0.1
+2022-02-22 22:32:29,459|ERROR| main|r.c.Client(236)|> CheckTrigTrue
+2022-02-22 22:32:29,459|ERROR| main|r.c.Client(236)|> CheckTrigTrue
+2022-02-22 22:32:29,459|ERROR| main|r.c.Client(555)|> Passed checktrig
+2022-02-22 22:32:29,459|ERROR| main|r.c.Client(555)|> Passed checktrig
+2022-02-22 22:32:30,462|ERROR| main|r.c.Client(226)|> 127.0.0.1
+2022-02-22 22:32:30,462|ERROR| main|r.c.Client(226)|> 127.0.0.1
+2022-02-22 22:32:30,462|ERROR| main|r.c.Client(236)|> CheckTrigTrue
+2022-02-22 22:32:30,462|ERROR| main|r.c.Client(236)|> CheckTrigTrue
+2022-02-22 22:32:30,463|ERROR| main|r.c.Client(555)|> Passed checktrig
+2022-02-22 22:32:30,463|ERROR| main|r.c.Client(555)|> Passed checktrig
+2022-02-22 22:32:31,465|ERROR| main|r.c.Client(226)|> 127.0.0.1
+2022-02-22 22:32:31,465|ERROR| main|r.c.Client(226)|> 127.0.0.1
+2022-02-22 22:32:31,465|ERROR| main|r.c.Client(236)|> CheckTrigTrue
+2022-02-22 22:32:31,465|ERROR| main|r.c.Client(236)|> CheckTrigTrue
+2022-02-22 22:32:31,465|ERROR| main|r.c.Client(555)|> Passed checktrig
+2022-02-22 22:32:31,465|ERROR| main|r.c.Client(555)|> Passed checktrig
+2022-02-22 22:32:32,468|ERROR| main|r.c.Client(226)|> 127.0.0.1
+2022-02-22 22:32:32,468|ERROR| main|r.c.Client(226)|> 127.0.0.1
+2022-02-22 22:32:32,468|ERROR| main|r.c.Client(236)|> CheckTrigTrue
+2022-02-22 22:32:32,468|ERROR| main|r.c.Client(236)|> CheckTrigTrue
+2022-02-22 22:32:32,468|ERROR| main|r.c.Client(555)|> Passed checktrig
+2022-02-22 22:32:32,468|ERROR| main|r.c.Client(555)|> Passed checktrig
+2022-02-22 22:32:33,471|ERROR| main|r.c.Client(226)|> 127.0.0.1
+2022-02-22 22:32:33,471|ERROR| main|r.c.Client(226)|> 127.0.0.1
+2022-02-22 22:32:33,471|ERROR| main|r.c.Client(236)|> CheckTrigTrue
+2022-02-22 22:32:33,471|ERROR| main|r.c.Client(236)|> CheckTrigTrue
+2022-02-22 22:32:33,472|ERROR| main|r.c.Client(555)|> Passed checktrig
+2022-02-22 22:32:33,472|ERROR| main|r.c.Client(555)|> Passed checktrig
+2022-02-22 22:32:34,474|ERROR| main|r.c.Client(226)|> 127.0.0.1
+2022-02-22 22:32:34,474|ERROR| main|r.c.Client(226)|> 127.0.0.1
+2022-02-22 22:32:34,474|ERROR| main|r.c.Client(236)|> CheckTrigTrue
+2022-02-22 22:32:34,474|ERROR| main|r.c.Client(236)|> CheckTrigTrue
+2022-02-22 22:32:34,475|ERROR| main|r.c.Client(555)|> Passed checktrig
+2022-02-22 22:32:34,475|ERROR| main|r.c.Client(555)|> Passed checktrig
+2022-02-22 22:32:35,477|ERROR| main|r.c.Client(226)|> 127.0.0.1
+2022-02-22 22:32:35,477|ERROR| main|r.c.Client(226)|> 127.0.0.1
+2022-02-22 22:32:35,478|ERROR| main|r.c.Client(236)|> CheckTrigTru2022-02-22 22:32:35,522|INFO|ead-0|s.Protocol(43)|> 
+6988ffdf-894e-4579-80c9-bf0bf5bf235c: just arrived to vacation!
+2022-02-22 22:32:35,522|INFO|ead-0|s.Protocol(43)|> 
+6988ffdf-894e-4579-80c9-bf0bf5bf235c: just arrived to vacation!
+2022-02-22 22:32:37,630|INFO| main|.s.Handler(97)|> Waiting for response
+2022-02-22 22:32:37,630|INFO| main|.s.Handler(97)|> Waiting for response
+2022-02-22 22:32:37,647|INFO| main|s.Protocol(43)|> 
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+2022-02-22 22:32:37,647|INFO| main|s.Protocol(43)|> 
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+32:35,479|ERROR| main|r.c.Client(95)|> 1331
+2022-02-22 22:32:35,479|ERROR| main|r.c.Client(95)|> 1331
+2022-02-22 22:32:35,492|ERROR| main|r.c.Client(259)|> Send message :6988ffdf-894e-4579-80c9-bf0bf5bf235c: just arrived to vacation!
+2022-02-22 22:32:35,492|ERROR| main|r.c.Client(259)|> Send message :6988ffdf-894e-4579-80c9-bf0bf5bf235c: just arrived to vacation!
+2022-02-22 22:32:37,630|INFO| main|r.c.Client(344)|> ls
+2022-02-22 22:32:37,630|INFO| main|r.c.Client(344)|> ls
+2022-02-22 22:32:37,646|ERROR| main|r.c.Client(259)|> Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+2022-02-22 22:32:37,646|ERROR| main|r.c.Client(259)|> Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+2022-02-22 22:33:33,806| INFO| main|r.s.Server(120)|> Enter 'help' if you dont know what to do.
+
+
+2022-02-22 22:33:33,806| INFO| main|r.s.Server(120)|> Enter 'help' if you dont know what to do.
+
+
+2022-02-22 22:33:40,136| INFO|ead-0|s.Protocol(43)|> 
+30e57ce5-cfe3-4a6d-b485-c08321f670de: just arrived to vacation!
+2022-02-22 22:33:40,136| INFO|ead-0|s.Protocol(43)|> 
+30e57ce5-cfe3-4a6d-b485-c08321f670de: just arrived to vacation!
+2022-02-22 22:33:42,196| INFO| main|.s.Handler(97)|> Waiting for response
+2022-02-22 22:33:42,196| INFO| main|.s.Handler(97)|> Waiting for response
+2022-02-22 22:33:42,215| INFO| main|s.Protocol(43)|> 
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+2022-02-22 22:33:42,215| INFO| main|s.Protocol(43)|> 
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+ 22:33:40,085|ERROR| main|r.c.Client(90)|> INIT
+2022-02-22 22:33:40,086|ERROR| main|r.c.Client(94)|> 127.0.0.1 
+2022-02-22 22:33:40,086|ERROR| main|r.c.Client(94)|> 127.0.0.1 
+2022-02-22 22:33:40,086|ERROR| main|r.c.Client(95)|> 1331
+2022-02-22 22:33:40,086|ERROR| main|r.c.Client(95)|> 1331
+2022-02-22 22:33:40,100|ERROR| main|r.c.Client(259)|> Send message :30e57ce5-cfe3-4a6d-b485-c08321f670de: just arrived to vacation!
+2022-02-22 22:33:40,100|ERROR| main|r.c.Client(259)|> Send message :30e57ce5-cfe3-4a6d-b485-c08321f670de: just arrived to vacation!
+2022-02-22 22:33:42,197| INFO| main|r.c.Client(344)|> ls
+2022-02-22 22:33:42,197| INFO| main|r.c.Client(344)|> ls
+2022-02-22 22:33:42,214|ERROR| main|r.c.Client(259)|> Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+2022-02-22 22:33:42,214|ERROR| main|r.c.Client(259)|> Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+2022-02-22 22:37:56.763 [32m INFO[m [35m${sys:PID}[m --- [           main] [36mc.r.s.Server                            [m : Enter 'help' if you dont know what to do.
+
+
+2022-02-22 22:37:56.763 [32m INFO[m [35m${sys:PID}[m --- [           main] [36mc.r.s.Server                            [m : Enter 'help' if you dont know what to do.
+
+
+22:41:22.797|[32m INFO[m [35m${sys:PID}[m|> --- [      main] [36mc.r.s.Server        [m : Enter 'help' if you dont know what to do.
+
+
+22:41:22.797|[32m INFO[m [35m${sys:PID}[m|> --- [      main] [36mc.r.s.Server        [m : Enter 'help' if you dont know what to do.
+
+
+22:43:04.486|[32m INFO[m |> --- [ main] [36mc.r.s.Server        [m | Enter 'help' if you dont know what to do.
+
+
+22:43:04.486|[32m INFO[m |> --- [ main] [36mc.r.s.Server        [m | Enter 'help' if you dont know what to do.
+
+
+22:43:27.664|[32m INFO[m |> --- [           main] [36mc.r.s.Server        [m | Enter 'help' if you dont know what to do.
+
+
+22:43:27.664|[32m INFO[m |> --- [           main] [36mc.r.s.Server        [m | Enter 'help' if you dont know what to do.
+
+
+22:43:43.038|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | catch in checktrig
+22:43:43.038|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | catch in checktrig
+22:44:26.705|[32m INFO[m |> --- [           main] [36mc.r.s.Server        [m | Enter 'help' if you dont know what to do.
+
+
+22:44:26.705|[32m INFO[m |> --- [           main] [36mc.r.s.Server        [m | Enter 'help' if you dont know what to do.
+
+
+22:44:47.968|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      [m | 
+e43663ff-19b2-4bd4-9810-12da002ebf8d: just arrived to vacation!
+22:44:47.968|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      [m | 
+e43663ff-19b2-4bd4-9810-12da002ebf8d: just arrived to vacation!
+22:45:05.589|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.h.HTTPServer  [m | HTTP Server started on port: 8089
+22:45:05.589|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.h.HTTPServer  [m | HTTP Server started on port: 8089
+22:45:05.592|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       [m | Waiting for response
+22:45:05.592|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       [m | Waiting for response
+22:45:05.796|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       [m | Connection Was Lost While Reading - localhost/127.0.0.1:35660
+22:45:05.796|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       [m | Connection Was Lost While Reading - localhost/127.0.0.1:35660
+22:45:18.680|[32m INFO[m |> --- [           main] [36mc.r.s.h.HTTPHandler [m | Waiting for Response..
+22:45:18.680|[32m INFO[m |> --- [           main] [36mc.r.s.h.HTTPHandler [m | Waiting for Response..
+.0.0.1 
+22:44:47.922|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | 127.0.0.1 
+22:44:47.922|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | 1331
+22:44:47.922|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | 1331
+22:44:47.934|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | Send message :e43663ff-19b2-4bd4-9810-12da002ebf8d: just arrived to vacation!
+22:44:47.934|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | Send message :e43663ff-19b2-4bd4-9810-12da002ebf8d: just arrived to vacation!
+22:45:05.592|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | httpSw
+22:45:05.592|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | httpSw
+22:45:05.594|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | 127.0.0.1
+22:45:05.594|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | 127.0.0.1
+22:45:05.595|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | CheckTrigTrue
+22:45:05.595|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | CheckTrigTrue
+22:45:05.595|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | Init started!
+22:45:05.595|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | Init started!
+22:45:05.796|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | whoami
+22:45:05.796|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | whoami
+22:45:05.805|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | Send message :shorida
+
+22:45:05.805|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | Send message :shorida
+
+22:45:05.806|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | http://127.0.0.1:8089/lit
+22:45:05.806|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | http://127.0.0.1:8089/lit
+22:45:25.811|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | ls
+22:45:25.811|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | ls
+22:45:25.813|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+22:45:25.813|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+22:45:25.814|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | http://127.0.0.1:8089/lit
+22:45:25.814|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | http://127.0.0.1:8089/lit
+22:45:35.819|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | No instructions
+22:45:35.819|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | No instructions
+22:45:45.821|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | No instructions
+22:45:45.821|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | No instructions
+22:45:55.823|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | No instructions
+22:45:55.823|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | No instructions
+22:50:39.280|[32m INFO[m |> --- [           main] [36mc.r.s.Server        [m | Enter 'help' if you dont know what to do.
+
+
+22:50:39.280|[32m INFO[m |> --- [           main] [36mc.r.s.Server        [m | Enter 'help' if you dont know what to do.
+
+
+22:50:48.348|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      [m | 
+24d1d2f8-4876-46a5-bd1d-6aa925b69b5b: just arrived to vacation!
+22:50:48.348|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      [m | 
+24d1d2f8-4876-46a5-bd1d-6aa925b69b5b: just arrived to vacation!
+22:50:52.192|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       [m | Waiting for response
+22:50:52.192|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       [m | Waiting for response
+22:50:52.210|[32m INFO[m |> --- [           main] [36mc.r.s.Protocol      [m | 
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+22:50:52.210|[32m INFO[m |> --- [           main] [36mc.r.s.Protocol      [m | 
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | INIT
+22:50:48.296|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | INIT
+22:50:48.296|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | 127.0.0.1 
+22:50:48.296|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | 127.0.0.1 
+22:50:48.296|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | 1331
+22:50:48.296|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | 1331
+22:50:48.310|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | Send message :24d1d2f8-4876-46a5-bd1d-6aa925b69b5b: just arrived to vacation!
+22:50:48.310|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | Send message :24d1d2f8-4876-46a5-bd1d-6aa925b69b5b: just arrived to vacation!
+22:50:52.192|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | ls
+22:50:52.192|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | ls
+22:50:52.209|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+22:50:52.209|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+22:51:12.739|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | Send message :Connection gets reset because EOF Exception on Client
+22:51:12.739|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | Send message :Connection gets reset because EOF Exception on Client
+22:51:13.741|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | 127.0.0.1
+22:51:13.741|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | 127.0.0.1
+22:51:13.742|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | CheckTrigTrue
+22:51:13.742|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | CheckTrigTrue
+22:51:13.742|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | Passed checktrig
+22:51:13.742|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | Passed checktrig
+22:51:13.742|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | Init started!
+22:51:13.742|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | Init started!
+22:51:13.743|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | INIT
+22:51:13.743|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | INIT
+22:51:13.743|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | 127.0.0.1 
+22:51:13.743|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | 127.0.0.1 
+22:51:13.743|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | 1331
+22:51:13.743|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | 1331
+22:51:13.744|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | catch in init
+22:51:13.744|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | catch in init
+22:52:34.798|[32m INFO[m |> --- [           main] [36mc.r.s.Server        [m | Enter 'help' if you dont know what to do.
+
+
+22:52:34.798|[32m INFO[m |> --- [           main] [36mc.r.s.Server        [m | Enter 'help' if you dont know what to do.
+
+
+22:52:57.183|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      [m | 
+64d3abbe-9a3f-47d3-ab34-4493f95b68fb: just arrived to vacation!
+22:52:57.183|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      [m | 
+64d3abbe-9a3f-47d3-ab34-4493f95b68fb: just arrived to vacation!
+22:53:06.596|[32m INFO[m |> --- [           main] [36mc.r.s.h.HTTPSShell  [m | HTTPS-Server configured
+22:53:06.596|[32m INFO[m |> --- [           main] [36mc.r.s.h.HTTPSShell  [m | HTTPS-Server configured
+22:53:06.597|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.h.HTTPSServer [m | Start single-threaded server at /0.0.0.0:8443
+22:53:06.597|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.h.HTTPSServer [m | Start single-threaded server at /0.0.0.0:8443
+22:53:06.599|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       [m | Waiting for response
+22:53:06.599|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       [m | Waiting for response
+22:53:07.256|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       [m | Connection Was Lost While Reading - localhost/127.0.0.1:35666
+22:53:07.256|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       [m | Connection Was Lost While Reading - localhost/127.0.0.1:35666
+22:53:07.257|[32m INFO[m |> --- [           main] [36mc.r.s.Server        [m | Failed to switch shell to HTTPS!
+22:53:07.257|[32m INFO[m |> --- [           main] [36mc.r.s.Server        [m | Failed to switch shell to HTTPS!
+[m |> --- [           main] [36mc.r.c.Client        [m | Send message :64d3abbe-9a3f-47d3-ab34-4493f95b68fb: just arrived to vacation!
+22:53:06.599|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | httpsSw
+22:53:06.599|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | httpsSw
+22:53:06.602|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | 127.0.0.1
+22:53:06.602|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | 127.0.0.1
+22:53:06.602|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | CheckTrigTrue
+22:53:06.602|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | CheckTrigTrue
+22:53:06.602|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | Init started!
+22:53:06.602|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | Init started!
+22:53:07.257|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | lul
+22:53:07.257|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | lul
+22:53:27.443|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | No instructions
+22:53:27.443|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | No instructions
+22:53:37.513|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | No instructions
+22:53:37.513|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | No instructions
+22:55:21.019|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (226)[m | 127.0.0.1
+22:55:21.024|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (236)[m | CheckTrigTrue
+22:55:21.024|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (555)[m | Passed checktrig
+22:55:21.024|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (90)[m | INIT
+22:55:21.025|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (94)[m | 127.0.0.1 
+22:55:21.025|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (95)[m | 1331
+22:55:21.037|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (259)[m | Send message :b8ff35be-5b50-4698-8a7f-296b94bfb4ed: just arrived to vacation!
+22:55:28.388|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (259)[m | Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+22:55:38.389|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (259)[m | Send message :Connection gets reset because EOF Exception on Client
+22:55:39.392|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (226)[m | 127.0.0.1
+22:55:39.393|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (236)[m | CheckTrigTrue
+22:55:39.393|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (555)[m | Passed checktrig
+22:55:39.393|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (90)[m | INIT
+22:55:39.394|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (94)[m | 127.0.0.1 
+22:55:39.394|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (95)[m | 1331
+22:55:39.395|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (108)[m | catch in init
+22:55:50.398|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (226)[m | 127.0.0.1
+22:55:50.398|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (236)[m | CheckTrigTrue
+22:55:50.399|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (555)[m | Passed checktrig
+22:55:50.399|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (90)[m | INIT
+22:55:50.399|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (94)[m | 127.0.0.1 
+22:55:50.399|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (95)[m | 1331
+22:55:50.400|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (108)[m | catch in init
+22:56:01.403|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (226)[m | 127.0.0.1
+22:56:01.403|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (236)[m | CheckTrigTrue
+22:56:01.404|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (555)[m | Passed checktrig
+22:56:01.404|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (90)[m | INIT
+22:56:01.405|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (94)[m | 127.0.0.1 
+22:56:01.405|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (95)[m | 1331
+22:56:01.406|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (108)[m | catch in init
+22:56:12.408|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (226)[m | 127.0.0.1
+22:56:12.409|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (236)[m | CheckTrigTrue
+22:56:12.409|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (555)[m | Passed checktrig
+22:56:12.409|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (90)[m | INIT
+22:56:12.409|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (94)[m | 127.0.0.1 
+22:56:12.410|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (95)[m | 1331
+22:56:12.410|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (108)[m | catch in init
+22:56:23.413|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (226)[m | 127.0.0.1
+22:56:23.413|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (236)[m | CheckTrigTrue
+22:56:23.414|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (555)[m | Passed checktrig
+22:56:23.414|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (90)[m | INIT
+22:56:23.414|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (94)[m | 127.0.0.1 
+22:56:23.414|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (95)[m | 1331
+22:56:23.415|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (108)[m | catch in init
+22:56:34.417|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (226)[m | 127.0.0.1
+22:56:34.418|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (236)[m | CheckTrigTrue
+22:56:34.418|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (555)[m | Passed checktrig
+22:56:34.418|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (90)[m | INIT
+22:56:34.419|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (94)[m | 127.0.0.1 
+22:56:34.419|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (95)[m | 1331
+22:56:34.419|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (108)[m | catch in init
+22:56:49.284|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | 127.0.0.1
+22:56:49.287|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | CheckTrigTrue
+22:56:49.287|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | Passed checktrig
+22:56:49.287|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | Init started!
+22:56:49.288|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | INIT
+22:56:49.288|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | 127.0.0.1 
+22:56:49.288|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | 1331
+22:56:49.289|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | catch in init
+22:57:08.712|[32m INFO[m |> --- [           main] [36mc.r.s.Server        [m | Enter 'help' if you dont know what to do.
+
+
+22:57:38.888|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      [m | 
+�W{9(%���8���X�67-a5e2-38f2f806744a: just arrived to vacation!
+22:57:43.723|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       [m | Waiting for response
+[m | Passed checktrig
+22:57:38.841|[32m INFO[m |> --- [           main] [36mc.r.c.Client        [m | Init started!
+22:57:38.841|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | INIT
+22:57:38.841|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | 127.0.0.1 
+22:57:38.842|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | 1331
+22:57:38.854|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | Send message :247e75b6-26ad-4067-a5e2-38f2f806744a: just arrived to vacation!
+22:57:43.724|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | lul
+22:57:53.724|[31mERROR[m |> --- [           main] [36mc.r.c.Client        [m | Send message :Connection gets reset because EOF Exception on Client
+22:58:13.235|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (120)[m | Enter 'help' if you dont know what to do.
+
+
+22:58:17.676|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bb61dd21-b6d3-4354-9217-d5cb793e4761: just arrived to vacation!
+22:58:26.665|[32m INFO[m |> --- [           main] [36mc.r.s.h.HTTPSShell  (27)[m | HTTPS-Server configured
+22:58:26.666|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.h.HTTPSServer (76)[m | Start single-threaded server at /0.0.0.0:8445
+22:58:26.669|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+22:58:27.318|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (111)[m | Connection Was Lost While Reading - localhost/127.0.0.1:35688
+22:58:27.318|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (166)[m | Failed to switch shell to HTTPS!
+ Send message :bb61dd21-b6d3-4354-9217-d5cb793e4761: just arrived to vacation!
+22:58:26.669|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (344)[m | httpsSw
+22:58:26.672|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (226)[m | 127.0.0.1
+22:58:26.673|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (236)[m | CheckTrigTrue
+22:58:26.673|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (86)[m | Init started!
+22:58:27.320|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (398)[m | lul
+22:58:47.518|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (450)[m | No instructions
+22:58:57.577|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (450)[m | No instructions
+22:59:07.652|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (450)[m | No instructions
+22:59:17.714|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (450)[m | No instructions
+22:59:34.756|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (120)[m | Enter 'help' if you dont know what to do.
+
+
+22:59:40.725|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+369d8541-e4f3-4bec-b3d3-e0ba31115727: just arrived to vacation!
+23:00:45.272|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+d0f60fb3-2d0b-434b-a5c5-bc79e42b806c: just arrived to vacation!
+
+22:59:40.681|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (86)[m | Init started!
+22:59:40.682|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (90)[m | INIT
+22:59:40.682|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (94)[m | 127.0.0.1 
+22:59:40.682|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (95)[m | 1331
+22:59:40.694|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (259)[m | Send message :369d8541-e4f3-4bec-b3d3-e0ba31115727: just arrived to vacation!
+23:00:45.232|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (226)[m | 127.0.0.1
+23:00:45.237|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (236)[m | CheckTrigTrue
+23:00:45.237|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (558)[m | Passed checktrig
+23:00:45.238|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (86)[m | Init started!
+23:00:45.238|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (90)[m | INIT
+23:00:45.238|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (94)[m | 127.0.0.1 
+23:00:45.239|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (95)[m | 1331
+23:00:45.243|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (259)[m | Send message :d0f60fb3-2d0b-434b-a5c5-bc79e42b806c: just arrived to vacation!
+23:00:46.468|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (259)[m | Send message :Connection gets reset because EOF Exception on Client
+23:00:47.471|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (226)[m | 127.0.0.1
+23:00:47.472|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (236)[m | CheckTrigTrue
+23:00:47.472|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (558)[m | Passed checktrig
+23:00:47.472|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (86)[m | Init started!
+23:00:47.472|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (90)[m | INIT
+23:00:47.472|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (94)[m | 127.0.0.1 
+23:00:47.473|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (95)[m | 1331
+23:00:47.473|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (108)[m | catch in init
+23:00:58.477|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (226)[m | 127.0.0.1
+23:00:58.478|[31mERROR[m |> --- 23:00:58.497|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+d0f60fb3-2d0b-434b-a5c5-bc79e42b806c: just arrived to vacation!
+m | Passed checktrig
+23:00:58.478|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (86)[m | Init started!
+23:00:58.479|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (90)[m | INIT
+23:00:58.479|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (94)[m | 127.0.0.1 
+23:00:58.480|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (95)[m | 1331
+23:00:58.495|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (259)[m | Send message :d0f60fb3-2d0b-434b-a5c5-bc79e42b806c: just arrived to vacation!
+23:01:13.002|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (120)[m | Enter 'help' if you dont know what to do.
+
+
+23:01:24.727|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+6b06beed-82ea-4d7d-93b4-4b80b4b75892: just arrived to vacation!
+23:01:35.254|[32m INFO[m |> --- [           main] [36mc.r.s.h.HTTPSShell  (27)[m | HTTPS-Server configured
+23:01:35.256|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.h.HTTPSServer (76)[m | Start single-threaded server at /0.0.0.0:8443
+23:01:35.258|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+23:01:35.936|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (111)[m | Connection Was Lost While Reading - localhost/127.0.0.1:35698
+23:01:35.937|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (166)[m | Failed to switch shell to HTTPS!
+ Send message :6b06beed-82ea-4d7d-93b4-4b80b4b75892: just arrived to vacation!
+23:01:35.259|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (344)[m | httpsSw
+23:01:35.262|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (226)[m | 127.0.0.1
+23:01:35.262|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (236)[m | CheckTrigTrue
+23:01:35.263|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (86)[m | Init started!
+23:01:35.936|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (401)[m | lul
+23:01:56.209|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:02:13.281|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (120)[m | Enter 'help' if you dont know what to do.
+
+
+23:02:19.261|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+3867983c-7772-4a06-a11e-ce86afd9a94e: just arrived to vacation!
+23:02:24.848|[32m INFO[m |> --- [           main] [36mc.r.s.h.HTTPSShell  (27)[m | HTTPS-Server configured
+23:02:24.849|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.h.HTTPSServer (76)[m | Start single-threaded server at /0.0.0.0:8443
+23:02:24.852|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+23:02:25.511|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (111)[m | Connection Was Lost While Reading - localhost/127.0.0.1:35700
+23:02:25.512|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (166)[m | Failed to switch shell to HTTPS!
+ Send message :3867983c-7772-4a06-a11e-ce86afd9a94e: just arrived to vacation!
+23:02:24.852|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (344)[m | httpsSw
+23:02:24.853|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (356)[m | Got HTTPSSW Command
+23:02:24.856|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (226)[m | 127.0.0.1
+23:02:24.856|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (236)[m | CheckTrigTrue
+23:02:24.857|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (358)[m | Uppdate ran!
+23:02:24.857|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (86)[m | Init started!
+23:02:25.512|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (401)[m | lul
+23:02:25.514|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (360)[m | Init done successfully!
+23:02:45.735|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:02:55.815|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:03:05.903|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:03:15.976|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:03:26.032|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:03:36.092|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:03:46.157|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:03:56.219|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:04:06.297|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:04:16.372|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:04:26.429|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:04:36.489|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:04:46.546|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:04:56.616|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:05:06.684|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:05:16.739|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:05:26.803|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:05:36.870|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:05:46.926|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:05:57.002|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:06:07.066|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:06:17.123|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:06:27.189|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:06:37.256|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:06:47.357|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:06:57.432|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:07:07.489|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:07:17.550|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:07:27.615|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:07:37.675|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:07:47.733|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:07:57.794|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:08:07.887|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:08:17.963|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:08:28.036|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:08:38.099|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:08:48.155|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:08:58.216|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:09:08.283|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:09:18.345|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:09:28.406|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:09:38.462|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:09:48.520|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:09:58.576|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:10:08.634|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (453)[m | No instructions
+23:17:30.199|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (120)[m | Enter 'help' if you dont know what to do.
+
+
+23:17:34.951|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+a746c3bf-cba8-41d7-b529-92e35481bd87: just arrived to vacation!
+23:17:46.698|[32m INFO[m |> --- [           main] [36mc.r.s.h.HTTPSShell  (27)[m | HTTPS-Server configured
+23:17:46.700|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.h.HTTPSServer (76)[m | Start single-threaded server at /0.0.0.0:8443
+23:17:46.702|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+23:18:57.238|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (111)[m | Connection Was Lost While Reading - localhost/127.0.0.1:35702
+23:18:57.239|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (166)[m | Failed to switch shell to HTTPS!
+[m | Send message :a746c3bf-cba8-41d7-b529-92e35481bd87: just arrived to vacation!
+23:17:46.702|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (339)[m | httpsSw
+23:17:46.703|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (351)[m | Got HTTPSSW Command
+23:17:46.705|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (233)[m | 127.0.0.18443
+23:17:46.706|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (243)[m | CheckTrigTrue
+23:17:46.706|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (353)[m | Uppdate ran!
+23:17:46.706|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (91)[m | Init started!
+23:17:46.706|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (151)[m | INIT HTTPS beginning
+23:17:47.417|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (396)[m | lul
+23:17:47.419|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (355)[m | Init done successfully!
+23:19:08.963|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (120)[m | Enter 'help' if you dont know what to do.
+
+
+23:19:14.975|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+fcaa1d80-9d5c-4386-a33c-0c03fb2f7aed: just arrived to vacation!
+23:19:23.701|[32m INFO[m |> --- [           main] [36mc.r.s.h.HTTPSShell  (27)[m | HTTPS-Server configured
+23:19:23.702|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.h.HTTPSServer (76)[m | Start single-threaded server at /0.0.0.0:8443
+23:19:23.705|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+23:19:24.321|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (111)[m | Connection Was Lost While Reading - localhost/127.0.0.1:35704
+23:19:24.322|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (166)[m | Failed to switch shell to HTTPS!
+[m | Send message :fcaa1d80-9d5c-4386-a33c-0c03fb2f7aed: just arrived to vacation!
+23:19:23.705|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (339)[m | httpsSw
+23:19:23.706|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (351)[m | Got HTTPSSW Command
+23:19:23.709|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (233)[m | 127.0.0.18443
+23:19:23.710|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (243)[m | CheckTrigTrue
+23:19:23.710|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (353)[m | Uppdate ran!
+23:19:23.710|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (91)[m | Init started!
+23:19:23.711|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (151)[m | INIT HTTPS beginning
+23:19:24.321|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (396)[m | lul
+23:19:24.323|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (355)[m | Init done successfully!
+23:20:55.759|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (120)[m | Enter 'help' if you dont know what to do.
+
+
+23:21:01.548|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+95355f17-d13f-4213-9a2d-289017a47078: just arrived to vacation!
+23:21:07.647|[32m INFO[m |> --- [           main] [36mc.r.s.h.HTTPSShell  (27)[m | HTTPS-Server configured
+23:21:07.648|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.h.HTTPSServer (76)[m | Start single-threaded server at /0.0.0.0:8443
+23:21:07.651|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+23:21:08.233|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (111)[m | Connection Was Lost While Reading - localhost/127.0.0.1:35706
+23:21:08.234|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (166)[m | Failed to switch shell to HTTPS!
+[m | Send message :95355f17-d13f-4213-9a2d-289017a47078: just arrived to vacation!
+23:21:07.652|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (339)[m | httpsSw
+23:21:07.652|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (351)[m | Got HTTPSSW Command
+23:21:07.655|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (233)[m | 127.0.0.18443
+23:21:07.655|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (243)[m | CheckTrigTrue
+23:21:07.656|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (353)[m | Uppdate ran!
+23:21:07.656|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (91)[m | Init started!
+23:21:07.656|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (151)[m | INIT HTTPS beginning
+23:21:08.233|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (396)[m | lul
+23:21:08.235|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (355)[m | Init done successfully!
+23:21:28.236|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+23:21:38.237|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+23:21:48.239|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+23:21:58.241|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+23:22:08.243|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+23:22:22.390|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (120)[m | Enter 'help' if you dont know what to do.
+
+
+23:22:41.937|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+89029f72-746c-4847-8e75-f161be201cfc: just arrived to vacation!
+23:22:52.040|[32m INFO[m |> --- [           main] [36mc.r.s.h.HTTPSShell  (27)[m | HTTPS-Server configured
+23:22:52.041|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.h.HTTPSServer (76)[m | Start single-threaded server at /0.0.0.0:8443
+23:22:52.044|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+23:22:52.665|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (111)[m | Connection Was Lost While Reading - localhost/127.0.0.1:35708
+23:22:52.670|[32m INFO[m |> --- [           main] [36mc.r.s.h.HTTPSServer (231)[m | Waiting for Response..
+     (266)[m | Send message :89029f72-746c-4847-8e75-f161be201cfc: just arrived to vacation!
+23:22:52.044|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (339)[m | httpsSw
+23:22:52.045|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (351)[m | Got HTTPSSW Command
+23:22:52.047|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (233)[m | 127.0.0.18443
+23:22:52.048|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (243)[m | CheckTrigTrue
+23:22:52.048|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (353)[m | Uppdate ran!
+23:22:52.049|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (91)[m | Init started!
+23:22:52.049|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (151)[m | INIT HTTPS beginning
+23:22:52.666|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (396)[m | lul
+23:22:52.668|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (355)[m | Init done successfully!
+23:23:12.669|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+23:23:22.670|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+23:23:32.672|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+23:23:42.673|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+23:23:52.675|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+23:24:02.677|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+23:25:17.669|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (120)[m | Enter 'help' if you dont know what to do.
+
+
+23:26:03.261|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+86677557-5cc3-4440-95d9-03506f00ebcd: just arrived to vacation!
+23:26:10.348|[32m INFO[m |> --- [           main] [36mc.r.s.h.HTTPSShell  (27)[m | HTTPS-Server configured
+23:26:10.349|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.h.HTTPSServer (76)[m | Start single-threaded server at /0.0.0.0:8443
+23:26:10.352|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+23:26:10.985|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (111)[m | Connection Was Lost While Reading - localhost/127.0.0.1:35710
+23:26:10.989|[32m INFO[m |> --- [           main] [36mc.r.s.h.HTTPSServer (231)[m | Waiting for Response..
+     (266)[m | Send message :86677557-5cc3-4440-95d9-03506f00ebcd: just arrived to vacation!
+23:26:10.352|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (339)[m | httpsSw
+23:26:10.353|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (351)[m | Got HTTPSSW Command
+23:26:10.355|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (233)[m | 127.0.0.18443
+23:26:10.356|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (243)[m | CheckTrigTrue
+23:26:10.356|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (353)[m | Update ran!
+23:26:10.356|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (91)[m | Init started!
+23:26:10.357|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (151)[m | INIT HTTPS beginning
+23:26:10.985|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (396)[m | lul
+23:26:10.987|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (355)[m | Init done successfully!
+23:26:30.988|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+23:26:31.076|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (439)[m | No instructions
+23:26:41.077|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+23:26:41.080|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (439)[m | No instructions
+23:26:51.080|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+23:26:51.082|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (439)[m | No instructions

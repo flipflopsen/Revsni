@@ -12,6 +12,7 @@ import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
 
 import com.revsni.server.http.HTTPShell;
+import com.revsni.server.https.HTTPSShell;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -19,6 +20,9 @@ import org.passay.CharacterRule;
 import org.passay.EnglishCharacterData;
 import org.passay.CharacterData;
 import org.passay.PasswordGenerator;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 
@@ -29,14 +33,17 @@ public class Server extends Observable {
     //private String pass;
     //private String ip;
     private volatile int port;
+    private volatile int portIn;
     private SecretKey key;
     private IvParameterSpec iv;
     private boolean first = true;
     public volatile String shellType;
     private volatile Updater updater;
     private volatile HTTPShell httpShell;
+    private volatile HTTPSShell httpsShell;
 
-    private static final Logger LOG = LogManager.getLogger(Server.class);
+    Logger logger = LogManager.getLogger(getClass());
+
 
 
     public static void main(String[] args) throws NoSuchAlgorithmException, InvalidKeySpecException, IOException {
@@ -94,7 +101,7 @@ public class Server extends Observable {
         updater.generateOutputString();
         try {
             if(updater.writeOut()) {
-                LOG.debug("File output.txt wrote!");
+                logger.debug("File output.txt wrote!");
                 return true;
             } else {
                 return false;
@@ -110,7 +117,7 @@ public class Server extends Observable {
             try {
                 String message;
                 do {
-                    if(first) { System.out.println("Enter 'help' if you dont know what to do.\n\n");}
+                    if(first) { logger.info("Enter 'help' if you dont know what to do.\n\n");}
                     first = false;
 
                     InputStreamReader inputStreamReader = new InputStreamReader(System.in);
@@ -138,20 +145,33 @@ public class Server extends Observable {
                             updater.writeOut();
                             notifyObservers("httpSw");
                             shellType = "HTTP";
-                            if(httpShell.getConnInf()) {
-                                shellType = "HTTP";
-                            } else {
-                                System.out.println("Failed to switch shell to HTTP!");
+                            if(!httpShell.getConnInf()) {
+                                logger.info("Failed to switch shell to HTTP!");
                                 updater.setShellType("TCP", String.valueOf(this.port));
                                 shellType = "TCP";
                             }
-                        
+                            break;
+
+                        case("switchHTTPS"): 
+                            System.out.print("Specify a Port on which HTTPS-Server should listen on: ");
+                            int portIn = Integer.parseInt(bufferedReader.readLine());
+                            httpsShell = new HTTPSShell(key, iv, portIn);
+                            httpsShell.fireUp(portIn);
+                            updater.setShellType("HTTPS", String.valueOf(httpsShell.getPort()));
+                            updater.generateOutputString();
+                            updater.writeOut();
+                            notifyObservers("httpsSw");
+                            shellType = "HTTPS";
+                                             
                         default: 
                             if(shellType.equals("TCP")) {
                                 notifyObservers(message);
                             }
                             if(shellType.equals("HTTP")) {
                                 httpShell.sendCommand(message);
+                            }
+                            if(shellType.equals("HTTPS")) {
+                                httpsShell.sendCommand(message);
                             }
                         
                     }
@@ -166,7 +186,7 @@ public class Server extends Observable {
             } 
             finally {
                 setRunning(false);
-                System.out.println("Server is shutting down");
+                logger.info("Server is shutting down");
                 try {
                     Thread.sleep(10000);
                 }

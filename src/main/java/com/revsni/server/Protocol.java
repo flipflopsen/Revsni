@@ -14,9 +14,13 @@ import javax.crypto.spec.SecretKeySpec;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 @Deprecated
 public class Protocol {
-    protected static final Logger parentLogger = LogManager.getLogger();
+
+    Logger logger = LogManager.getLogger(getClass());
+
     //private Logger LOG = parentLogger;
     private Cipher cipherDec;
     private Cipher cipherEnc;
@@ -36,7 +40,7 @@ public class Protocol {
         try {
             String message  = new String(cipherDec.doFinal(Base64.getDecoder()
                 .decode((String) msg)));
-            System.out.println("\n" + message);
+            logger.info("\n" + message);
             System.out.print("Revsn [TCP] » ");
             return true;
         } catch (IllegalBlockSizeException | BadPaddingException e) {

@@ -9,8 +9,7 @@ import org.apache.logging.log4j.Logger;
 
 @Deprecated
 public class Listener implements Runnable{
-    protected static final Logger parentLogger = LogManager.getLogger();
-    private Logger LOG = parentLogger;
+    Logger logger = LogManager.getLogger(getClass());
     
     private ServerSocket serverSocket;
     private Server server;
@@ -21,7 +20,7 @@ public class Listener implements Runnable{
         try {
             serverSocket = new ServerSocket(server.getPort());
             server.setRunning(true);
-            LOG.debug("ServerSocket izda");
+            logger.debug("TCP Socket is up on Port: {}", server.getPort());
 
         }
         catch (IOException e) {
@@ -35,7 +34,6 @@ public class Listener implements Runnable{
         while(server.isRunning()) {
             try {
                 Socket connection = serverSocket.accept();
-                LOG.debug("Connection local port: " + connection.getLocalPort());
 
                 Handler connectionHandler = new Handler(server,connection);
 
@@ -43,11 +41,11 @@ public class Listener implements Runnable{
                 
                 //Add connection somehow to Server
 
-                LOG.debug("Connection received from " + connection.getInetAddress().getHostName());
+                logger.debug("Connection received from " + connection.getInetAddress().getHostName() + ":" + connection.getLocalPort());
 
             }
             catch (IOException e) {
-                LOG.debug("Error in Thread");
+                logger.debug("Error in Thread");
                 server.setRunning(false);
             }
         }

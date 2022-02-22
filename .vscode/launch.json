@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch HTTPSServer",
+            "request": "launch",
+            "mainClass": "com.revsni.server.https.HTTPSServer",
+            "projectName": "revsn"
+        },
+        {
+            "type": "java",
             "name": "Launch HTTP",
             "request": "launch",
             "mainClass": "com.revsni.server.http.HTTP",

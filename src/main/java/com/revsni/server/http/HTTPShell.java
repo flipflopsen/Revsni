@@ -5,10 +5,16 @@ import java.io.IOException;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+    
+
 public class HTTPShell {
     volatile HTTPHandler handler;
     volatile HTTPServer server = new HTTPServer();
     private volatile int port;
+    Logger logger = LogManager.getLogger(getClass());
+    
 
 
     public HTTPShell(SecretKey key, IvParameterSpec iv, int portIn) throws IOException {
@@ -24,7 +30,7 @@ public class HTTPShell {
                 try {
                     server.main(port, handler);
                 } catch (Exception e) {
-                    System.out.println("Could not start HTTP Server.");
+                    logger.info("Could not start HTTP Server.");
                     System.exit(1);
                 }
             }

@@ -61,6 +61,12 @@
     <artifactId>httpclient</artifactId>
     <version>4.5.13</version>
   </dependency>
+  <dependency>
+    <groupId>io.github.hakky54</groupId>
+    <artifactId>sslcontext-kickstart</artifactId>
+    <version>6.7.0</version>
+  </dependency>
+  
   </dependencies>
 
   <build>
