@@ -117,7 +117,7 @@ public class Server extends Observable {
             try {
                 String message;
                 do {
-                    if(first) { logger.info("Enter 'help' if you dont know what to do.\n\n");}
+                    if(first) { logger.info("Enter 'help' if you dont know what to do.\n\nListening...\n");}
                     first = false;
 
                     InputStreamReader inputStreamReader = new InputStreamReader(System.in);
@@ -131,38 +131,48 @@ public class Server extends Observable {
                         case("help"): printHelp(); break;
                         case("usage"): printUsage(); break;
                         case("configure"): printConfigure(); break;
-                        case("switch"): printSwitch(); break;
+                        case("switch"): 
+                            printSwitch();
+                            System.out.println("---Enter anything else to leave this menu.---\n");
+                            System.out.print("Revsn [" + shellType + "] » ");
+                            String tmp = bufferedReader.readLine();
+                            switch(tmp) {
+                                case("http"): 
+                                    System.out.print("Specify a Port on which HTTP-Server should listen on: ");
+                                    int port = Integer.parseInt(bufferedReader.readLine());
+                                    httpShell = new HTTPShell(key, iv, port);
+                                    updater.setShellType("HTTP", String.valueOf(httpShell.getPort()));
+                                    updater.generateOutputString();
+                                    updater.writeOut();
+                                    notifyObservers("httpSw");
+                                    shellType = "HTTP";
+                                    if(!httpShell.getConnInf()) {
+                                        logger.info("Failed to switch shell to HTTP!");
+                                        updater.setShellType("TCP", String.valueOf(this.port));
+                                        shellType = "TCP";
+                                    }
+                                    break;
+
+                                case("https"): 
+                                    System.out.print("Specify a Port on which HTTPS-Server should listen on: ");
+                                    int portIn = Integer.parseInt(bufferedReader.readLine());
+                                    httpsShell = new HTTPSShell(key, iv, portIn);
+                                    httpsShell.fireUp(portIn);
+                                    updater.setShellType("HTTPS", String.valueOf(httpsShell.getPort()));
+                                    updater.generateOutputString();
+                                    updater.writeOut();
+                                    notifyObservers("httpsSw");
+                                    shellType = "HTTPS";
+                                    break;
+                            
+                                default:
+                                    break;
+                            } 
+                            break;
                         case("mode"): printMode(); break;
                         case("kill"): notifyObservers("kill"); break;
                         case("exit"): System.exit(0); break;
-                        case("encryption"): printEncryption(); break;
-                        case("switchHTTP"): 
-                            System.out.print("Specify a Port on which HTTP-Server should listen on: ");
-                            int port = Integer.parseInt(bufferedReader.readLine());
-                            httpShell = new HTTPShell(key, iv, port);
-                            updater.setShellType("HTTP", String.valueOf(httpShell.getPort()));
-                            updater.generateOutputString();
-                            updater.writeOut();
-                            notifyObservers("httpSw");
-                            shellType = "HTTP";
-                            if(!httpShell.getConnInf()) {
-                                logger.info("Failed to switch shell to HTTP!");
-                                updater.setShellType("TCP", String.valueOf(this.port));
-                                shellType = "TCP";
-                            }
-                            break;
-
-                        case("switchHTTPS"): 
-                            System.out.print("Specify a Port on which HTTPS-Server should listen on: ");
-                            int portIn = Integer.parseInt(bufferedReader.readLine());
-                            httpsShell = new HTTPSShell(key, iv, portIn);
-                            httpsShell.fireUp(portIn);
-                            updater.setShellType("HTTPS", String.valueOf(httpsShell.getPort()));
-                            updater.generateOutputString();
-                            updater.writeOut();
-                            notifyObservers("httpsSw");
-                            shellType = "HTTPS";
-                                             
+                        case("encryption"): printEncryption(); break;     
                         default: 
                             if(shellType.equals("TCP")) {
                                 notifyObservers(message);

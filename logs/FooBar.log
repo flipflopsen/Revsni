@@ -894,3 +894,551 @@ fcaa1d80-9d5c-4386-a33c-0c03fb2f7aed: just arrived to vacation!
 23:26:41.080|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (439)[m | No instructions
 23:26:51.080|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
 23:26:51.082|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (439)[m | No instructions
+23:43:45.644|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (120)[m | Enter 'help' if you dont know what to do.
+
+
+23:43:51.174|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+5a60cb1d-a285-4e4c-bf12-30ed029c7838: just arrived to vacation!
+23:44:11.534|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.h.HTTPServer  (23)[m | HTTP Server started on port: 8006
+23:44:11.537|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+23:44:11.745|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (111)[m | Connection Was Lost While Reading - localhost/127.0.0.1:35712
+23:44:11.759|[32m INFO[m |> --- [  HTTP-worker-2] [36mc.r.s.h.HTTPHandler (120)[m | shorida
+
+23:44:13.577|[32m INFO[m |> --- [           main] [36mc.r.s.h.HTTPHandler (79)[m | Waiting for Response..
+23:44:31.769|[32m INFO[m |> --- [  HTTP-worker-4] [36mc.r.s.h.HTTPHandler (120)[m | logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+23:47:24.063|[32m INFO[m |> --- [           main] [36mc.r.s.h.HTTPHandler (79)[m | Waiting for Response..
+23:47:31.883|[32m INFO[m |> --- [ HTTP-worker-23] [36mc.r.s.h.HTTPHandler (120)[m | br-8eab487f3cdc: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.18.0.1  netmask 255.255.0.0  broadcast 172.18.255.255
+        ether 02:42:f0:05:44:8b  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:cb:bb:5e:26  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+docker_gwbridge: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.20.0.1  netmask 255.255.0.0  broadcast 172.20.255.255
+        ether 02:42:31:98:02:3b  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp3s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.62.131  netmask 255.255.255.0  broadcast 192.168.62.255
+        inet6 fe80::cadf:3c67:bafc:d064  prefixlen 64  scopeid 0x20<link>
+        ether 08:62:66:2d:ab:e0  txqueuelen 1000  (Ethernet)
+        RX packets 1704680  bytes 1073330049 (1023.6 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2319569  bytes 1419240054 (1.3 GiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 216689  bytes 21677090 (20.6 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 216689  bytes 21677090 (20.6 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+t        (416)[m | No instructions
+23:46:41.853|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+23:46:51.857|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+23:47:01.860|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+23:47:11.864|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+23:47:21.871|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+23:47:31.876|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (339)[m | ifconfig
+23:47:31.878|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (266)[m | Send message :br-8eab487f3cdc: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.18.0.1  netmask 255.255.0.0  broadcast 172.18.255.255
+        ether 02:42:f0:05:44:8b  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:cb:bb:5e:26  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+docker_gwbridge: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.20.0.1  netmask 255.255.0.0  broadcast 172.20.255.255
+        ether 02:42:31:98:02:3b  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp3s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.62.131  netmask 255.255.255.0  broadcast 192.168.62.255
+        inet6 fe80::cadf:3c67:bafc:d064  prefixlen 64  scopeid 0x20<link>
+        ether 08:62:66:2d:ab:e0  txqueuelen 1000  (Ethernet)
+        RX packets 1704680  bytes 1073330049 (1023.6 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2319569  bytes 1419240054 (1.3 GiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 216689  bytes 21677090 (20.6 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 216689  bytes 21677090 (20.6 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+23:47:31.880|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (281)[m | http://127.0.0.1:8006/lit
+23:47:41.887|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+23:47:51.890|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+23:48:01.893|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+23:55:00.149|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (120)[m | Enter 'help' if you dont know what to do.
+
+
+23:55:06.816|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+d3dcb540-3e30-42b5-bb33-3ef5a042af6e: just arrived to vacation!
+23:55:21.374|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.h.HTTPServer  (23)[m | HTTP Server started on port: 8080
+23:55:21.377|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+23:55:21.575|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (111)[m | Connection Was Lost While Reading - localhost/127.0.0.1:35714
+23:55:21.589|[32m INFO[m |> --- [  HTTP-worker-2] [36mc.r.s.h.HTTPHandler (120)[m | shorida
+
+> --- [           main] [36mc.r.c.Client        (100)[m | 1331
+23:55:06.788|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (266)[m | Send message :d3dcb540-3e30-42b5-bb33-3ef5a042af6e: just arrived to vacation!
+23:55:21.377|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (339)[m | httpSw
+23:55:21.380|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (233)[m | 127.0.0.18080
+23:55:21.380|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (243)[m | CheckTrigTrue
+23:55:21.381|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (91)[m | Init started!
+23:55:21.575|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (339)[m | whoami
+23:55:21.585|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (266)[m | Send message :shorida
+
+23:55:21.587|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (281)[m | http://127.0.0.1:8080/lit
+23:55:41.610|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+23:55:51.620|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+23:56:01.627|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+23:56:11.636|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+23:56:21.644|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+23:56:31.652|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+23:56:41.663|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+23:56:51.670|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+23:57:01.676|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+23:57:11.683|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+23:57:26.476|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (120)[m | Enter 'help' if you dont know what to do.
+
+
+23:57:32.088|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+199b155d-19fb-4a72-840a-a414490a1ea1: just arrived to vacation!
+23:57:35.061|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+23:57:35.078|[32m INFO[m |> --- [           main] [36mc.r.s.Protocol      (43)[m | 
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+23:57:54.227|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+23:57:54.227|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.h.HTTPServer  (23)[m | HTTP Server started on port: 8006
+23:57:54.409|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (111)[m | Connection Was Lost While Reading - localhost/127.0.0.1:35716
+23:57:54.414|[32m INFO[m |> --- [  HTTP-worker-2] [36mc.r.s.h.HTTPHandler (120)[m | shorida
+
+[m |> --- [           main] [36mc.r.c.Client        (339)[m | ls
+23:57:35.078|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (266)[m | Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+23:57:54.227|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (339)[m | httpSw
+23:57:54.230|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (233)[m | 127.0.0.18006
+23:57:54.230|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (243)[m | CheckTrigTrue
+23:57:54.230|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (91)[m | Init started!
+23:57:54.410|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (339)[m | whoami
+23:57:54.411|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (266)[m | Send message :shorida
+
+23:57:54.413|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (281)[m | http://127.0.0.1:8006/lit
+23:58:14.441|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+23:58:24.450|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+23:58:34.456|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+23:58:44.464|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+23:59:17.424|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (120)[m | Enter 'help' if you dont know what to do.
+
+
+23:59:23.747|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+edc51b12-3aa4-4945-ab9b-f09568531a3c: just arrived to vacation!
+23:59:33.049|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.h.HTTPServer  (23)[m | HTTP Server started on port: 8994
+23:59:33.053|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+23:59:33.239|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (111)[m | Connection Was Lost While Reading - localhost/127.0.0.1:35718
+23:59:33.254|[32m INFO[m |> --- [  HTTP-worker-2] [36mc.r.s.h.HTTPHandler (120)[m | 'shorida
+' joined the party through HTTP!
+23:59:43.824|[32m INFO[m |> --- [           main] [36mc.r.s.h.HTTPHandler (79)[m | Waiting for Response..
+23:59:53.263|[32m INFO[m |> --- [  HTTP-worker-4] [36mc.r.s.h.HTTPHandler (120)[m | 'logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+' joined the party through HTTP!
+pSw
+23:59:33.055|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (233)[m | 127.0.0.18994
+23:59:33.056|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (243)[m | CheckTrigTrue
+23:59:33.056|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (91)[m | Init started!
+23:59:33.239|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (339)[m | whoami
+23:59:33.250|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (266)[m | Send message :shorida
+
+23:59:33.251|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (281)[m | http://127.0.0.1:8994/lit
+23:59:53.259|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (339)[m | ls
+23:59:53.260|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (266)[m | Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+23:59:53.262|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (281)[m | http://127.0.0.1:8994/lit
+00:00:03.272|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+00:00:13.275|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+00:00:23.282|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+00:00:33.285|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+00:00:46.625|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (120)[m | Enter 'help' if you dont know what to do.
+
+
+00:00:49.902|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+221d0e42-995d-4e57-8b26-83c15a1dda89: just arrived to vacation!
+00:00:58.363|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.h.HTTPServer  (23)[m | HTTP Server started on port: 8995
+00:00:58.366|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+00:00:58.570|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (111)[m | Connection Was Lost While Reading - localhost/127.0.0.1:35720
+00:00:58.584|[32m INFO[m |> --- [  HTTP-worker-2] [36mc.r.s.h.HTTPHandler (120)[m | shorida
+
+> --- [           main] [36mc.r.c.Client        (100)[m | 1331
+00:00:49.871|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (266)[m | Send message :221d0e42-995d-4e57-8b26-83c15a1dda89: just arrived to vacation!
+00:00:58.366|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (339)[m | httpSw
+00:00:58.369|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (233)[m | 127.0.0.18995
+00:00:58.369|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (243)[m | CheckTrigTrue
+00:00:58.369|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (91)[m | Init started!
+00:00:58.570|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (339)[m | whoami
+00:00:58.580|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (266)[m | Send message :shorida
+
+00:00:58.582|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (281)[m | http://127.0.0.1:8995/lit
+00:01:18.588|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+00:01:28.590|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+00:01:38.593|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+00:01:48.595|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+00:01:59.641|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (120)[m | Enter 'help' if you dont know what to do.
+
+
+00:02:34.102|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (120)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+00:02:41.092|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (120)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+00:02:46.518|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (120)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+00:02:53.182|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+719248de-139e-4067-ba31-66435aad22c6: just arrived to vacation!
+00:03:03.218|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+00:03:03.238|[32m INFO[m |> --- [           main] [36mc.r.s.Protocol      (43)[m | 
+uid=1000(shorida) gid=998(wheel) groups=998(wheel),964(mysql)
+
+00:03:13.299|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+00:03:13.302|[32m INFO[m |> --- [           main] [36mc.r.s.Protocol      (43)[m | 
+shorida
+
+00:03:16.559|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+00:03:23.311|[32m INFO[m |> --- [           main] [36mc.r.s.Protocol      (43)[m | 
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+00:03:25.154|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+00:03:33.340|[32m INFO[m |> --- [           main] [36mc.r.s.Protocol      (43)[m | 
+.
+├── logfile.log
+├── logs
+│   └── FooBar.log
+├── output.txt
+├── pom.xml
+├── Readme.md
+├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── revsni
+│       │           ├── builder
+│       │           ├── client
+│       │           │   ├── Client.java
+│       │           │   └── Ouchie.java
+│       │           ├── server
+│       │           │   ├── Handler.java
+│       │           │   ├── http
+│       │           │   │   ├── HTTPHandler.java
+│       │           │   │   ├── HTTPServer.java
+│       │           │   │   ├── HTTPShell.java
+│       │           │   │   ├── output.txt
+│       │           │   │   └── templates
+│       │           │   ├── https
+│       │           │   │   ├── certificates
+│       │           │   │   │   ├── certificate.p12
+│       │           │   │   │   ├── certificate.pem
+│       │           │   │   │   ├── key.pem
+│       │           │   │   │   ├── keystore.jks
+│       │           │   │   │   ├── lance.cer
+│       │           │   │   │   ├── lance.csr
+│       │           │   │   │   ├── lance.pkipath
+│       │           │   │   │   ├── server.cer
+│       │           │   │   │   └── test.crt
+│       │           │   │   ├── HTTPSServer.java
+│       │           │   │   └── HTTPSShell.java
+│       │           │   ├── Listener.java
+│       │           │   ├── Protocol.java
+│       │           │   ├── Server.java
+│       │           │   └── Updater.java
+│       │           └── utils
+│       │               ├── FileData.java
+│       │               └── KeyboardFilesFilter.java
+│       └── resources
+│           └── log4j2.xml
+└── target
+    ├── classes
+    │   ├── com
+    │   │   └── revsni
+    │   │       ├── builder
+    │   │       ├── client
+    │   │       │   ├── Client.class
+    │   │       │   └── Ouchie.class
+    │   │       ├── server
+    │   │       │   ├── Handler.class
+    │   │       │   ├── http
+    │   │       │   │   ├── HTTPHandler.class
+    │   │       │   │   ├── HTTPServer$1.class
+    │   │       │   │   ├── HTTPServer.class
+    │   │       │   │   ├── HTTPShell$1.class
+    │   │       │   │   ├── HTTPShell.class
+    │   │       │   │   ├── output.txt
+    │   │       │   │   └── templates
+    │   │       │   ├── https
+    │   │       │   │   ├── certificates
+    │   │       │   │   │   ├── certificate.p12
+    │   │       │   │   │   ├── certificate.pem
+    │   │       │   │   │   ├── key.pem
+    │   │       │   │   │   ├── keystore.jks
+    │   │       │   │   │   ├── lance.cer
+    │   │       │   │   │   ├── lance.csr
+    │   │       │   │   │   ├── lance.pkipath
+    │   │       │   │   │   ├── server.cer
+    │   │       │   │   │   └── test.crt
+    │   │       │   │   ├── HTTPSServer.class
+    │   │       │   │   ├── HTTPSShell$1.class
+    │   │       │   │   └── HTTPSShell.class
+    │   │       │   ├── Listener.class
+    │   │       │   ├── Protocol.class
+    │   │       │   ├── Server$1.class
+    │   │       │   ├── Server.class
+    │   │       │   └── Updater.class
+    │   │       └── utils
+    │   │           ├── FileData$Status.class
+    │   │           ├── FileData.class
+    │   │           └── KeyboardFilesFilter.class
+    │   └── log4j2.xml
+    ├── generated-sources
+    │   └── annotations
+    ├── generated-test-sources
+    │   └── test-annotations
+    └── test-classes
+
+32 directories, 60 files
+
+00:03:53.109|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+00:03:53.109|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.h.HTTPServer  (23)[m | HTTP Server started on port: 8994
+00:03:53.300|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (111)[m | Connection Was Lost While Reading - localhost/127.0.0.1:35722
+00:03:53.304|[32m INFO[m |> --- [  HTTP-worker-2] [36mc.r.s.h.HTTPHandler (120)[m | shorida
+
+00:03:59.750|[32m INFO[m |> --- [           main] [36mc.r.s.h.HTTPHandler (79)[m | Waiting for Response..
+00:04:13.336|[32m INFO[m |> --- [  HTTP-worker-4] [36mc.r.s.h.HTTPHandler (120)[m | logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+-- [           main] [36mc.r.c.Client        (339)[m | httpSw
+00:03:53.112|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (233)[m | 127.0.0.18994
+00:03:53.113|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (243)[m | CheckTrigTrue
+00:03:53.113|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (91)[m | Init started!
+00:03:53.300|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (339)[m | whoami
+00:03:53.301|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (266)[m | Send message :shorida
+
+00:03:53.302|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (281)[m | http://127.0.0.1:8994/lit
+00:04:13.329|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (339)[m | ls
+00:04:13.331|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (266)[m | Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+00:04:13.333|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (281)[m | http://127.0.0.1:8994/lit
+00:04:23.341|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+00:04:33.345|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+00:04:47.641|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (120)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+00:05:07.536|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (120)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+00:06:46.253|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (120)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+00:06:51.874|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+5d12bcad-ed93-4613-9c39-0b9725e2bb9d: just arrived to vacation!
+00:06:57.131|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+00:06:57.151|[32m INFO[m |> --- [           main] [36mc.r.s.Protocol      (43)[m | 
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+00:06:59.941|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+00:07:07.153|[32m INFO[m |> --- [           main] [36mc.r.s.Protocol      (43)[m | 
+shorida
+
+00:07:18.422|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+00:07:18.421|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.h.HTTPServer  (23)[m | HTTP Server started on port: 8995
+00:07:18.639|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (111)[m | Connection Was Lost While Reading - localhost/127.0.0.1:35724
+00:07:18.647|[32m INFO[m |> --- [  HTTP-worker-2] [36mc.r.s.h.HTTPHandler (120)[m | shorida
+
+00:07:20.384|[32m INFO[m |> --- [           main] [36mc.r.s.h.HTTPHandler (79)[m | Waiting for Response..
+00:07:38.660|[32m INFO[m |> --- [  HTTP-worker-4] [36mc.r.s.h.HTTPHandler (120)[m | logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+00:07:49.048|[32m INFO[m |> --- [           main] [36mc.r.s.h.HTTPSShell  (27)[m | HTTPS-Server configured
+00:07:49.049|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.h.HTTPSServer (76)[m | Start single-threaded server at /0.0.0.0:9943
+   (243)[m | CheckTrigTrue
+00:07:18.427|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (91)[m | Init started!
+00:07:18.639|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (339)[m | whoami
+00:07:18.641|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (266)[m | Send message :shorida
+
+00:07:18.643|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (281)[m | http://127.0.0.1:8995/lit
+00:07:38.655|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (339)[m | ls
+00:07:38.656|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (266)[m | Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+00:07:38.658|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (281)[m | http://127.0.0.1:8995/lit
+00:07:48.665|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+00:07:58.668|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (416)[m | No instructions
+12:00:17.453|[32m INFO[m |> --- [           main] [36mc.r.s.Server        (120)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+12:00:30.894|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+9ceebea1-a028-497a-aecb-202730c4884d: just arrived to vacation!
+12:00:33.934|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+12:00:33.954|[32m INFO[m |> --- [           main] [36mc.r.s.Protocol      (43)[m | 
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+12:00:36.937|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+12:00:43.957|[32m INFO[m |> --- [           main] [36mc.r.s.Protocol      (43)[m | 
+Failed to read BufIO
+12:00:57.389|[32m INFO[m |> --- [           main] [36mc.r.s.h.HTTPSShell  (27)[m | HTTPS-Server configured
+12:00:57.390|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (97)[m | Waiting for response
+12:00:57.390|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.h.HTTPSServer (76)[m | Start single-threaded server at /0.0.0.0:8443
+12:00:57.910|[32m INFO[m |> --- [           main] [36mc.r.s.Handler       (111)[m | Connection Was Lost While Reading - localhost/127.0.0.1:43426
+t        (266)[m | Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+12:00:43.954|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (339)[m | switchHTTPS
+12:00:43.956|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (266)[m | Send message :Failed to read BufIO
+12:00:57.390|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (339)[m | httpsSw
+12:00:57.391|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (351)[m | Got HTTPSSW Command
+12:00:57.393|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (233)[m | 127.0.0.18443
+12:00:57.393|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (243)[m | CheckTrigTrue
+12:00:57.393|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (353)[m | Update ran!
+12:00:57.394|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (91)[m | Init started!
+12:00:57.394|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (151)[m | INIT HTTPS beginning
+12:00:57.910|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (396)[m | lul
+12:00:57.912|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (355)[m | Init done successfully!
+12:01:17.912|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+12:01:17.975|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (439)[m | No instructions
+12:01:27.976|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+12:01:27.978|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (439)[m | No instructions
+12:01:37.978|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+12:01:37.980|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (439)[m | No instructions
+12:01:47.981|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+12:01:47.982|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (439)[m | No instructions
+12:01:57.983|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+12:01:57.984|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (439)[m | No instructions
+12:02:07.985|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+12:02:07.989|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (439)[m | No instructions
+12:02:17.989|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+12:02:17.995|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (439)[m | No instructions
+12:02:27.996|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+12:02:27.997|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (439)[m | No instructions
+12:02:37.998|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+12:02:38.004|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (439)[m | No instructions
+12:02:48.005|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+12:02:48.007|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (439)[m | No instructions
+12:02:58.007|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+12:02:58.009|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (439)[m | No instructions
+12:03:08.010|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
+12:03:08.012|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (439)[m | No instructions
