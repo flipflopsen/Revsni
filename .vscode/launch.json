@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Serverino",
+            "request": "launch",
+            "mainClass": "com.revsni.server.Serverino",
+            "projectName": "revsn"
+        },
+        {
+            "type": "java",
             "name": "Launch HTTPSServer",
             "request": "launch",
             "mainClass": "com.revsni.server.https.HTTPSServer",

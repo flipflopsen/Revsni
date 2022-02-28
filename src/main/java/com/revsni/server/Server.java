@@ -192,7 +192,7 @@ public class Server extends Observable {
                 while(!message.equals("quit"));
             } catch (IOException e) {
 
-                e.printStackTrace();
+                e.printStackTrace(); 
             } 
             finally {
                 setRunning(false);
@@ -256,7 +256,6 @@ public class Server extends Observable {
     public void setPort(int port) {
         this.port = port;
     }
-
     public SecretKey getKey() {
         return this.key;
     }
@@ -289,6 +288,7 @@ public class Server extends Observable {
                           +"vanilla     -   Use Revsni Java Interface\n"
                           +"safe        -   Use predefined Commands\n"
                           +"nc          -   Use netcat\n"
+                          +"ps          -   Use Powershell (Windows only!)\n"
                           +"\n");
     }
 
@@ -298,7 +298,7 @@ public class Server extends Observable {
                           +"|Configuration Menu|"
                           +"-----------"
                           +"\n"
-                          +"charset     -   Configure used Charset for compatibility\n"
+                          +"charset     -   Configure used charset for compatibility\n"
                           +"shells      -   Configure Parameters of different Shells\n"
                           +"\n");
     }

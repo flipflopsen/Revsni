@@ -35,6 +35,7 @@ public class Listener implements Runnable{
             try {
                 Socket connection = serverSocket.accept();
 
+                //Handler connectionHandler = new Handler(server,connection);
                 Handler connectionHandler = new Handler(server,connection);
 
                 server.addObserver(connectionHandler);

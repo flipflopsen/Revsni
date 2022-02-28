@@ -35,7 +35,6 @@ public class Protocol {
         cipherEnc.init(Cipher.ENCRYPT_MODE, server.getKey(), server.getIv());
     }
 
-
     public boolean processMessage(String msg) {
         try {
             String message  = new String(cipherDec.doFinal(Base64.getDecoder()
