@@ -1442,3 +1442,171 @@ target
 12:02:58.009|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (439)[m | No instructions
 12:03:08.010|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (318)[m | Getting Instructions for HTTPS
 12:03:08.012|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (439)[m | No instructions
+21:21:40.977| INFO |> --- [           main] c.r.s.Server        (120) | Enter 'help' if you dont know what to do.
+
+Listening...
+
+21:22:22.106| INFO |> --- [           main] c.r.s.Server        (199) | Server is shutting down
+21:22:36.522| INFO |> --- [           main] c.r.s.Server        (120) | Enter 'help' if you dont know what to do.
+
+Listening...
+
+21:22:40.969|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:22:50.988|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:23:00.996|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:23:11.003|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:23:21.021|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:23:31.028|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:23:41.040|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:23:51.047|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:24:01.058|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:24:11.080|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:24:21.103|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:24:31.195|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:24:41.207|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:24:51.230|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:25:01.236|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:25:11.248|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:25:27.133| INFO |> --- [           main] c.r.s.Server        (120) | Enter 'help' if you dont know what to do.
+
+Listening...
+
+21:25:29.768|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:25:39.867|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:25:50.036|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:26:00.045|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:26:10.054|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:26:20.075|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:26:30.091|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:26:40.108|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:26:50.115|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:27:00.122|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:27:10.125|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:27:20.127|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:27:30.134|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:27:40.141|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:27:50.157|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:28:00.170|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:28:10.176|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:28:20.287|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:28:30.341|ERROR |> --- [           main] c.r.c.Client        (248) | catch in checktrig
+21:29:04.093| INFO |> --- [           main] c.r.s.Server        (120) | Enter 'help' if you dont know what to do.
+
+Listening...
+
+21:29:06.631|ERROR |> --- [           main] c.r.c.Client        (249) | catch in checktrig
+21:29:16.672|ERROR |> --- [           main] c.r.c.Client        (249) | catch in checktrig
+21:29:26.678|ERROR |> --- [           main] c.r.c.Client        (249) | catch in checktrig
+21:29:36.691|ERROR |> --- [           main] c.r.c.Client        (249) | catch in checktrig
+21:29:46.700|ERROR |> --- [           main] c.r.c.Client        (249) | catch in checktrig
+21:30:16.928|ERROR |> --- [           main] c.r.c.Client        (249) | catch in checktrig
+21:30:26.973|ERROR |> --- [           main] c.r.c.Client        (249) | catch in checktrig
+21:31:16.828|ERROR |> --- [           main] c.r.c.Client        (233) | 127.0.0.11331
+21:31:16.840|ERROR |> --- [           main] c.r.c.Client        (243) | CheckTrigTrue
+21:31:16.842|ERROR |> --- [           main] c.r.c.Client        (545) | Passed checktrig
+21:31:16.844| INFO |> --- [           main] c.r.c.Client        (91) | Init started!
+21:31:16.844|ERROR |> --- [           main] c.r.c.Client        (95) | INIT
+21:31:16.848|ERROR |> --- [           main] c.r.c.Client        (99) | 127.0.0.1 
+21:31:16.848|ERROR |> --- [           main] c.r.c.Client        (100) | 1331
+21:31:16.862|ERROR |> --- [           main] c.r.c.Client        (113) | catch in init
+21:31:27.950|ERROR |> --- [           main] c.r.c.Client        (233) | 127.0.0.11331
+21:31:27.950|ERROR |> --- [           main] c.r.c.Client        (243) | CheckTrigTrue
+21:31:27.950|ERROR |> --- [           main] c.r.c.Client        (545) | Passed checktrig
+21:31:27.957| INFO |> --- [           main] c.r.c.Client        (91) | Init started!
+21:31:27.957|ERROR |> --- [           main] c.r.c.Client        (95) | INIT
+21:31:27.959|ERROR |> --- [           main] c.r.c.Client        (99) | 127.0.0.1 
+21:31:27.959|ERROR |> --- [           main] c.r.c.Client        (100) | 1331
+21:31:27.959|ERROR |> --- [           main] c.r.c.Client        (113) | catch in init
+21:31:39.013|ERROR |> --- [           main] c.r.c.Client        (233) | 127.0.0.11331
+21:31:39.018|ERROR |> --- [           main]21:31:39.333| INFO |> --- [       Thread-0] c.r.s.Protocol      (43) | 
+6e0c0221-7742-46b1-9ee4-6a1462a539ec: just arrived to vacation!
+21:31:56.098| INFO |> --- [           main] c.r.s.Handler       (97) | Waiting for response
+21:31:56.125| INFO |> --- [           main] c.r.s.Protocol      (43) | 
+Failed to read BufIO
+21:32:02.524| INFO |> --- [           main] c.r.s.Handler       (97) | Waiting for response
+21:32:06.134| INFO |> --- [           main] c.r.s.Protocol      (43) | 
+Failed to read BufIO
+21:32:07.906| INFO |> --- [           main] c.r.s.Handler       (97) | Waiting for response
+21:32:16.139| INFO |> --- [           main] c.r.s.Protocol      (43) | 
+Failed to read BufIO
+21:32:19.976| INFO |> --- [           main] c.r.s.Handler       (97) | Waiting for response
+21:32:26.154| INFO |> --- [           main] c.r.s.Protocol      (43) | 
+Failed to read BufIO
+OR |> --- [           main] c.r.c.Client        (266) | Send message :Failed to read BufIO
+21:32:16.135| INFO |> --- [           main] c.r.c.Client        (339) | dir
+21:32:16.138|ERROR |> --- [           main] c.r.c.Client        (266) | Send message :Failed to read BufIO
+21:32:26.151| INFO |> --- [           main] c.r.c.Client        (339) | dir
+21:32:26.153|ERROR |> --- [           main] c.r.c.Client        (266) | Send message :Failed to read BufIO
+21:36:45.534|ERROR |> --- [           main] c.r.c.Client        (233) | 127.0.0.11331
+21:36:45.543|ERROR |> --- [           main] c.r.c.Client        (243) | CheckTrigTrue
+21:36:45.545|ERROR |> --- [           main] c.r.c.Client        (545) | Passed checktrig
+21:36:45.547| INFO |> --- [           main] c.r.c.Client        (91) | Init started!
+21:36:45.549|ERROR |> --- [           main] c.r.c.Client        (95) | INIT
+21:36:45.551|ERROR |> --- [           main] c.r.c.Client        (99) | 127.0.0.1 
+21:36:45.553|ERROR |> --- [           main] c.r.c.Client        (100) | 1331
+21:36:45.558|ERROR |> --- [           main] c.r.c.Client        (113) | catch in init
+21:36:56.606|ERROR |> --- [           main] c.r.c.Client        (233) | 127.0.0.11331
+21:36:56.606|ERROR |> --- [           main]21:36:56.735| INFO |> --- [       Thread-0] c.r.s.Protocol      (43) | 
+0821d21c-0ac9-4a2d-b72a-502e315bb991: just arrived to vacation!
+21:37:05.326| INFO |> --- [           main] c.r.s.Handler       (97) | Waiting for response
+21:37:05.459| INFO |> --- [           main] c.r.s.Protocol      (43) | 
+desktop-um8ic1i\flipflop
+
+21:37:07.528| INFO |> --- [           main] c.r.s.Handler       (97) | Waiting for response
+21:37:15.466| INFO |> --- [           main] c.r.s.Protocol      (43) | 
+Failed to read BufIO
+21:37:23.314| INFO |> --- [           main] c.r.s.Handler       (97) | Waiting for response
+21:37:25.470| INFO |> --- [           main] c.r.s.Protocol      (43) | 
+Failed to read BufIO
+21:37:33.834| INFO |> --- [           main] c.r.s.Handler       (97) | Waiting for response
+21:37:35.499| INFO |> --- [           main] c.r.s.Protocol      (43) | 
+Failed to read BufIO
+21:37:50.769| INFO |> --- [           main] c.r.s.Handler       (97) | Waiting for response
+21:37:50.773| INFO |> --- [           main] c.r.s.Protocol      (43) | 
+Failed to read BufIO
+21:37:56.443| INFO |> --- [           main] c.r.s.Handler       (97) | Waiting for response
+21:38:00.779| INFO |> --- [           main] c.r.s.Protocol      (43) | 
+Failed to read BufIO
+21:38:03.659| INFO |> --- [           main] c.r.s.Handler       (97) | Waiting for response
+21:38:10.828| INFO |> --- [           main] c.r.s.Protocol      (43) | 
+desktop-um8ic1i\flipflop
+
+21:38:21.558| INFO |> --- [           main] c.r.s.Handler       (97) | Waiting for response
+21:38:21.561| INFO |> --- [           main] c.r.s.Protocol      (43) | 
+Do not send empty commands!
+21:38:29.311| INFO |> --- [           main] c.r.s.Handler       (97) | Waiting for response
+ INFO |> --- [           main] c.r.c.Client        (339) | whoami
+21:38:10.827|ERROR |> --- [           main] c.r.c.Client        (266) | Send message :desktop-um8ic1i\flipflop
+
+21:38:21.558| INFO |> --- [           main] c.r.c.Client        (339) | 
+21:38:21.559|ERROR |> --- [           main] c.r.c.Client        (266) | Send message :Do not send empty commands!
+21:38:31.574| INFO |> --- [           main] c.r.c.Client        (339) | cmd.exe
+23:20:33.705| INFO |> --- [           main] c.r.s.Server        (120) | Enter 'help' if you dont know what to do.
+
+Listening...
+
+23:20:42.306| INFO |> --- [       Thread-0] c.r.s.Protocol      (43) | 
+5f357de2-4be1-4d21-8de4-149efd7b6cc0: just arrived to vacation!
+23:21:36.447| INFO |> --- [       Thread-0] c.r.s.Protocol      (43) | 
+305d42f7-ebf0-498f-817c-376454641781: just arrived to vacation! On: Windows 10
+23:21:40.160| INFO |> --- [           main] c.r.s.Handler       (97) | Waiting for response
+23:21:40.167| INFO |> --- [           main] c.r.s.Protocol      (43) | 
+Failed to read BufIO
+23:21:40.169| INFO |> --- [           main] c.r.s.Handler       (97) | Waiting for response
+23:21:40.171| INFO |> --- [           main] c.r.s.Protocol      (43) | 
+Windows 10
+23:21:42.240| INFO |> --- [           main] c.r.s.Handler       (97) | Waiting for response
+23:21:50.173| INFO |> --- [           main] c.r.s.Protocol      (43) | 
+Failed to read BufIO
+23:21:50.175| INFO |> --- [           main] c.r.s.Handler       (97) | Waiting for response
+23:21:50.177| INFO |> --- [           main] c.r.s.Protocol      (43) | 
+Failed to read B23:21:50.183| INFO |> --- [           main] c.r.c.Client        (340) | dir
+23:21:50.186|ERROR |> --- [           main] c.r.c.Client        (267) | Send message :Failed to read BufIO
+|> --- [           main] c.r.c.Client        (95) | INIT
+23:21:36.331|ERROR |> --- [           main] c.r.c.Client        (99) | 127.0.0.1 
+23:21:36.332|ERROR |> --- [           main] c.r.c.Client        (100) | 1331
+23:21:36.341|ERROR |> --- [           main] c.r.c.Client        (266) | Send message :305d42f7-ebf0-498f-817c-376454641781: just arrived to vacation! On: Windows 10
+23:21:40.161| INFO |> --- [           main] c.r.c.Client        (339) | ls
+23:21:40.165|ERROR |> --- [           main] c.r.c.Client        (266) | Send message :Failed to read BufIO
+23:21:50.168| INFO |> --- [           main] c.r.c.Client        (339) | dir
+23:21:50.171|ERROR |> --- [           main] c.r.c.Client        (266) | Send message :Failed to read BufIO

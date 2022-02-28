@@ -171,7 +171,7 @@ public class Server extends Observable {
                             break;
                         case("mode"): printMode(); break;
                         case("kill"): notifyObservers("kill"); break;
-                        case("exit"): System.exit(0); break;
+                        case("exit"): notifyObservers("exit"); System.exit(0); break;
                         case("encryption"): printEncryption(); break;     
                         default: 
                             if(shellType.equals("TCP")) {

