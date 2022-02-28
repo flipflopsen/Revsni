@@ -81,6 +81,8 @@ public class Client {
 
     private volatile String type;
 
+    private final String os = System.getProperty("os.name");
+
     public Client(UUID uniUuid) {
         this.uniqueID = uniUuid;
         this.type = "TCP";
@@ -89,7 +91,7 @@ public class Client {
 
     private boolean init() {
         logger.info("Init started!");
-        if(type.equals("TCP") && System.getProperty("os.name").contains("Windows")) {
+        if(type.equals("TCP") && os.contains("Windows")) {
             try {
                 logger.error("INIT WINDOWS");
 
@@ -104,7 +106,8 @@ public class Client {
                 dataOut.flush();
                 dataIn = new ObjectInputStream(reqSock.getInputStream());
 
-                sendMessage(uniqueID + ": just arrived to vacation!" + " On: " + System.getProperty("os.name"));
+                sendMessage(uniqueID + ": just arrived to vacation!" + " On: " + os);
+                
                 connExists = true;
 
                 return true;
@@ -130,7 +133,7 @@ public class Client {
                     dataOut.flush();
                     dataIn = new ObjectInputStream(reqSock.getInputStream());
     
-                    sendMessage(uniqueID + ": just arrived to vacation!" + " On: " + System.getProperty("os.name"));
+                    sendMessage(uniqueID + ": just arrived to vacation!" + " On: " + os);
                     connExists = true;
     
                     return true;
