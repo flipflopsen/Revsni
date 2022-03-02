@@ -12,14 +12,16 @@ public class Configuration {
         HTTP(localAddrHTTP, localPortHTTP, srvAddrHTTP, srvPortHTTP), 
         HTTPS(localAddrHTTPS, localPortHTTPS, srvAddrHTTPS, srvPortHTTPS), 
         HTTPAsync(localAddrHTTP, localPortHTTP, srvAddrHTTP, srvPortHTTP, endpointHTTP, asynchrRandomizeGradeHTTP), 
-        HTTPSAsync(localAddrHTTPS, localPortHTTPS, srvAddrHTTPS, srvPortHTTPS, endpointHTTPS,asynchrRandomizeGradeHTTPS);
+        HTTPSAsync(localAddrHTTPS, localPortHTTPS, srvAddrHTTPS, srvPortHTTPS, endpointHTTPS,asynchrRandomizeGradeHTTPS),
+        DNS(localAddrTCP, localPortTCP);
+        
 
-        private int asynchrRandomizeGrade;
-        private int lPort;
-        private String lHost;
-        private int srvPort;
-        private String srvHost;
-        private String endpoint;
+        public int asynchrRandomizeGrade;
+        public int lPort;
+        public String lHost;
+        public int srvPort;
+        public String srvHost;
+        public String endpoint;
 
         private Mode(String laddr, int lport) {
             this.lHost = laddr;
@@ -93,10 +95,8 @@ public class Configuration {
         localAddrTCP = bufferedReader.readLine();
         System.out.println("");
         System.out.print("[TCP Configuration] Port to listen on: ");
-        localPortTCP = bufferedReader.read();
+        localPortTCP = Integer.parseInt(bufferedReader.readLine());
         System.out.println("");
-        bufferedReader.close();
-        inputStreamReader.close();
     }
 
     public void setUDP() throws IOException {
@@ -106,10 +106,8 @@ public class Configuration {
         localAddrUDP = bufferedReader.readLine();
         System.out.println("");
         System.out.print("[UDP Configuration] Port to listen on: ");
-        localPortUDP = bufferedReader.read();
+        localPortUDP = Integer.parseInt(bufferedReader.readLine());
         System.out.println("");
-        bufferedReader.close();
-        inputStreamReader.close();
     }
 
     public void setHTTP() throws IOException {
@@ -119,16 +117,17 @@ public class Configuration {
         srvAddrHTTP = bufferedReader.readLine();
         System.out.println("");
         System.out.print("[HTTP Configuration] Port the Server should listen on: ");
-        srvPortHTTP = bufferedReader.read();
+        srvPortHTTP = Integer.parseInt(bufferedReader.readLine());
         System.out.println("");
         System.out.print("[HTTP Configuration] Local IP: ");
         localAddrHTTP = bufferedReader.readLine();
         System.out.println("");
         System.out.print("[HTTP Configuration] Port the Handler should listen on: ");
-        localPortHTTP = bufferedReader.read();
+        localPortHTTP = Integer.parseInt(bufferedReader.readLine());
         System.out.println("");
-        bufferedReader.close();
-        inputStreamReader.close();
+        System.out.print("[HTTP Configuration] Endpoint (without /): ");
+        endpointHTTP = "/" + bufferedReader.readLine();
+        System.out.println("");
     }
 
     public void setHTTPS() throws IOException {
@@ -138,36 +137,33 @@ public class Configuration {
         srvAddrHTTPS = bufferedReader.readLine();
         System.out.println("");
         System.out.print("[HTTPS Configuration] Port the Server should listen on: ");
-        srvPortHTTPS = bufferedReader.read();
+        srvPortHTTPS = Integer.parseInt(bufferedReader.readLine());
         System.out.println("");
         System.out.print("[HTTPS Configuration] Local IP: ");
         localAddrHTTPS = bufferedReader.readLine();
         System.out.println("");
         System.out.print("[HTTPS Configuration] Port the Handler should listen on: ");
-        localPortHTTPS = bufferedReader.read();
+        localPortHTTPS = Integer.parseInt(bufferedReader.readLine());
         System.out.println("");
-        bufferedReader.close();
-        inputStreamReader.close();
+        System.out.print("[HTTPS Configuration] Endpoint (without /): ");
+        endpointHTTPS = "/" + bufferedReader.readLine();
+        System.out.println("");
     }
 
     public void setAsyncHTTP() throws IOException {
         InputStreamReader inputStreamReader = new InputStreamReader(System.in);
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
         System.out.print("[HTTP Configuration] Grade of randomization for GET Requests (1-5): ");
-        asynchrRandomizeGradeHTTP = bufferedReader.read();
+        asynchrRandomizeGradeHTTP = Integer.parseInt(bufferedReader.readLine());
         System.out.println("");
-        bufferedReader.close();
-        inputStreamReader.close();
     }
 
     public void setAsyncHTTPS() throws IOException {
         InputStreamReader inputStreamReader = new InputStreamReader(System.in);
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
         System.out.print("[HTTPS Configuration] Grade of randomization for GET Requests (1-5): ");
-        asynchrRandomizeGradeHTTP = bufferedReader.read();
+        asynchrRandomizeGradeHTTP = Integer.parseInt(bufferedReader.readLine());
         System.out.println("");
-        bufferedReader.close();
-        inputStreamReader.close();
     }
 
     public String getTCPConf() {
@@ -196,9 +192,11 @@ public class Configuration {
 
     public void printConf() throws IOException {
         boolean back = false;
-            while(!back) {
+        InputStreamReader inputStreamReader = new InputStreamReader(System.in);
+        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+        while(!back) {
+            clearConsole();
 
-            
             System.out.println("\n"
                               +"-----------"
                               +"|Configuration Menu|"
@@ -206,6 +204,7 @@ public class Configuration {
                               +"\n"
                               +"-<|Active Mode: " + mode.name() + "|>-\n\n"
                               +"What do you want to configure?:\n"
+                              +"0. Mode\n"
                               +"1. TCP\n"
                               +"2. UDP\n"
                               +"3. HTTP\n"
@@ -218,57 +217,95 @@ public class Configuration {
                               +"\n");
 
             System.out.print("Revsn [CONFIG] » ");
-            InputStreamReader inputStreamReader = new InputStreamReader(System.in);
-            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
             String decision = bufferedReader.readLine();
             System.out.println();
             switch(decision) {
+                case("0"):
+                    clearConsole();
+                    setMode();
+                    break;
                 case("1"):
                     boolean tcpBack = false;
                     while(!tcpBack) {  
+                        clearConsole();
                         printTCP();
-                        System.out.print("Revsn [CONFIG]-[TCP]» Wanna edit? (y/n): ");
+                        System.out.print("Revsn [CONFIG]-[TCP]» Wanna edit / Done? (y/n): ");
+                        String dec = bufferedReader.readLine();
+                        switch(dec) {
+                            case("n"): tcpBack = true; break;
+                            case("y"): setTCP(); tcpBack = true; break;
+                        }
                     }
                     break;
                 case("2"):
                     boolean udpBack = false;
-                    while(!udpBack) {   
+                    while(!udpBack) { 
+                        clearConsole();  
                         printUDP();
-                        System.out.print("Revsn [CONFIG]-[UDP]» Wanna edit? (y/n): ");
+                        System.out.print("Revsn [CONFIG]-[UDP]» Wanna edit / Done? (y/n): ");
+                        String dec = bufferedReader.readLine();
+                        switch(dec) {
+                            case("n"): udpBack = true; break;
+                            case("y"): setUDP(); break;
+                        }
                     }
                     break;
                 case("3"):
                     boolean httpBack = false;
                     while(!httpBack) { 
+                        clearConsole();
                         printHTTP();
-                        System.out.print("Revsn [CONFIG]-[HTTP]» Wanna edit? (y/n): ");
+                        System.out.print("Revsn [CONFIG]-[HTTP]» Wanna edit / Done? (y/n): ");
+                        String dec = bufferedReader.readLine();
+                        switch(dec) {
+                            case("n"): httpBack = true; break;
+                            case("y"): setHTTP(); break;
+                        }
                     }
                     break;
                 case("4"):  
                     boolean httpsBack = false;
                     while(!httpsBack) { 
+                        clearConsole();
                         printHTTPS();
-                        System.out.print("Revsn [CONFIG]-[HTTPS]» Wanna edit? (y/n): ");
+                        System.out.print("Revsn [CONFIG]-[HTTPS]» Wanna edit / Done? (y/n): ");
+                        String dec = bufferedReader.readLine();
+                        switch(dec) {
+                            case("n"): httpsBack = true; break;
+                            case("y"): setHTTPS(); break;
+                        }
                     }
                     break;
                 case("5"):
                     boolean httpAsBack = false;
                     while(!httpAsBack) { 
+                        clearConsole();
                         printHTTPAS();
-                        System.out.print("Revsn [CONFIG]-[HTTPAsync]» Wanna edit? (y/n): ");
+                        System.out.print("Revsn [CONFIG]-[HTTPAsync]» Wanna edit / Done? (y/n): ");
+                        String dec = bufferedReader.readLine();
+                        switch(dec) {
+                            case("n"): httpAsBack = true; break;
+                            case("y"): setAsyncHTTP(); break;
+                        }
                     }
                     break;
                 case("6"):  
                     boolean httpsAsBack = false;
                     while(!httpsAsBack) { 
+                        clearConsole();
                         printHTTPSAS();
                         System.out.print("Revsn [CONFIG]-[HTTPSAsync]» Wanna edit? (y/n): ");
+                        String dec = bufferedReader.readLine();
+                        switch(dec) {
+                            case("n"): httpsAsBack = true; break;
+                            case("y"): setAsyncHTTPS(); break;
+                        }
                     }
                     break;
                 case("7"):  
 
                     break;
-                case("back"): back = true; break;
+                case("back"): clearConsole(); back = true; break;
                 default:
             }
         }
@@ -366,11 +403,68 @@ public class Configuration {
                           +"\n");
     }
 
-    public void setMode(Mode mode) {
-        this.mode = mode;
+    public void setMode() {
+        System.out.println("\n"
+                          +"-----------"
+                          +"|Mode - Configuration|"
+                          +"-----------"
+                          +"\n"
+                          +"-<|Active Mode: " + mode.name() + "|>-\n\n"
+                          +"Set mode:\n"
+                          +"\n"
+                          +"tcp         -   Change to TCP Mode\n"
+                          +"udp         -   Change to UDP Mode\n"
+                          +"http        -   Change to HTTP Mode\n"
+                          +"https       -   Change to HTTPS Mode\n"
+                          +"httpas      -   Change to Asynchronous HTTP Mode\n"
+                          +"httpsas     -   Change to Asynchronous HTTPS Mode\n"
+                          +"dns         -   Change to DNS Mode\n"
+                          +"\n"
+                          +"\n"
+                          +"Type 'back' to go back\n"
+                          +"\n");
+
+        System.out.print("Revsn [CONFIG]-[MODE] » ");
+        InputStreamReader inputStreamReaderMode = new InputStreamReader(System.in);
+        BufferedReader bufferedReaderMode = new BufferedReader(inputStreamReaderMode);
+        String decisionMode;
+        try {
+            decisionMode = bufferedReaderMode.readLine();
+        } catch (IOException e) {
+            decisionMode = "back";
+        }
+        System.out.println();
+        switch(decisionMode) {
+            case("tcp"): mode = Mode.TCP; break;
+            case("udp"): mode = Mode.UDP; break;
+            case("http"): mode = Mode.HTTP; break;
+            case("https"): mode = Mode.HTTPS; break;
+            case("httpas"): mode = Mode.HTTPAsync; break;
+            case("httpsas"): mode = Mode.HTTPSAsync; break;
+            case("dns"): mode = Mode.DNS; break;
+            case("back"): return;
+            default: 
+        }
+        clearConsole();
     } 
 
     public Mode getMode() {
         return this.mode;
+    }
+
+    public final static void clearConsole() {
+        try {
+            final String os = System.getProperty("os.name");
+
+            if (os.contains("Windows")) {
+                Runtime.getRuntime().exec("cls");
+            }
+            else {
+                Runtime.getRuntime().exec("clear");
+            }
+        }
+        catch (final Exception e) {
+            //  Handle any exceptions.
+        }
     }
 }
