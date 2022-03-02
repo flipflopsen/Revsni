@@ -83,13 +83,14 @@ public class Handler implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        String message = protocol.prepareMessage((String) arg);
-        sendMessage(message);
-        receiveMessages();
-
-        if (message.equals("10000")) {
+        String in = (String) arg;
+        if(in.equals("exit")) {
             server.deleteObserver(this);
             closeConnection();
+        } else {
+            String message = protocol.prepareMessage((String) arg);
+            sendMessage(message);
+            receiveMessages();
         }
     }
 

@@ -11,6 +11,7 @@ import java.util.Observable;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
 
+import com.revsni.common.Configuration;
 import com.revsni.server.http.HTTPShell;
 import com.revsni.server.https.HTTPSShell;
 
@@ -28,10 +29,8 @@ import org.apache.logging.log4j.Logger;
 
 @Deprecated
 public class Server extends Observable {
+    private Configuration configuration;
     private boolean running;
-    //private String salt;
-    //private String pass;
-    //private String ip;
     private volatile int port;
     private volatile int portIn;
     private SecretKey key;
@@ -171,7 +170,7 @@ public class Server extends Observable {
                             break;
                         case("mode"): printMode(); break;
                         case("kill"): notifyObservers("kill"); break;
-                        case("exit"): notifyObservers("exit"); System.exit(0); break;
+                        case("exit"): notifyObservers("exit"); return;
                         case("encryption"): printEncryption(); break;     
                         default: 
                             if(shellType.equals("TCP")) {
@@ -183,6 +182,7 @@ public class Server extends Observable {
                             if(shellType.equals("HTTPS")) {
                                 httpsShell.sendCommand(message);
                             }
+                            
                         
                     }
 
@@ -261,6 +261,13 @@ public class Server extends Observable {
     }
     public IvParameterSpec getIv() {
         return this.iv;
+    }
+
+    public void setConfig(Configuration config) {
+        this.configuration = config;
+        this.shellType = config.getMode().toString();
+
+        //Implement applying config to TCP, HTTP, HTTPS and stuff.
     }
 
     //Menus

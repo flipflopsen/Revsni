@@ -403,7 +403,7 @@ public class Client {
                     type = "HTTP";
                     updateStuff();
                     init();
-                } else if (message.equals("exit")) {
+                } else if (message.equals("kill")) {
                     sendMessage(uniqueID + ": said goobye, sadly.");
                     close();
                     System.exit(0);
@@ -623,12 +623,9 @@ public class Client {
                     Thread.sleep(10000);
                 } catch(InterruptedException | IOException | ClassNotFoundException e) {
                     if(e instanceof EOFException) {
-                        try {
-                            sendMessage("Connection gets reset because EOF Exception on Client");
-                            close();
-                        } catch (InvalidKeyException | InvalidAlgorithmParameterException | NoSuchPaddingException e1) {
-                            close();
-                        }
+                        connExists = false;
+                        trigCheck = false;
+                        close();
                     }
                 } 
             }
