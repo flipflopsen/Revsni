@@ -22,7 +22,6 @@ import com.revsni.common.Configuration.Mode;
 import com.revsni.server.http.HTTPShell;
 import com.revsni.server.https.HTTPSShell;
 import com.revsni.utils.CouplePair;
-import com.revsni.utils.Quadmap;
 import com.revsni.utils.ThreadMonitor;
 import com.revsni.utils.Triplet;
 
@@ -37,12 +36,14 @@ import org.passay.PasswordGenerator;
 
 
 public class Server implements Runnable{
-    //private Configuration configuration;
+    //Shell and Network stuff
+    
     private volatile boolean running;
     private volatile int port;
     //private volatile int portIn;
     private volatile SecretKey key;
     private volatile IvParameterSpec iv;
+    //private Configuration configuration;
     private volatile boolean first = true;
     public volatile String shellType;
     private volatile Updater updater;
@@ -50,39 +51,33 @@ public class Server implements Runnable{
     private volatile HTTPSShell httpsShell;
     private volatile Listener listener;
     public volatile ThreadMonitor threadMonitor;
-    public volatile int sessionNumber;
 
-    public volatile ArrayList<String> ips = new ArrayList<>();
+    //Sessions
+    public volatile int sessionNumber;
+    public volatile int sessionNumberStart;
     public volatile ArrayList<Triplet<Mode, Integer, String>> modePortUUID = new ArrayList<>();
     public volatile ArrayList<CouplePair<String, String>> ipOs = new ArrayList<>();
-    
+    public volatile Map<Integer, Handler> handlerinos = new ConcurrentHashMap<>();
+
+    //Helper Lists and Maps for Sessions
+    public volatile ArrayList<String> ips = new ArrayList<>();
     public static HashMap<Integer, String> sessionNumOsStatic = new HashMap<>();
     public HashMap<Integer, String> sessionNumOs = sessionNumOsStatic;
-
     public static HashMap<Integer, String> sessNumUUIDSatic = new HashMap<>();
     public HashMap<Integer, String> sessNumUUID = sessNumUUIDSatic;
-
     public static HashMap<Integer, String> sessIpSt = new HashMap<>();
     public HashMap<Integer, String> sessIp = sessIpSt;
 
 
-    //UUID, OS, sessionLiMap
-    public static volatile HashMap<String, HashMap<String, Map<String, Quadmap<Integer, Handler, Mode, Integer>>>> sessions = new HashMap<>();
-
-    //IP, Port, Handler, Mode, Session Number
-    public static Map<String, Quadmap<Integer, Handler, Mode, Integer>> sessionLiMap = new ConcurrentHashMap<>();
-
-    //Session Number, Handler
-    public volatile Map<Integer, Handler> handlerinos = new ConcurrentHashMap<>();
 
     Logger logger = LogManager.getLogger(getClass());
-
     public static final Logger loggerS = LogManager.getLogger(Server.class);
 
 
 
     public Server(String ip, int port, String pass, String salt, ThreadMonitor monitor, int sessionNumber) throws NoSuchAlgorithmException, InvalidKeySpecException, IOException {
         this.sessionNumber = sessionNumber;
+        this.sessionNumberStart = sessionNumber;
         
         this.threadMonitor = monitor;
         
@@ -126,6 +121,7 @@ public class Server implements Runnable{
         }
     }
 
+    //Creates Initial Listener on TCP and handles Console Input from User as well as the interaction with different Types of Shells like TCP, HTTP etc.
     @Override
     public void run() {
         if(!isRunning() && first) {
@@ -145,8 +141,6 @@ public class Server implements Runnable{
                     BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
                     
                     message = bufferedReader.readLine();
-
-                    //setChanged();
 
                     switch(message) {
                         case("help"): printHelp(); break;
@@ -226,11 +220,7 @@ public class Server implements Runnable{
                                 httpsShell.sendCommand(message);
                             }
                             
-                        
                     }
-
-                    
-                    
                 } 
                 while(!message.equals("quit"));
             } catch (IOException e) {
@@ -250,6 +240,8 @@ public class Server implements Runnable{
             }
         }
     }
+
+
 
     //Pass and Salt gen
     public static String generatePassOrSalt() {
@@ -318,28 +310,10 @@ public class Server implements Runnable{
     //Session handling
 
     public static void addSession(String uuid, String os, int sessionNumber) {
-
-        String ip = sessionLiMap.entrySet().stream()
-            .filter(entry -> Objects.equals(entry.getValue().getSessionNumber(), sessionNumber))
-            .map(Map.Entry::getKey)
-            .findFirst()
-            .orElse(null);
-
-        //Stream<Quadmap<Integer, Handler, Mode, Integer>> quadStream = sessionLiMap.values().stream();
-        Quadmap<Integer, Handler, Mode, Integer> quad = sessionLiMap.get(ip);
-
-        Map<String, Quadmap<Integer, Handler, Mode, Integer>> mappi = new ConcurrentHashMap<>();
-        mappi.put(ip, quad);
-        HashMap<String, Map<String, Quadmap<Integer, Handler, Mode, Integer>>> helper = new HashMap<>();
-        helper.put(os, mappi); 
-        
-        sessions.put(uuid, helper);
         loggerS.info("Added Session Nr. " + sessionNumber + " to the session list!");
         sessionNumOsStatic.put(sessionNumber, os);
         sessNumUUIDSatic.put(sessionNumber, uuid);
-        
-
-        
+ 
     }
 
     public static void removeSession(int uuid) {
@@ -351,7 +325,6 @@ public class Server implements Runnable{
     }
 
     public void addHandlerinoSess(String ip, int port, Handler handler, int sessionNumber ) {
-        sessionLiMap.put(ip, new Quadmap<Integer, Handler, Mode, Integer>(port, handler, Mode.TCP, sessionNumber));
         handlerinos.put(sessionNumber, handler);
         sessIpSt.put(sessionNumber, ip);
         

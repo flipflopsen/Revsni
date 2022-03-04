@@ -5304,3 +5304,29 @@ target
 18:20:26.837|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
 18:20:26.837|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
 18:20:26.837|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+20:31:34.439|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (275)[m | catch in checktrig
+20:31:44.445|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (275)[m | catch in checktrig
+20:31:54.484|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (260)[m | 127.0.0.11331
+20:31:54.486|[31mERROR[m |> --- [           main] [20:31:54.537|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (314)[m | Added Session Nr. 1 to the session list!
+20:31:54.538|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (53)[m | Connection received from localhost:1331
+20:32:00.671|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (314)[m | Added Session Nr. 2 to the session list!
+20:32:00.672|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (53)[m | Connection received from localhost:1331
+20:32:00.758|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Handler       (100)[m | Waiting for response
+20:32:05.384|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Handler       (100)[m | Waiting for response
+20:32:06.340|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Handler       (75)[m | Closing Connection - localhost/127.0.0.1:53604
+20:32:06.341|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (235)[m | Server is shutting down
+20:32:06.341|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (59)[m | Error in Thread
+6mc.r.c.Client        (92)[m | Init started!
+20:32:00.634|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (122)[m | INIT
+20:32:00.635|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (126)[m | 127.0.0.1 
+20:32:00.635|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 1331
+20:32:00.638|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (293)[m | Send message :0568e9b1-1e54-4dac-b8b3-b9afc480ca8b: just arrived to vacation! On: Linux
+20:32:05.384|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (399)[m | ls
+20:32:05.402|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (293)[m | Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
