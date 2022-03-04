@@ -8,22 +8,13 @@ import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Set;
-import java.util.UUID;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
-
-import one.util.streamex.EntryStream;
-import one.util.streamex.StreamEx;
 
 import com.revsni.Revsni;
 import com.revsni.common.Configuration;
@@ -42,16 +33,14 @@ import org.passay.EnglishCharacterData;
 import org.passay.CharacterData;
 import org.passay.PasswordGenerator;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 
 
 public class Server implements Runnable{
-    private Configuration configuration;
+    //private Configuration configuration;
     private volatile boolean running;
     private volatile int port;
-    private volatile int portIn;
+    //private volatile int portIn;
     private volatile SecretKey key;
     private volatile IvParameterSpec iv;
     private volatile boolean first = true;
@@ -319,7 +308,7 @@ public class Server implements Runnable{
     }
 
     public void setConfig(Configuration config) {
-        this.configuration = config;
+        //this.configuration = config;
         this.shellType = config.getMode().toString();
 
         //Implement applying config to TCP, HTTP, HTTPS and stuff.

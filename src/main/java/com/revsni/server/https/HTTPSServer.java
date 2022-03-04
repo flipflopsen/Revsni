@@ -17,9 +17,9 @@ import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.KeyStore;
 import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+//import java.util.List;
 
 import javax.net.ssl.KeyManagerFactory;
 import javax.crypto.SecretKey;
@@ -91,10 +91,8 @@ public class HTTPSServer {
                      BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(
                              socket.getOutputStream(), encoding.name()))
                 ) {
-                    List<String> headers = getHeaderLines(reader);
-                    String cookie = headers.get(1);
+                    //List<String> headers = getHeaderLines(reader);
                     String command = "Hi";
-                    //String command = handle(cookie);
                     if(command.length() == 0 || command == null) {
                         writer.write(getResponse(encoding, command));
                         writer.flush();
@@ -212,6 +210,7 @@ public class HTTPSServer {
                 body;
     }
     
+    /*
     private List<String> getHeaderLines(BufferedReader reader)
             throws IOException {
         List<String> lines = new ArrayList<String>();
@@ -223,7 +222,7 @@ public class HTTPSServer {
         }
         return lines;
     }
-
+    */
     public void sendCommand(String command) {
         String respo = command;
         try {
