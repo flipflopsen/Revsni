@@ -40,21 +40,19 @@ public class Listener implements Runnable{
         while(server.isRunning()) {
             try {
                 Socket connection = serverSocket.accept();
-                logger.info("socket accept");
 
                 //Handler connectionHandler = new Handler(server,connection);
                 Handler connectionHandler = new Handler(server,connection,sessionNumber);
-                logger.info("new handler");
 
                 server.addHandlerinoSess(connection.getInetAddress().getHostAddress(), connection.getLocalPort(),connectionHandler, sessionNumber);
                 connectionHandler.callAddSessionHandler();
-                sessionNumber++;
 
                 
                 //Add connection somehow to Server
 
                 logger.info("Connection received from " + connection.getInetAddress().getHostName() + ":" + connection.getLocalPort());
-                System.out.print("Revsn [TCP] ["+connection.getInetAddress().getHostAddress() +"] » ");
+                server.addToPrint(sessionNumber);
+                sessionNumber++;
 
             }
             catch (IOException e) {

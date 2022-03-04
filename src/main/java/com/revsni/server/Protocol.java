@@ -38,20 +38,21 @@ public class Protocol {
         cipherEnc.init(Cipher.ENCRYPT_MODE, server.getKey(), server.getIv());
     }
 
-    public boolean processMessage(String msg, String ip) {
+    public boolean processMessage(String msg, String ip, int sessionNumber) {
         try {
             String message  = new String(cipherDec.doFinal(Base64.getDecoder()
                 .decode((String) msg)));
-            logger.info("\n" + message);
+            if(!message.equals("")){
+                logger.info("\n" + message);
+            }
             
             if(message.contains("arrived to vacation")) {
                 String[] splitted = message.split(":");
                 this.uuid = splitted[0];
-                this.os = splitted[2];
-                logger.info(uuid + "," + os);
+                this.os = splitted[2].replaceAll("\\s","");
             }
             
-            System.out.print("Revsn [TCP] ["+ ip +"] » ");
+            System.out.print("Revsn [TCP]["+ ip +"]["+sessionNumber+"] » ");
             return true;
         } catch (IllegalBlockSizeException | BadPaddingException e) {
             e.printStackTrace();

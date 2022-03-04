@@ -10,6 +10,8 @@ import java.util.Observer;
 
 import javax.crypto.NoSuchPaddingException;
 
+import com.revsni.common.Configuration.Mode;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -26,6 +28,7 @@ public class Handler  {
     private Server server;
     private Socket connection = null;
 
+    private final Mode mode = Mode.TCP;
 
     private Protocol protocol;
 
@@ -50,7 +53,7 @@ public class Handler  {
         try {
             object = dataIn.readObject();
             if (object instanceof String) {
-                protocol.processMessage((String) object, connection.getInetAddress().getHostAddress());
+                protocol.processMessage((String) object, connection.getInetAddress().getHostAddress(), sessionNumber);
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -104,7 +107,7 @@ public class Handler  {
                 Object object = dataIn.readObject();
                 if (object instanceof String) {
                     String message = (String) object;
-                    done = protocol.processMessage(message, connection.getInetAddress().getHostAddress());
+                    done = protocol.processMessage(message, connection.getInetAddress().getHostAddress(), sessionNumber);
                 }
             }
             catch (IOException | ClassNotFoundException e) {
@@ -120,6 +123,16 @@ public class Handler  {
         Server.addSession(protocol.getuuid(), protocol.getOs(), sessionNumber);
     }
 
-   
+    public int getPort() {
+        return connection.getPort();
+    }
+
+    public int getSessionNumber() {
+        return this.sessionNumber;
+    }
+
+    public Mode getMode() {
+        return this.mode;
+    }
 
 }
