@@ -17,7 +17,7 @@ import com.revsni.server.Server;
 import com.revsni.utils.ThreadMonitor;
 import com.revsni.utils.SessionInfo;
 
-@Deprecated
+
 public class Revsni {
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_BLACK = "\u001B[30m";
@@ -34,6 +34,7 @@ public class Revsni {
     public static volatile boolean activeHelper = true;
     public static Thread serverino = null;
     public static volatile ThreadMonitor threadMonitor = new ThreadMonitor();
+    public static int sessionNumber = 0;
 
 
     private static Configuration configuration = new Configuration();
@@ -64,7 +65,8 @@ public class Revsni {
                     if(servero == null) {
                         try {
                             configuration.getMode();
-                            servero = new Server(Mode.TCP.lHost, Mode.TCP.lPort, "lol123", "lol123", threadMonitor);
+                            sessionNumber++;
+                            servero = new Server(Mode.TCP.lHost, Mode.TCP.lPort, "lol123", "lol123", threadMonitor, sessionNumber);
                         } catch (NoSuchAlgorithmException | InvalidKeySpecException e1) {
                             servero = null;
                         }

@@ -13,14 +13,15 @@ import javax.crypto.NoSuchPaddingException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Deprecated 
-public class Handler implements Observer {
+public class Handler  {
     Logger logger = LogManager.getLogger(getClass());
 
     //private Logger LOG = parentLogger;
 	
     private ObjectInputStream dataIn;
     private ObjectOutputStream dataOut;
+
+    private int sessionNumber;
 
     private Server server;
     private Socket connection = null;
@@ -29,9 +30,10 @@ public class Handler implements Observer {
     private Protocol protocol;
 
 
-    public Handler(Server server, Socket connection) throws IOException {
+    public Handler(Server server, Socket connection, int sessionNumber) throws IOException {
         this.server = server;
         this.connection = connection;
+        this.sessionNumber = sessionNumber;
 
         try {
             protocol = new Protocol(this.server);
@@ -81,11 +83,10 @@ public class Handler implements Observer {
         }
     }
 
-    @Override
-    public void update(Observable o, Object arg) {
+    public void update(Object arg) {
         String in = (String) arg;
         if(in.equals("exit")) {
-            server.deleteObserver(this);
+            server.handlerinos.remove(sessionNumber);
             closeConnection();
         } else {
             String message = protocol.prepareMessage((String) arg);
@@ -110,7 +111,7 @@ public class Handler implements Observer {
                 done = true;
                 String error = "Connection Was Lost While Reading - " + connection.getRemoteSocketAddress();
                 logger.info(error);
-                server.deleteObserver(this);
+                server.handlerinos.remove(sessionNumber);
             }
         }
     }
