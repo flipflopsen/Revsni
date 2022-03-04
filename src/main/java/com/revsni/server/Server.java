@@ -9,9 +9,11 @@ import java.security.spec.InvalidKeySpecException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Observable;
 import java.util.UUID;
 import java.util.Map.Entry;
+import java.util.concurrent.ConcurrentHashMap;
 
 import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
@@ -36,8 +38,7 @@ import org.apache.logging.log4j.Logger;
 
 
 
-@Deprecated
-public class Server extends Observable implements Runnable{
+public class Server implements Runnable{
     private Configuration configuration;
     private volatile boolean running;
     private volatile int port;
@@ -51,16 +52,21 @@ public class Server extends Observable implements Runnable{
     private volatile HTTPSShell httpsShell;
     private volatile Listener listener;
     public volatile ThreadMonitor threadMonitor;
+    public volatile int sessionNumber;
+
 
     //UUID, Name, IP, Port, Mode, Thread
     public static volatile HashMap<UUID, SessionInfo<String, String, Integer, Mode, Thread>> sessions = new HashMap<>();
     public static List<UUID> sessionList = new ArrayList<>();
 
+    public volatile Map<Integer, Handler> handlerinos = new ConcurrentHashMap<>();
+
     Logger logger = LogManager.getLogger(getClass());
 
 
 
-    public Server(String ip, int port, String pass, String salt, ThreadMonitor monitor) throws NoSuchAlgorithmException, InvalidKeySpecException, IOException {
+    public Server(String ip, int port, String pass, String salt, ThreadMonitor monitor, int sessionNumber) throws NoSuchAlgorithmException, InvalidKeySpecException, IOException {
+        this.sessionNumber = sessionNumber;
         
         this.threadMonitor = monitor;
         
@@ -107,7 +113,7 @@ public class Server extends Observable implements Runnable{
     @Override
     public void run() {
         if(!isRunning() && first) {
-            listener = new Listener(this);
+            listener = new Listener(this, sessionNumber);
             Thread listenerThread = new Thread(listener);
             listenerThread.start();
             System.out.println("Listener started!");
@@ -124,7 +130,7 @@ public class Server extends Observable implements Runnable{
                     
                     message = bufferedReader.readLine();
 
-                    setChanged();
+                    //setChanged();
 
                     switch(message) {
                         case("help"): printHelp(); break;
@@ -143,7 +149,7 @@ public class Server extends Observable implements Runnable{
                                     updater.setShellType("HTTP", String.valueOf(httpShell.getPort()));
                                     updater.generateOutputString();
                                     updater.writeOut();
-                                    notifyObservers("httpSw");
+                                    handlerinos.get(sessionNumber).update("httpSw");
                                     shellType = "HTTP";
                                     if(!httpShell.getConnInf()) {
                                         logger.info("Failed to switch shell to HTTP!");
@@ -160,7 +166,7 @@ public class Server extends Observable implements Runnable{
                                     updater.setShellType("HTTPS", String.valueOf(httpsShell.getPort()));
                                     updater.generateOutputString();
                                     updater.writeOut();
-                                    notifyObservers("httpsSw");
+                                    handlerinos.get(sessionNumber).update("httpsSw");
                                     shellType = "HTTPS";
                                     break;
                             
@@ -169,8 +175,8 @@ public class Server extends Observable implements Runnable{
                             } 
                             break;
                         case("mode"): printMode(); break;
-                        case("kill"): notifyObservers("kill"); break;
-                        case("exit"): notifyObservers("exit"); Revsni.setActive(false); return;
+                        case("kill"): handlerinos.get(sessionNumber).update("kill"); break;
+                        case("exit"): handlerinos.get(sessionNumber).update("exit"); Revsni.setActive(false); return;
                         case("encryption"): printEncryption(); break;
                         case("bg"):
                             Revsni.setActiveHelper(true); 
@@ -189,12 +195,13 @@ public class Server extends Observable implements Runnable{
 
                             System.out.print("Which session you want to interact with? (type 'none' to exit): ");
                             String decSession = bufferedReader.readLine();
+                            handlerinos.get(sessionNumber).update("");
                             
 
                             break;
                         default: 
                             if(shellType.equals("TCP")) {
-                                notifyObservers(message);
+                                handlerinos.get(sessionNumber).update(message);
                             }
                             if(shellType.equals("HTTP")) {
                                 httpShell.sendCommand(message);
@@ -298,13 +305,13 @@ public class Server extends Observable implements Runnable{
         //UUID, Name, IP, Port, Mode, Thread
 
         sessions.put(uuid, new SessionInfo<String,String,Integer,Mode,Thread>(name, ipAddr, port, mode, thread));
-   }
+    }
 
-   public static void removeSession(UUID uuid) {
+    public static void removeSession(UUID uuid) {
        sessions.remove(uuid);
-   }
+    }
 
-   public static void removeSession(String name) {
+    public static void removeSession(String name) {
        if(sessions.values().stream().findAny().get().name.contains(name)) {
            for(Entry<UUID, SessionInfo<String, String, Integer, Mode, Thread>> entry : sessions.entrySet()) {
                if(entry.getValue().name.equals(name)) {
@@ -312,13 +319,21 @@ public class Server extends Observable implements Runnable{
                }
            }
        }
-   }
+    }
+
+    public void addHandlerino(Handler handler, int sessionNumber) {
+        handlerinos.put(sessionNumber, handler);
+    }
+
+    public void removeHandlerino(int sessionNumber) {
+        handlerinos.remove(sessionNumber);
+    }
+
+    public void printSessions() {
+
+    }
 
 
-   private void printSessions() {
-
-
-   }
 
 
     //Menus

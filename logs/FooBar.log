@@ -3712,3 +3712,71 @@ target
 21:33:13.333|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
 21:33:13.333|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
 21:33:13.334|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+01:05:53.426|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (276)[m | catch in checktrig
+01:06:03.487|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+01:06:03.489|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+01:06:03.489|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+01:06:03.489|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+01:06:03.490|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+01:06:03.490|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+01:06:03.491|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+01:06:03.492|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+01:06:14.495|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+01:06:14.495|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+01:06:14.496|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+01:06:14.496|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+01:06:14.497|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+01:06:14.497|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+01:06:14.497|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+01:06:14.514|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (294)[m | Send message :01:06:19.310|[31mERROR[m |> --- [           main] [36mc.r.c.Client     01:06:54.917|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+01:06:54.918|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+01:06:54.918|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+01:06:54.919|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+01:06:54.919|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+01:06:54.919|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+01:06:54.919|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+01:06:54.920|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+01:07:05.923|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+01:07:05.923|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+01:07:05.924|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+01:07:05.924|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+01:07:05.924|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+01:07:05.924|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+01:07:05.925|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+01:07:05.940|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (294)[m | Send message :333bc156-492d-42d1-842c-9abf723d7fde: just arrived to vacation! On: Linux
+01:07:23.212|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+01:07:23.213|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+01:07:23.213|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+01:07:23.213|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+01:07:23.214|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+01:07:23.214|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+01:07:23.214|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+01:07:23.215|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+01:07:34.217|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+01:07:34.218|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+01:07:34.218|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+01:07:34.219|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+01:07:34.219|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+01:07:34.219|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+01:07:34.220|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+01:07:34.220|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+01:07:45.228|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+01:07:45.229|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+01:07:45.229|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+01:07:45.229|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+01:07:45.229|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+01:07:45.230|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+01:07:45.230|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+01:07:45.244|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (294)[m | Send message :333bc156-492d-42d1-842c-9abf723d7fde: just arrived to vacation! On: Linux
+   (261)[m | 127.0.0.11331
+01:07:45.225|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+01:07:45.225|[31mERROR[m |> --- [           main] [36mc.01:07:45.226|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (37)[m | socket accept
+01:07:45.241|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (42)[m | 
+a5fc3fd2-20ab-4e04-9d80-c901db2f1936: just arrived to vacation! On: Linux
+01:07:45.242|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (41)[m | new handler
+01:07:45.243|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (47)[m | Connection received from localhost:1331
+01:07:45.243|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (37)[m | socket accept
+01:07:45.245|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (42)[m | 
+333bc156-492d-42d1-842c-9abf723d7fde: just arrived to vacation! On: Linux
+01:07:45.245|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (41)[m | new handler
+01:07:45.246|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (47)[m | Connection received from localhost:1331
