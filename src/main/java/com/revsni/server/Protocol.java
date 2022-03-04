@@ -4,7 +4,6 @@ import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
-import java.util.UUID;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -12,17 +11,9 @@ import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 public class Protocol {
 
-    Logger logger = LogManager.getLogger(getClass());
-
-    //private Logger LOG = parentLogger;
     private Cipher cipherDec;
     private Cipher cipherEnc;
     private SecretKeySpec spec;
@@ -43,7 +34,7 @@ public class Protocol {
             String message  = new String(cipherDec.doFinal(Base64.getDecoder()
                 .decode((String) msg)));
             if(!message.equals("")){
-                logger.info("\n" + message);
+                System.out.println("\n" + message);
             }
             
             if(message.contains("arrived to vacation")) {

@@ -52,7 +52,7 @@ public class Configuration {
 
     private Mode mode = Mode.TCP;
 
-    private String configurationName = "";
+    //private String configurationName = "";
     
     private static String localAddrTCP = "127.0.0.1";
     private static String localAddrUDP = "127.0.0.1";
@@ -80,7 +80,7 @@ public class Configuration {
 
 
     public void saveConfiguration(String name) {
-        this.configurationName = name;
+        //this.configurationName = name;
     }
 
     public void loadConfiguraion(String name) {

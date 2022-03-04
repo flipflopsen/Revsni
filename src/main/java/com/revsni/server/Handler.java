@@ -5,8 +5,6 @@ import java.net.Socket;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
-import java.util.Observable;
-import java.util.Observer;
 
 import javax.crypto.NoSuchPaddingException;
 
