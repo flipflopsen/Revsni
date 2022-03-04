@@ -50,7 +50,7 @@ public class Handler  {
         try {
             object = dataIn.readObject();
             if (object instanceof String) {
-                protocol.processMessage((String) object);
+                protocol.processMessage((String) object, connection.getInetAddress().getHostAddress());
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -104,7 +104,7 @@ public class Handler  {
                 Object object = dataIn.readObject();
                 if (object instanceof String) {
                     String message = (String) object;
-                    done = protocol.processMessage(message);
+                    done = protocol.processMessage(message, connection.getInetAddress().getHostAddress());
                 }
             }
             catch (IOException | ClassNotFoundException e) {
@@ -114,6 +114,10 @@ public class Handler  {
                 server.handlerinos.remove(sessionNumber);
             }
         }
+    }
+
+    public void callAddSessionHandler() {
+        Server.addSession(protocol.getuuid(), protocol.getOs(), sessionNumber);
     }
 
    

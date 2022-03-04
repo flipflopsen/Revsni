@@ -4,6 +4,7 @@ import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
+import java.util.UUID;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -25,6 +26,8 @@ public class Protocol {
     private Cipher cipherDec;
     private Cipher cipherEnc;
     private SecretKeySpec spec;
+    private String os;
+    private String uuid;
 
     public Protocol(Server server) throws InvalidKeyException, InvalidAlgorithmParameterException, NoSuchAlgorithmException, NoSuchPaddingException {
         this.spec = new SecretKeySpec(server.getKey().getEncoded(), "AES");
@@ -35,12 +38,20 @@ public class Protocol {
         cipherEnc.init(Cipher.ENCRYPT_MODE, server.getKey(), server.getIv());
     }
 
-    public boolean processMessage(String msg) {
+    public boolean processMessage(String msg, String ip) {
         try {
             String message  = new String(cipherDec.doFinal(Base64.getDecoder()
                 .decode((String) msg)));
             logger.info("\n" + message);
-            System.out.print("Revsn [TCP] » ");
+            
+            if(message.contains("arrived to vacation")) {
+                String[] splitted = message.split(":");
+                this.uuid = splitted[0];
+                this.os = splitted[2];
+                logger.info(uuid + "," + os);
+            }
+            
+            System.out.print("Revsn [TCP] ["+ ip +"] » ");
             return true;
         } catch (IllegalBlockSizeException | BadPaddingException e) {
             e.printStackTrace();
@@ -58,5 +69,13 @@ public class Protocol {
             e.printStackTrace();
         }
         return message;
+    }
+
+    public String getOs() {
+        return this.os;
+    }
+
+    public String getuuid() {
+        return this.uuid;
     }
 }

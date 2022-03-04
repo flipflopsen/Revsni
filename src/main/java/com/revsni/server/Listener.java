@@ -43,15 +43,18 @@ public class Listener implements Runnable{
                 logger.info("socket accept");
 
                 //Handler connectionHandler = new Handler(server,connection);
-                Handler connectionHandler = new Handler(server,connection, sessionNumber);
+                Handler connectionHandler = new Handler(server,connection,sessionNumber);
                 logger.info("new handler");
 
-                server.addHandlerino(connectionHandler, sessionNumber);
+                server.addHandlerinoSess(connection.getInetAddress().getHostAddress(), connection.getLocalPort(),connectionHandler, sessionNumber);
+                connectionHandler.callAddSessionHandler();
+                sessionNumber++;
 
                 
                 //Add connection somehow to Server
 
                 logger.info("Connection received from " + connection.getInetAddress().getHostName() + ":" + connection.getLocalPort());
+                System.out.print("Revsn [TCP] ["+connection.getInetAddress().getHostAddress() +"] » ");
 
             }
             catch (IOException e) {

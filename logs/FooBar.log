@@ -3780,3 +3780,414 @@ a5fc3fd2-20ab-4e04-9d80-c901db2f1936: just arrived to vacation! On: Linux
 333bc156-492d-42d1-842c-9abf723d7fde: just arrived to vacation! On: Linux
 01:07:45.245|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (41)[m | new handler
 01:07:45.246|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (47)[m | Connection received from localhost:1331
+12:33:30.005|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (276)[m | catch in checktrig
+12:33:40.057|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+12:33:40.058|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+12:33:40.058|[31mERROR[m |> --- [           main] [36mc.12:33:40.061|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (43)[m | socket accept
+12:33:40.104|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (42)[m | 
+8325f46f-c22b-4473-8ead-9487ee027d61: just arrived to vacation! On: Linux
+12:33:40.105|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (47)[m | new handler
+12:33:40.106|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (55)[m | Connection received from localhost:1331
+12:33:46.577|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Handler       (99)[m | Waiting for response
+12:33:46.579|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (42)[m | 
+Do not send empty commands!
+12:33:47.402|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Handler       (99)[m | Waiting for response
+12:33:56.596|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (42)[m | 
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+12:33:58.788|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Handler       (99)[m | Waiting for response
+12:34:06.598|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (42)[m | 
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+12:34:13.852|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Handler       (99)[m | Waiting for response
+12:34:16.601|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (42)[m | 
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+6mc.r.c.Client        (294)[m | Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+12:34:27.604|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+12:34:27.605|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+12:34:27.605|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+12:34:27.605|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+12:34:27.606|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+12:34:27.606|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+12:34:27.606|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+12:34:27.607|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+12:36:55.096|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (276)[m | catch in checktrig
+12:37:05.142|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+12:37:05.143|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+12:37:05.144|[31mERROR[m |> --- [           main] [36mc.12:37:05.146|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (43)[m | socket accept
+12:37:05.188|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+83eb21a0-86ed-491a-9f79-10df2921b428: just arrived to vacation! On: Linux
+12:37:05.189|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (48)[m | 83eb21a0-86ed-491a-9f79-10df2921b428, Linux
+12:37:05.189|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (47)[m | new handler
+12:37:05.190|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (55)[m | Connection received from localhost:1331
+13:27:50.366|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+13:27:50.371|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+13:27:50.372|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+13:27:50.372|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+13:27:50.373|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+13:27:50.373|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+13:27:50.374|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+13:27:50.375|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+13:28:01.378|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+13:28:01.379|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+13:28:01.379|[31mERROR[m |> --- [           main] [36mc.13:28:01.383|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (43)[m | socket accept
+13:28:01.426|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+19193c25-3ea3-4e0e-a002-a059edd16227: just arrived to vacation! On: Linux
+13:28:01.428|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (322)[m | nullin addSession!
+-- [           main] [36mc.r.c.Client        (128)[m | 1331
+13:28:01.395|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (294)[m | Send message :19193c25-3ea3-4e0e-a002-a059edd16227: just arrived to vacation! On: Linux
+13:31:10.086|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+13:31:10.086|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+13:31:10.087|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+13:31:10.087|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+13:31:10.087|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+13:31:10.088|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+13:31:10.088|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+13:31:10.089|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+13:58:27.603|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+13:58:27.607|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+13:58:27.607|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+13:58:27.608|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+13:58:27.608|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+13:58:27.609|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+13:58:27.609|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+13:58:27.611|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+13:58:38.614|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+13:58:38.614|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+13:58:38.614|[31mERROR[m |> --- [           main] [36mc.13:58:38.616|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (43)[m | socket accept
+13:58:38.660|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+36c6f642-624e-4470-8d30-0dba33f8edb9: just arrived to vacation! On: Linux
+13:58:38.662|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (336)[m | nullin addSession!
+-- [           main] [36mc.r.c.Client        (128)[m | 1331
+13:58:38.630|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (294)[m | Send message :36c6f642-624e-4470-8d30-0dba33f8edb9: just arrived to vacation! On: Linux
+13:59:01.507|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+13:59:01.508|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+13:59:01.508|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+13:59:01.508|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+13:59:01.508|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+13:59:01.509|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+13:59:01.509|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+13:59:01.509|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+13:59:12.514|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+13:59:12.516|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+13:59:12.519|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+13:59:12.519|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+13:59:12.520|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+13:59:12.520|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+13:59:12.520|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+13:59:12.521|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+13:59:23.524|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+13:59:23.525|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+13:59:23.525|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+13:59:23.526|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+13:59:23.526|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+13:59:23.527|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+13:59:23.527|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+13:59:23.528|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+13:59:34.530|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+13:59:34.530|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+13:59:34.531|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+13:59:34.531|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+13:59:34.531|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+13:59:34.531|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+13:59:34.532|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+13:59:34.532|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+13:59:45.534|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+13:59:45.535|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+13:59:45.535|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+13:59:45.536|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+13:59:45.536|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+13:59:45.536|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+13:59:45.537|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+13:59:45.537|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+14:01:01.405|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:01:01.409|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:01:01.410|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+14:01:01.410|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+14:01:01.411|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+14:01:01.411|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+14:01:01.411|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+14:01:01.413|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+14:01:12.416|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:01:12.416|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:01:12.416|[31mERROR[m |> --- [           main] [36mc.14:01:12.420|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (43)[m | socket accept
+14:01:12.465|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+0550eab3-7acd-405e-9173-118332c5fbf6: just arrived to vacation! On: Linux
+14:01:12.465|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (47)[m | new handler
+14:01:12.466|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (360)[m | Set 127.0.0.1 1331 com.revsni.server.Handler@1aca51a9 1 in sessionLiMap success
+14:01:12.467|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (14:01:24.002|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:01:24.003|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:01:24.003|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+14:01:24.003|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+14:01:24.003|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+14:01:24.004|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+14:01:24.004|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+14:01:24.004|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+14:05:10.045|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:05:10.049|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:05:10.049|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+14:05:10.050|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+14:05:10.050|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+14:05:10.050|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+14:05:10.051|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+14:05:10.052|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+14:05:21.056|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:05:21.056|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:05:21.059|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+14:05:21.060|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+14:05:21.060|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+14:05:21.061|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+14:05:21.061|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+14:05:21.061|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+14:05:32.065|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:05:32.066|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:05:32.066|[31mERROR[m |> --- [           main] [36mc.14:05:32.067|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (43)[m | socket accept
+14:05:32.114|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (45)[m | 
+0d9e10b5-af0f-4357-bbcb-ca61325783cc: just arrived to vacation! On: Linux
+14:05:32.115|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (51)[m | 0d9e10b5-af0f-4357-bbcb-ca61325783cc, Linux
+14:05:32.115|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (47)[m | new handler
+14:05:32.116|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (360)[m | Set 127.0.0.1 1331 com.revs14:06:42.483|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:06:42.483|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:06:42.483|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+14:06:42.484|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+14:06:42.484|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+14:06:42.484|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+14:06:42.484|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+14:06:42.485|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+14:06:53.489|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:06:53.489|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:06:53.489|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+14:06:53.490|[14:06:53.491|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (43)[m | socket accept
+14:06:53.505|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (45)[m | 
+0d9e10b5-af0f-4357-bbcb-ca61325783cc: just arrived to vacation! On: Linux
+14:06:53.505|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (51)[m | 0d9e10b5-af0f-4357-bbcb-ca61325783cc, Linux
+14:06:53.505|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (47)[m | new handler
+14:06:53.506|[32m INFO[m |> --- [       Thread-1] [14:07:45.098|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:07:45.099|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:07:45.099|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+14:07:45.099|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+14:07:45.100|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+14:07:45.100|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+14:07:45.100|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+14:07:45.101|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+14:10:53.787|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:10:53.791|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:10:53.791|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+14:10:53.792|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+14:10:53.792|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+14:10:53.792|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+14:10:53.793|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+14:10:53.794|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+14:11:04.798|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:11:04.799|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:11:04.800|[31mERROR[m |> --- [           main] [36mc.14:11:04.802|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (43)[m | socket accept
+14:11:04.852|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (45)[m | 
+0deb5eaa-b3c7-4b1a-ba2e-e7ceb8e71548: just arrived to vacation! On: Linux
+14:11:04.852|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (51)[m | 0deb5eaa-b3c7-4b1a-ba2e-e7ceb8e71548, Linux
+14:11:04.853|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (47)[m | new handler
+14:11:04.853|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (353)[m | Set 127.0.0.1 1331 com.revs14:11:08.809|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (400)[m | ls
+14:11:08.825|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (294)[m | Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+14:11:21.669|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:11:21.669|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:11:21.669|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+14:11:21.669|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+14:11:21.669|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+14:11:21.670|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+14:11:21.670|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+14:11:21.670|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+14:11:38.188|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:11:38.192|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:11:38.192|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+14:11:38.193|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+14:11:38.193|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+14:11:38.194|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+14:11:38.194|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+14:11:38.196|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+14:11:49.199|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:11:49.200|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:11:49.200|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+14:11:49.201|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+14:11:49.201|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+14:11:49.201|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+14:11:49.202|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+14:11:49.202|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+14:12:00.206|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:12:00.207|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:12:00.207|[31mERROR[m |> --- [           main] [36mc.14:12:00.209|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (43)[m | socket accept
+14:12:00.252|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (45)[m | 
+1c4fe909-1120-491a-bf6b-f28367dda3e9: just arrived to vacation! On: Linux
+14:12:00.252|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (51)[m | 1c4fe909-1120-491a-bf6b-f28367dda3e9, Linux
+14:12:00.253|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (47)[m | new handler
+14:12:00.254|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (353)[m | Set 127.0.0.1 1331 com.revs14:12:04.732|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (400)[m | ls
+14:12:04.748|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (294)[m | Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+14:13:54.280|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:13:54.281|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:13:54.281|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+14:13:54.281|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+14:13:54.281|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+14:13:54.281|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+14:13:54.282|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+14:13:54.283|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+14:14:05.291|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:14:05.292|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:14:05.293|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+14:14:05.294|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+14:14:05.295|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+14:14:05.296|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+14:14:05.297|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+14:14:05.299|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+14:14:16.304|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:14:16.304|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:14:16.305|[31mERROR[m |> --- [           main] [36mc.14:14:16.306|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (43)[m | socket accept
+14:14:16.319|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (45)[m | 
+1c4fe909-1120-491a-bf6b-f28367dda3e9: just arrived to vacation! On: Linux
+14:14:16.319|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (51)[m | 1c4fe909-1120-491a-bf6b-f28367dda3e9, Linux
+14:14:16.320|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (47)[m | new handler
+14:14:16.321|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (353)[m | Set 127.0.0.1 1331 com.revs14:14:22.500|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (400)[m | ls
+14:14:22.501|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (294)[m | Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+14:15:57.680|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:15:57.680|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:15:57.680|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+14:15:57.680|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+14:15:57.681|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+14:15:57.681|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+14:15:57.681|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+14:15:57.681|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+14:16:08.686|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:16:08.686|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:16:08.686|[31mERROR[m |> --- [           main] [36mc.14:16:08.688|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (43)[m | socket accept
+14:16:08.700|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (45)[m | 
+1c4fe909-1120-491a-bf6b-f28367dda3e9: just arrived to vacation! On: Linux
+14:16:08.701|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (51)[m | 1c4fe909-1120-491a-bf6b-f28367dda3e9, Linux
+14:16:08.701|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (47)[m | new handler
+14:16:08.702|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (353)[m | Set 127.0.0.1 1331 com.revs14:16:10.742|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (400)[m | ls
+14:16:10.743|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (294)[m | Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+14:16:20.746|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (400)[m | ls
+14:16:20.748|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (294)[m | Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+14:18:12.063|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:18:12.064|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:18:12.064|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+14:18:12.064|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+14:18:12.064|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+14:18:12.065|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+14:18:12.065|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+14:18:12.065|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+14:18:23.068|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:18:23.069|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:18:23.069|[31mERROR[m |> --- [           main] [36mc.14:18:23.070|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (43)[m | socket accept
+14:18:23.082|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (45)[m | 
+1c4fe909-1120-491a-bf6b-f28367dda3e9: just arrived to vacation! On: Linux
+14:18:23.083|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (51)[m | 1c4fe909-1120-491a-bf6b-f28367dda3e9, Linux
+14:18:23.083|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (47)[m | new handler
+14:18:23.084|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (353)[m | Set 127.0.0.1 1331 com.revs14:18:24.877|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (400)[m | ls
+14:18:24.879|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (294)[m | Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+14:19:16.227|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:19:16.227|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:19:16.228|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (606)[m | Passed checktrig
+14:19:16.228|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (93)[m | Init started!
+14:19:16.228|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (123)[m | INIT
+14:19:16.228|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (127)[m | 127.0.0.1 
+14:19:16.229|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 1331
+14:19:16.229|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (141)[m | catch in init
+14:19:27.232|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (261)[m | 127.0.0.11331
+14:19:27.233|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (271)[m | CheckTrigTrue
+14:19:27.233|[31mERROR[m |> --- [           main] [36mc.14:19:27.234|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (43)[m | socket accept
+14:19:27.246|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (45)[m | 
+1c4fe909-1120-491a-bf6b-f28367dda3e9: just arrived to vacation! On: Linux
+14:19:27.247|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (51)[m | 1c4fe909-1120-491a-bf6b-f28367dda3e9, Linux
+14:19:27.247|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (47)[m | new handler
+14:19:27.247|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (353)[m | Set 127.0.0.1 1331 com.revs14:19:30.190|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (400)[m | ls
+14:19:30.192|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (294)[m | Send message :logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+14:19:40.193|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (400)[m | whoami
+14:19:40.198|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (294)[m | Send message :shorida
+
+read-1] [36mc.r.s.Listener      (56)[m | Connection received from localhost:1331
+14:19:30.189|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Handler       (99)[m | Waiting for response
+14:19:30.193|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (45)[m | 
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+14:19:32.843|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Handler       (99)[m | Waiting for response
+14:19:40.200|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (45)[m | 
+shorida
+
