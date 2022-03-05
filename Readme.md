@@ -1,12 +1,14 @@
 # Revsni
 
 **Disclaimer:** This project is for purely educational purposes! This repository stays private for several safety related reasons.
+
 ---
 ## Introduction
 
 Revsni aka. **REVerse Shell Noteable Impact** aims to be a **Java-Based** Framework like Application for different Types of Command & Control.
 Furthermore it should be able to switch between different types of communication and encryption whereas encryption will be nestable and interchangeable.
 Last but not least it will implement a builder in order to create different types of payloads and handlers, compatible with the same central server.
+
 ---
 ## Already implemented
   - Socket based communication between Server and Client through TCP
@@ -30,6 +32,9 @@ Last but not least it will implement a builder in order to create different type
   - Payloads
   - Handlers
   - Websites (for authentic HTTP(S) asynchronous stuff)
+- Server
+  - Local GUI
+  - Web GUI
 
 ### Shell types
   - UDP
