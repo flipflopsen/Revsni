@@ -22,7 +22,7 @@ Last but not least it will implement a builder in order to create different type
   - Asynchronous HTTPS
 ### Encryption
   - SSL
-
+---
 ## Planned
 
 ### General
