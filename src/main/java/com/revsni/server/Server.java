@@ -174,16 +174,7 @@ public class Server implements Runnable{
                                     getInteraction(sessionNumber).sendCommand("httpSw");
                                     setInteraction(sessionNumber, httpShell);
                                     setMode(sessionNumber, Mode.HTTP);
-                                    /*
-                                    if(!httpShell.getConnInf()) {
-                                        logger.info("Failed to switch shell to HTTP!");
-                                        
-                                        //TODO Update this Fallback
-                                        updater.setShellType("TCP", String.valueOf(this.port));
-                                        
-                                        setMode(sessionNumber, Mode.TCP);
-                                    }
-                                    */
+                                    logger.info("Switch done!");
                                     break;
 
                                 case("https"): 
@@ -234,7 +225,7 @@ public class Server implements Runnable{
                             }
                             if(getMode(sessionNumber).toString().equals("HTTP")) {
                                 sessionHandlers.get(sessionNumber).sendCommand(message);
-                                httpShell.sendCommand(message);
+                                //httpShell.sendCommand(message);
                             }
                             if(getMode(sessionNumber).toString().equals("HTTPS")) {
                                 sessionHandlers.get(sessionNumber).sendCommand(message);

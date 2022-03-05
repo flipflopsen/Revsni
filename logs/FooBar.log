@@ -6924,3 +6924,192 @@ r.c.Client        (128)[m | 127.0.0.1
 .Server        (350)[m | Getting interaction for sessioNumber: 2
 18:23:43.647|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (351)[m | Type is: TCP
 18:23:48.819|[31mERROR[m |> --- [           main] [36mc.r.s.Server        (423)[m | FAILED TO SAVE SESSIONS TO FILE!
+20:07:33.462|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+20:07:33.467|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+20:07:33.468|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+20:07:33.468|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+20:07:33.469|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+20:07:33.469|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+20:07:33.470|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+20:07:33.472|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (142)[m | catch in init
+20:07:45.475|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+20:07:45.475|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+20:07:45.476|[31mERROR[m |> --- [           main] [36mc.20:07:45.533|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (332)[m | Added Session Nr. 1 to the session list!
+20:07:45.535|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+20:07:45.535|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (352)[m | Getting interaction for sessioNumber: 1
+20:07:45.536|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (353)[m | Type is: TCP
+20:07:45.536|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (352)[m | Getting interaction for sessioNumbe20:07:54.422|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | ls
+20:07:54.433|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :initial.txt
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+20:08:04.435|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | httpSw
+20:08:04.440|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.12293
+20:08:04.440|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+20:08:04.440|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+20:08:04.665|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | whoami
+20:08:04.667|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :shorida
+
+20:08:04.669|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (315)[m | http://127.0.0.1:2293/lit
+20:08:24.695|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+[       Thread-0] [36mc.r.s.Server        (252)[m | Server is shutting down
+20:08:04.667|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (82)[m | Error in Thread
+20:08:04.671|[32m INFO[m |> --- [  HTTP-worker-2] [36mc.r.s.h.HTTPHandler (129)[m | shorida
+
+20:08:50.336|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+20:08:50.342|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+20:08:59.902|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (332)[m | Added Session Nr. 1 to the session list!
+20:08:59.903|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+20:08:59.903|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (352)[m | Getting interaction for sessioNumber: 1
+20:08:59.904|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (353)[m | Type is: TCP
+20:08:59.904|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (352)[m | Getting interaction for sessioNumber: 1
+20:08:59.904|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (353)[m | Type is: TCP
+20:09:04.312|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.h.HTTPServer  (23)[m | HTTP Server started on port: 8894
+20:09:04.316|[32m INFO[m |> --- [ 20:09:04.319|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | httpSw
+20:09:04.321|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18894
+20:09:04.322|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+20:20:09:04.517|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (117)[m | Connection20:09:04.518|[32m INFO[m |> --- [           main] 20:09:04.518|[32m INFO[m |> --- [       T20:09:04.526|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :shorida
+
+20:09:04.528|[32m INFO[m |> --- [           main] [36mc.r.20:09:04.530|[32m INFO[m |> --- [  HTTP-worker-2] 20:09:24.559|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:09:34.567|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:09:44.577|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:09:54.584|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:10:04.595|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:10:14.603|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:10:24.611|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:10:34.624|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:10:44.649|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:10:54.656|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:11:04.663|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:11:14.669|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:11:24.678|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:11:34.685|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:11:44.691|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:11:54.698|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:12:04.705|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:12:14.715|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:12:24.723|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:12:34.729|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:14:54.459|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+20:14:54.465|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+20:15:07.231|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (332)[m | Added Session Nr. 1 to the session list!
+20:15:07.233|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+20:15:07.233|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (352)[m | Getting interaction for sessioNumber: 1
+20:15:07.234|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (353)[m | Type is: TCP
+20:15:07.234|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (352)[m | Getting interaction for sessioNumber: 1
+20:15:07.235|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (353)[m | Type is: TCP
+20:15:19.136|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (352)[m | Getting interaction for sessioNumber: 1
+20:15:19.136|[32m INFO[m |>20:15:19.140|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | httpSw
+20:15:19.143|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18556
+20:15:19.143|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+20:20:15:19.349|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (117)[m | Connection20:15:19.349|[32m INFO[m |> --- [           main] 20:15:19.350|[32m INFO[m |> --- [       T20:15:19.360|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :shorida
+
+20:15:19.362|[32m INFO[m |> --- [           main] [36mc.r.c.Client      20:15:19.363|[32m INFO[m |> --- [  HT20:15:39.367|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:15:49.369|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:15:59.373|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:16:09.375|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:16:19.377|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:16:29.379|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:16:39.384|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:16:49.386|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:16:59.388|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:17:09.394|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:17:19.400|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:17:29.403|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:17:39.405|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:17:49.407|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:17:59.409|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:18:09.410|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:18:19.412|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:18:29.415|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:18:39.417|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:18:49.422|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:18:59.424|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:19:06.942|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18556
+20:19:06.946|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+20:19:06.946|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+20:19:08.948|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+20:19:08.949|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+20:19:08.949|[31mERROR[m |> --- [           main] [36mc.20:19:08.989|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+20:19:08.991|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+20:19:08.991|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+20:19:08.991|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+20:19:08.992|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumbe20:19:10.589|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | ls
+20:19:10.606|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :initial.txt
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+20:19:20.608|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (463)[m | lul
+20:20:13.420|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18995
+20:20:13.422|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+20:20:13.423|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+20:20:15.426|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18995
+20:20:15.427|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+20:20:15.427|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+20:20:17.431|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18995
+20:20:17.432|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+20:20:17.432|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+20:20:19.434|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+20:20:19.435|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+20:20:19.435|[31mERROR[m |> --- [           main] [36mc.20:20:19.451|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+20:20:19.453|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+20:20:19.453|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+20:20:19.454|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+20:20:19.454|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumbe20:20:23.832|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | httpSw
+20:20:23.834|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18994
+20:20:23.835|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+20:20:23.835|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+20:20:24.043|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | whoami
+20:20:24.045|[31mERROR[m |> --- [           main] [36mc.r.c20:20:24.048|[32m INFO[m |> --- [  HTTP-worker-2] [36mc.r.s.h.HTTPHandler (129)[m | shorida
+
+20:20:25.859|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.H20:20:44.052|[32m INFO[m |> --- [         20:20:44.057|[32m INFO[m |> --- [  HTTP-worker-4] [36mc.r.s.h.HTTPHandler (129)[m | initial.txt
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+20:20:50.640|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (83)[m | Waiting for Response..
+20:20:54.070|[32m INFO[m |> --- [  HTTP-worker-6] [36mc.r.s.h.HTTPHandler (129)[m | shorida
+
+20:21:06.760|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (83)[m | Waiting for Response..
+20:21:14.088|[32m INFO[m |> --- [  HTTP-worker-9] [36mc.r.s.h.HTTPHandler (129)[m | initial.txt
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+/127.0.0.1:8994/lit
+20:21:04.078|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+20:21:14.084|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | ls
+20:21:14.085|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :initial.txt
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+20:21:14.086|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (315)[m | http://127.0.0.1:8994/lit

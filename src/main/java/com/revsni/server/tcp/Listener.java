@@ -79,8 +79,8 @@ public class Listener implements Runnable{
 
             }
             catch (IOException e) {
-                logger.info("Error in Thread");
-                server.setRunning(false);
+                logger.info("Error in TCP Listener Thread!");
+                //server.setRunning(false);
             }
         }
     }

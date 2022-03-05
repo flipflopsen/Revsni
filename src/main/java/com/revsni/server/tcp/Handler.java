@@ -92,6 +92,9 @@ public class Handler implements Interaction{
         if(in.equals("exit")) {
             server.removeSession(sessionNumber);
             closeConnection();
+        } else if(in.equals("httpSw") || in.equals("httpsSw")) {
+            String message = protocol.prepareMessage((String) arg);
+            sendMessage(message);
         } else {
             String message = protocol.prepareMessage((String) arg);
             sendMessage(message);
