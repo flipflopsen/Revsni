@@ -35,6 +35,15 @@ public class Revsni {
 
     private static Configuration configuration = new Configuration();
     public static void main(String[] args) throws IOException {
+        /*
+        if(args.length < 2) {
+            printUsage();
+            System.exit(0);
+        } else if(args.length == 3) {
+            printUsage();
+            System.exit(0);
+        }
+        */
         
         System.out.println("\n"
                           +"-----------"
@@ -47,6 +56,7 @@ public class Revsni {
                           +"3. Start the Builder\n"
                           +"4. Save Sessions to a File\n"
                           +"5. Load Sessions from a File\n"
+                          +"0. Usage\n"
                           +"\n"
                           +"Type 'exit' to leave\n"
                           +"\n");
@@ -57,6 +67,7 @@ public class Revsni {
         String decision = bufferedReader.readLine();
         System.out.println();
         switch(decision) {
+            case("0"): printUsage(); break;
             case("1"): configs(); break;
             case("2"): try {
                     if(servero == null) {
@@ -193,4 +204,18 @@ public class Revsni {
     public static void setActiveHelper(boolean state) {
         activeHelper = state;
     }
+
+    private static void printUsage() {
+        System.out.println("\n"
+                          +"-----------"
+                          +"|Usage|"
+                          +"-----------"
+                          +"\n"
+                          +"For now Revsni needs AES for initial connection\n you don't have to specify a password\n  nor a salt\n   but they will be generated and saved into a file called inital.txt!\n"
+                          +"\nMinimal:\n\tjava -jar server.jar <Server-IP> <Server-Port>\n"
+                          +"\nRecommendend:\n\tjava -jar server.jar <Server-IP> <Server-Port> <Password> <Salt>\n"
+                          +"\nIt's okay to not specify a salt as it will be generated anyways. :) \n"
+                          +"\n");
+    }
+
 }   

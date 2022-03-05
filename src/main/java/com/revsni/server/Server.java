@@ -497,6 +497,7 @@ public class Server implements Runnable{
                           +"-----------"
                           +"\n"
                           +"mode        -   Use netcat for example\n"
+                          +"commands    -   Show Revsn specific commands\n"
                           +"encryption  -   Change between different encryptions or combine them\n"
                           +"switch      -   Switch Shell\n"
                           +"configure   -   Configure Revsn\n"
@@ -541,6 +542,8 @@ public class Server implements Runnable{
                           +"httpas      -   Change to Asynchronous HTTP Shell\n"
                           +"httpsas     -   Change to Asynchronous HTTPS Shell\n"
                           +"dns         -   Change to DNS Reverse Shell\n"
+                          +"smb         -   Change to SMB Shell (mostly Windows only, run detection first!)\n"
+                          +"ssdp/upnp   -   Change to SSDP/UPNP Shell through UDP\n"
                           +"\n");
     }
 
@@ -570,6 +573,10 @@ public class Server implements Runnable{
                           +"\nRecommendend:\n\tjava -jar server.jar <Server-IP> <Server-Port> <Password> <Salt>\n"
                           +"\nIt's okay to not specify a salt as it will be generated anyways. :) \n"
                           +"\n");
+    }
+
+    private void printCommands() {
+
     }
 
 }
