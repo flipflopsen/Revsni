@@ -51,7 +51,7 @@ public class HTTPSServer {
 
     private volatile boolean est = false;
     
-    Logger logger = LogManager.getLogger(getClass());
+    public Logger logger = LogManager.getLogger(getClass());
 
     public HTTPSServer(SecretKey key, IvParameterSpec iv) {
         _key = key;

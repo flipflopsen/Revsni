@@ -1,4 +1,4 @@
-package com.revsni.server;
+package com.revsni.server.tcp;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -6,18 +6,40 @@ import java.net.Socket;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import com.revsni.server.Server;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
 public class Listener implements Runnable{
-    Logger logger = LogManager.getLogger(getClass());
+    private static final Logger logger = LogManager.getLogger(Listener.class);
 
     Map<String, Integer> handlerinos = new ConcurrentHashMap<>();
     
     public volatile int sessionNumber;
     private ServerSocket serverSocket;
     private Server server;
+
+    public ServerSocket getServerSocket() {
+        return this.serverSocket;
+    }
+
+    public void setServerSocket(ServerSocket serverSocket) {
+        this.serverSocket = serverSocket;
+    }
+
+    public Server getServer() {
+        return this.server;
+    }
+
+    public void setServer(Server server) {
+        this.server = server;
+    }
+
+    public Listener() {
+        //Default Constructor for Serialization
+    }
 
     public Listener(Server server, int sessionNumber) {
         this.server = server;
@@ -44,7 +66,8 @@ public class Listener implements Runnable{
                 //Handler connectionHandler = new Handler(server,connection);
                 Handler connectionHandler = new Handler(server,connection,sessionNumber);
 
-                server.addHandlerinoSess(connection.getInetAddress().getHostAddress(), connection.getLocalPort(),connectionHandler, sessionNumber);
+                server.setInteraction(sessionNumber, connectionHandler);
+                server.addSession(connection.getInetAddress().getHostAddress(), connection.getLocalPort(),connectionHandler, sessionNumber);
                 connectionHandler.callAddSessionHandler();
 
                 

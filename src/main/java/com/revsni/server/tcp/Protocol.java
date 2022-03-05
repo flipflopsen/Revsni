@@ -1,4 +1,4 @@
-package com.revsni.server;
+package com.revsni.server.tcp;
 
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
@@ -10,6 +10,8 @@ import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
+
+import com.revsni.server.Server;
 
 
 public class Protocol {

@@ -16,11 +16,12 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
 
 public class Updater {
-    protected static final Logger parentLogger = LogManager.getLogger();
+
+    //private static final Logger logger = LogManager.getLogger(Updater.class);
     //private Logger LOG = parentLogger;
     
     private int method;
@@ -84,7 +85,7 @@ public class Updater {
 
     public boolean writeOut() throws IOException {
         try {
-            Writer fileWriter = new FileWriter("output.txt");
+            Writer fileWriter = new FileWriter("initial.txt");
             fileWriter.write(output);
             fileWriter.close();
             return true;

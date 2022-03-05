@@ -1,4 +1,4 @@
-package com.revsni.server;
+package com.revsni.server.tcp;
 
 import java.io.*;
 import java.net.Socket;
@@ -9,12 +9,15 @@ import java.security.NoSuchAlgorithmException;
 import javax.crypto.NoSuchPaddingException;
 
 import com.revsni.common.Configuration.Mode;
+import com.revsni.server.Interaction;
+import com.revsni.server.Server;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Handler  {
-    Logger logger = LogManager.getLogger(getClass());
+public class Handler implements Interaction{
+    private static final Logger logger = LogManager.getLogger(Handler.class);
+
 
     //private Logger LOG = parentLogger;
 	
@@ -84,10 +87,10 @@ public class Handler  {
         }
     }
 
-    public void update(Object arg) {
+    public void sendCommand(String arg) {
         String in = (String) arg;
         if(in.equals("exit")) {
-            server.handlerinos.remove(sessionNumber);
+            server.removeSession(sessionNumber);
             closeConnection();
         } else {
             String message = protocol.prepareMessage((String) arg);
@@ -112,7 +115,7 @@ public class Handler  {
                 done = true;
                 String error = "Connection Was Lost While Reading - " + connection.getRemoteSocketAddress();
                 logger.info(error);
-                server.handlerinos.remove(sessionNumber);
+                server.removeSession(sessionNumber);
             }
         }
     }
@@ -132,5 +135,52 @@ public class Handler  {
     public Mode getMode() {
         return this.mode;
     }
+
+    public ObjectInputStream getDataIn() {
+        return this.dataIn;
+    }
+
+    public void setDataIn(ObjectInputStream dataIn) {
+        this.dataIn = dataIn;
+    }
+
+    public ObjectOutputStream getDataOut() {
+        return this.dataOut;
+    }
+
+    public void setDataOut(ObjectOutputStream dataOut) {
+        this.dataOut = dataOut;
+    }
+
+    public void setSessionNumber(int sessionNumber) {
+        this.sessionNumber = sessionNumber;
+    }
+
+    public Server getServer() {
+        return this.server;
+    }
+
+    public void setServer(Server server) {
+        this.server = server;
+    }
+
+    public Socket getConnection() {
+        return this.connection;
+    }
+
+    public void setConnection(Socket connection) {
+        this.connection = connection;
+    }
+
+
+
+    public Protocol getProtocol() {
+        return this.protocol;
+    }
+
+    public void setProtocol(Protocol protocol) {
+        this.protocol = protocol;
+    }
+
 
 }

