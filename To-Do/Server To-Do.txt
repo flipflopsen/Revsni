@@ -1,0 +1,28 @@
+Builder
+	-Different Clients with usage of Configuration.java
+		-.NET Clients
+		-Java Clients
+
+Encryption
+	-RSA
+	-Twofish
+	-Serpent
+	-Blowfish
+	-TripleDES
+
+Configuration
+	-Make use of it in Server
+
+Ansychronous HTTP(S)
+	-Randomized Time-Delays
+
+Shells
+	-Ansychronous HTTP(S)
+		-Randomized Time-Delays
+	-SMB
+	-DNS
+	-UDP
+	-UPNP
+
+
+

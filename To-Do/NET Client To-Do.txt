@@ -1,0 +1,22 @@
+Features
+	-OS detection
+	-Persistence
+		-New File create
+		-Obfuscated
+		-Evasion
+		-Depends on OS etc.
+	-Process Injection
+	-Different Exec
+		-Powershell
+		-CMD exec
+		-Bash
+		-Sh
+
+Shell-Types
+	-All
+
+Encryption
+    -All
+
+Make Builder compatible for small Payloads -> Modular
+
