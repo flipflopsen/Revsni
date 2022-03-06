@@ -85,7 +85,7 @@ public class Updater {
 
     public boolean writeOut() throws IOException {
         try {
-            Writer fileWriter = new FileWriter("initial.txt");
+            Writer fileWriter = new FileWriter("revsni/filehosting/initial.txt");
             fileWriter.write(output);
             fileWriter.close();
             return true;
