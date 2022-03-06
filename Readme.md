@@ -11,8 +11,6 @@ Last but not least it will implement a builder in order to create different type
 
 ---
 ## Already implemented
-  - Socket based communication between Server and Client through TCP
-  - AES encryption in CBC mode
 ### General
 - Interchangeable shells
 - Interchangeable and nestable encryption
@@ -24,6 +22,8 @@ Last but not least it will implement a builder in order to create different type
   - Asynchronous HTTPS
 ### Encryption
   - SSL
+  - AES
+  - RSA
 ---
 ## Planned
 
@@ -43,7 +43,6 @@ Last but not least it will implement a builder in order to create different type
   - SSDP/UPNP
 
 ### Encryption
-  - RSA
   - Twofish
   - Serpent
   - Triple DES
