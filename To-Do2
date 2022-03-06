@@ -1,0 +1,4 @@
+To-Do
+
+Client Message ready bevor decryption um zu gucken, ob decryption fail
+-> Wenn ja, dann Fallback auf andere Verschlüsselung.

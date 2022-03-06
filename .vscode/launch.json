@@ -1,16 +1,6 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        {
-            "type": "java",
-            "name": "Launch AutoResponsiveLayoutExample",
-            "request": "launch",
-            "mainClass": "com.revsni.AutoResponsiveLayoutExample",
-            "projectName": "revsn"
-        },
         {
             "type": "java",
             "name": "Launch Revsni",
@@ -19,73 +9,20 @@
             "projectName": "revsn"
         },
         {
-            "type": "java",
-            "name": "Launch Serverino",
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
             "request": "launch",
-            "mainClass": "com.revsni.server.Serverino",
-            "projectName": "revsn"
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/Cevsn/bin/Debug/net6.0/Cevsn.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Cevsn",
+            "console": "internalConsole",
+            "stopAtEntry": false
         },
         {
-            "type": "java",
-            "name": "Launch HTTPSServer",
-            "request": "launch",
-            "mainClass": "com.revsni.server.https.HTTPSServer",
-            "projectName": "revsn"
-        },
-        {
-            "type": "java",
-            "name": "Launch HTTP",
-            "request": "launch",
-            "mainClass": "com.revsni.server.http.HTTP",
-            "projectName": "revsn"
-        },
-        {
-            "type": "java",
-            "name": "Launch HTTPServer",
-            "request": "launch",
-            "mainClass": "com.revsni.server.http.HTTPServer",
-            "projectName": "revsn"
-        },
-        {
-            "type": "java",
-            "name": "Launch Server",
-            "request": "launch",
-            "mainClass": "com.revsni.server.Server",
-            "projectName": "revsn"
-        },
-        {
-            "type": "java",
-            "name": "Launch HTTPServer",
-            "request": "launch",
-            "mainClass": "com.revsni.server.HTTPServer",
-            "projectName": "revsn"
-        },
-        {
-            "type": "java",
-            "name": "Launch Ouchie",
-            "request": "launch",
-            "mainClass": "com.revsni.client.Ouchie",
-            "projectName": "revsn"
-        },
-        {
-            "type": "java",
-            "name": "Launch Current File",
-            "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "Launch Ouchie",
-            "request": "launch",
-            "mainClass": "com.revsn.client.Ouchie",
-            "projectName": "revsn"
-        },
-        {
-            "type": "java",
-            "name": "Launch Server",
-            "request": "launch",
-            "mainClass": "com.revsn.server.Server",
-            "projectName": "revsn"
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach"
         }
     ]
 }
