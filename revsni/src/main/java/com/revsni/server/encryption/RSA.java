@@ -22,6 +22,13 @@ public class RSA implements Encri {
     private PrivateKey privKey;
     private PublicKey pubKey;
 
+    public static void main(String[] args) {
+        RSA rsa = new RSA();
+        rsa.generateKeys();
+        rsa.saveKeys();
+        rsa.loadKeys();
+    }
+
     public RSA() {
         
     }
@@ -41,13 +48,13 @@ public class RSA implements Encri {
     }
 
     public void saveKeys() {
-        try (FileOutputStream fos = new FileOutputStream("public.key")) {
+        try (FileOutputStream fos = new FileOutputStream("revsni/keys/public.key")) {
             fos.write(pubKey.getEncoded());
         } catch (IOException e) {
             logger.error("Failed save RSA Public Key!");
             e.printStackTrace();
         }
-        try (FileOutputStream fos = new FileOutputStream("private.key")) {
+        try (FileOutputStream fos = new FileOutputStream("revsni/keys/private.key")) {
             fos.write(privKey.getEncoded());
         } catch (IOException e) {
             logger.error("Failed save RSA Private Key!");
@@ -56,8 +63,8 @@ public class RSA implements Encri {
     }
 
     public void loadKeys() {
-        File publicKeyFile = new File("public.key");
-        File privateKeyFile = new File("private.key");
+        File publicKeyFile = new File("revsni/keys/public.key");
+        File privateKeyFile = new File("revsni/keys/private.key");
         try {
             byte[] publicKeyBytes = Files.readAllBytes(publicKeyFile.toPath());
             byte[] privateKeyBytes = Files.readAllBytes(privateKeyFile.toPath());
