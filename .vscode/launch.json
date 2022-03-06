@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Webserver",
+            "request": "launch",
+            "mainClass": "com.revsni.Webserver",
+            "projectName": "revsn"
+        },
+        {
+            "type": "java",
             "name": "Launch RSA",
             "request": "launch",
             "mainClass": "com.revsni.server.encryption.RSA",

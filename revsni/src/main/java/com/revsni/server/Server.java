@@ -575,8 +575,10 @@ public class Server implements Runnable{
                           +"\n");
     }
 
+    /*
     private void printCommands() {
 
     }
+    */
 
 }
