@@ -6,6 +6,15 @@ import java.io.InputStreamReader;
 
 public class Configuration {
 
+    public enum EncMode {
+        AES,
+        RSA,
+        TWOFISH,
+        SERPENT,
+        SSL,
+        BLOWFISH
+    }
+
     public enum Mode {
         TCP(localAddrTCP, localPortTCP), 
         UDP(localAddrUDP, localPortUDP), 
