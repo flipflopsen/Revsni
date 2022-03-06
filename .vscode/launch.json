@@ -6,6 +6,13 @@
             "name": "Launch Revsni",
             "request": "launch",
             "mainClass": "com.revsni.Revsni",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch Revsni",
+            "request": "launch",
+            "mainClass": "com.revsni.Revsni",
             "projectName": "revsn"
         },
         {
