@@ -4,3 +4,22 @@
 Listening...
 
 14:15:42.342|[31mERROR[m |> --- [           main] [36mc.r.s.e.RSA         (80)[m | Failed to generate Key Specs and Keys from RSA Key Files!
+15:16:12.286|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (53)[m | Pubkey wrote!
+15:16:12.293|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (60)[m | Privkey wrote!
+15:16:12.308|[31mERROR[m |> --- [           main] [36mc.r.s.e.RSA         (82)[m | Failed to generate Key Specs and Keys from RSA Key Files!
+15:20:46.228|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (59)[m | Pubkey wrote!
+15:20:46.236|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (68)[m | Privkey wrote!
+15:26:15.932|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (62)[m | Pubkey wrote!
+15:26:15.937|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (71)[m | Privkey wrote!
+15:26:15.956|[31mERROR[m |> --- [           main] [36mc.r.s.e.RSA         (93)[m | Failed to generate Key Specs and Keys from RSA Key Files!
+15:28:43.664|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (65)[m | Pubkey wrote!
+15:28:43.669|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (74)[m | Privkey wrote!
+15:28:43.691|[31mERROR[m |> --- [           main] [36mc.r.s.e.RSA         (100)[m | Failed to generate Key Specs and Keys from RSA Key Files!
+15:33:22.018|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (64)[m | Pubkey wrote!
+15:33:22.025|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (71)[m | Privkey wrote!
+15:45:14.233|[31mERROR[m |> --- [           main] [36mc.r.s.e.RSA         (157)[m | Failed to load RSA Keys!
+15:45:27.802|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (101)[m | Host RSA Public Key wrote!
+15:45:27.809|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (108)[m | Host RSA Private Key wrote!
+15:45:27.811|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (126)[m | RSA Public Key loaded (Host)!
+15:45:27.811|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (128)[m | RSA Private Key loaded (Host)!
+15:45:27.812|[31mERROR[m |> --- [           main] [36mc.r.s.e.RSA         (157)[m | Failed to load RSA Keys!
