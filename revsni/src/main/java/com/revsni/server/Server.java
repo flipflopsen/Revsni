@@ -170,7 +170,7 @@ public class Server implements Runnable{
                                     httpShell = new HTTPShell(key, iv, port, sessionNumber);
                                     updater.setShellType("HTTP", String.valueOf(httpShell.getPort()));
                                     updater.generateOutputString();
-                                    updater.writeOut();
+                                    updater.writeOut(getUUID(sessionNumber));
                                     getInteraction(sessionNumber).sendCommand("httpSw");
                                     setInteraction(sessionNumber, httpShell);
                                     setMode(sessionNumber, Mode.HTTP);
@@ -184,7 +184,7 @@ public class Server implements Runnable{
                                     httpsShell.fireUp(portIn);
                                     updater.setShellType("HTTPS", String.valueOf(getInteraction(sessionNumber).getPort()));
                                     updater.generateOutputString();
-                                    updater.writeOut();
+                                    updater.writeOut(getUUID(sessionNumber));
                                     getInteraction(sessionNumber).sendCommand("httpsSw");
                                     setInteraction(sessionNumber, httpsShell);
                                     setMode(sessionNumber, Mode.HTTPS);
@@ -347,6 +347,10 @@ public class Server implements Runnable{
 
     public String getIp(int sessioNumber) {
         return sessIp.get(sessioNumber);
+    }
+
+    public String getUUID(int sessionNumber) {
+        return modePortUUID.get(sessionNumber - sessionNumberStart).getAddition();
     }
 
     public Mode getMode(int sessionNumber) {

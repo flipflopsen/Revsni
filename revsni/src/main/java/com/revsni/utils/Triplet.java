@@ -1,26 +1,26 @@
 package com.revsni.utils;
 
 public class Triplet<K,V,A> {
-    public K name;
-    public V ipAddr;
-    public A port;
+    public K key;
+    public V value;
+    public A addition;
 
-    public Triplet(K name, V ipAddr, A port) {
-        this.name = name;
-        this.ipAddr = ipAddr;
-        this.port = port;
+    public Triplet(K key, V value, A addition) {
+        this.key = key;
+        this.value = value;
+        this.addition = addition;
     }
 
     public K getKey() {
-        return this.name;
+        return this.key;
     }
 
     public V getValue() {
-        return this.ipAddr;
+        return this.value;
     }
 
     public A getAddition() {
-        return this.port;
+        return this.addition;
     }
     
 }

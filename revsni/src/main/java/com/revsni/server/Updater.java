@@ -94,6 +94,17 @@ public class Updater {
         }
     }
 
+    public boolean writeOut(String filename) throws IOException {
+        try {
+            Writer fileWriter = new FileWriter("revsni/filehosting/" + filename + ".txt");
+            fileWriter.write(output);
+            fileWriter.close();
+            return true;
+        } catch (IOException e) {
+            return false;
+        }
+    }
+
 
     public void setKey(SecretKey key) {
         this.key = key;
