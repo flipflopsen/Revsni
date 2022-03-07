@@ -1,6 +1,6 @@
 # Revsni
 
-**Disclaimer:** This project is for purely educational purposes!! This repository stays private for several safety related reasons.
+**Disclaimer:** This project is for purely educational purposes! This repository stays private for several safety related reasons.
 
 ---
 ## Introduction
