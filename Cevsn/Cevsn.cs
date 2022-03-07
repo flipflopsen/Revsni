@@ -15,7 +15,7 @@ namespace cevsn
 {
     public class Cevsn
     {
-        public static String URL = "http://127.0.0.1:8082/";
+        public static String URL = "http://127.0.0.1:8082/initial.txt";
         public static String UUID = Guid.NewGuid().ToString();
         public volatile static byte[] KEY = new byte[256];
         public volatile static byte[] IV = new byte[16];
@@ -108,7 +108,7 @@ namespace cevsn
 
         static String getContent()
         {
-            Task<string> response = client.GetStringAsync(URL + "initial.txt");
+            Task<string> response = client.GetStringAsync(URL);
             Console.Write(response.Result.ToString() + "\n");
             return response.Result.ToString();
         }
