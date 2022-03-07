@@ -9,6 +9,7 @@ import com.revsni.utils.Triplet;
 public class Lombi {
 
     public static final UUID uuid = UUID.randomUUID();
+    
     //<SessionNumber<Name, IP, Port<OS, Randomization, UUID>>>
     public static HashMap<Integer, Quadmap<String, String, Integer, Triplet<String, Integer, UUID>>> stuff = new HashMap<>();
 
