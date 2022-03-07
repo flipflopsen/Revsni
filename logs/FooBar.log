@@ -23,3 +23,37 @@ Listening...
 15:45:27.811|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (126)[m | RSA Public Key loaded (Host)!
 15:45:27.811|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (128)[m | RSA Private Key loaded (Host)!
 15:45:27.812|[31mERROR[m |> --- [           main] [36mc.r.s.e.RSA         (157)[m | Failed to load RSA Keys!
+17:15:56.624|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (265)[m | 127.0.0.11331
+17:15:56.648|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (275)[m | CheckTrigTrue
+17:15:56.652|[31mERROR[m |> --- [           main] [36mc.17:15:56.733|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+17:15:56.735|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+17:15:56.735|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+17:15:56.735|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+17:15:56.736|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumbe17:15:57.949|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (404)[m | ls
+17:15:57.959|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (298)[m | Send message :Cevsn
+logs
+Readme.md
+revsni
+Revsni.code-workspace
+To-Do
+
+2m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+17:15:57.949|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (107)[m | Waiting for response
+17:16:00.733|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (243)[m | Server is shutting down
+17:16:00.733|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (82)[m | Error in TCP Listener Thread!
+17:16:13.853|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+17:16:13.859|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+20:42:40.047|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+20:42:40.054|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+20:43:09.112|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+20:43:09.117|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+20:56:44.504|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (82)[m | Error in TCP Listener Thread!

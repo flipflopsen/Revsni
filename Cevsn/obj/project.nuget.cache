@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MHfIMZbS9Uv0J27axwuwcq5TfgEu6h2BnAKlXJ0lh0wkq1mnW7fjhm+gYo8FSSs/PI0dr24+hzT7mrrJnA6lBA==",
+  "dgSpecHash": "CRqj6Q+iX6q74lApQ+ReUxv08IL9Ab6elGI3GTc8LLh2+JhOJGtfqtbqfA7IUOdhjB/jgeHSpyGzHxJ0DF/qNw==",
   "success": true,
-  "projectFilePath": "/home/shorida/Projekte/Revsn/Cevsn/Cevsn.csproj",
+  "projectFilePath": "/home/shorida/Projekte/Revsni/Cevsn/Cevsn.csproj",
   "expectedPackageFiles": [
     "/home/shorida/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.2/microsoft.aspnetcore.app.ref.6.0.2.nupkg.sha512"
   ],

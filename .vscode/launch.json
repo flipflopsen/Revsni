@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Ouchie",
+            "request": "launch",
+            "mainClass": "com.revsni.client.Ouchie",
+            "projectName": "revsn"
+        },
+        {
+            "type": "java",
             "name": "Launch Webserver",
             "request": "launch",
             "mainClass": "com.revsni.Webserver",

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/shorida/Projekte/Revsn/Cevsn/Cevsn.csproj",
+      "projectUniqueName": "/home/shorida/Projekte/Revsni/Cevsn/Cevsn.csproj",
       "projectName": "Cevsn",
-      "projectPath": "/home/shorida/Projekte/Revsn/Cevsn/Cevsn.csproj",
+      "projectPath": "/home/shorida/Projekte/Revsni/Cevsn/Cevsn.csproj",
       "packagesPath": "/home/shorida/.nuget/packages/",
-      "outputPath": "/home/shorida/Projekte/Revsn/Cevsn/obj/",
+      "outputPath": "/home/shorida/Projekte/Revsni/Cevsn/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/shorida/.nuget/NuGet/NuGet.Config"

@@ -62,6 +62,14 @@ public class Handler implements Interaction{
         }
 
     } 
+
+    public void initHandlerJava() {
+
+    }
+
+    public void initHandlerCS() {
+        
+    }
     
 
     void sendMessage(String msg) {
