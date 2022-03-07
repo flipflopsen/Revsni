@@ -46,7 +46,7 @@ public class Listener implements Runnable{
         this.sessionNumber = sessionNumber;
 
         try {
-            serverSocket = new ServerSocket(server.getPort());
+            serverSocket = new ServerSocket(server.getPort(), 10);
             server.setRunning(true);
             logger.info("TCP Socket is up on Port: {}", server.getPort());
 

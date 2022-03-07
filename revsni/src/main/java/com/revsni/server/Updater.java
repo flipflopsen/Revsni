@@ -3,6 +3,7 @@ package com.revsni.server;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
+import java.nio.charset.StandardCharsets;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
@@ -77,15 +78,31 @@ public class Updater {
         return new IvParameterSpec(iv);
     }
 
-    public String generateOutputString() {
+    public String generateOutputStringC() {
         output = null;
         output = address[0] + ";" + address[1] + ";" + Base64.getEncoder().encodeToString(shellType.getBytes()) + ";" + Base64.getEncoder().encodeToString(key.getEncoded()) + ";" + Base64.getEncoder().encodeToString(iv.getIV());
+        return output;
+    }
+    public String generateOutputString() {
+        output = null;
+        output = address[0] + ";" + address[1] + ";" + Base64.getEncoder().encodeToString(shellType.getBytes()) + ";" + Base64.getEncoder().encodeToString(key.getEncoded()) + ";" + Base64.getEncoder().encodeToString(iv.getIV()) + ";" + this.password + ";" + Base64.getEncoder().encodeToString(this.salt.getBytes());
         return output;
     }
 
     public boolean writeOut() throws IOException {
         try {
             Writer fileWriter = new FileWriter("revsni/filehosting/initial.txt");
+            fileWriter.write(output);
+            fileWriter.close();
+            return true;
+        } catch (IOException e) {
+            return false;
+        }
+    }
+
+    public boolean writeOutC() throws IOException {
+        try {
+            Writer fileWriter = new FileWriter("revsni/filehosting/initialC.txt");
             fileWriter.write(output);
             fileWriter.close();
             return true;

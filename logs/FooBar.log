@@ -140,3 +140,677 @@ To-Do
 11:35:10.371|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (481)[m | No instructions
 11:35:20.376|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (481)[m | No instructions
   Thread-0] [36mc.r.s.t.Handler     (115)[m | Waiting for response
+12:50:54.787|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+12:50:54.796|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+12:54:42.790|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+12:54:42.799|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+12:54:43.559|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+12:54:43.560|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+12:54:43.561|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+12:54:43.561|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+12:54:43.562|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+12:54:43.563|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+12:54:48.498|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+12:54:48.498|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+12:54:50.238|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (243)[m | Server is shutting down
+12:54:50.239|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (82)[m | Error in TCP Listener Thread!
+12:56:40.514|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+12:56:40.520|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+12:56:42.273|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+12:56:42.275|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+12:56:42.275|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+12:56:42.276|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+12:56:42.276|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+12:56:42.276|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+12:56:52.336|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+12:56:52.337|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+12:56:54.020|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (243)[m | Server is shutting down
+12:56:54.021|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (82)[m | Error in TCP Listener Thread!
+12:57:55.329|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+12:57:55.338|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+12:58:04.135|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+12:58:04.137|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+12:58:04.137|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+12:58:04.137|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+12:58:04.138|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+12:58:04.138|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+12:59:04.098|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+12:59:04.099|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+12:59:05.911|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (243)[m | Server is shutting down
+12:59:05.911|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (82)[m | Error in TCP Listener Thread!
+12:59:20.990|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+12:59:20.998|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+12:59:21.327|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+12:59:21.329|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+12:59:21.330|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+12:59:21.330|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+12:59:21.330|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+12:59:21.331|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:01:09.852|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 2 to the session list!
+13:01:09.852|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+13:01:09.853|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 2
+13:01:09.853|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:01:09.854|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 2
+13:01:09.854|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:01:52.455|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 3 to the session list!
+13:01:52.456|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+13:01:52.456|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 3
+13:01:52.456|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:01:52.457|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 3
+13:01:52.457|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:07:51.112|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 4 to the session list!
+13:07:51.113|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+13:07:51.113|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 4
+13:07:51.113|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:07:51.113|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 4
+13:07:51.114|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:07:58.514|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 5 to the session list!
+13:07:58.515|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+13:07:58.515|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 5
+13:07:58.515|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:07:58.515|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 5
+13:07:58.516|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:26:30.932|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 6 to the session list!
+13:26:38.083|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+13:26:38.084|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 6
+13:26:38.084|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:26:38.084|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 6
+13:26:38.085|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:26:38.239|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:26:38.239|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:26:38.240|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (154)[m | Error while sending message: 'ls', to: 1 
+13:26:39.975|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (243)[m | Server is shutting down
+13:26:39.976|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (82)[m | Error in TCP Listener Thread!
+13:26:50.551|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+13:26:50.557|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+13:28:10.631|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+13:28:10.638|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+13:29:38.433|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+13:29:38.442|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+13:30:43.803|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+13:30:43.813|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+13:30:43.824|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+13:30:43.825|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+13:30:43.825|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:30:43.825|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:30:43.826|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:30:43.826|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:30:50.478|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:30:50.479|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:35:26.303|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+13:35:26.309|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+13:35:31.276|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (243)[m | Server is shutting down
+13:35:50.772|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+13:35:50.781|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+13:35:51.347|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+13:35:51.350|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+13:35:51.352|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:35:51.353|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:35:51.355|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:35:51.356|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:35:54.845|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:35:54.847|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:39:51.165|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:39:51.165|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:41:20.652|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+13:41:20.658|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+13:41:20.925|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+13:41:20.926|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+13:41:20.927|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:41:20.927|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:41:20.927|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:41:20.928|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:41:22.674|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:41:22.675|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:41:48.230|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:41:48.230|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:49:37.010|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+13:49:37.017|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+13:49:38.366|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+13:49:38.367|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+13:49:38.367|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:49:38.368|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:49:38.368|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:49:38.369|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:49:39.818|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:49:39.819|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:52:44.979|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+13:52:44.984|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+13:52:45.216|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+13:52:45.217|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+13:52:45.218|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:52:45.218|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:52:45.219|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:52:45.219|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:52:47.430|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:52:47.431|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:56:14.799|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+13:56:14.806|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+13:56:15.245|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+13:56:15.246|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+13:56:15.246|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:56:15.246|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:56:15.247|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:56:15.247|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:56:17.006|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:56:17.006|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:57:02.275|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:57:02.276|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:57:02.277|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (149)[m | Error while sending message: 'dsa', to: 1 
+13:57:09.792|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+13:57:09.798|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+13:57:10.131|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+13:57:10.132|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+13:57:10.133|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:57:10.133|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:57:10.134|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:57:10.134|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:57:11.819|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:57:11.820|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:58:01.699|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+13:58:01.706|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+13:58:02.664|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+13:58:02.665|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+13:58:02.666|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:58:02.666|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:58:02.667|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:58:02.667|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:58:03.824|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:58:03.825|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:59:41.568|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:59:41.568|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:59:41.569|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (149)[m | Error while sending message: 'ls', to: 1 
+13:59:46.465|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+13:59:46.471|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+13:59:46.794|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+13:59:46.796|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+13:59:46.797|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:59:46.798|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:59:46.798|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:59:46.799|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+13:59:47.504|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+13:59:47.505|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:00:01.220|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+14:00:01.228|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+14:00:01.274|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+14:00:01.276|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+14:00:01.276|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:00:01.276|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:00:01.276|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:00:01.277|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:00:03.090|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:00:03.091|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:04:09.746|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+14:04:09.752|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+14:04:10.447|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+14:04:10.449|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+14:04:10.449|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:04:10.449|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:04:10.450|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:04:10.450|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:04:11.828|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:04:11.829|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:05:54.122|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+14:05:54.130|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+14:07:28.213|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+14:07:28.221|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+14:07:28.271|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+14:07:28.272|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+14:07:28.272|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:07:28.273|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:07:28.273|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:07:28.274|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:07:29.571|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:07:29.571|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:08:51.937|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+14:08:51.942|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+14:08:52.035|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+14:08:52.036|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+14:08:52.037|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:08:52.038|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:08:52.038|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:08:52.038|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:08:52.796|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:08:52.797|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:31:02.600|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+14:31:02.606|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+14:32:06.181|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+14:32:06.188|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+14:32:11.822|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+14:32:11.824|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+14:32:11.824|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:32:11.825|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:32:11.825|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:32:11.826|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:32:16.175|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:32:16.175|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:35:53.510|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+14:35:53.516|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+14:35:54.351|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+14:35:54.352|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+14:35:54.353|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:35:54.353|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:35:54.353|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:35:54.354|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:35:56.028|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:35:56.030|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:43:08.878|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+14:43:08.885|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+14:43:09.569|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+14:43:09.570|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+14:43:09.571|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:43:09.571|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:43:09.571|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:43:09.572|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:43:10.463|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:43:10.464|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:43:31.998|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+14:43:32.004|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+14:43:32.408|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+14:43:32.409|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+14:43:32.410|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:43:32.410|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:43:32.410|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:43:32.411|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:43:33.928|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:43:33.928|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:47:20.794|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+14:47:20.800|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+14:47:21.415|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+14:47:21.416|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+14:47:21.416|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:47:21.417|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:47:21.417|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:47:21.418|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:53:04.043|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+14:53:04.048|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+14:53:04.691|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+14:53:04.693|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+14:53:04.694|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:53:04.694|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+14:53:04.695|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+14:53:04.695|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:01:19.942|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+15:01:19.949|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+15:01:20.685|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+15:01:20.687|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+15:01:20.687|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:01:20.688|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:01:20.688|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:01:20.689|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:06:32.238|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+15:06:32.246|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+15:06:32.625|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+15:06:32.627|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+15:06:32.627|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:06:32.628|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:06:32.628|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:06:32.628|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:07:47.224|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+15:07:47.230|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+15:07:48.058|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+15:07:48.059|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+15:07:48.060|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:07:48.060|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:07:48.061|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:07:48.061|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:14:15.305|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+15:14:15.311|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+15:14:16.033|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+15:14:16.034|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+15:14:16.034|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:14:16.035|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:14:16.035|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:14:16.035|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:14:20.478|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:14:20.478|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:16:10.999|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+15:16:11.007|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+15:19:21.827|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+15:19:21.835|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+15:20:05.274|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+15:20:05.282|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+15:21:59.422|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+15:21:59.431|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+15:24:23.255|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+15:24:23.261|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+15:25:42.055|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+15:25:42.064|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+15:29:59.585|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+15:29:59.595|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+15:30:00.240|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+15:30:00.241|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+15:30:00.241|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:30:00.242|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:30:00.242|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:30:00.243|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:30:50.728|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+15:30:50.734|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+15:31:28.500|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+15:31:28.507|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+15:31:29.395|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+15:31:29.397|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+15:31:29.397|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:31:29.398|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:31:29.398|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:31:29.398|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:34:50.818|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+15:34:50.824|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+15:35:41.651|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+15:35:41.659|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+15:35:41.691|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+15:35:41.692|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+15:35:41.692|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:35:41.693|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:35:41.693|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:35:41.693|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:35:56.779|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:35:56.779|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:41:40.072|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+15:41:40.078|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+15:41:40.993|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+15:41:40.994|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+15:41:40.994|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:41:40.994|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:41:40.995|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:41:40.995|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:42:31.350|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+15:42:31.356|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+15:42:31.594|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+15:42:31.596|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+15:42:31.596|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:42:31.596|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:42:31.597|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:42:31.597|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:43:50.122|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+15:43:50.128|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+15:43:50.981|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+15:43:50.982|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+15:43:50.982|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:43:50.983|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:43:50.983|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:43:50.983|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:48:28.327|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+15:48:28.334|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+15:48:28.864|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+15:48:28.865|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+15:48:28.866|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:48:28.866|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:48:28.867|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+15:48:28.867|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+15:53:26.257|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+15:53:26.263|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+15:54:56.564|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+15:54:56.572|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+16:02:51.969|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+16:02:51.977|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+16:02:52.512|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+16:02:52.513|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+16:02:52.514|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+16:02:52.514|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+16:02:52.515|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+16:02:52.515|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+16:03:23.204|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+16:03:23.226|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+16:04:29.272|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+16:04:29.279|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+16:04:32.069|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+16:04:32.070|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+16:04:32.070|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+16:04:32.071|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+16:04:32.071|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+16:04:32.071|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+16:04:45.395|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+16:04:45.396|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+16:09:59.825|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+16:09:59.832|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+16:10:02.558|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+16:10:02.559|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+16:10:02.559|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+16:10:02.560|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+16:10:02.560|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+16:10:02.560|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+16:10:39.087|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+16:10:39.095|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+16:12:10.019|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+16:12:10.026|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+16:26:19.924|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+16:26:19.934|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+16:26:55.965|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+16:26:55.973|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+16:27:40.162|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+16:27:40.170|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+16:29:09.914|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+16:29:09.920|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+16:30:12.052|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+16:30:12.061|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+16:30:51.687|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+16:30:51.695|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+16:31:42.141|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+16:31:42.148|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+16:31:46.338|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+16:31:46.339|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+16:31:46.339|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+16:31:46.340|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+16:31:46.340|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+16:31:46.340|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+16:31:48.506|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+16:31:48.506|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
+16:34:24.823|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+16:34:24.829|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+16:36:28.758|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+16:36:28.766|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+16:36:31.287|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+16:36:31.289|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+16:36:31.289|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+16:36:31.290|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+16:36:31.290|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+16:36:31.291|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+16:37:37.751|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+16:37:37.759|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+16:41:13.124|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+16:41:13.130|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+

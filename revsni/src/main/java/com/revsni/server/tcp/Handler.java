@@ -2,6 +2,7 @@ package com.revsni.server.tcp;
 
 import java.io.*;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
@@ -22,8 +23,10 @@ public class Handler implements Interaction{
 
     //private Logger LOG = parentLogger;
 	
-    private ObjectInputStream dataIn;
-    private ObjectOutputStream dataOut;
+    //private ObjectInputStream dataIn;
+    //private ObjectOutputStream dataOut;
+    private DataInputStream dataIn;
+    private DataOutputStream dataOut;
 
     private int sessionNumber;
 
@@ -47,11 +50,19 @@ public class Handler implements Interaction{
             e.printStackTrace();
         }
 
+        dataIn = new DataInputStream(connection.getInputStream());
+        dataOut = new DataOutputStream(connection.getOutputStream());
+        dataOut.flush();
+        receiveMessages();
+        
+
+        /*
         dataIn = new ObjectInputStream(connection.getInputStream());
         dataOut = new ObjectOutputStream(connection.getOutputStream());
         dataOut.flush();
 
         Object object;
+
         try {
             object = dataIn.readObject();
             if (object instanceof String) {
@@ -60,6 +71,7 @@ public class Handler implements Interaction{
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+        */
 
     } 
 
@@ -71,17 +83,21 @@ public class Handler implements Interaction{
         
     }
     
+    public void checkMem() {
+        Runtime runtime = Runtime.getRuntime();  
 
-    void sendMessage(String msg) {
-        try{
-            dataOut.writeObject(msg);
-            dataOut.flush();
-        }
-        catch(IOException ioException) {
-            String error = "Connection Was Lost While Writing - " + connection.getRemoteSocketAddress();
-            logger.info(error);
-        }
+        long maxMemory = runtime.maxMemory();  
+        long allocatedMemory = runtime.totalMemory();  
+        long freeMemory = runtime.freeMemory();  
+
+        System.out.println("free memory: " + freeMemory / 1024);  
+        System.out.println("allocated memory: " + allocatedMemory / 1024);  
+        System.out.println("max memory: " + maxMemory /1024);  
+        System.out.println("total free memory: " +   
+        (freeMemory + (maxMemory - allocatedMemory)) / 1024);  
     }
+
+
 
     private void closeConnection() {
         logger.info("Closing Connection - " + connection.getRemoteSocketAddress());
@@ -102,15 +118,40 @@ public class Handler implements Interaction{
             server.removeSession(sessionNumber);
             closeConnection();
         } else if(in.equals("httpSw") || in.equals("httpsSw")) {
-            String message = protocol.prepareMessage((String) arg);
-            sendMessage(message);
+            sendMessage(in);
         } else {
-            String message = protocol.prepareMessage((String) arg);
-            sendMessage(message);
+            sendMessage(in);
             receiveMessages();
         }
     }
 
+    private void receiveMessages(){
+        try {
+            int len = dataIn.readInt();
+            byte[] bytes = new byte[len];
+            dataIn.read(bytes, 0, len);
+            String received = new String(bytes, StandardCharsets.UTF_8);
+            if(received != null) {
+                protocol.processMessage(received, connection.getInetAddress().getHostAddress(), sessionNumber);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void sendMessage(String message) {
+        String toSend = protocol.prepareMessage(new String(message.getBytes(), StandardCharsets.UTF_8));
+        byte[] toSendBytes = toSend.getBytes(StandardCharsets.UTF_8);
+        try {
+            dataOut.writeInt(toSendBytes.length);
+            dataOut.write(toSendBytes, 0, toSendBytes.length);
+        } catch (IOException e) {
+            logger.error("Error while sending message: '{}', to: {} ", message, sessionNumber);
+            e.printStackTrace();
+        }
+    }
+
+    /*
     private void receiveMessages() {
         logger.info("Waiting for response");
 
@@ -132,6 +173,18 @@ public class Handler implements Interaction{
         }
     }
 
+    void sendMessage(String msg) {
+        try{
+            dataOut.writeObject(msg);
+            dataOut.flush();
+        }
+        catch(IOException ioException) {
+            String error = "Connection Was Lost While Writing - " + connection.getRemoteSocketAddress();
+            logger.info(error);
+        }
+    }
+    */
+
     public void callAddSessionHandler() {
         Server.addSession(protocol.getuuid(), protocol.getOs(), sessionNumber);
     }
@@ -146,22 +199,6 @@ public class Handler implements Interaction{
 
     public Mode getMode() {
         return this.mode;
-    }
-
-    public ObjectInputStream getDataIn() {
-        return this.dataIn;
-    }
-
-    public void setDataIn(ObjectInputStream dataIn) {
-        this.dataIn = dataIn;
-    }
-
-    public ObjectOutputStream getDataOut() {
-        return this.dataOut;
-    }
-
-    public void setDataOut(ObjectOutputStream dataOut) {
-        this.dataOut = dataOut;
     }
 
     public void setSessionNumber(int sessionNumber) {
@@ -183,7 +220,6 @@ public class Handler implements Interaction{
     public void setConnection(Socket connection) {
         this.connection = connection;
     }
-
 
 
     public Protocol getProtocol() {

