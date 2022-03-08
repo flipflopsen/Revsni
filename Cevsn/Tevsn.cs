@@ -80,6 +80,7 @@ namespace tevsn
             Array.Reverse(lenBytes);
             writer.Write(lenBytes);
             writer.Write(toSendBytes);
+            writer.Flush();
         }
 
         public String Receive()
@@ -96,6 +97,7 @@ namespace tevsn
                 Console.Write(bytes + "Received!\n");
                 string str = Encoding.UTF8.GetString(bytes);
                 Console.Write("String: " + str);
+                string nicer = str.Replace("=","");
                 byte[] b64 = Convert.FromBase64String(str);
                 message = Decrypt(b64);
                 Console.Write("Decrypted: " + message.ToString());
@@ -124,7 +126,7 @@ namespace tevsn
             //write decrypt method for aes cbc
             private string Decrypt(byte[] bytes)
             {
-                ReadKey(Key.ToString()!);
+                //ReadKey(Key.ToString()!);
                 using (Aes aes = Aes.Create())
                 {
                     aes.Key = Key;
@@ -134,7 +136,8 @@ namespace tevsn
                     using (ICryptoTransform decryptor = aes.CreateDecryptor())
                     {
                         byte[] decryptedBytes = decryptor.TransformFinalBlock(bytes, 0, bytes.Length);
-                        return Encoding.UTF8.GetString(decryptedBytes);
+                        Console.Write("Base64: " + Encoding.UTF8.GetString(decryptedBytes));
+                        return Encoding.UTF8.GetString(Convert.FromBase64String(Encoding.UTF8.GetString(decryptedBytes).Replace("=","")));
                     }
                 }
             }

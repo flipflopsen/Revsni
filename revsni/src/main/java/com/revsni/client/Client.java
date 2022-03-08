@@ -1,6 +1,8 @@
 package com.revsni.client;
 
 import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -55,8 +57,8 @@ public class Client {
     private Socket reqSock;
     private String[] address = new String[2];
 
-    private ObjectOutputStream dataOut;
-    private ObjectInputStream dataIn;
+    private DataOutputStream dataOut;
+    private DataInputStream dataIn;
 
     private Cipher cipherEnc;
     private Cipher cipherDec;
@@ -101,9 +103,9 @@ public class Client {
 
                 reqSock = new Socket(address[0], port);
 
-                dataOut = new ObjectOutputStream(reqSock.getOutputStream());
+                dataOut = new DataOutputStream(reqSock.getOutputStream());
                 dataOut.flush();
-                dataIn = new ObjectInputStream(reqSock.getInputStream());
+                dataIn = new DataInputStream(reqSock.getInputStream());
 
                 sendMessage(uniqueID + ": just arrived to vacation!" + " On: " + os);
                 
@@ -128,9 +130,9 @@ public class Client {
     
                     reqSock = new Socket(address[0], port);
     
-                    dataOut = new ObjectOutputStream(reqSock.getOutputStream());
+                    dataOut = new DataOutputStream(reqSock.getOutputStream());
                     dataOut.flush();
-                    dataIn = new ObjectInputStream(reqSock.getInputStream());
+                    dataIn = new DataInputStream(reqSock.getInputStream());
     
                     sendMessage(uniqueID + ": just arrived to vacation!" + " On: " + os);
                     connExists = true;
@@ -301,11 +303,14 @@ public class Client {
             cipherEnc.init(Cipher.ENCRYPT_MODE, this.key, this.iv);
 
             String encoded = new String(Base64.getEncoder()
-                .encode(cipherEnc.doFinal(msg.getBytes())));
+                .encode(cipherEnc
+                .doFinal(Base64.getEncoder()
+                .encode(msg.getBytes()))));
 
             logger.debug(encoded);
             if(type.equals("TCP")) {
-                dataOut.writeObject(encoded);
+                dataOut.writeInt(encoded.getBytes().length);
+                dataOut.write(encoded.getBytes());
                 dataOut.flush();
             }
             if(type.equals("HTTP")) {
@@ -400,6 +405,8 @@ public class Client {
                 
                 String message  = new String(cipherDec.doFinal(Base64.getDecoder()
                     .decode(msg)));
+
+                message = new String(Base64.getDecoder().decode(message));
 
                 logger.info(message);
 
@@ -622,15 +629,14 @@ public class Client {
         if(type.equals("TCP")) {
             while (!reqSock.isClosed()) {
                 try {
-                    String message = (String) dataIn.readObject();
+                    String message = receiveMessages();
                     handleCentral(message);
                     Thread.sleep(10000);
-                } catch(InterruptedException | IOException | ClassNotFoundException e) {
-                    if(e instanceof EOFException) {
-                        connExists = false;
-                        trigCheck = false;
-                        close();
-                    }
+                } catch(InterruptedException e) {
+                    connExists = false;
+                    trigCheck = false;
+                    close();
+                    
                 } 
             }
         }
@@ -644,5 +650,20 @@ public class Client {
                 }
             }
         }
+    }
+
+    private String receiveMessages(){
+        try {
+            int len = dataIn.readInt();
+            byte[] bytes = new byte[len];
+            dataIn.read(bytes, 0, len);
+            String received = new String(bytes);
+            if(received != null) {
+                return received;
+            } 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "";
     }
 }

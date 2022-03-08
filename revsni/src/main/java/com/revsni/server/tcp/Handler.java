@@ -19,12 +19,7 @@ import org.apache.logging.log4j.Logger;
 
 public class Handler implements Interaction{
     private static final Logger logger = LogManager.getLogger(Handler.class);
-
-
-    //private Logger LOG = parentLogger;
-	
-    //private ObjectInputStream dataIn;
-    //private ObjectOutputStream dataOut;
+    
     private DataInputStream dataIn;
     private DataOutputStream dataOut;
 
@@ -54,24 +49,6 @@ public class Handler implements Interaction{
         dataOut = new DataOutputStream(connection.getOutputStream());
         dataOut.flush();
         receiveMessages();
-        
-
-        /*
-        dataIn = new ObjectInputStream(connection.getInputStream());
-        dataOut = new ObjectOutputStream(connection.getOutputStream());
-        dataOut.flush();
-
-        Object object;
-
-        try {
-            object = dataIn.readObject();
-            if (object instanceof String) {
-                protocol.processMessage((String) object, connection.getInetAddress().getHostAddress(), sessionNumber);
-            }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        */
 
     } 
 
@@ -143,6 +120,7 @@ public class Handler implements Interaction{
         String toSend = protocol.prepareMessage(new String(message.getBytes(), StandardCharsets.UTF_8));
         byte[] toSendBytes = toSend.getBytes(StandardCharsets.UTF_8);
         try {
+            logger.info("Trying to write...");
             dataOut.writeInt(toSendBytes.length);
             dataOut.write(toSendBytes, 0, toSendBytes.length);
         } catch (IOException e) {
@@ -150,40 +128,6 @@ public class Handler implements Interaction{
             e.printStackTrace();
         }
     }
-
-    /*
-    private void receiveMessages() {
-        logger.info("Waiting for response");
-
-        boolean done = false;
-        while (!done) {
-            try {
-                Object object = dataIn.readObject();
-                if (object instanceof String) {
-                    String message = (String) object;
-                    done = protocol.processMessage(message, connection.getInetAddress().getHostAddress(), sessionNumber);
-                }
-            }
-            catch (IOException | ClassNotFoundException e) {
-                done = true;
-                String error = "Connection Was Lost While Reading - " + connection.getRemoteSocketAddress();
-                logger.info(error);
-                server.removeSession(sessionNumber);
-            }
-        }
-    }
-
-    void sendMessage(String msg) {
-        try{
-            dataOut.writeObject(msg);
-            dataOut.flush();
-        }
-        catch(IOException ioException) {
-            String error = "Connection Was Lost While Writing - " + connection.getRemoteSocketAddress();
-            logger.info(error);
-        }
-    }
-    */
 
     public void callAddSessionHandler() {
         Server.addSession(protocol.getuuid(), protocol.getOs(), sessionNumber);
