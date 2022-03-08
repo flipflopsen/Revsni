@@ -24,17 +24,17 @@ public class Protocol {
 
     public Protocol(Server server) throws InvalidKeyException, InvalidAlgorithmParameterException, NoSuchAlgorithmException, NoSuchPaddingException {
         this.spec = new SecretKeySpec(server.getKey().getEncoded(), "AES");
-        cipherDec = Cipher.getInstance("AES/CBC/NoPadding");
+        cipherDec = Cipher.getInstance("AES/CBC/PKCS5Padding");
         cipherDec.init(Cipher.DECRYPT_MODE, spec, server.getIv());
 
-        cipherEnc = Cipher.getInstance("AES/CBC/NoPadding");
+        cipherEnc = Cipher.getInstance("AES/CBC/PKCS5Padding");
         cipherEnc.init(Cipher.ENCRYPT_MODE, server.getKey(), server.getIv());
     }
 
     public boolean processMessage(String msg, String ip, int sessionNumber) {
         try {
             System.out.println(msg);
-            byte[] replaced1 = Base64.getDecoder().decode(msg.getBytes("UTF-8"));
+            byte[] replaced1 = Base64.getDecoder().decode(msg.getBytes("ASCII"));
             System.out.println(new String(replaced1));
             byte[] decodedB64 = cipherDec.doFinal(replaced1);
             System.out.println(replaced1);
@@ -62,12 +62,7 @@ public class Protocol {
     public String prepareMessage(String msg) {
         String message = "-";
         try {
-            byte[] data = Base64.getEncoder().encode(msg.getBytes("UTF-8"));
-            int i = 0;
-            String s = "0";
-            while(data.length % 16 != 0) {
-                data = Base64.getEncoder().encode((msg + new String(new char[i]).replace("\0", s)).getBytes("UTF-8"));
-            }
+            byte[] data = Base64.getEncoder().encode(msg.getBytes("ASCII"));
             message  = Base64.getEncoder()
                 .encodeToString(cipherEnc.doFinal(data));
             return message;
