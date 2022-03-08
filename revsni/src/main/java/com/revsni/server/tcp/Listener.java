@@ -75,6 +75,7 @@ public class Listener implements Runnable{
 
                 logger.info("Connection received from " + connection.getInetAddress().getHostName() + ":" + connection.getLocalPort());
                 server.addToPrint(sessionNumber);
+                server.deliverNewPrivKey(sessionNumber);
                 sessionNumber++;
 
             }

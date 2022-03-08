@@ -56,6 +56,10 @@ public class HTTPShell implements Interaction {
         handler.sendCommand(command);
     }
 
+    public void sendCommand(String command, String uuid) {
+        handler.sendCommand(command);
+    }
+
     public boolean getConnInf() {
         return handler.getConnInf();
     }

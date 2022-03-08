@@ -1,6 +1,5 @@
 package com.revsni.server.encryption;
 
-import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
@@ -78,14 +77,10 @@ public class AES implements Encri {
 
     public String decrypt(String encrypted) {
         try {
-            System.out.println(encrypted);
             byte[] replaced1 = Base64.getDecoder().decode(encrypted.getBytes(StandardCharsets.UTF_8));
-            System.out.println(new String(replaced1));
             byte[] decodedB64;
             decodedB64 = decryptCipher.doFinal(replaced1);
-            System.out.println(replaced1);
             String repl2 = new String(decodedB64);
-            System.out.println(repl2);
             String message = new String(Base64.getDecoder().decode(repl2), StandardCharsets.UTF_8);
             return message;
         } catch (IllegalBlockSizeException | BadPaddingException e) {

@@ -45,7 +45,6 @@ public class Protocol {
             this.uuid = splitted[0];
             this.os = splitted[2].replaceAll("\\s","");
         }
-        
         System.out.print("Revsn [TCP]["+ ip +"]["+sessionNumber+"] » ");
         return true;
         
@@ -58,6 +57,16 @@ public class Protocol {
             message = clientEnc.get(sessionNumber).encrypt(msg);
         } else {
             message = Server.initEncri.encrypt(msg);
+        }
+        return message;
+    }
+    public String prepareMessage(String msg, int sessionNumber, String uuid) {
+        updateEncryptionModes();
+        String message;
+        if(clientEnc.containsKey(sessionNumber)) {
+            message = clientEnc.get(sessionNumber).encrypt(uuid, msg);
+        } else {
+            message = Server.initEncri.encrypt(uuid, msg);
         }
         return message;
     }

@@ -28,3 +28,5 @@
 /home/shorida/Projekte/Revsni/Cevsn/obj/Debug/net6.0/ref/Cevsn.dll
 /home/shorida/Projekte/Revsni/Cevsn/obj/Debug/net6.0/Cevsn.pdb
 /home/shorida/Projekte/Revsni/Cevsn/obj/Debug/net6.0/Cevsn.genruntimeconfig.cache
+/home/shorida/Projekte/Revsni/Cevsn/bin/Debug/net6.0/BouncyCastle.Crypto.dll
+/home/shorida/Projekte/Revsni/Cevsn/obj/Debug/net6.0/Cevsn.csproj.CopyComplete

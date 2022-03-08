@@ -34,6 +34,10 @@ public class HTTPSShell implements Interaction {
         server.sendCommand(command);
     }
 
+    public void sendCommand(String command, String uuid) {
+        server.sendCommand(command);
+    }
+
     public int getPort() {
         return this.port;
     }

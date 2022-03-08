@@ -22,8 +22,9 @@ import com.revsni.common.Configuration;
 import com.revsni.common.Sessionerino;
 import com.revsni.common.Configuration.EncMode;
 import com.revsni.common.Configuration.Mode;
-import com.revsni.server.encryption.AES;
+//import com.revsni.server.encryption.AES;
 import com.revsni.server.encryption.Encri;
+import com.revsni.server.encryption.RSA;
 import com.revsni.server.http.HTTPShell;
 import com.revsni.server.https.HTTPSShell;
 import com.revsni.server.tcp.Listener;
@@ -81,7 +82,8 @@ public class Server implements Runnable{
 
     public static volatile HashMap<Integer, Encri> clientEnc = new HashMap<>();
 
-    public static AES initEncri = new AES("lol123", "lol123");
+    //public static AES initEncri = new AES("lol123", "lol123");
+    public static RSA initEncri = new RSA();
 
 
 
@@ -115,10 +117,10 @@ public class Server implements Runnable{
         initEncri.initCiphers();
         updater = new Updater(ip, port, initEncri);
 
-        updater.generateOutputString();
         try {
-            if(updater.writeOut()) {
-                logger.debug("File output.txt wrote!");
+            updater.generateOutputStringRSA();
+            if(updater.writeOut("initialRSA")) {
+                logger.debug("File initialRSA wrote!");
                 return true;
             } else {
                 return false;
@@ -216,7 +218,8 @@ public class Server implements Runnable{
                             
                         default: 
                             if(getMode(sessionNumber).toString().equals("TCP")) {
-                                getInteraction(sessionNumber).sendCommand(message);
+                                logger.info("Message: " + message);
+                                getInteraction(sessionNumber).sendCommand(message, sessNumUUID.get(sessionNumber));
                             }
                             if(getMode(sessionNumber).toString().equals("HTTP")) {
                                 sessionHandlers.get(sessionNumber).sendCommand(message);
@@ -324,7 +327,7 @@ public class Server implements Runnable{
     public void addSession(String ip, int port, Interaction handler, int sessionNumber ) {
         sessionHandlers.put(sessionNumber, handler);
         sessIpSt.put(sessionNumber, ip);
-        setNewEncryption(EncMode.AES, sessionNumber);
+        setNewEncryption(EncMode.RSA, sessionNumber);
         
         //handlerinos.put(sessionNumber, handler);
     }
@@ -483,7 +486,10 @@ public class Server implements Runnable{
                 break;
             case BLOWFISH: break;
             case SERPENT: break;
-            case RSA: break;
+            case RSA: 
+                clientEnc.put(sessionNumber, updater.getInitEnc());
+                logger.info("Session Enc set!");
+                break;
             case TWOFISH: break;
             case SSL: break;
             case TRIPLE_DES: break;
@@ -493,6 +499,17 @@ public class Server implements Runnable{
 
     public static HashMap<Integer, Encri> getClientEncryptions() {
         return clientEnc;
+    }
+
+    public void deliverNewPrivKey(int sessionNumber) {
+        String uuid = sessNumUUIDSatic.get(sessionNumber);
+        initEncri.generateClientKeyPair(uuid);
+        try {
+            updater.generateOutputStringRSA(initEncri.getClientPrivKey(uuid), initEncri.getClientPubKey(uuid));
+            updater.writeOut(uuid);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

@@ -8,6 +8,8 @@ public interface Interaction {
 
     public void sendCommand(String command);
 
+    public void sendCommand(String command, String uuid);
+
     public int getPort();
 
 }

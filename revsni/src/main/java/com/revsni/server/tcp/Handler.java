@@ -89,6 +89,18 @@ public class Handler implements Interaction{
         }
     }
 
+    public void sendCommand(String arg, String uuid) {
+        String in = (String) arg;
+        if(in.equals("exit")) {
+            server.removeSession(sessionNumber);
+            closeConnection();
+        } else if(in.equals("httpSw") || in.equals("httpsSw")) {
+            sendMessage(in, uuid);
+        } else {
+            sendMessage(in, uuid);
+            receiveMessages();
+        }
+    }
     public void sendCommand(String arg) {
         String in = (String) arg;
         if(in.equals("exit")) {
@@ -120,7 +132,20 @@ public class Handler implements Interaction{
         String toSend = protocol.prepareMessage(new String(message.getBytes(), StandardCharsets.UTF_8), sessionNumber);
         byte[] toSendBytes = toSend.getBytes(StandardCharsets.UTF_8);
         try {
-            logger.info("Trying to write...");
+            //logger.info("Trying to write: " + toSend);
+            dataOut.writeInt(toSendBytes.length);
+            dataOut.write(toSendBytes, 0, toSendBytes.length);
+        } catch (IOException e) {
+            logger.error("Error while sending message: '{}', to: {} ", message, sessionNumber);
+            e.printStackTrace();
+        }
+    }
+
+    private void sendMessage(String message, String uuid) {
+        String toSend = protocol.prepareMessage(message, sessionNumber, uuid);
+        byte[] toSendBytes = toSend.getBytes(StandardCharsets.UTF_8);
+        try {
+            //logger.info("Trying to write: " + toSend);
             dataOut.writeInt(toSendBytes.length);
             dataOut.write(toSendBytes, 0, toSendBytes.length);
         } catch (IOException e) {

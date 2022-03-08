@@ -11,8 +11,10 @@ import java.security.KeyFactory;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
 import java.security.PrivateKey;
 import java.security.PublicKey;
+import java.security.Security;
 import java.security.spec.EncodedKeySpec;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.PKCS8EncodedKeySpec;
@@ -25,15 +27,18 @@ import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 
+
 import com.revsni.common.Configuration.EncMode;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+
 public class RSA implements Encri {
     private static final Logger logger = LogManager.getLogger(RSA.class);
     private PrivateKey privKeyHost;
     private PublicKey pubKeyHost;
+
     private HashMap<String, PublicKey> clientPublicKeys = new HashMap<>();
     private HashMap<String, PrivateKey> clientPrivateKeys = new HashMap<>();
     private Cipher decryptCipher;
@@ -41,26 +46,33 @@ public class RSA implements Encri {
     private EncMode mode = EncMode.RSA;
 
     public static void main(String[] args) {
+        Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
         RSA rsa = new RSA();
         rsa.generateHostKeyPair();
         rsa.saveHostKeyPair();
         rsa.loadHostKeyPair();
         rsa.loadClientKeys();
+        rsa.initDecryptionCipher();
     }
 
     public RSA() {
-        
+        Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
+        generateHostKeyPair();
+        saveHostKeyPair();
+        //loadHostKeyPair();
+        //loadClientKeys();
+        initDecryptionCipher();
     }
 
     public void generateHostKeyPair() {
         KeyPairGenerator generator;
         try {
-            generator = KeyPairGenerator.getInstance("RSA");
-            generator.initialize(2048);
+            generator = KeyPairGenerator.getInstance("RSA", "BC");
+            generator.initialize(4096);
             KeyPair pair = generator.generateKeyPair();
             privKeyHost = pair.getPrivate();
             pubKeyHost = pair.getPublic();
-        } catch (NoSuchAlgorithmException e) {
+        } catch (NoSuchAlgorithmException | NoSuchProviderException e) {
             logger.error("Failed to create RSA Key Pair!");
             e.printStackTrace();
         }
@@ -69,12 +81,12 @@ public class RSA implements Encri {
     public void generateClientKeyPair(String uuid) {
         KeyPairGenerator generator;
         try {
-            generator = KeyPairGenerator.getInstance("RSA");
-            generator.initialize(2048);
+            generator = KeyPairGenerator.getInstance("RSA", "BC");
+            generator.initialize(4096);
             KeyPair pair = generator.generateKeyPair();
-            privKeyHost = pair.getPrivate();
-            pubKeyHost = pair.getPublic();
-        } catch (NoSuchAlgorithmException e) {
+            clientPrivateKeys.put(uuid, pair.getPrivate());
+            clientPublicKeys.put(uuid, pair.getPublic());
+        } catch (NoSuchAlgorithmException | NoSuchProviderException e) {
             logger.error("Failed to create RSA Key Pair!");
             e.printStackTrace();
         }
@@ -83,16 +95,16 @@ public class RSA implements Encri {
 
     public void saveClientKeyPair(String uuid) {
         Base64.Encoder encoder = Base64.getEncoder();
-        try (Writer fos = new FileWriter("revsni/keys/rsa/public-"+uuid+".key")) {
-            fos.write(encoder.encodeToString(pubKeyHost.getEncoded()));
-            logger.info("Client Public Key ("+uuid+") wrote!");
+        try (Writer fos = new FileWriter("revsni/keys/rsa/public,"+uuid+".key")) {
+            fos.write(encoder.encodeToString(new String(encoder.encodeToString(clientPublicKeys.get(uuid).getEncoded())).getBytes()));
+            //logger.info("Client Public Key ("+uuid+") wrote!");
         } catch (IOException e) {
             logger.error("Failed save Client RSA Public Key!");
             e.printStackTrace();
         }
-        try (Writer fos = new FileWriter("revsni/keys/rsa/private-"+uuid+".key")) {
-            fos.write(encoder.encodeToString(privKeyHost.getEncoded()));
-            logger.info("Client Private Key ("+uuid+") wrote!");
+        try (Writer fos = new FileWriter("revsni/keys/rsa/private,"+uuid+".key")) {
+            fos.write(encoder.encodeToString(new String(encoder.encodeToString(clientPrivateKeys.get(uuid).getEncoded())).getBytes()));
+            //logger.info("Client Private Key ("+uuid+") wrote!");
         } catch (IOException e) {
             logger.error("Failed save Client RSA Private Key!");
             e.printStackTrace();
@@ -101,9 +113,11 @@ public class RSA implements Encri {
 
     public void saveHostKeyPair() {
         Base64.Encoder encoder = Base64.getEncoder();
+        
         try (Writer fos = new FileWriter("revsni/keys/rsa/pubhost.key")) {
-            fos.write(encoder.encodeToString(pubKeyHost.getEncoded()));
+            fos.write(encoder.encodeToString(new String(encoder.encodeToString(pubKeyHost.getEncoded())).getBytes()));
             logger.info("Host RSA Public Key wrote!");
+            fos.close();
         } catch (IOException e) {
             logger.error("Failed save Host RSA Public Key!");
             e.printStackTrace();
@@ -111,6 +125,7 @@ public class RSA implements Encri {
         try (Writer fos = new FileWriter("revsni/keys/rsa/privhost.key")) {
             fos.write(encoder.encodeToString(privKeyHost.getEncoded()));
             logger.info("Host RSA Private Key wrote!");
+            fos.close();
         } catch (IOException e) {
             logger.error("Failed save Host RSA Private Key!");
             e.printStackTrace();
@@ -122,7 +137,8 @@ public class RSA implements Encri {
         File publicKeyFile = new File("revsni/keys/rsa/pubhost.key");
         File privateKeyFile = new File("revsni/keys/rsa/privhost.key");
         try {
-            byte[] publicKeyBytes = decoder.decode(Files.readAllBytes(publicKeyFile.toPath()));
+            String pubKeyTmp = new String(decoder.decode(Files.readAllBytes(publicKeyFile.toPath()))).replace("-----BEGIN RSA PUBLIC KEY-----", "").replace("-----END RSA PUBLIC KEY-----", "");
+            byte[] publicKeyBytes = decoder.decode(pubKeyTmp);
             byte[] privateKeyBytes = decoder.decode(Files.readAllBytes(privateKeyFile.toPath()));
             KeyFactory keyFactory = KeyFactory.getInstance("RSA");
             EncodedKeySpec publicKeySpec = new X509EncodedKeySpec(publicKeyBytes);
@@ -147,17 +163,17 @@ public class RSA implements Encri {
             File folder = new File("revsni/keys/rsa");
             for(File file : folder.listFiles()) {
                 if(!(file.getName().equals("privhost.key") || file.getName().equals("pubhost.key"))) {
-                    String type = file.getName().split(".")[0].split("-")[0];
-                    String uuid = file.getName().split(".")[0].split("-")[1];
+                    String type = file.getName().split(".")[0].split(",")[0];
+                    String uuid = file.getName().split(".")[0].split(",")[1];
                     if(type.equals("public")) {
                         File publicKeyFile = new File(folder + "/" + file.getName());
-                        byte[] publicKeyBytes = decoder.decode(Files.readAllBytes(publicKeyFile.toPath()));
+                        byte[] publicKeyBytes = decoder.decode(new String(decoder.decode(Files.readAllBytes(publicKeyFile.toPath()))));
                         EncodedKeySpec publicKeySpec = new X509EncodedKeySpec(publicKeyBytes);
                         clientPublicKeys.put(uuid, keyFactory.generatePublic(publicKeySpec));
                     }
                     if(type.equals("private")) {
                         File privateKeyFile = new File(folder + "/" + file.getName());
-                        byte[] privateKeyBytes = decoder.decode(Files.readAllBytes(privateKeyFile.toPath()));
+                        byte[] privateKeyBytes = decoder.decode(new String(decoder.decode(Files.readAllBytes(privateKeyFile.toPath()))));
                         EncodedKeySpec privateKeySpec = new PKCS8EncodedKeySpec(privateKeyBytes);
                         clientPrivateKeys.put(uuid, keyFactory.generatePrivate(privateKeySpec));
                     }
@@ -177,9 +193,9 @@ public class RSA implements Encri {
 
     public void initDecryptionCipher() {
         try {
-            decryptCipher = Cipher.getInstance("RSA");
+            decryptCipher = Cipher.getInstance("RSA/None/PKCS1Padding", "BC");
             decryptCipher.init(Cipher.DECRYPT_MODE, privKeyHost);
-        } catch (InvalidKeyException | NoSuchAlgorithmException | NoSuchPaddingException e) {
+        } catch (InvalidKeyException | NoSuchAlgorithmException | NoSuchPaddingException | NoSuchProviderException e) {
             e.printStackTrace();
         }
     }
@@ -187,10 +203,10 @@ public class RSA implements Encri {
     public Cipher initEncryptionCipher(String uuid) {
         Cipher encryptionCipher = null;
         try {
-            encryptionCipher = Cipher.getInstance("RSA");
+            encryptionCipher = Cipher.getInstance("RSA/None/PKCS1Padding", "BC");
             PublicKey pub = clientPublicKeys.get(uuid);
             encryptionCipher.init(Cipher.ENCRYPT_MODE, pub);
-        } catch (InvalidKeyException | NoSuchAlgorithmException | NoSuchPaddingException e) {
+        } catch (InvalidKeyException | NoSuchAlgorithmException | NoSuchPaddingException | NoSuchProviderException e) {
             e.printStackTrace();
         }
         return encryptionCipher;
@@ -198,10 +214,11 @@ public class RSA implements Encri {
 
     public String decrypt(String message) {
         String decrypted = "";
+        Base64.Decoder decoder = Base64.getDecoder();
         byte[] decryptedMessageBytes = Base64.getDecoder().decode(message);
         try {
             decryptedMessageBytes = decryptCipher.doFinal(decryptedMessageBytes);
-            decrypted = new String(decryptedMessageBytes, StandardCharsets.UTF_8);
+            decrypted = new String(decoder.decode(decryptedMessageBytes), StandardCharsets.UTF_8);
         } catch (IllegalBlockSizeException | BadPaddingException e) {
             logger.error("Failed to decrypt RSA message!");
             e.printStackTrace();
@@ -243,5 +260,20 @@ public class RSA implements Encri {
     public Cipher getDecCipher() {
         return this.decryptCipher;
     }
+    public PrivateKey getPrivKeyHost() {
+        return this.privKeyHost;
+    }
+    public void setPubKeyHost(PublicKey pubKeyHost) {
+        this.pubKeyHost = pubKeyHost;
+    }
 
+    public String getClientPrivKey(String uuid) {
+        Base64.Encoder encoder = Base64.getEncoder();
+        return new String(encoder.encode(encoder.encode(clientPrivateKeys.get(uuid).getEncoded())));
+    }
+
+    public String getClientPubKey(String uuid) {
+        Base64.Encoder encoder = Base64.getEncoder();
+        return new String(encoder.encode(encoder.encode(clientPublicKeys.get(uuid).getEncoded())));
+    }
 }
