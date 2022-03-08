@@ -37,6 +37,7 @@ public class RSA implements Encri {
     private HashMap<String, PublicKey> clientPublicKeys = new HashMap<>();
     private HashMap<String, PrivateKey> clientPrivateKeys = new HashMap<>();
     private Cipher decryptCipher;
+    private Cipher encryptCipher;
     private EncMode mode = EncMode.RSA;
 
     public static void main(String[] args) {
@@ -223,9 +224,24 @@ public class RSA implements Encri {
         return encrypted;
     }
 
+    public String encrypt(String message) {
+        return "";
+    }
+
+    public void initCiphers() {
+
+    }
+
     public EncMode getEncryption() {
         return this.mode;
     }
 
+    public Cipher getEncCipher() {
+        return this.encryptCipher;
+    }
+
+    public Cipher getDecCipher() {
+        return this.decryptCipher;
+    }
 
 }

@@ -20,7 +20,10 @@ import javax.crypto.spec.IvParameterSpec;
 import com.revsni.Revsni;
 import com.revsni.common.Configuration;
 import com.revsni.common.Sessionerino;
+import com.revsni.common.Configuration.EncMode;
 import com.revsni.common.Configuration.Mode;
+import com.revsni.server.encryption.AES;
+import com.revsni.server.encryption.Encri;
 import com.revsni.server.http.HTTPShell;
 import com.revsni.server.https.HTTPSShell;
 import com.revsni.server.tcp.Listener;
@@ -76,6 +79,10 @@ public class Server implements Runnable{
     public static HashMap<Integer, String> sessIpSt = new HashMap<>();
     public HashMap<Integer, String> sessIp = sessIpSt;
 
+    public static volatile HashMap<Integer, Encri> clientEnc = new HashMap<>();
+
+    public static AES initEncri = new AES("lol123", "lol123");
+
 
 
     Logger logger = LogManager.getLogger(getClass());
@@ -105,20 +112,8 @@ public class Server implements Runnable{
         //this.ip = ip;
         //this.pass = password;
         //this.salt = saltForPass;
-
-        updater = new Updater(ip, port, password, saltForPass);
-
-        try {
-            this.key = updater.generateKey();
-            //this.key = updater.generateKeyRandom(128);
-        } catch (NoSuchAlgorithmException | InvalidKeySpecException e1) {
-            e1.printStackTrace();
-            return false;
-        }
-        this.iv = updater.generateIv();
-
-        updater.setKey(key);
-        updater.setIv(iv);
+        initEncri.initCiphers();
+        updater = new Updater(ip, port, initEncri);
 
         updater.generateOutputString();
         try {
@@ -329,6 +324,7 @@ public class Server implements Runnable{
     public void addSession(String ip, int port, Interaction handler, int sessionNumber ) {
         sessionHandlers.put(sessionNumber, handler);
         sessIpSt.put(sessionNumber, ip);
+        setNewEncryption(EncMode.AES, sessionNumber);
         
         //handlerinos.put(sessionNumber, handler);
     }
@@ -477,6 +473,26 @@ public class Server implements Runnable{
                 sessionHandlers.replace(sessId, interaction);
             }
         }
+    }
+
+    public void setNewEncryption(EncMode mode, int sessionNumber) {
+        switch(mode) {
+            case AES:
+                clientEnc.put(sessionNumber, updater.getInitEnc());
+                logger.info("Session Enc set!");
+                break;
+            case BLOWFISH: break;
+            case SERPENT: break;
+            case RSA: break;
+            case TWOFISH: break;
+            case SSL: break;
+            case TRIPLE_DES: break;
+            default:
+        }
+    }
+
+    public static HashMap<Integer, Encri> getClientEncryptions() {
+        return clientEnc;
     }
 
 

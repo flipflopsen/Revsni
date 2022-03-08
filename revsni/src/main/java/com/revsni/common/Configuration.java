@@ -12,7 +12,8 @@ public class Configuration {
         TWOFISH,
         SERPENT,
         SSL,
-        BLOWFISH
+        BLOWFISH,
+        TRIPLE_DES
     }
 
     public enum Mode {

@@ -117,7 +117,7 @@ public class Handler implements Interaction{
     }
 
     private void sendMessage(String message) {
-        String toSend = protocol.prepareMessage(new String(message.getBytes(), StandardCharsets.UTF_8));
+        String toSend = protocol.prepareMessage(new String(message.getBytes(), StandardCharsets.UTF_8), sessionNumber);
         byte[] toSendBytes = toSend.getBytes(StandardCharsets.UTF_8);
         try {
             logger.info("Trying to write...");

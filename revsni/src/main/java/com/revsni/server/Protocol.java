@@ -1,73 +1,63 @@
 package com.revsni.server;
 
-import java.io.UnsupportedEncodingException;
-import java.nio.charset.StandardCharsets;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
-import java.util.Base64;
+import java.util.HashMap;
 
-import javax.crypto.BadPaddingException;
-import javax.crypto.Cipher;
-import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
-import javax.crypto.spec.SecretKeySpec;
+
+import com.revsni.server.encryption.Encri;
 
 
 public class Protocol {
 
-    private Cipher cipherDec;
-    private Cipher cipherEnc;
-    private SecretKeySpec spec;
+    private Server server;
     private String os;
     private String uuid;
+    private volatile HashMap<Integer, Encri> clientEnc = new HashMap<>();
 
     public Protocol(Server server) throws InvalidKeyException, InvalidAlgorithmParameterException, NoSuchAlgorithmException, NoSuchPaddingException {
-        this.spec = new SecretKeySpec(server.getKey().getEncoded(), "AES");
-        cipherDec = Cipher.getInstance("AES/CBC/PKCS5Padding");
-        cipherDec.init(Cipher.DECRYPT_MODE, spec, server.getIv());
-
-        cipherEnc = Cipher.getInstance("AES/CBC/PKCS5Padding");
-        cipherEnc.init(Cipher.ENCRYPT_MODE, server.getKey(), server.getIv());
+        this.server = server;
+        this.clientEnc = Server.getClientEncryptions();
+        
     }
 
     public boolean processMessage(String msg, String ip, int sessionNumber) {
-        try {
-            System.out.println(msg);
-            byte[] replaced1 = Base64.getDecoder().decode(msg.getBytes("ASCII"));
-            System.out.println(new String(replaced1));
-            byte[] decodedB64 = cipherDec.doFinal(replaced1);
-            System.out.println(replaced1);
-            String repl2 = new String(decodedB64, StandardCharsets.UTF_8);
-            System.out.println(repl2);
-            String message = new String(Base64.getDecoder().decode(repl2));
-            if(!message.equals("")){
-                System.out.println("\n" + message);
-            }
-            
-            if(message.contains("arrived to vacation")) {
-                String[] splitted = message.split(":");
-                this.uuid = splitted[0];
-                this.os = splitted[2].replaceAll("\\s","");
-            }
-            
-            System.out.print("Revsn [TCP]["+ ip +"]["+sessionNumber+"] » ");
-            return true;
-        } catch (IllegalBlockSizeException | BadPaddingException | UnsupportedEncodingException e) {
-            e.printStackTrace();
+        updateEncryptionModes();
+        String message;
+        if(clientEnc.containsKey(sessionNumber)) {
+            message = clientEnc.get(sessionNumber).decrypt(msg);
+        } else {
+            message = Server.initEncri.decrypt(msg);
         }
+        if(!message.equals("")){
+            System.out.println("\n" + message);
+        }
+
+        if(message.equals("errxuk")) {
+            System.out.println("Failed to decrypt message!");
+            return false;
+        }
+        
+        if(message.contains("arrived to vacation")) {
+            String[] splitted = message.split(":");
+            this.uuid = splitted[0];
+            this.os = splitted[2].replaceAll("\\s","");
+        }
+        
+        System.out.print("Revsn [TCP]["+ ip +"]["+sessionNumber+"] » ");
         return true;
+        
     }
 
-    public String prepareMessage(String msg) {
-        String message = "-";
-        try {
-            byte[] data = Base64.getEncoder().encode(msg.getBytes("ASCII"));
-            message  = Base64.getEncoder()
-                .encodeToString(cipherEnc.doFinal(data));
-            return message;
-        } catch (IllegalBlockSizeException | BadPaddingException | UnsupportedEncodingException e) {
-            e.printStackTrace();
+    public String prepareMessage(String msg, int sessionNumber) {
+        updateEncryptionModes();
+        String message;
+        if(clientEnc.containsKey(sessionNumber)) {
+            message = clientEnc.get(sessionNumber).encrypt(msg);
+        } else {
+            message = Server.initEncri.encrypt(msg);
         }
         return message;
     }
@@ -78,5 +68,9 @@ public class Protocol {
 
     public String getuuid() {
         return this.uuid;
+    }
+
+    public void updateEncryptionModes() {
+        this.clientEnc = Server.getClientEncryptions();
     }
 }

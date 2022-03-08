@@ -1050,3 +1050,118 @@ To-Do
 .r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
 09:59:35.799|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (344)[m | Type is: TCP
 09:59:35.799|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (146)[m | Trying to write...
+10:09:52.683|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+10:09:52.691|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (149)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+10:09:54.114|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (323)[m | Added Session Nr. 1 to the session list!
+10:09:54.115|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+10:09:54.115|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+10:09:54.116|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+10:09:54.116|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (343)[m | Getting interaction for sessioNumber: 1
+10:09:54.116|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (344)[m | Type is: TCP
+11:08:37.600|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+11:08:37.604|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+11:08:37.605|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (617)[m | Passed checktrig
+11:08:37.605|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+11:08:37.605|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+11:08:37.606|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+11:08:37.606|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+11:08:37.607|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :199020c8-b965-4a78-833b-0939d89fc5e7: just arrived to vacation! On: Linux
+11:14:07.610|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+11:14:07.614|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+11:14:07.614|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (617)[m | Passed checktrig
+11:14:07.615|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+11:14:07.615|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+11:14:07.616|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+11:14:07.616|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+11:14:07.617|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :2f998404-3d24-49c8-82cd-560a56ca16e6: just arrived to vacation! On: Linux
+11:15:41.401|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+11:15:41.407|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (144)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+11:15:55.156|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+11:15:55.159|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+11:15:55.160|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (617)[m | Passed checktrig
+11:15:55.160|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+11:15:55.160|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+11:15:55.161|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+11:15:55.161|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+11:15:55.162|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :d1b9bd4d-45cf-4842-bbeb-8f4c66653690: just arrived to vacation! On: Linux
+11:17:42.380|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+11:17:42.385|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+11:17:42.386|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (617)[m | Passed checktrig
+11:17:42.387|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+11:17:42.387|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+11:17:42.388|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+11:17:42.388|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+11:17:42.390|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (142)[m | catch in init
+11:17:54.394|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+11:17:54.394|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+11:17:54.394|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (617)[m | Passed checktrig
+11:17:54.395|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+11:17:54.395|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+11:17:54.395|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+11:17:54.396|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+11:17:54.396|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :e59ae44c-dd19-4849-91a8-e33d63d9af93: just arrived to vacation! On: Linux
+11:24:46.308|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+11:24:46.312|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+11:24:46.312|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (617)[m | Passed checktrig
+11:24:46.313|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+11:24:46.313|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+11:24:46.314|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+11:24:46.314|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+11:24:46.315|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :9bdc0814-9585-4241-a21e-7589b78feaef: just arrived to vacation! On: Linux
+11:30:12.164|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (267)[m | 127.0.0.11331
+11:30:12.168|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (277)[m | CheckTrigTrue
+11:30:12.168|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (617)[m | Passed checktrig
+11:30:12.169|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (94)[m | Init started!
+11:30:12.169|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (124)[m | INIT
+11:30:12.169|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (128)[m | 127.0.0.1 
+11:30:12.170|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | 1331
+11:30:12.171|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :118eb478-9a74-4f57-aa72-d7848b6490ca: just arrived to vacation! On: Linux
+11:31:58.008|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+11:31:58.014|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (144)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+11:32:00.589|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (482)[m | Session Enc set!
+11:32:00.590|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (318)[m | Added Session Nr. 1 to the session list!
+11:32:00.591|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+11:32:00.591|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (339)[m | Getting interaction for sessioNumber: 1
+11:32:00.592|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (340)[m | Type is: TCP
+11:32:00.592|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (339)[m | Getting interaction for sessioNumber: 1
+11:32:00.592|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (340)[m | Type is: TCP
+4-e241a2268466: just arrived to vacation! On: Linux
+11:34:15.897|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+11:34:15.905|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (144)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+11:34:32.086|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (482)[m | Session Enc set!
+11:34:32.087|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (318)[m | Added Session Nr. 1 to the session list!
+11:34:32.088|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+11:34:32.088|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (339)[m | Getting interaction for sessioNumber: 1
+11:34:32.088|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (340)[m | Type is: TCP
+11:34:32.089|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (339)[m | Getting interaction for sessioNumber: 1
+11:34:32.089|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (340)[m | Type is: TCP
+11:34:44.493|[32m INFO[m |> --- [       Thread-0] 11:34:44.498|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (411)[m | ls
+11:34:44.515|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :Cevsn
+logs
+Readme.md
+revsni
+Revsni.code-workspace
+To-Do
+
+11:34:54.516|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (411)[m | ls
+11:34:54.517|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (300)[m | Send message :Cevsn
+logs
+Readme.md
+revsni
+Revsni.code-workspace
+To-Do
+
+Type is: TCP
+11:34:50.620|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (123)[m | Trying to write...
