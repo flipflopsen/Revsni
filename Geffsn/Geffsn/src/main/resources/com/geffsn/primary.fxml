@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="837.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" prefHeight="549.0" prefWidth="926.0" spacing="20.0">
+         <children>
+            <Label text="Primary View" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#191919f7" height="572.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="843.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#323232" height="546.0" layoutX="12.0" layoutY="12.0" stroke="#323232" strokeDashOffset="1.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="100.0" strokeType="OUTSIDE" width="205.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#323232" height="544.0" layoutX="257.0" layoutY="13.0" stroke="#323232" strokeDashOffset="1.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="100.0" strokeType="OUTSIDE" width="565.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6f0000" height="557.0" layoutX="232.0" layoutY="8.0" stroke="#323232" strokeDashOffset="1.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="100.0" strokeType="OUTSIDE" width="10.0" />
+      <JFXProgressBar />
+      <JFXToggleButton layoutX="553.0" layoutY="125.0" />
+      <JFXTimePicker />
+   </children>
+</AnchorPane>

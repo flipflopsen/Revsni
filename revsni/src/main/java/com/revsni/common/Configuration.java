@@ -61,6 +61,7 @@ public class Configuration {
     }
 
     private Mode mode = Mode.TCP;
+    private EncMode encMode = EncMode.RSA;
 
     //private String configurationName = "";
     
@@ -97,6 +98,10 @@ public class Configuration {
 
     }
 
+     
+    /*
+        Setter
+    */
 
     public void setTCP() throws IOException {
         InputStreamReader inputStreamReader = new InputStreamReader(System.in);
@@ -175,6 +180,98 @@ public class Configuration {
         asynchrRandomizeGradeHTTP = Integer.parseInt(bufferedReader.readLine());
         System.out.println("");
     }
+    public void setEncMode() {
+        System.out.println("\n"
+                          +"-----------"
+                          +"|Encryption Mode - Configuration|"
+                          +"-----------"
+                          +"\n"
+                          +"-<|Active Mode: " + encMode.name() + "|>-\n\n"
+                          +"Set mode:\n"
+                          +"\n"
+                          +"aes         -   Change to AES in CBC Mode\n"
+                          +"rsa         -   Change to RSA with 4096 keysize\n"
+                          +"twofish     -   Change to Twofish\n"
+                          +"blowfish    -   Change to Blowfish\n"
+                          +"serpent     -   Change to Serpent\n"
+                          +"tripledes   -   Change to TripleDES\n"
+                          +"\n"
+                          +"\n"
+                          +"Type 'back' to go back\n"
+                          +"\n");
+
+        System.out.print("Revsn [CONFIG]-[ENCMODE] » ");
+        InputStreamReader inputStreamReader = new InputStreamReader(System.in);
+        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+        String decisionMode;
+        try {
+            decisionMode = bufferedReader.readLine();
+        } catch (IOException e) {
+            decisionMode = "back";
+        }
+        System.out.println();
+        switch(decisionMode) {
+            case("aes"): encMode = EncMode.AES; break;
+            case("rsa"): encMode = EncMode.RSA; break;
+            case("twofish"): encMode = EncMode.TWOFISH; break;
+            case("blowfish"): encMode = EncMode.BLOWFISH; break;
+            case("serpent"): encMode = EncMode.SERPENT; break;
+            case("tripledes"): encMode = EncMode.TRIPLE_DES; break;
+            case("back"): return;
+            default: 
+        }
+        clearConsole();
+        
+    }
+
+    public void setMode() {
+        System.out.println("\n"
+                          +"-----------"
+                          +"|Mode - Configuration|"
+                          +"-----------"
+                          +"\n"
+                          +"-<|Active Mode: " + mode.name() + "|>-\n\n"
+                          +"Set mode:\n"
+                          +"\n"
+                          +"tcp         -   Change to TCP Mode\n"
+                          +"udp         -   Change to UDP Mode\n"
+                          +"http        -   Change to HTTP Mode\n"
+                          +"https       -   Change to HTTPS Mode\n"
+                          +"httpas      -   Change to Asynchronous HTTP Mode\n"
+                          +"httpsas     -   Change to Asynchronous HTTPS Mode\n"
+                          +"dns         -   Change to DNS Mode\n"
+                          +"\n"
+                          +"\n"
+                          +"Type 'back' to go back\n"
+                          +"\n");
+
+        System.out.print("Revsn [CONFIG]-[MODE] » ");
+        InputStreamReader inputStreamReaderMode = new InputStreamReader(System.in);
+        BufferedReader bufferedReaderMode = new BufferedReader(inputStreamReaderMode);
+        String decisionMode;
+        try {
+            decisionMode = bufferedReaderMode.readLine();
+        } catch (IOException e) {
+            decisionMode = "back";
+        }
+        System.out.println();
+        switch(decisionMode) {
+            case("tcp"): mode = Mode.TCP; break;
+            case("udp"): mode = Mode.UDP; break;
+            case("http"): mode = Mode.HTTP; break;
+            case("https"): mode = Mode.HTTPS; break;
+            case("httpas"): mode = Mode.HTTPAsync; break;
+            case("httpsas"): mode = Mode.HTTPSAsync; break;
+            case("dns"): mode = Mode.DNS; break;
+            case("back"): return;
+            default: 
+        }
+        clearConsole();
+    } 
+
+    /*
+        Getter
+    */
 
     public String getTCPConf() {
         String conf = "";
@@ -200,6 +297,18 @@ public class Configuration {
         return conf;
     }
 
+    public EncMode getEncMode() {
+        return this.encMode;
+    }
+
+    public Mode getMode() {
+            return this.mode;
+    }
+
+
+    /*
+        Menu
+    */
     public void printConf() throws IOException {
         boolean back = false;
         InputStreamReader inputStreamReader = new InputStreamReader(System.in);
@@ -413,54 +522,7 @@ public class Configuration {
                           +"\n");
     }
 
-    public void setMode() {
-        System.out.println("\n"
-                          +"-----------"
-                          +"|Mode - Configuration|"
-                          +"-----------"
-                          +"\n"
-                          +"-<|Active Mode: " + mode.name() + "|>-\n\n"
-                          +"Set mode:\n"
-                          +"\n"
-                          +"tcp         -   Change to TCP Mode\n"
-                          +"udp         -   Change to UDP Mode\n"
-                          +"http        -   Change to HTTP Mode\n"
-                          +"https       -   Change to HTTPS Mode\n"
-                          +"httpas      -   Change to Asynchronous HTTP Mode\n"
-                          +"httpsas     -   Change to Asynchronous HTTPS Mode\n"
-                          +"dns         -   Change to DNS Mode\n"
-                          +"\n"
-                          +"\n"
-                          +"Type 'back' to go back\n"
-                          +"\n");
-
-        System.out.print("Revsn [CONFIG]-[MODE] » ");
-        InputStreamReader inputStreamReaderMode = new InputStreamReader(System.in);
-        BufferedReader bufferedReaderMode = new BufferedReader(inputStreamReaderMode);
-        String decisionMode;
-        try {
-            decisionMode = bufferedReaderMode.readLine();
-        } catch (IOException e) {
-            decisionMode = "back";
-        }
-        System.out.println();
-        switch(decisionMode) {
-            case("tcp"): mode = Mode.TCP; break;
-            case("udp"): mode = Mode.UDP; break;
-            case("http"): mode = Mode.HTTP; break;
-            case("https"): mode = Mode.HTTPS; break;
-            case("httpas"): mode = Mode.HTTPAsync; break;
-            case("httpsas"): mode = Mode.HTTPSAsync; break;
-            case("dns"): mode = Mode.DNS; break;
-            case("back"): return;
-            default: 
-        }
-        clearConsole();
-    } 
-
-    public Mode getMode() {
-        return this.mode;
-    }
+    
 
     public final static void clearConsole() {
         try {

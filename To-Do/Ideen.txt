@@ -1,0 +1,3 @@
+Verschlüsselungsmodi durch verteilte Platzierung eines Kürzels in der verschlüsselten Nachricht an festen Stellen und angepasst an den Verschlüsselungszeichensatz.
+
+Die Stellen im Client übergeben, bei Builder evtl automatisch Erzeugen

