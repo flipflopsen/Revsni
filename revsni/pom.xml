@@ -99,6 +99,11 @@
       <artifactId>bcprov-jdk15to18</artifactId>
       <version>1.70</version>
   </dependency>
+  <dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.11.0</version>
+  </dependency>
 
   <!-- Thanks for using https://jar-download.com -->
   

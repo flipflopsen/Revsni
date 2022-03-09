@@ -77,6 +77,7 @@ namespace tevsn
             string toSend = Encrypt(data);
             byte[] toSendBytes = Encoding.UTF8.GetBytes(toSend);
             byte[] lenBytes = BitConverter.GetBytes(toSendBytes.Length);
+            Console.Write("Sending: " + toSend + "\n");
             Array.Reverse(lenBytes);
             writer.Write(lenBytes);
             writer.Write(toSendBytes);

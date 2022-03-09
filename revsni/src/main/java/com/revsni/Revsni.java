@@ -31,6 +31,7 @@ public class Revsni {
     public static int sessionNumberStart = 1;
     public static boolean loaded = false;
     public static Server servero = null;
+    public static volatile boolean serverError = false;
 
 
     private static Configuration configuration = new Configuration();
@@ -166,7 +167,15 @@ public class Revsni {
         while(!activeHelper) {
             try {
                 Thread.sleep(5);
-            } catch (InterruptedException e) {}
+            } catch (InterruptedException e) {
+
+            }
+        }
+        if(serverError) {
+            serverino.interrupt();
+            serverino = null;
+            servero = null;
+            threadMonitor = new ThreadMonitor();
         }
 
         clearConsole();
@@ -196,6 +205,10 @@ public class Revsni {
         catch (final Exception e) {
             
         }
+    }
+
+    public static void setServerError() {
+        serverError = true;
     }
 
     public static void setActive(boolean state) {

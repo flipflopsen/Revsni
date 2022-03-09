@@ -1,11 +1,14 @@
 package com.revsni.server;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Base64;
+import org.apache.commons.io.FileUtils;
 
 import com.revsni.common.Configuration.EncMode;
 import com.revsni.server.encryption.AES;
@@ -26,7 +29,6 @@ public class Updater {
     private String[] address = new String[2];
     private String shellType;
     private Encri initEncri;
-    private AES aesReal;
     private String privKey = null;
     private String pubKey = null;
 
@@ -35,7 +37,6 @@ public class Updater {
         address[0] = ip;
         address[1] = Integer.toString(port);
         initEncri = init;
-        aesReal = init;
         this.shellType = "TCP";
 
     }
@@ -129,6 +130,15 @@ public class Updater {
 
     public void setPubKey(String pubKey) {
         this.pubKey = pubKey;
+    }
+
+    public void deleteFilehost(String uuid) {
+        File dir = new File("revsni/filehosting");
+        for(File file : dir.listFiles()) {
+            if(file.getName().equals(uuid + ".txt")) {
+                file.delete();
+            }
+        }
     }
 
 }

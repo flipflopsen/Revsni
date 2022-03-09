@@ -2,6 +2,7 @@ package com.revsni.server.tcp;
 
 import java.io.*;
 import java.net.Socket;
+import java.net.SocketException;
 import java.nio.charset.StandardCharsets;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
@@ -80,6 +81,7 @@ public class Handler implements Interaction{
         logger.info("Closing Connection - " + connection.getRemoteSocketAddress());
 
         try {
+            server.removeSession(sessionNumber);
             dataIn.close();
             dataOut.close();
             connection.close();
@@ -124,6 +126,10 @@ public class Handler implements Interaction{
                 protocol.processMessage(received, connection.getInetAddress().getHostAddress(), sessionNumber);
             }
         } catch (IOException e) {
+            if(e instanceof EOFException) {
+                logger.error("EOF Exception while reading from InputStream! Connection gets shut down...");
+            }
+            closeConnection();
             e.printStackTrace();
         }
     }
@@ -136,7 +142,11 @@ public class Handler implements Interaction{
             dataOut.writeInt(toSendBytes.length);
             dataOut.write(toSendBytes, 0, toSendBytes.length);
         } catch (IOException e) {
-            logger.error("Error while sending message: '{}', to: {} ", message, sessionNumber);
+            logger.error("Error while sending message: '{}', to: {} \n", message, sessionNumber);
+            if(e instanceof SocketException) {
+                logger.error("Socket is dead, connection closes...");
+            }
+            closeConnection();
             e.printStackTrace();
         }
     }
@@ -150,8 +160,13 @@ public class Handler implements Interaction{
             dataOut.write(toSendBytes, 0, toSendBytes.length);
         } catch (IOException e) {
             logger.error("Error while sending message: '{}', to: {} ", message, sessionNumber);
+            closeConnection();
             e.printStackTrace();
         }
+    }
+
+    public void setNewEnc(int sessionnNumber) {
+        protocol.newClientEncryption(sessionnNumber);
     }
 
     public void callAddSessionHandler() {

@@ -11,6 +11,9 @@ import com.revsni.common.Configuration.EncMode;
 import com.revsni.server.encryption.AES;
 import com.revsni.server.encryption.Encri;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 
 public class Protocol {
 
@@ -19,6 +22,8 @@ public class Protocol {
     private String uuid;
     private volatile HashMap<Integer, Encri> clientEnc = new HashMap<>();
     public String mode;
+
+    Logger logger = LogManager.getLogger(getClass());
 
     public Protocol(Server server) throws InvalidKeyException, InvalidAlgorithmParameterException, NoSuchAlgorithmException, NoSuchPaddingException {
         this.server = server;
@@ -35,7 +40,7 @@ public class Protocol {
             message = Server.initEncri.decrypt(msg);
         }
         if(!message.equals("")){
-            System.out.println("\n" + message);
+            logger.info("\n" + message);
         }
 
         if(message.equals("errxuk")) {
@@ -47,10 +52,10 @@ public class Protocol {
             String[] splitted = message.split(":");
             this.uuid = splitted[0];
             this.os = splitted[2].replaceAll("\\s","");
-            this.mode = splitted[3].replaceAll("\\s","");
-            newClientEncryption(sessionNumber);
+            //this.mode = splitted[3].replaceAll("\\s","");
+            //newClientEncryption(sessionNumber);
         }
-        System.out.print("Revsn [TCP]["+ ip +"]["+sessionNumber+"] » ");
+        //System.out.println("Revsn [TCP]["+ ip +"]["+sessionNumber+"] » ");
         return true;
         
     }
@@ -89,11 +94,11 @@ public class Protocol {
 
     }
     public void newClientEncryption(int sessionNumber) {
-        EncMode encMode = null;
-        if(mode.equals(EncMode.AES.name())) {
+        EncMode encMode = EncMode.RSA;
+        if(encMode.name().equals(EncMode.AES.name())) {
             encMode = EncMode.AES;
         }
-        if(mode.equals(EncMode.RSA.name())) {
+        if(encMode.name().equals(EncMode.RSA.name())) {
             encMode = EncMode.RSA;
         }
         server.setNewEncryption(encMode, sessionNumber);

@@ -57,9 +57,9 @@ public class RSA implements Encri {
 
     public RSA() {
         Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
-        generateHostKeyPair();
-        saveHostKeyPair();
-        //loadHostKeyPair();
+        //generateHostKeyPair();
+        //saveHostKeyPair();
+        loadHostKeyPair();
         //loadClientKeys();
         initDecryptionCipher();
     }
@@ -207,7 +207,6 @@ public class RSA implements Encri {
             PublicKey pub = clientPublicKeys.get(uuid);
             encryptionCipher.init(Cipher.ENCRYPT_MODE, pub);
         } catch (InvalidKeyException | NoSuchAlgorithmException | NoSuchPaddingException | NoSuchProviderException e) {
-            e.printStackTrace();
         }
         return encryptionCipher;
     }
@@ -221,7 +220,6 @@ public class RSA implements Encri {
             decrypted = new String(decoder.decode(decryptedMessageBytes), StandardCharsets.UTF_8);
         } catch (IllegalBlockSizeException | BadPaddingException e) {
             logger.error("Failed to decrypt RSA message!");
-            e.printStackTrace();
         }
         return decrypted;
     }

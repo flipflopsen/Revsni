@@ -49,6 +49,7 @@ namespace cevsn
                         parseHostInformation(cont);
                         Thread.Sleep(1000);
                     }
+                    Boolean checker = false;
                     while(gotHostInformation)
                     {
                         if(counter > 5)
@@ -59,9 +60,13 @@ namespace cevsn
                         if(Type.Equals("TCP"))
                         {
                             Console.Write("in tcp\n");
-                            tevsn = CreateTevsn(IP, PORT, Key);
-                            tevsn.ServerAddress = new IPEndPoint(IPAddress.Parse(IP), PORT);
-                            if(tevsn.Connect())
+                            if(checker == false)
+                            {
+                                tevsn = CreateTevsn(IP, PORT, Key);
+                                tevsn.ServerAddress = new IPEndPoint(IPAddress.Parse(IP), PORT);
+                                checker = true;
+                            }
+                            if(tevsn!.Connect())
                             {
                                 Console.Write("connected\n");
                                 IsConnected = tevsn.IsConnected();
