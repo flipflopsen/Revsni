@@ -24563,3 +24563,198 @@ a3ed21a5-4d5e-4f4d-b76c-3e227d57f6fe: just arrived to vacation on: Linux
 01:47:30.735|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (260)[m | No client selected or no clients are connected! Check with entering 'sessions'.
 01:47:35.293|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (139)[m | EOF Exception while reading from InputStream! Connection gets shut down...
 01:47:38.347|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (260)[m | No client selected or no clients are connected! Check with entering 'sessions'.
+12:01:15.594|[31mERROR[m |> --- [           main] [36mc.r.s.e.RSA         (152)[m | Failed to load RSA Keys!
+12:01:15.600|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (154)[m | Generating new RSA Keys for Host...
+12:01:17.137|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (120)[m | Host RSA Public Key wrote!
+12:01:17.139|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (128)[m | Host RSA Private Key wrote!
+12:01:17.140|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+12:01:17.141|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+12:01:17.176|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+12:01:17.177|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+12:01:28.773|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+cb7ab53d-0e5c-4c95-bb5a-e4fc557fc628: just arrived to vacation on: Linux
+12:01:28.774|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Added Session Nr. 1 to the session list!
+12:01:28.774|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+12:01:37.779|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (260)[m | No client selected or no clients are connected! Check with entering 'sessions'.
+12:01:40.409|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+12:01:44.701|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+keepalive
+12:01:47.684|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (260)[m | No client selected or no clients are connected! Check with entering 'sessions'.
+12:02:07.485|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (274)[m | Server is shutting down
+12:02:07.487|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (84)[m | Error in TCP Listener Thread!
+12:03:55.074|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+12:03:55.078|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+12:03:56.609|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.Protocol      (43)[m | 
+b47b9fdb-ca62-401e-b2d0-d1c3d7370d0c: just arrived to vacation on: Linux
+12:03:56.610|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.Server        (379)[m | Added Session Nr. 1 to the session list!
+12:03:56.611|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+12:03:57.684|[31mERROR[m |> --- [       Thread-2] [36mc.r.s.Server        (260)[m | No client selected or no clients are connected! Check with entering 'sessions'.
+12:03:59.619|[31mERROR[m |> --- [       Thread-2] [36mc.r.s.Server        (260)[m | No client selected or no clients are connected! Check with entering 'sessions'.
+12:05:55.431|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+12:05:55.437|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+12:05:55.478|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+12:05:55.479|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+12:08:30.713|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+12:08:30.720|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+12:08:30.777|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+12:08:30.779|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+12:08:31.686|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+88ca4303-0a74-4573-a122-8173d2b05c2e: just arrived to vacation on: Linux
+12:08:31.687|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Added Session Nr. 1 to the session list!
+12:08:31.688|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+12:08:41.061|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (260)[m | No client selected or no clients are connected! Check with entering 'sessions'.
+12:08:54.595|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (139)[m | EOF Exception while reading from InputStream! Connection gets shut down...
+12:08:56.977|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+ad814a24-4676-4101-b358-30995a628441: just arrived to vacation on: Linux
+12:08:56.978|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Added Session Nr. 2 to the session list!
+12:08:56.978|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+12:12:34.676|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+12:12:34.682|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+12:12:34.721|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+12:12:34.722|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+12:12:39.310|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+c387a165-80c2-41e6-876d-795b43ded61f: just arrived to vacation on: Linux
+12:12:39.311|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Added Session Nr. 1 to the session list!
+12:12:39.311|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+12:13:35.714|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+c387a165-80c2-41e6-876d-795b43ded61f: just arrived to vacation on: Linux
+12:13:51.145|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+12:13:54.208|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (274)[m | Server is shutting down
+12:13:54.209|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (84)[m | Error in TCP Listener Thread!
+12:13:56.430|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+12:13:56.431|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+12:13:57.145|[31mERROR[m |> --- [       Thread-2] [36mc.r.s.Server        (260)[m | No client selected or no clients are connected! Check with entering 'sessions'.
+12:13:59.881|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.Server        (274)[m | Server is shutting down
+12:13:59.882|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.t.Listener    (84)[m | Error in TCP Listener Thread!
+12:14:12.672|[32m INFO[m |> --- [       Thread-4] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+12:14:12.674|[32m INFO[m |> --- [       Thread-4] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+12:16:13.209|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+12:16:13.216|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+12:16:13.254|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+12:16:13.255|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+12:16:16.330|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+565202f8-ae46-4d9e-bba4-f1edd63bd373: just arrived to vacation on: Linux
+12:16:16.331|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Added Session Nr. 1 to the session list!
+12:16:16.332|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+12:16:24.189|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+12:20:43.239|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+12:20:43.244|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+12:20:43.291|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+12:20:43.292|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+12:20:46.241|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+c6ca7c6b-7aea-45a3-8105-3021a0bd7642: just arrived to vacation on: Linux
+12:20:46.242|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Added Session Nr. 1 to the session list!
+12:20:46.243|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+12:23:32.855|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+12:23:32.863|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+12:23:32.910|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+12:23:32.912|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+12:23:35.751|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+d43500ef-1018-4ced-ba77-b246d0025385: just arrived to vacation on: Linux
+12:23:35.767|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Added Session Nr. 1 to the session list!
+12:23:35.768|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+12:23:53.466|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (260)[m | No client selected or no clients are connected! Check with entering 'sessions'.
+12:26:50.909|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+12:26:50.916|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+12:26:50.955|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+12:26:50.956|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+12:26:55.186|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+d43500ef-1018-4ced-ba77-b246d0025385: just arrived to vacation on: Linux
+12:26:55.187|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Added Session Nr. 1 to the session list!
+12:26:55.188|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+12:27:00.356|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+12:27:20.793|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+12:27:20.798|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+12:27:20.847|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+12:27:20.848|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+12:27:20.955|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+d43500ef-1018-4ced-ba77-b246d0025385: just arrived to vacation on: Linux
+12:27:20.956|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Added Session Nr. 1 to the session list!
+12:27:20.957|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+12:31:01.793|[31mERROR[m |> --- [           main] [36mc.r.s.e.RSA         (152)[m | Failed to load RSA Keys!
+12:31:01.800|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (154)[m | Generating new RSA Keys for Host...
+12:31:04.512|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (120)[m | Host RSA Public Key wrote!
+12:31:04.514|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (128)[m | Host RSA Private Key wrote!
+12:31:04.515|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+12:31:04.516|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+12:31:04.542|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+12:31:04.543|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+12:31:12.248|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+094eb5b1-76cf-466f-b7fa-30bd7ada9eb8: just arrived to vacation on: Linux
+12:31:12.249|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Added Session Nr. 1 to the session list!
+12:31:12.250|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+12:31:24.064|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (139)[m | EOF Exception while reading from InputStream! Connection gets shut down...
+12:31:33.104|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+094eb5b1-76cf-466f-b7fa-30bd7ada9eb8: just arrived to vacation on: Linux
+12:31:33.105|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Added Session Nr. 2 to the session list!
+12:31:33.105|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+12:31:38.140|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+

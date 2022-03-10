@@ -48,6 +48,18 @@ namespace tevsn
             }
         }
 
+        public bool Fallback()
+        {
+            try
+            {
+                tcpClient.Close();
+                return true;
+            } catch (Exception) {
+                Console.Write("wtf.");
+                return false;
+            }
+        }
+
         //check if connection is alive
         public bool IsConnected()
         {
@@ -63,9 +75,9 @@ namespace tevsn
                 }
                 return true;
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                e.ToString();
+                Console.Write("Client isn't connected anymore!");
                 return false;
             }
         }
@@ -86,24 +98,29 @@ namespace tevsn
 
         public String Receive()
         {
-            String message;
-            NetworkStream clientStream = tcpClient.GetStream();
-            reader = new BinaryReader(clientStream);
-            byte[] lenBytes = reader.ReadBytes(4);
-            Array.Reverse(lenBytes);
-            int len = BitConverter.ToInt32(lenBytes);
-            byte[] bytes = reader.ReadBytes(len);
-            if(bytes.Length > 1)
+            try
             {
-                string str = Encoding.UTF8.GetString(bytes);
-                byte[] b64 = Convert.FromBase64String(str);
-                message = Decrypt(b64);
-                Console.Write("Received: " + message + "\n");
-                return message;
-            }
-            else 
-            {
-                return "--";
+                String message;
+                NetworkStream clientStream = tcpClient.GetStream();
+                reader = new BinaryReader(clientStream);
+                byte[] lenBytes = reader.ReadBytes(4);
+                Array.Reverse(lenBytes);
+                int len = BitConverter.ToInt32(lenBytes);
+                byte[] bytes = reader.ReadBytes(len);
+                if(bytes.Length > 1)
+                {
+                    string str = Encoding.UTF8.GetString(bytes);
+                    byte[] b64 = Convert.FromBase64String(str);
+                    message = Decrypt(b64);
+                    Console.Write("Received: " + message + "\n");
+                    return message;
+                }
+                else 
+                {
+                    return "--";
+                }
+            } catch (Exception) {
+                return "reviveTime";
             }
         }
 
