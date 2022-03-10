@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Websn",
+            "request": "launch",
+            "mainClass": "com.revsni.websn.Websn",
+            "projectName": "revsn"
+        },
+        {
+            "type": "java",
             "name": "Launch RSA",
             "request": "launch",
             "mainClass": "com.revsni.client.Encri.RSA",

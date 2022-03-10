@@ -89,11 +89,6 @@
       <artifactId>jackson-databind</artifactId>
       <version>2.13.1</version>
     </dependency>
-    <dependency>
-      <groupId>org.javastack</groupId>
-      <artifactId>httpd</artifactId>
-      <version>1.1.2</version>
-  </dependency>
   <dependency>
       <groupId>org.bouncycastle</groupId>
       <artifactId>bcprov-jdk15to18</artifactId>

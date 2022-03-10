@@ -1,7 +1,3 @@
-GUI
-	-Local Java GUI in Netbeans or sth
-	-Web GUI with PHP, Javascript, maybe a DB?
-
 Builder
 	-Different Clients with usage of Configuration.java
 		-.NET Clients
@@ -28,5 +24,7 @@ Shells
 	-UDP
 	-UPNP
 
+General
+	-Detection welcher Client connected, ob .NET oder Java
 
 

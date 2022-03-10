@@ -18,11 +18,11 @@ Shell-Types
 		-Switch between Async and normal
 
 Encryption
-	-All except AES
+	-All except RSA
 
 Make Builder compatible for small Payloads -> Modular
 
 ---Notes---
 
-Client Message ready bevor decryption um zu gucken, ob decryption fail
--> Wenn ja, dann Fallback auf andere Verschlüsselung.
+AES läuft nur mit Java-Java
+Detection welcher Client connected, ob .NET oder Java

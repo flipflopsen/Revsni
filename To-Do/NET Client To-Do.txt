@@ -9,14 +9,17 @@ Features
 	-Different Exec
 		-Powershell
 		-CMD exec
-		-Bash
-		-Sh
 
 Shell-Types
-	-All
+	-HTTP(S) (Async)
 
 Encryption
-    -All
+    -All except RSA
+	-AES not really posssible (?)
 
 Make Builder compatible for small Payloads -> Modular
 
+---Notes---
+
+AES läuft nur mit Java-Java
+Detection welcher Client connected, ob .NET oder Java

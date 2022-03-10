@@ -24892,3 +24892,14 @@ Listening...
 
 13:07:51.105|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (274)[m | Server is shutting down
 13:07:51.106|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (84)[m | Error in TCP Listener Thread!
+13:26:01.855|[31mERROR[m |> --- [           main] [36mc.r.s.e.RSA         (152)[m | Failed to load RSA Keys!
+13:26:01.862|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (154)[m | Generating new RSA Keys for Host...
+13:26:02.868|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (120)[m | Host RSA Public Key wrote!
+13:26:02.870|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (128)[m | Host RSA Private Key wrote!
+13:26:02.871|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+13:26:02.872|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+13:26:02.906|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+13:26:02.907|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
