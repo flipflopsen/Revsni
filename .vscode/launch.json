@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch RSA",
+            "request": "launch",
+            "mainClass": "com.revsni.client.Encri.RSA",
+            "projectName": "revsn"
+        },
+        {
+            "type": "java",
             "name": "Launch App",
             "request": "launch",
             "mainClass": "com.geffsn/com.geffsn.App",

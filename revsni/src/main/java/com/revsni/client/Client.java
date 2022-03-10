@@ -8,6 +8,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.Socket;
+import java.net.SocketException;
 import java.net.URL;
 
 import java.security.InvalidAlgorithmParameterException;
@@ -48,6 +49,8 @@ import org.apache.logging.log4j.Logger;
 
 import javax.net.ssl.SSLContext;
 
+import com.revsni.client.Encri.RSA;
+
 public class Client {
     Logger logger = LogManager.getLogger(getClass());
 
@@ -71,10 +74,14 @@ public class Client {
     private volatile boolean connExists = false;
     private volatile boolean httpEst = false;
 
+    private String privKey = "";
+    private String pubKey = "";
+
     KeyStore keyStore;
     SSLConnectionSocketFactory scsf;
     SSLContext sslContext = null;
     TrustStrategy acceptingTrustStrategy;
+    RSA rsa = new RSA();
 
     private volatile String type;
 
@@ -242,14 +249,14 @@ public class Client {
         }
     }
 
-    private boolean checkTrig() throws IOException {
+    private boolean checkTrigAES() throws IOException {
         //Go for webserver and extract IP, Port and Key. Then set and use the stuff
         try {
             String URL;
             if(keepAliveEndpoint == null) {
                 URL = "http://127.0.0.1:8082/initial.txt";
             } else {
-                URL = "http://127.0.0.1:8082/" + keepAliveEndpoint + ".txt";
+                URL = "http://127.0.0.1:8082/" + uniqueID + ".txt";
             }
             URL url = new URL(URL);
 
@@ -284,6 +291,97 @@ public class Client {
         
     }
 
+    private boolean getPrivKey() {
+        try {
+            String URL;
+            URL = "http://127.0.0.1:8082/" + uniqueID + ".txt";
+            
+            URL url = new URL(URL);
+
+            Document doc = Jsoup.parse(url, 1000 * 3);
+            String text = doc.body().text();
+
+            logger.debug(text);
+
+            String outp[] = text.split(";");
+
+            address[0] = outp[0];
+            address[1] = outp[1];
+            logger.error(address[0] + address[1]);
+
+            pubKey = outp[3];
+            rsa.setKey(pubKey, "public");
+            rsa.initEncryptionCipher();
+            try {
+                privKey = outp[4];
+                rsa.setKey(privKey, "private");
+                rsa.initDecryptionCipher();
+            } catch (Exception e) {
+                logger.info("Failed to get privKey!");
+                e.printStackTrace();
+            }
+
+            this.type = new String(Base64.getDecoder().decode(outp[2]));
+
+            logger.error("Got Privkey and Host information!");
+            trigCheck = true;
+            connExists = false;
+            return true;
+        } catch (IOException e) {
+            logger.error("Catch in PrivKey and Stuff.");
+            trigCheck = false;
+            return false;
+        }
+    }
+
+    private boolean checkTrig() throws IOException {
+        //Go for webserver and extract IP, Port and Key. Then set and use the stuff
+        try {
+            String URL;
+            if(keepAliveEndpoint == null) {
+                URL = "http://127.0.0.1:8082/initialRSA.txt";
+            } else {
+                URL = "http://127.0.0.1:8082/" + uniqueID + ".txt";
+            }
+            URL url = new URL(URL);
+
+            Document doc = Jsoup.parse(url, 1000 * 3);
+            String text = doc.body().text();
+
+            logger.debug(text);
+
+            String outp[] = text.split(";");
+
+            address[0] = outp[0];
+            address[1] = outp[1];
+            logger.error(address[0] + address[1]);
+
+            pubKey = outp[3];
+            rsa.setKey(pubKey, "public");
+            rsa.initEncryptionCipher();
+            try {
+                privKey = outp[4];
+                rsa.setKey(privKey, "private");
+                rsa.initDecryptionCipher();
+            } catch (Exception e) {
+                logger.info("Failed to get privKey!");
+                e.printStackTrace();
+            }
+
+            this.type = new String(Base64.getDecoder().decode(outp[2]));
+
+            logger.error("CheckTrigTrue");
+            trigCheck = true;
+            connExists = false;
+            return true;
+        } catch (IOException e) {
+            logger.error("catch in checktrig");
+            trigCheck = false;
+            return false;
+        }
+        
+    }
+
     private boolean updateStuff() {
         try {
             checkTrig();
@@ -297,6 +395,7 @@ public class Client {
         try {
             logger.error("Send message :" + msg);
 
+            /*
             cipherEnc = Cipher.getInstance("AES/CBC/PKCS5Padding");
             cipherEnc.init(Cipher.ENCRYPT_MODE, this.key, this.iv);
 
@@ -305,6 +404,8 @@ public class Client {
                 .doFinal(Base64.getEncoder()
                 .encode(msg.getBytes()))));
 
+            */
+            String encoded = rsa.encrypt(msg);
             logger.debug(encoded);
             if(type.equals("TCP")) {
                 dataOut.writeInt(encoded.getBytes().length);
@@ -342,7 +443,7 @@ public class Client {
                 }
             }
 
-        } catch (IOException | NoSuchAlgorithmException | IllegalBlockSizeException | BadPaddingException e) {
+        } catch (IOException /* | NoSuchAlgorithmException | IllegalBlockSizeException | BadPaddingException*/ e) {
             e.printStackTrace();
         }
     }
@@ -398,6 +499,7 @@ public class Client {
         if(msg.length() > 1) {
 
             try {
+                /*
                 cipherDec = Cipher.getInstance("AES/CBC/PKCS5Padding");
                 cipherDec.init(Cipher.DECRYPT_MODE, this.key, this.iv);
                 
@@ -405,7 +507,8 @@ public class Client {
                     .decode(msg)));
 
                 message = new String(Base64.getDecoder().decode(message));
-
+                */
+                String message = rsa.decrypt(msg);
                 logger.info(message);
 
                 if(message.equals("httpSw")) {
@@ -462,7 +565,7 @@ public class Client {
                     }
                 }
             
-            } catch (InvalidKeyException | InvalidAlgorithmParameterException | NoSuchAlgorithmException | NoSuchPaddingException | IllegalBlockSizeException | BadPaddingException e) {
+            } catch (InvalidKeyException | InvalidAlgorithmParameterException | NoSuchPaddingException /*| NoSuchAlgorithmException  | IllegalBlockSizeException | BadPaddingException*/ e) {
                 logger.error("lul");
             }
         }
@@ -625,6 +728,12 @@ public class Client {
         }
 
         if(type.equals("TCP")) {
+            try {
+                Thread.sleep(5000);
+                getPrivKey();
+            } catch (InterruptedException e) {
+                
+            }
             while (!reqSock.isClosed()) {
                 try {
                     String message = receiveMessages();
@@ -660,7 +769,7 @@ public class Client {
                 return received;
             } 
         } catch (IOException e) {
-            e.printStackTrace();
+            //Fallback here
         }
         return "";
     }

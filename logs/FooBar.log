@@ -24758,3 +24758,137 @@ Cevsn.csproj
 obj
 Tevsn.cs
 
+13:01:00.380|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+13:01:00.386|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+13:01:00.432|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+13:01:00.433|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+13:01:07.940|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (357)[m | 127.0.0.11331
+13:01:07.968|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (367)[m | Failed to get privKey!
+13:01:07.969|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (373)[m | CheckTrigTrue
+13:01:07.969|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (718)[m | Passed checktrig
+13:01:07.970|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (99)[m | Init started!
+13:01:07.970|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | INIT
+13:01:07.970|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (133)[m | 127.0.0.1 
+13:01:07.970|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (134)[m | 1331
+13:01:07.971|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (396)[m | Send message :75683d9e-0caa-4ce4-ba0d-1051951a96b1: just arrived to vacation! On: Linux
+13:01:07.976|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (331)[m | Catch in PrivKey and Stuff.
+13:02:22.381|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+13:02:22.390|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+13:02:22.443|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+13:02:22.445|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+13:04:29.802|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (260)[m | No client selected or no clients are connected! Check with entering 'sessions'.
+ent        (367)[m | Failed to get privKey!
+13:02:24.984|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (373)[m | CheckTrigTrue
+13:02:24.985|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (718)[m | Passed checktrig
+13:02:24.985|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (99)[m | Init started!
+13:02:24.986|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | INIT
+13:02:24.986|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (133)[m | 127.0.0.1 
+13:02:24.986|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (134)[m | 1331
+13:02:24.987|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (396)[m | Send message :82e869e6-8c78-40e1-9137-fef02105d24b: just arrived to vacation! On: Linux
+13:02:29.993|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (331)[m | Catch in PrivKey and Stuff.
+13:04:31.099|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (357)[m | 127.0.0.11331
+13:04:31.125|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (367)[m | Failed to get privKey!
+13:04:31.126|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (373)[m | CheckTrigTrue
+13:04:31.126|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (718)[m | Passed checktrig
+13:04:31.126|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (99)[m | Init started!
+13:04:31.127|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | INIT
+13:04:31.127|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (133)[m | 127.0.0.1 
+13:04:31.127|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (134)[m | 1331
+13:04:31.128|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (396)[m | Send message :68ca5b7b-5749-47c5-ad0a-393619039522: just arrived to vacation! On: Linux
+13:04:36.132|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (331)[m | Catch in PrivKey and Stuff.
+13:04:50.602|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+13:04:50.612|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+13:04:50.661|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+13:04:50.663|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+13:05:02.500|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+b61d50fb-19e4-48d3-87b9-c2c631763bd5: just arrived to vacation! On: Linux
+13:05:02.501|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Added Session Nr. 1 to the session list!
+13:05:02.502|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+13:05:13.165|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+Failed to read BufIO
+13:06:58.624|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+39bf2144-dedd-4f68-a629-0e8c868a5685: just arrived to vacation! On: Linux
+13:06:58.627|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Added Session Nr. 2 to the session list!
+13:06:58.630|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+13:07:00.156|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (169)[m | Connection to session 1 died... sadly. :)
+13:07:03.674|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+Cevsn
+Geffsn
+logs
+Readme.md
+revsni
+Revsni.code-workspace
+To-Do
+
+13:07:13.850|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+e87e8b9e-711f-4c8b-a5fa-66b22d39dd37: just arrived to vacation! On: Linux
+13:07:13.850|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Added Session Nr. 3 to the session list!
+13:07:13.851|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+13:07:15.407|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (169)[m | Connection to session 2 died... sadly. :)
+13:07:18.904|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+Cevsn
+Geffsn
+logs
+Readme.md
+revsni
+Revsni.code-workspace
+To-Do
+
+ Init started!
+13:06:58.604|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | INIT
+13:06:58.604|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (133)[m | 127.0.0.1 
+13:06:58.605|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (134)[m | 1331
+13:06:58.606|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (396)[m | Send message :39bf2144-dedd-4f68-a629-0e8c868a5685: just arrived to vacation! On: Linux
+13:07:03.613|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (310)[m | 127.0.0.11331
+13:07:03.615|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (326)[m | Got Privkey and Host information!
+13:07:03.650|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (512)[m | ls
+13:07:03.658|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (396)[m | Send message :Cevsn
+Geffsn
+logs
+Readme.md
+revsni
+Revsni.code-workspace
+To-Do
+
+13:07:13.807|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (357)[m | 127.0.0.11331
+13:07:13.830|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (367)[m | Failed to get privKey!
+13:07:13.831|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (373)[m | CheckTrigTrue
+13:07:13.831|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (718)[m | Passed checktrig
+13:07:13.831|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (99)[m | Init started!
+13:07:13.832|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (129)[m | INIT
+13:07:13.832|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (133)[m | 127.0.0.1 
+13:07:13.832|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (134)[m | 1331
+13:07:13.833|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (396)[m | Send message :e87e8b9e-711f-4c8b-a5fa-66b22d39dd37: just arrived to vacation! On: Linux
+13:07:18.839|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (310)[m | 127.0.0.11331
+13:07:18.841|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (326)[m | Got Privkey and Host information!
+13:07:18.885|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (512)[m | ls
+13:07:18.893|[31mERROR[m |> --- [           main] [36mc.r.c.Client        (396)[m | Send message :Cevsn
+Geffsn
+logs
+Readme.md
+revsni
+Revsni.code-workspace
+To-Do
+
+13:07:45.340|[31mERROR[m |> --- [           main] [36mc.r.s.e.RSA         (152)[m | Failed to load RSA Keys!
+13:07:45.344|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (154)[m | Generating new RSA Keys for Host...
+13:07:46.521|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (120)[m | Host RSA Public Key wrote!
+13:07:46.523|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (128)[m | Host RSA Private Key wrote!
+13:07:46.523|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+13:07:46.524|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+13:07:46.548|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+13:07:46.549|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+13:07:51.105|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (274)[m | Server is shutting down
+13:07:51.106|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (84)[m | Error in TCP Listener Thread!
