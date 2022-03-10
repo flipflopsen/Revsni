@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
 import java.security.InvalidKeyException;
 import java.security.KeyFactory;
 import java.security.KeyPair;
@@ -149,7 +150,12 @@ public class RSA implements Encri {
             logger.info("RSA Private Key loaded (Host)!"); 
         } catch (IOException e) {
             logger.error("Failed to load RSA Keys!");
-            e.printStackTrace();
+            if(e instanceof NoSuchFileException) {
+                logger.info("Generating new RSA Keys for Host...");
+                generateHostKeyPair();
+                saveHostKeyPair();
+                loadHostKeyPair();
+            }
         } catch (NoSuchAlgorithmException | InvalidKeySpecException e) {
             logger.error("Failed to generate Key Specs and Keys from RSA Key Files!");
             e.printStackTrace();

@@ -1,6 +1,7 @@
 package com.revsni;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.security.NoSuchAlgorithmException;
@@ -57,6 +58,8 @@ public class Revsni {
                           +"3. Start the Builder\n"
                           +"4. Save Sessions to a File\n"
                           +"5. Load Sessions from a File\n"
+                          +"6. Clear Filehost Folder\n"
+                          +"7. Clear Keys Folder\n"
                           +"0. Usage\n"
                           +"\n"
                           +"Type 'exit' to leave\n"
@@ -130,6 +133,8 @@ public class Revsni {
                     }
                 }
                 break;
+            case("6"): clearFilehost(); break;
+            case("7"): clearKeyFolder(); break;
             case("exit"): System.exit(1); break;
             default:
         }
@@ -207,6 +212,47 @@ public class Revsni {
         }
     }
 
+    //create method to clear folder revsni/filehost
+    public static void clearFilehost() throws IOException {
+        File folder = new File("revsni/filehosting");
+        File[] listOfFiles = folder.listFiles();
+        for (File file : listOfFiles) {
+            if(file.isDirectory()) {
+                for (File lul : file.listFiles()) {
+                    if(!lul.isDirectory()) {
+                        lul.delete();
+                    }
+                }
+            } else {
+                file.delete();
+            }
+            
+        }
+        System.out.println("Filehost folder cleared!");
+        clearConsole();
+        main(new String[1]);
+    }
+    //create method to clear folder revsni/keys
+    public static void clearKeyFolder() throws IOException {
+        File folder = new File("revsni/keys");
+        File[] listOfFiles = folder.listFiles();
+        for (File file : listOfFiles) {
+            if(file.isDirectory()) {
+                for (File lul : file.listFiles()) {
+                    if(!lul.isDirectory()) {
+                        lul.delete();
+                    }
+                }
+            } else {
+                file.delete();
+            }
+            
+        }
+        System.out.println("Keys folder cleared!");
+        clearConsole();
+        main(new String[1]);
+    }
+
     public static void setServerError() {
         serverError = true;
     }
@@ -231,5 +277,6 @@ public class Revsni {
                           +"\nIt's okay to not specify a salt as it will be generated anyways. :) \n"
                           +"\n");
     }
+
 
 }   

@@ -23702,3 +23702,864 @@ Listening...
 20:04:20.990|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (230)[m | Failed to send command:ls, fallback initiated
 20:04:20.991|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (270)[m | Server is shutting down
 20:04:20.992|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (84)[m | Error in TCP Listener Thread!
+00:22:26.847|[31mERROR[m |> --- [           main] [36mc.r.s.e.RSA         (151)[m | Failed to load RSA Keys!
+00:22:26.900|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+00:22:26.901|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (148)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+00:23:57.478|[31mERROR[m |> --- [           main] [36mc.r.s.e.RSA         (152)[m | Failed to load RSA Keys!
+00:23:57.483|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (154)[m | Generating new RSA Keys for Host...
+00:24:01.562|[31mERROR[m |> --- [           main] [36mc.r.s.e.RSA         (152)[m | Failed to load RSA Keys!
+00:24:01.562|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (154)[m | Generating new RSA Keys for Host...
+00:24:17.774|[31mERROR[m |> --- [           main] [36mc.r.s.e.RSA         (152)[m | Failed to load RSA Keys!
+00:24:17.779|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (154)[m | Generating new RSA Keys for Host...
+00:24:20.326|[31mERROR[m |> --- [           main] [36mc.r.s.e.RSA         (152)[m | Failed to load RSA Keys!
+00:24:20.327|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (154)[m | Generating new RSA Keys for Host...
+00:24:25.489|[31mERROR[m |> --- [           main] [36mc.r.s.e.RSA         (152)[m | Failed to load RSA Keys!
+00:24:25.489|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (154)[m | Generating new RSA Keys for Host...
+00:24:46.281|[31mERROR[m |> --- [           main] [36mc.r.s.e.RSA         (152)[m | Failed to load RSA Keys!
+00:24:46.286|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (154)[m | Generating new RSA Keys for Host...
+00:24:47.749|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (120)[m | Host RSA Public Key wrote!
+00:24:47.752|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (128)[m | Host RSA Private Key wrote!
+00:24:47.753|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+00:24:47.754|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+00:24:47.783|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+00:24:47.784|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (148)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+00:25:09.493|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+9b37054f-a1cd-4f24-afec-5dfdc2fc6ef1: just arrived to vacation on: Linux
+00:25:09.494|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (342)[m | Added Session Nr. 1 to the session list!
+00:25:09.495|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+00:25:09.495|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (363)[m | Getting interaction for sessioNumber: 1
+00:25:09.496|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (364)[m | Type is: TCP
+00:25:09.496|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (363)[m | Getting interaction for sessioNumber: 1
+00:25:09.497|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (364)[m | Type is: TCP
+00:25:26.478|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+7e5518a9-79e7-4fa0-ab30-728a46c1eedb: just arrived to vacation on: Linux
+00:25:26.479|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (342)[m | Added Session Nr. 2 to the session list!
+00:25:26.480|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+00:25:26.481|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (363)[m | Getting interaction for sessioNumber: 2
+00:25:26.481|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (364)[m | Type is: TCP
+00:25:26.481|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (363)[m | Getting interaction for sessioNumber: 2
+00:25:26.481|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (364)[m | Type is: TCP
+00:25:41.988|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (227)[m | Message: ls
+00:25:41.989|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (363)[m | Getting interaction for sessioNumber: 2
+00:25:41.990|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (364)[m | Type is: TCP
+00:25:42.052|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+00:25:46.056|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (227)[m | Message: ls
+00:25:46.057|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (363)[m | Getting interaction for sessioNumber: 1
+00:25:46.058|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (364)[m | Type is: TCP
+00:25:46.136|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+00:25:51.784|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (227)[m | Message: ls
+00:25:51.785|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (363)[m | Getting interaction for sessioNumber: 1
+00:25:51.786|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (364)[m | Type is: TCP
+00:25:51.789|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (162)[m | Error while sending message: 'ls', to: 1 
+00:25:51.790|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38272
+00:25:51.797|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38272
+00:25:56.596|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (227)[m | Message: ls
+00:25:56.597|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (363)[m | Getting interaction for sessioNumber: 1
+00:25:56.598|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (231)[m | Failed to send command: 'ls'!
+00:26:43.038|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+99ff4201-78b0-4959-9790-a39b9551dccc: just arrived to vacation on: Linux
+00:26:43.039|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (342)[m | Added Session Nr. 3 to the session list!
+00:26:43.039|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+00:26:43.039|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (363)[m | Getting interaction for sessioNumber: 3
+00:26:43.040|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (364)[m | Type is: TCP
+00:26:43.040|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (363)[m | Getting interaction for sessioNumber: 3
+00:26:43.040|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (364)[m | Type is: TCP
+00:27:08.678|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+5f5d87e8-0665-4364-adbb-b00e46c5dc43: just arrived to vacation on: Linux
+00:27:08.679|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (342)[m | Added Session Nr. 4 to the session list!
+00:27:08.679|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+00:27:08.680|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (363)[m | Getting interaction for sessioNumber: 4
+00:27:08.680|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (364)[m | Type is: TCP
+00:27:08.680|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (363)[m | Getting interaction for sessioNumber: 4
+00:27:08.680|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (364)[m | Type is: TCP
+00:27:18.410|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (227)[m | Message: ls
+00:27:18.410|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (363)[m | Getting interaction for sessioNumber: 1
+00:27:18.410|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (231)[m | Failed to send command: 'ls'!
+00:27:39.396|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (269)[m | Server is shutting down
+00:30:23.072|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+00:30:23.076|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+00:30:23.114|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+00:30:23.115|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (148)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+00:30:23.249|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+2c908a6d-ddee-4902-aa25-c353050c2c29: just arrived to vacation on: Linux
+00:30:23.250|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (347)[m | Added Session Nr. 1 to the session list!
+00:30:23.251|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+00:30:23.252|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (368)[m | Getting interaction for sessioNumber: 1
+00:30:23.252|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (369)[m | Type is: TCP
+00:30:23.252|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (368)[m | Getting interaction for sessioNumber: 1
+00:30:23.253|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (369)[m | Type is: TCP
+00:30:26.756|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+1f7ef826-aa37-4ad6-b6c6-9c55ac7d156a: just arrived to vacation on: Linux
+00:30:26.756|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (347)[m | Added Session Nr. 2 to the session list!
+00:30:26.757|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+00:30:26.757|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (368)[m | Getting interaction for sessioNumber: 2
+00:30:26.757|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (369)[m | Type is: TCP
+00:30:26.758|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (368)[m | Getting interaction for sessioNumber: 2
+00:30:26.758|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (369)[m | Type is: TCP
+00:30:42.618|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (227)[m | Message: ls
+00:30:42.619|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (368)[m | Getting interaction for sessioNumber: 2
+00:30:42.620|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (369)[m | Type is: TCP
+00:30:42.686|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+00:30:51.528|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (227)[m | Message: ls
+00:30:51.529|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (368)[m | Getting interaction for sessioNumber: 1
+00:30:51.531|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (369)[m | Type is: TCP
+00:30:51.594|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+00:45:53.193|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+00:45:53.201|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+00:45:53.237|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+00:45:53.238|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (152)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+00:45:54.161|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+70f1ec0d-95d9-4bdf-912c-404165ce27e3: just arrived to vacation on: Linux
+00:45:54.162|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (359)[m | Added Session Nr. 1 to the session list!
+00:45:54.162|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+00:45:54.163|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (380)[m | Getting interaction for sessioNumber: 1
+00:45:54.163|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (381)[m | Type is: TCP
+00:45:54.163|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (380)[m | Getting interaction for sessioNumber: 1
+00:45:54.164|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (381)[m | Type is: TCP
+00:46:00.653|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (272)[m | Server is shutting down
+00:46:00.656|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (84)[m | Error in TCP Listener Thread!
+00:53:52.840|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+00:53:52.845|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+00:53:52.894|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+00:53:52.895|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (152)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+00:53:57.631|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+b6f80858-a8b1-4e59-b37b-fb80efed6b69: just arrived to vacation on: Linux
+00:53:57.632|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (359)[m | Added Session Nr. 1 to the session list!
+00:53:57.633|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+00:53:57.633|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (380)[m | Getting interaction for sessioNumber: 1
+00:53:57.633|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (381)[m | Type is: TCP
+00:53:57.634|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (380)[m | Getting interaction for sessioNumber: 1
+00:53:57.634|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (381)[m | Type is: TCP
+00:54:00.552|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (231)[m | Message: ls
+00:54:00.553|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (380)[m | Getting interaction for sessioNumber: 1
+00:54:00.553|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (381)[m | Type is: TCP
+00:54:02.637|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+00:54:07.005|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+84756687-6223-4919-99cf-c5caa9099017: just arrived to vacation on: Linux
+00:54:07.006|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (359)[m | Added Session Nr. 2 to the session list!
+00:54:07.007|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+00:54:07.007|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (380)[m | Getting interaction for sessioNumber: 2
+00:54:07.007|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (381)[m | Type is: TCP
+00:54:07.007|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (380)[m | Getting interaction for sessioNumber: 2
+00:54:07.008|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (381)[m | Type is: TCP
+00:54:11.443|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (231)[m | Message: ls
+00:54:11.443|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (380)[m | Getting interaction for sessioNumber: 2
+00:54:11.444|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (381)[m | Type is: TCP
+00:54:12.062|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+00:54:18.083|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (231)[m | Message: whoami
+00:54:18.084|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (380)[m | Getting interaction for sessioNumber: 1
+00:54:18.084|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (381)[m | Type is: TCP
+00:54:18.138|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+shorida
+
+00:54:22.897|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (231)[m | Message: whoami
+00:54:22.898|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (380)[m | Getting interaction for sessioNumber: 2
+00:54:22.899|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (381)[m | Type is: TCP
+00:54:22.948|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+shorida
+
+00:54:27.756|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (231)[m | Message: ls
+00:54:27.757|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (380)[m | Getting interaction for sessioNumber: 2
+00:54:27.757|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (381)[m | Type is: TCP
+00:54:27.761|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (162)[m | Error while sending message: 'ls', to: 2 
+00:54:27.762|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38322
+00:54:27.766|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38322
+00:54:27.768|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (272)[m | Server is shutting down
+00:54:27.770|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (84)[m | Error in TCP Listener Thread!
+00:56:41.253|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+00:56:41.259|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+00:56:41.301|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+00:56:41.302|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (152)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+00:56:44.548|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+6e2d221c-b40b-46c0-b3b0-06ada07f8c22: just arrived to vacation on: Linux
+00:56:44.548|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (358)[m | Added Session Nr. 1 to the session list!
+00:56:44.549|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+00:56:44.549|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Getting interaction for sessioNumber: 1
+00:56:44.550|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (380)[m | Type is: TCP
+00:56:44.550|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Getting interaction for sessioNumber: 1
+00:56:44.550|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (380)[m | Type is: TCP
+00:56:48.890|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+c296b0cd-72c5-40a6-b8e8-af1cee819d83: just arrived to vacation on: Linux
+00:56:48.891|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (358)[m | Added Session Nr. 2 to the session list!
+00:56:48.891|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+00:56:48.892|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Getting interaction for sessioNumber: 2
+00:56:48.892|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (380)[m | Type is: TCP
+00:56:48.892|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Getting interaction for sessioNumber: 2
+00:56:48.892|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (380)[m | Type is: TCP
+00:56:50.369|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (231)[m | Message: ls
+00:56:50.370|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (379)[m | Getting interaction for sessioNumber: 1
+00:56:50.371|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (380)[m | Type is: TCP
+00:56:50.444|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+00:56:58.184|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (231)[m | Message: ls
+00:56:58.186|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (379)[m | Getting interaction for sessioNumber: 1
+00:56:58.187|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (380)[m | Type is: TCP
+00:56:58.191|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (162)[m | Error while sending message: 'ls', to: 1 
+00:56:58.192|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38324
+00:56:58.198|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38324
+00:56:58.201|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (271)[m | Server is shutting down
+00:56:58.202|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (84)[m | Error in TCP Listener Thread!
+01:03:00.015|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+01:03:00.020|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+01:03:00.066|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+01:03:00.071|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (152)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+01:03:05.035|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+a33c09b3-4954-448b-919a-618bd53145e3: just arrived to vacation on: Linux
+01:03:05.036|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (358)[m | Added Session Nr. 1 to the session list!
+01:03:05.036|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+01:03:05.037|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Getting interaction for sessioNumber: 1
+01:03:05.037|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (380)[m | Type is: TCP
+01:03:05.038|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Getting interaction for sessioNumber: 1
+01:03:05.038|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (380)[m | Type is: TCP
+01:03:06.879|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+1e0a57f7-7cc8-4cd6-a26c-86799592592b: just arrived to vacation on: Linux
+01:03:06.880|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (358)[m | Added Session Nr. 2 to the session list!
+01:03:06.880|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+01:03:06.881|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Getting interaction for sessioNumber: 2
+01:03:06.881|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (380)[m | Type is: TCP
+01:03:06.881|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Getting interaction for sessioNumber: 2
+01:03:06.882|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (380)[m | Type is: TCP
+01:03:08.139|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (231)[m | Message: ls
+01:03:08.140|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (379)[m | Getting interaction for sessioNumber: 1
+01:03:08.140|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (380)[m | Type is: TCP
+01:03:10.032|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+01:03:16.435|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (231)[m | Message: ls
+01:03:16.436|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (379)[m | Getting interaction for sessioNumber: 1
+01:03:16.436|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (380)[m | Type is: TCP
+01:03:16.505|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+01:03:21.291|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (231)[m | Message: ls
+01:03:21.291|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (379)[m | Getting interaction for sessioNumber: 2
+01:03:21.292|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (380)[m | Type is: TCP
+01:03:21.293|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (162)[m | Error while sending message: 'ls', to: 2 
+01:03:21.293|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38330
+01:03:21.295|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38330
+01:03:21.295|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (271)[m | Server is shutting down
+01:03:21.296|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (84)[m | Error in TCP Listener Thread!
+01:03:33.908|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+01:03:33.909|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.Server        (152)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+01:03:50.763|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.Server        (271)[m | Server is shutting down
+01:03:50.765|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.t.Listener    (84)[m | Error in TCP Listener Thread!
+01:14:19.428|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+01:14:19.433|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+01:14:19.474|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+01:14:19.474|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+01:14:23.666|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+54b7eb8d-fa65-4080-93b6-d7b4890a22b4: just arrived to vacation on: Linux
+01:14:23.668|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (371)[m | Added Session Nr. 1 to the session list!
+01:14:23.668|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+01:14:23.669|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (392)[m | Getting interaction for sessioNumber: 1
+01:14:23.669|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (393)[m | Type is: TCP
+01:14:23.670|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (392)[m | Getting interaction for sessioNumber: 1
+01:14:23.670|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (393)[m | Type is: TCP
+01:14:24.648|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (232)[m | Message: ls
+01:14:30.140|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (232)[m | Message: ls
+01:14:42.457|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (232)[m | Message: whoami
+01:16:48.751|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+01:16:48.756|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+01:16:48.793|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+01:16:48.795|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+01:16:52.224|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+9014fdda-66f8-482b-bdf2-804e40fc6707: just arrived to vacation on: Linux
+01:16:52.225|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (371)[m | Added Session Nr. 1 to the session list!
+01:16:52.226|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+01:16:52.226|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (392)[m | Getting interaction for sessioNumber: 1
+01:16:52.227|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (393)[m | Type is: TCP
+01:16:52.227|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (392)[m | Getting interaction for sessioNumber: 1
+01:16:52.228|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (393)[m | Type is: TCP
+01:16:53.883|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (232)[m | Message: ls
+01:17:38.829|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+01:17:38.835|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+01:17:38.877|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+01:17:38.878|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+01:17:41.709|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+37d48f35-a13a-452f-9800-c9c7e40c0fdf: just arrived to vacation on: Linux
+01:17:41.710|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (373)[m | Added Session Nr. 1 to the session list!
+01:17:41.711|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+01:17:41.711|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (394)[m | Getting interaction for sessioNumber: 1
+01:17:41.711|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (395)[m | Type is: TCP
+01:17:41.712|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (394)[m | Getting interaction for sessioNumber: 1
+01:17:41.712|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (395)[m | Type is: TCP
+01:17:47.669|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (232)[m | Message: ls
+01:17:47.670|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (294)[m | Session: + 1 went offline due to unknown fkin reasons.
+01:18:52.912|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+01:18:52.918|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+01:18:52.963|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+01:18:52.964|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+01:18:56.031|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+39c57852-34b7-4a2a-913d-6c274644e7e4: just arrived to vacation on: Linux
+01:18:56.032|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (373)[m | Added Session Nr. 1 to the session list!
+01:18:56.032|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+01:18:56.033|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (394)[m | Getting interaction for sessioNumber: 1
+01:18:56.033|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (395)[m | Type is: TCP
+01:18:56.033|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (394)[m | Getting interaction for sessioNumber: 1
+01:18:56.034|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (395)[m | Type is: TCP
+01:19:01.919|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (232)[m | Message: ls
+01:19:01.920|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (96)[m | Get keepalive
+01:19:01.921|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (294)[m | Session: 1 went offline due to unknown fkin reasons.
+01:19:48.248|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (232)[m | Message: ls
+01:19:48.248|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (96)[m | Get keepalive
+01:19:48.248|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (294)[m | Session: 1 went offline due to unknown fkin reasons.
+01:19:53.979|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+01:19:53.984|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+01:19:54.032|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+01:19:54.033|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+01:20:00.209|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+8874fb76-e4a1-48b3-9e4f-cbec8d7bef52: just arrived to vacation on: Linux
+01:20:00.210|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (373)[m | Added Session Nr. 1 to the session list!
+01:20:00.211|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+01:20:00.211|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (394)[m | Getting interaction for sessioNumber: 1
+01:20:00.211|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (395)[m | Type is: TCP
+01:20:00.212|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (394)[m | Getting interaction for sessioNumber: 1
+01:20:00.212|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (395)[m | Type is: TCP
+01:20:02.064|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (232)[m | Message: ls
+01:20:02.065|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (96)[m | Get keepalive
+01:20:02.067|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (98)[m | Get keepalive: false
+01:20:02.068|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (294)[m | Session: 1 went offline due to unknown fkin reasons.
+01:20:56.567|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+01:20:56.574|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+01:20:56.622|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+01:20:56.624|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+01:20:57.137|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+d63f708c-955f-4b37-819d-eb9514a0c551: just arrived to vacation on: Linux
+01:20:57.139|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (373)[m | Added Session Nr. 1 to the session list!
+01:20:57.140|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+01:20:57.140|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (394)[m | Getting interaction for sessioNumber: 1
+01:20:57.141|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (395)[m | Type is: TCP
+01:20:57.141|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (394)[m | Getting interaction for sessioNumber: 1
+01:20:57.142|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (395)[m | Type is: TCP
+01:21:03.038|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (232)[m | Message: ls
+01:21:03.038|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (95)[m | Get keepalive
+01:21:03.039|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (97)[m | Get keepalive: true
+01:21:03.039|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (394)[m | Getting interaction for sessioNumber: 1
+01:21:03.039|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (395)[m | Type is: TCP
+01:21:03.102|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+01:21:05.282|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (232)[m | Message: ls
+01:21:05.282|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (95)[m | Get keepalive
+01:21:05.282|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (97)[m | Get keepalive: true
+01:21:05.283|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (394)[m | Getting interaction for sessioNumber: 1
+01:21:05.283|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (395)[m | Type is: TCP
+01:21:05.327|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+01:21:07.032|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (232)[m | Message: whoami
+01:21:07.033|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (95)[m | Get keepalive
+01:21:07.033|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (97)[m | Get keepalive: true
+01:21:07.033|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (394)[m | Getting interaction for sessioNumber: 1
+01:21:07.033|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (395)[m | Type is: TCP
+01:21:07.103|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+shorida
+
+01:21:58.893|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+7fd5ffa3-4377-4a3d-83b5-a0815f7c7cff: just arrived to vacation on: Linux
+01:21:58.894|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (373)[m | Added Session Nr. 2 to the session list!
+01:21:58.894|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+01:21:58.895|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (394)[m | Getting interaction for sessioNumber: 2
+01:21:58.895|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (395)[m | Type is: TCP
+01:21:58.895|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (394)[m | Getting interaction for sessioNumber: 2
+01:21:58.895|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (395)[m | Type is: TCP
+01:21:59.753|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (232)[m | Message: ls
+01:21:59.753|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (95)[m | Get keepalive
+01:21:59.753|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (97)[m | Get keepalive: true
+01:21:59.754|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (394)[m | Getting interaction for sessioNumber: 1
+01:21:59.754|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (395)[m | Type is: TCP
+01:21:59.795|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+01:22:03.280|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (232)[m | Message: ls
+01:22:03.280|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (95)[m | Get keepalive
+01:22:03.280|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (97)[m | Get keepalive: true
+01:22:03.281|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (394)[m | Getting interaction for sessioNumber: 2
+01:22:03.281|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (395)[m | Type is: TCP
+01:22:03.281|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (236)[m | Failed to send command: 'ls'!
+01:22:17.526|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (232)[m | Message: ls
+01:22:17.527|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (95)[m | Get keepalive
+01:22:17.528|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (97)[m | Get keepalive: true
+01:22:17.529|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (394)[m | Getting interaction for sessioNumber: 2
+01:22:17.529|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (395)[m | Type is: TCP
+01:22:17.531|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (170)[m | Error while sending message: 'ls', to: 2 
+01:22:17.531|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38348
+01:22:17.533|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38348
+01:22:17.533|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (272)[m | Server is shutting down
+01:22:17.534|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (84)[m | Error in TCP Listener Thread!
+01:24:22.493|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+01:24:22.500|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+01:24:22.554|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+01:24:22.556|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+01:24:25.526|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+03b890bd-3edd-4ad4-a29e-4e9f8755af47: just arrived to vacation on: Linux
+01:24:25.527|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (375)[m | Added Session Nr. 1 to the session list!
+01:24:25.528|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+01:24:25.528|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (396)[m | Getting interaction for sessioNumber: 1
+01:24:25.529|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (397)[m | Type is: TCP
+01:24:25.529|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (396)[m | Getting interaction for sessioNumber: 1
+01:24:25.529|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (397)[m | Type is: TCP
+01:24:27.769|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (233)[m | Message: ls
+01:24:27.770|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (396)[m | Getting interaction for sessioNumber: 1
+01:24:27.770|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (397)[m | Type is: TCP
+01:24:27.770|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (237)[m | Failed to send command: 'ls'!
+01:24:32.685|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (233)[m | Message: ls
+01:24:32.685|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (396)[m | Getting interaction for sessioNumber: 1
+01:24:32.686|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (397)[m | Type is: TCP
+01:24:32.752|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+01:24:41.919|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (233)[m | Message: whoami
+01:24:41.921|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (396)[m | Getting interaction for sessioNumber: 1
+01:24:41.922|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (397)[m | Type is: TCP
+01:24:41.977|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+shorida
+
+01:24:45.211|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (233)[m | Message: ls
+01:24:45.212|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (396)[m | Getting interaction for sessioNumber: 1
+01:24:45.213|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (397)[m | Type is: TCP
+01:24:45.215|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (168)[m | Error while sending message: 'ls', to: 1 
+01:24:45.215|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38350
+01:24:45.220|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38350
+01:24:45.223|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (274)[m | Server is shutting down
+01:24:45.225|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (84)[m | Error in TCP Listener Thread!
+01:31:07.303|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+01:31:07.308|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+01:31:07.345|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+01:31:07.347|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+01:31:12.793|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+0bd0e705-f6a1-4381-bc15-f36a1247af4a: just arrived to vacation on: Linux
+01:31:12.794|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (375)[m | Added Session Nr. 1 to the session list!
+01:31:12.794|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+01:31:12.795|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (396)[m | Getting interaction for sessioNumber: 1
+01:31:12.795|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (397)[m | Type is: TCP
+01:31:12.796|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (396)[m | Getting interaction for sessioNumber: 1
+01:31:12.796|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (397)[m | Type is: TCP
+01:31:16.097|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (233)[m | Message: ls
+01:31:16.097|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (396)[m | Getting interaction for sessioNumber: 1
+01:31:16.098|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (397)[m | Type is: TCP
+01:31:16.099|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (171)[m | Error while sending message: 'ls', to: 1 
+01:31:16.099|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38352
+01:31:16.101|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38352
+01:31:16.101|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (274)[m | Server is shutting down
+01:31:16.102|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (84)[m | Error in TCP Listener Thread!
+01:33:37.998|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+01:33:38.006|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+01:33:38.047|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+01:33:38.048|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+01:33:41.345|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+ca43c85f-30d7-4912-8503-a71393d19bb4: just arrived to vacation on: Linux
+01:33:41.346|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (375)[m | Added Session Nr. 1 to the session list!
+01:33:41.346|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+01:33:41.347|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (396)[m | Getting interaction for sessioNumber: 1
+01:33:41.347|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (397)[m | Type is: TCP
+01:33:41.347|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (396)[m | Getting interaction for sessioNumber: 1
+01:33:41.348|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (397)[m | Type is: TCP
+01:33:43.194|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (233)[m | Message: ls
+01:33:43.195|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (396)[m | Getting interaction for sessioNumber: 1
+01:33:43.198|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (397)[m | Type is: TCP
+01:33:43.200|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (171)[m | Error while sending message: 'ls', to: 1 
+01:33:43.200|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38354
+01:33:43.202|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38354
+01:33:49.341|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+be50a521-c2bb-43e8-9206-4722bbc6cd10: just arrived to vacation on: Linux
+01:33:49.341|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (375)[m | Added Session Nr. 2 to the session list!
+01:33:49.342|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+01:33:49.342|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (396)[m | Getting interaction for sessioNumber: 2
+01:33:49.342|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (397)[m | Type is: TCP
+01:33:49.343|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (396)[m | Getting interaction for sessioNumber: 2
+01:33:49.343|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (397)[m | Type is: TCP
+01:33:56.853|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (233)[m | Message: ls
+01:33:56.854|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (396)[m | Getting interaction for sessioNumber: 2
+01:33:56.855|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (397)[m | Type is: TCP
+01:33:56.924|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+01:35:45.494|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+01:35:45.499|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+01:35:45.545|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+01:35:45.547|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+01:35:48.833|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+7adc874b-56cd-4e55-a6d1-25e678cd2b26: just arrived to vacation on: Linux
+01:35:48.834|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (375)[m | Added Session Nr. 1 to the session list!
+01:35:48.834|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+01:35:48.835|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (396)[m | Getting interaction for sessioNumber: 1
+01:35:48.835|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (397)[m | Type is: TCP
+01:35:48.836|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (396)[m | Getting interaction for sessioNumber: 1
+01:35:48.836|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (397)[m | Type is: TCP
+01:35:52.401|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (233)[m | Message: ls
+01:35:52.403|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (396)[m | Getting interaction for sessioNumber: 1
+01:35:52.403|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (397)[m | Type is: TCP
+01:35:53.841|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+01:35:56.540|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (233)[m | Message: ls
+01:35:56.541|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (396)[m | Getting interaction for sessioNumber: 1
+01:35:56.541|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (397)[m | Type is: TCP
+01:35:56.542|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (171)[m | Error while sending message: 'ls', to: 1 
+01:35:56.543|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38360
+01:35:56.544|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38360
+01:35:59.773|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (274)[m | Server is shutting down
+01:35:59.774|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (84)[m | Error in TCP Listener Thread!
+01:37:10.855|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+01:37:10.860|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+01:37:10.900|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+01:37:10.901|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+01:37:21.760|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+d75191ce-1a69-474b-860c-1b9d4b526981: just arrived to vacation on: Linux
+01:37:21.761|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Added Session Nr. 1 to the session list!
+01:37:21.762|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+01:37:21.762|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 1
+01:37:21.763|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:37:21.763|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 1
+01:37:21.764|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:37:24.095|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (233)[m | Message: ls
+01:37:24.096|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 1
+01:37:24.096|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:37:24.097|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (237)[m | Failed to send command: 'ls'!
+01:37:26.751|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (233)[m | Message: ls
+01:37:26.752|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 1
+01:37:26.753|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:37:26.816|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+01:37:29.928|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (233)[m | Message: ls
+01:37:29.929|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 1
+01:37:29.930|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:37:29.933|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (171)[m | Error while sending message: 'ls', to: 1 
+01:37:29.934|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38362
+01:37:29.938|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38362
+01:37:44.449|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+357ece84-a2a2-48d3-88c9-798ba6e9432a: just arrived to vacation on: Linux
+01:37:44.449|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Added Session Nr. 2 to the session list!
+01:37:44.450|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+01:37:44.450|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 2
+01:37:44.451|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:37:44.451|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 2
+01:37:44.451|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:37:50.910|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (233)[m | Message: ls
+01:37:50.911|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 2
+01:37:50.912|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:37:50.980|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+01:38:00.910|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (233)[m | Message: ls
+01:38:00.910|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 2
+01:38:00.911|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:38:00.959|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+01:38:11.502|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (233)[m | Message: ls
+01:38:11.503|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 2
+01:38:11.503|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:38:11.553|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+01:38:19.259|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+04664e35-56d3-40eb-a4ef-806ac5278e52: just arrived to vacation on: Linux
+01:38:19.259|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Added Session Nr. 3 to the session list!
+01:38:19.260|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+01:38:19.260|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 3
+01:38:19.260|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:38:19.260|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 3
+01:38:19.260|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:38:19.366|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (233)[m | Message: ls
+01:38:19.366|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 2
+01:38:19.366|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:38:19.408|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+01:38:24.086|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (233)[m | Message: ls
+01:38:24.088|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 3
+01:38:24.090|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:38:24.314|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+01:38:30.481|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (233)[m | Message: ls
+01:38:30.482|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 2
+01:38:30.483|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:38:30.571|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+01:38:40.721|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (233)[m | Message: ls
+01:38:40.721|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 3
+01:38:40.722|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:38:40.724|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (171)[m | Error while sending message: 'ls', to: 3 
+01:38:40.725|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38366
+01:38:40.729|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38366
+01:41:32.924|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+01:41:32.933|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+01:41:32.985|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+01:41:32.986|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+01:41:36.387|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+bfbcd6d7-294f-443c-a6dc-87fd6c89e2de: just arrived to vacation on: Linux
+01:41:36.388|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Added Session Nr. 1 to the session list!
+01:41:36.389|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+01:41:36.389|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 1
+01:41:36.389|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:41:36.390|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 1
+01:41:36.390|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:41:37.898|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (233)[m | Message: ls
+01:41:37.899|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 1
+01:41:37.899|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:41:37.900|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (237)[m | Failed to send command: 'ls'!
+01:41:41.968|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (233)[m | Message: ls
+01:41:41.970|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 1
+01:41:41.971|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:41:42.037|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+01:41:44.556|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (233)[m | Message: tree
+01:41:44.558|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 1
+01:41:44.559|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:41:44.925|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (139)[m | EOF Exception while reading from InputStream! Connection gets shut down...
+01:41:44.925|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38368
+01:43:10.487|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+01:43:10.494|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+01:43:10.529|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+01:43:10.530|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+01:43:11.273|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (259)[m | No clients are connected!
+01:43:16.190|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+9fdd7af3-6e97-4276-87c3-a20a858902d2: just arrived to vacation on: Linux
+01:43:16.191|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (380)[m | Added Session Nr. 1 to the session list!
+01:43:16.192|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+01:43:16.192|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (401)[m | Getting interaction for sessioNumber: 1
+01:43:16.193|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (402)[m | Type is: TCP
+01:43:16.193|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (401)[m | Getting interaction for sessioNumber: 1
+01:43:16.193|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (402)[m | Type is: TCP
+01:43:17.872|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (259)[m | No clients are connected!
+01:43:22.780|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (234)[m | Message: ls
+01:43:22.780|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (401)[m | Getting interaction for sessioNumber: 1
+01:43:22.780|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (402)[m | Type is: TCP
+01:43:22.845|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+01:43:26.392|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (259)[m | No clients are connected!
+01:45:15.978|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+01:45:15.983|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+01:45:16.028|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+01:45:16.029|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+01:45:16.526|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (259)[m | No clients are connected!
+01:45:16.526|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (261)[m | No clients are connected / No client selected!
+01:46:16.143|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+01:46:16.148|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+01:46:16.183|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+01:46:16.185|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+01:46:16.752|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (260)[m | No client selected or no clients are connected! Check with entering 'sessions'.
+01:46:24.158|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+e5bd858e-612e-4320-b162-8928aebd085a: just arrived to vacation on: Linux
+01:46:24.159|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Added Session Nr. 1 to the session list!
+01:46:24.159|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+01:46:24.160|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 1
+01:46:24.160|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:46:24.161|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 1
+01:46:24.161|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:46:25.777|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (260)[m | No client selected or no clients are connected! Check with entering 'sessions'.
+01:46:31.331|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (234)[m | Message: ls
+01:46:31.332|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 1
+01:46:31.334|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:46:31.396|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (43)[m | 
+bin
+Cevsn.cs
+Cevsn.csproj
+obj
+Tevsn.cs
+
+01:46:35.910|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (234)[m | Message: ls
+01:46:35.911|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (400)[m | Getting interaction for sessioNumber: 1
+01:46:35.912|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (401)[m | Type is: TCP
+01:46:35.914|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (169)[m | Connection to session 1 died... sadly. :)
+01:46:35.915|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38372
+01:46:35.916|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (81)[m | Closing Connection - localhost/127.0.0.1:38372
+01:47:26.954|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (148)[m | RSA Public Key loaded (Host)!
+01:47:26.959|[32m INFO[m |> --- [           main] [36mc.r.s.e.RSA         (150)[m | RSA Private Key loaded (Host)!
+01:47:27.003|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+01:47:27.004|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+01:47:29.985|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (43)[m | 
+a3ed21a5-4d5e-4f4d-b76c-3e227d57f6fe: just arrived to vacation on: Linux
+01:47:29.986|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (379)[m | Added Session Nr. 1 to the session list!
+01:47:29.987|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+01:47:30.735|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (260)[m | No client selected or no clients are connected! Check with entering 'sessions'.
+01:47:35.293|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.t.Handler     (139)[m | EOF Exception while reading from InputStream! Connection gets shut down...
+01:47:38.347|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (260)[m | No client selected or no clients are connected! Check with entering 'sessions'.

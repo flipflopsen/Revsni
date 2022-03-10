@@ -78,7 +78,7 @@ public class Handler implements Interaction{
 
 
     private void closeConnection() {
-        logger.info("Closing Connection - " + connection.getRemoteSocketAddress());
+        //logger.info("Closing Connection - " + connection.getRemoteSocketAddress());
 
         try {
             server.removeSession(sessionNumber);
@@ -86,9 +86,18 @@ public class Handler implements Interaction{
             dataOut.close();
             connection.close();
         }
-        catch(IOException ioException) {
-            ioException.printStackTrace();
+        catch(IOException e) {
+            if(e instanceof SocketException) {
+                server.removeSession(sessionNumber);
+                
+            }
         }
+    }
+
+    public boolean checkIfOnline() {
+        boolean kep = connection.isConnected();
+        return kep;
+        
     }
 
     public void sendCommand(String arg, String uuid) {
@@ -130,7 +139,6 @@ public class Handler implements Interaction{
                 logger.error("EOF Exception while reading from InputStream! Connection gets shut down...");
             }
             closeConnection();
-            e.printStackTrace();
         }
     }
 
@@ -147,7 +155,6 @@ public class Handler implements Interaction{
                 logger.error("Socket is dead, connection closes...");
             }
             closeConnection();
-            e.printStackTrace();
         }
     }
 
@@ -159,9 +166,8 @@ public class Handler implements Interaction{
             dataOut.writeInt(toSendBytes.length);
             dataOut.write(toSendBytes, 0, toSendBytes.length);
         } catch (IOException e) {
-            logger.error("Error while sending message: '{}', to: {} ", message, sessionNumber);
-            closeConnection();
-            e.printStackTrace();
+            logger.error("Connection to session " + sessionNumber + " died... sadly. :)");
+            closeConnection();;
         }
     }
 

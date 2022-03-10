@@ -27,6 +27,7 @@ import com.revsni.server.encryption.Encri;
 import com.revsni.server.encryption.RSA;
 import com.revsni.server.http.HTTPShell;
 import com.revsni.server.https.HTTPSShell;
+import com.revsni.server.tcp.Handler;
 import com.revsni.server.tcp.Listener;
 import com.revsni.utils.CouplePair;
 import com.revsni.utils.ThreadMonitor;
@@ -66,12 +67,16 @@ public class Server implements Runnable{
     //Sessions
     public volatile int sessionNumber;
     public volatile int sessionNumberStart;
-    public volatile ArrayList<Triplet<Mode, Integer, String>> modePortUUID = new ArrayList<>();
-    public volatile ArrayList<CouplePair<String, String>> ipOs = new ArrayList<>();
+    //public volatile ArrayList<Triplet<Mode, Integer, String>> modePortUUID = new ArrayList<>();
+    //public volatile ArrayList<CouplePair<String, String>> ipOs = new ArrayList<>();
     public volatile ConcurrentHashMap<Integer, Interaction> sessionHandlers = new ConcurrentHashMap<>();
 
+    public volatile HashMap<Integer, Triplet<Mode, Integer, String>> modePortUUID = new HashMap<>();
+    public volatile HashMap<Integer, CouplePair<String, String>> ipOs = new HashMap<>();
+    public volatile HashMap<Integer, String> ips = new HashMap<>();
+
     //Helper Lists and Maps for Sessions
-    public volatile ArrayList<String> ips = new ArrayList<>();
+    //public volatile ArrayList<String> ips = new ArrayList<>();
     public static HashMap<Integer, String> sessionNumOsStatic = new HashMap<>();
     public HashMap<Integer, String> sessionNumOs = sessionNumOsStatic;
     public static HashMap<Integer, String> sessNumUUIDSatic = new HashMap<>();
@@ -151,6 +156,7 @@ public class Server implements Runnable{
                         InputStreamReader inputStreamReader = new InputStreamReader(System.in);
                         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
                         
+                        if(sessionHandlers.keySet().isEmpty()) { sessionNumber = 0; }
                         printIn();
                         message = bufferedReader.readLine();
 
@@ -159,7 +165,7 @@ public class Server implements Runnable{
                             case("usage"): printUsage(); break;
                             case("configure"): printConfigure(); break;
                             case("switch"):
-                                if(sessionNumber == 0) { logger.error("No clients are connected!"); break; } 
+                                if(sessionNumber == 0) {  break; } 
                                 printSwitch();
                                 System.out.println("---Enter anything else to leave this menu.---\n");
                                 printIn();
@@ -172,7 +178,7 @@ public class Server implements Runnable{
                                         updater.setShellType("HTTP", String.valueOf(httpShell.getPort()));
                                         updater.generateOutputString(clientEnc.get(sessionNumber).getEncryption());
                                         updater.writeOut(getUUID(sessionNumber));
-                                        getInteraction(sessionNumber).sendCommand("httpSw");
+                                        send(sessionNumber, "httpSw");
                                         setInteraction(sessionNumber, httpShell);
                                         setMode(sessionNumber, Mode.HTTP);
                                         logger.info("Switch done!");
@@ -186,7 +192,7 @@ public class Server implements Runnable{
                                         updater.setShellType("HTTPS", String.valueOf(getInteraction(sessionNumber).getPort()));
                                         updater.generateOutputString(clientEnc.get(sessionNumber).getEncryption());
                                         updater.writeOut(getUUID(sessionNumber));
-                                        getInteraction(sessionNumber).sendCommand("httpsSw");
+                                        send(sessionNumber, "httpsSw");
                                         setInteraction(sessionNumber, httpsShell);
                                         setMode(sessionNumber, Mode.HTTPS);
                                         break;
@@ -196,7 +202,7 @@ public class Server implements Runnable{
                                 } 
                                 break;
                             case("mode"): printMode(); break;
-                            case("kill"): if(sessionNumber == 0) { logger.error("No clients are connected!"); break; } getInteraction(sessionNumber).sendCommand("kill"); getInteraction(sessionNumber).sendCommand("exit"); break;
+                            case("kill"): if(sessionNumber == 0) { break; } getInteraction(sessionNumber).sendCommand("kill"); getInteraction(sessionNumber).sendCommand("exit"); break;
                             case("exit"): Revsni.setActive(false); return;
                             case("encryption"): printEncryption(); break;
                             case("bg"):
@@ -222,37 +228,36 @@ public class Server implements Runnable{
                                 break;
                                 
                             default:
-                                if(!(message.equals("sessions") || message.equals("mode") || message.equals("encryption") || message.equals("switch")) || sessionNumber == 0) {
-                                    if(getMode(sessionNumber).toString().equals("TCP")) {
-                                        logger.info("Message: " + message);
-                                        try {
-                                            getInteraction(sessionNumber).sendCommand(message, sessNumUUID.get(sessionNumber));
-                                        } catch(Exception e) {
-                                            logger.error("Failed to send command: '"+message+"'!");
-                                            
-                                            if(sessionHandlers.keySet().isEmpty()) {
-                                                logger.error("No clients are connected!");
-                                                sessionNumber = 0;
-                                                break;
-                                                                  
+                                if(!(message.equals("sessions") || message.equals("mode") || message.equals("encryption") || message.equals("switch") || sessionNumber == 0)) {
+                                    if(checkIfOnline(sessionNumber)) {
+                                        if(getMode(sessionNumber).toString().equals("TCP")) {
+                                            //logger.info("Message: " + message);
+                                            try {
+                                                send(sessionNumber, message, sessNumUUID.get(sessionNumber));
+                                            } catch(Exception e) {
+                                                logger.error("Failed to send command: '"+message+"'!");
+                                                
+                                                if(sessionHandlers.keySet().isEmpty()) {
+                                                    logger.error("No clients are connected!");
+                                                    sessionNumber = 0;
+                                                    break;
+                                                                      
+                                                }
                                             }
+                                            
                                         }
-                                        
+                                        if(getMode(sessionNumber).toString().equals("HTTP")) {
+                                            send(sessionNumber, message);
+                                            //sessionHandlers.get(sessionNumber).sendCommand(message);
+                                        }
+                                        if(getMode(sessionNumber).toString().equals("HTTPS")) {
+                                            send(sessionNumber, message);
+                                            //sessionHandlers.get(sessionNumber).sendCommand(message);
+                                        }
                                     }
-                                    if(getMode(sessionNumber).toString().equals("HTTP")) {
-                                        getInteraction(sessionNumber).sendCommand(message);
-                                        //sessionHandlers.get(sessionNumber).sendCommand(message);
-                                    }
-                                    if(getMode(sessionNumber).toString().equals("HTTPS")) {
-                                        getInteraction(sessionNumber).sendCommand(message);
-                                        //sessionHandlers.get(sessionNumber).sendCommand(message);
-                                    }
-                                    break;  
                                 } else {
-                                    if(sessionNumber == 0) { logger.error("No clients are connected!"); break; }
-                                    break;
                                 }
-                                
+                                if(sessionNumber == 0) { logger.error("No client selected or no clients are connected! Check with entering 'sessions'."); }
                             }
                     } catch(IOException e) {
                         logger.error(e.getMessage() +": occured in Server main Thread!");
@@ -264,10 +269,42 @@ public class Server implements Runnable{
                         return;
                     }
                 } while(!message.equals("quit"));
+                logger.info("lul");
             } finally {
-                setRunning(false);
                 logger.info("Server is shutting down");
+                setRunning(false);
+                listener.stopListening();
+                Revsni.setActive(false);
+                Revsni.setServerError();
+                Revsni.setActiveHelper(true);
             }
+            return;
+        }
+    }
+
+    public void send(int sessionNumber, String message) {
+        if(checkIfOnline(sessionNumber)) {
+            getInteraction(sessionNumber).sendCommand(message);
+        } else {
+            logger.info("Session: + " + sessionNumber + " went offline due to unknown fkin reasons.");
+        }
+    }
+    public void send(int sessionNumber, String message, String uuid) {
+        if(checkIfOnline(sessionNumber)) {
+            getInteraction(sessionNumber).sendCommand(message, uuid);
+        } else {
+            logger.info("Session: " + sessionNumber + " went offline due to unknown fkin reasons.");
+        }
+    }
+
+    public boolean checkIfOnline(int sessionNumber) {
+        Boolean ret = false;
+        try {
+            Handler handler = (Handler) sessionHandlers.get(sessionNumber);
+            ret = handler.checkIfOnline();
+            return ret;
+        } catch (NullPointerException e) {
+            return false;
         }
     }
 
@@ -355,13 +392,13 @@ public class Server implements Runnable{
 
     public void removeSession(int sessionNumber) {
         sessionHandlers.remove(sessionNumber);
-        modePortUUID.remove(sessionNumber - sessionNumberStart);
-        ipOs.remove(sessionNumber - sessionNumberStart);
+        modePortUUID.remove(sessionNumber);
+        ipOs.remove(sessionNumber);
     }
 
     public Interaction getInteraction(int sessionNumber) {
-        logger.info("Getting interaction for sessioNumber: " + sessionNumber);
-        logger.info("Type is: " + sessionHandlers.get(sessionNumber).getMode().toString());
+        //logger.info("Getting interaction for sessioNumber: " + sessionNumber);
+        //logger.info("Type is: " + sessionHandlers.get(sessionNumber).getMode().toString());
         Interaction ret = null;
         try {
             ret = sessionHandlers.get(sessionNumber);
@@ -377,15 +414,15 @@ public class Server implements Runnable{
     }
 
     public String getUUID(int sessionNumber) {
-        return modePortUUID.get(sessionNumber - sessionNumberStart).getAddition();
+        return modePortUUID.get(sessionNumber).getAddition();
     }
 
     public Mode getMode(int sessionNumber) {
         Mode ret = null;
-        int sess = sessionNumber - sessionNumberStart;
+        int sess = sessionNumber;
         try {
             ret = modePortUUID.get(sess).getKey();
-        } catch(IndexOutOfBoundsException e) {
+        } catch(IndexOutOfBoundsException | NullPointerException e) {
             return Mode.TCP;
         }
 
@@ -393,9 +430,9 @@ public class Server implements Runnable{
     }
 
     public void setMode(int sessionNumber, Mode mode) {
-        int sess = sessionNumber - sessionNumberStart;
+        int sess = sessionNumber;
         Triplet<Mode, Integer, String> trip = new Triplet<Configuration.Mode,Integer,String>(mode, modePortUUID.get(sess).getValue(), modePortUUID.get(sess).getAddition());
-        modePortUUID.set(sess, trip);
+        modePortUUID.put(sess, trip);
     }
 
     public void addToPrint(int sessNr) {
@@ -405,8 +442,8 @@ public class Server implements Runnable{
         String tmpUUID = sessNumUUID.get(sessNr);
         String tmpOs = sessionNumOs.get(sessNr);
 
-        ipOs.add(new CouplePair<String,String>(tmpIp, tmpOs));
-        modePortUUID.add(new Triplet<Mode, Integer, String>(tmpMode, tmpPort, tmpUUID));
+        ipOs.put(sessNr, new CouplePair<String,String>(tmpIp, tmpOs));
+        modePortUUID.put(sessNr, new Triplet<Mode, Integer, String>(tmpMode, tmpPort, tmpUUID));
         printIn();
     }
 
@@ -428,20 +465,18 @@ public class Server implements Runnable{
 
 
     public void printSessions() {
-        int i = 0;
         try {
             System.out.println("---|Session List|---\n|Session Nr.\t|IP\t\t|OS\t|Mode\t|UUID\t\t\t\t\t|");
-            for(Integer sess : sessionNumOs.keySet()) {
+            for(Integer sess : ipOs.keySet()) {
                 System.out.println(
                     "|" + sess + "\t\t" +
-                    "|" + ipOs.get(i).getKey() + "\t" +
-                    "|" + ipOs.get(i).getValue() + "\t" +
-                    "|" + modePortUUID.get(i).getKey() + "\t" +
-                    "|" + modePortUUID.get(i).getAddition() + "\t" +
+                    "|" + ipOs.get(sess).getKey() + "\t" +
+                    "|" + ipOs.get(sess).getValue() + "\t" +
+                    "|" + modePortUUID.get(sess).getKey() + "\t" +
+                    "|" + modePortUUID.get(sess).getAddition() + "\t" +
                     "|\n");
-                i++;
             }
-        } catch(IndexOutOfBoundsException e) {
+        } catch(IndexOutOfBoundsException | NullPointerException e) {
         }
     }
 
@@ -510,9 +545,9 @@ public class Server implements Runnable{
     }
 
     public void updateLoadedSessionsForHandlers(String uuid, Interaction interaction) {
-        for(Triplet<Mode, Integer, String> tip : modePortUUID) {
+        for(Triplet<Mode, Integer, String> tip : modePortUUID.values()) {
             if(tip.getAddition().equals(uuid)) {
-                int sessId = modePortUUID.indexOf(tip) + sessionNumberStart;
+                int sessId = getKeyByValue(modePortUUID, tip);
                 sessionHandlers.replace(sessId, interaction);
             }
         }
