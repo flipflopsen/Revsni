@@ -1,0 +1,2 @@
+/home/shorida/Projekte/Revsni/Cevsn/Lombibombe/Cevsn.pdb
+/home/shorida/Projekte/Revsni/Cevsn/Lombibombe/Cevsn.exe

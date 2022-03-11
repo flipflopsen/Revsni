@@ -31701,3 +31701,1125 @@ shorida
 16:51:05.098|[32m INFO[m |> --- [       Thread-6] [36mc.r.s.h.HTTPHandler (92)[m | Waiting for Response..
 16:51:16.767|[32m INFO[m |> --- [       Thread-6] [36mc.r.s.h.HTTPHandler (92)[m | Waiting for Response..
 16:51:27.566|[32m INFO[m |> --- [       Thread-6] [36mc.r.s.h.HTTPHandler (92)[m | Waiting for Response..
+17:59:41.341|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+17:59:41.349|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (154)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+18:01:02.110|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+18:01:02.120|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (154)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+18:01:28.102|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (50)[m | 
+d41dd176-ab90-457a-83a4-a5a22c300174: just arrived to vacation on: Linux
+18:01:28.103|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (386)[m | 
+Added Session Nr. 1 to the session list!
+
+18:01:28.105|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+18:01:38.743|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (251)[m | No client selected or no clients are connected! Check with entering 'sessions'.
+18:01:47.422|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (54)[m | 
+bin
+cevsn
+Cevsn.cs
+Cevsn.csproj
+Encrn
+Hevsn.cs
+Litty
+obj
+Tevsn.cs
+
+18:01:55.029|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.h.HTTPServer  (23)[m | HTTP Server started on port: 9876
+18:01:55.031|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (185)[m | Switch done!
+18:01:59.119|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (92)[m | Waiting for Response..
+18:02:00.087|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (92)[m | Waiting for Response..
+18:02:07.129|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (92)[m | Waiting for Response..
+18:02:10.166|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (92)[m | Waiting for Response..
+18:02:25.986|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (265)[m | Server is shutting down
+18:02:25.986|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (84)[m | Error in TCP Listener Thread!
+18:02:28.991|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+18:02:28.992|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.Server        (154)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+18:02:39.646|[31mERROR[m |> --- [       Thread-3] [36mc.r.s.Server        (251)[m | No client selected or no clients are connected! Check with entering 'sessions'.
+18:02:51.129|[31mERROR[m |> --- [       Thread-3] [36mc.r.s.Server        (251)[m | No client selected or no clients are connected! Check with entering 'sessions'.
+18:02:54.573|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.Server        (265)[m | Server is shutting down
+18:03:04.936|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+18:03:04.947|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (154)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+18:03:10.604|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (50)[m | 
+e871f08a-f024-4322-9c9a-ea5d752e41a7: just arrived to vacation on: Linux
+18:03:10.606|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (386)[m | 
+Added Session Nr. 1 to the session list!
+
+18:03:10.607|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+18:03:17.856|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (54)[m | 
+bin
+cevsn
+Cevsn.cs
+Cevsn.csproj
+Encrn
+Hevsn.cs
+Litty
+obj
+Tevsn.cs
+
+18:03:28.221|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (54)[m | 
+bin
+cevsn
+Cevsn.cs
+Cevsn.csproj
+Encrn
+Hevsn.cs
+Litty
+obj
+Tevsn.cs
+
+18:03:32.280|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (54)[m | 
+shorida
+
+18:03:35.575|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (54)[m | 
+bin
+cevsn
+Cevsn.cs
+Cevsn.csproj
+Encrn
+Hevsn.cs
+Litty
+obj
+Tevsn.cs
+
+18:03:40.541|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (185)[m | Switch done!
+18:03:40.541|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.h.HTTPServer  (23)[m | HTTP Server started on port: 9998
+18:05:15.199|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (92)[m | Waiting for Response..
+18:05:19.344|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (265)[m | Server is shutting down
+18:05:19.345|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (84)[m | Error in TCP Listener Thread!
+18:05:19.977|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+18:05:19.978|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.Server        (154)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+18:05:39.411|[32m INFO[m |> --- [       Thread-4] [36mc.r.s.Protocol      (50)[m | 
+ec9b8e8a-76cf-4568-9388-3da0db4056e8: just arrived to vacation on: Linux
+18:05:39.412|[32m INFO[m |> --- [       Thread-4] [36mc.r.s.Server        (386)[m | 
+Added Session Nr. 1 to the session list!
+
+18:05:39.413|[32m INFO[m |> --- [       Thread-4] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+18:05:44.449|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.Protocol      (54)[m | 
+bin
+cevsn
+Cevsn.cs
+Cevsn.csproj
+Encrn
+Hevsn.cs
+Litty
+obj
+Tevsn.cs
+
+18:05:46.970|[31mERROR[m |> --- [       Thread-3] [36mc.r.s.t.Handler     (170)[m | Connection to session 1 died... sadly. :)
+18:06:00.712|[32m INFO[m |> --- [       Thread-4] [36mc.r.s.Protocol      (50)[m | 
+bc5125b8-17ec-494a-9598-5ca651d4dc1e: just arrived to vacation on: Linux
+18:06:00.712|[32m INFO[m |> --- [       Thread-4] [36mc.r.s.Server        (386)[m | 
+Added Session Nr. 2 to the session list!
+
+18:06:00.713|[32m INFO[m |> --- [       Thread-4] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+18:06:08.929|[31mERROR[m |> --- [       Thread-3] [36mc.r.s.Server        (251)[m | No client selected or no clients are connected! Check with entering 'sessions'.
+18:06:13.493|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.Protocol      (54)[m | 
+bin
+cevsn
+Cevsn.cs
+Cevsn.csproj
+Encrn
+Hevsn.cs
+Litty
+obj
+Tevsn.cs
+
+18:06:19.013|[32m INFO[m |> --- [       Thread-5] [36mc.r.s.h.HTTPServer  (23)[m | HTTP Server started on port: 9967
+18:06:19.014|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.Server        (185)[m | Switch done!
+18:06:19.040|[32m INFO[m |> --- [  HTTP-worker-1] [36mc.r.s.Protocol      (83)[m | 
+shorida
+
+18:06:25.589|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.h.HTTPHandler (92)[m | Waiting for Response..
+18:06:31.031|[32m INFO[m |> --- [  HTTP-worker-4] [36mc.r.s.Protocol      (83)[m | 
+bin
+cevsn
+Cevsn.cs
+Cevsn.csproj
+Encrn
+Hevsn.cs
+Litty
+obj
+Tevsn.cs
+
+18:06:48.264|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.h.HTTPHandler (92)[m | Waiting for Response..
+18:06:52.038|[32m INFO[m |> --- [  HTTP-worker-4] [36mc.r.s.Protocol      (83)[m | 
+shorida
+
+18:07:02.876|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.h.HTTPHandler (92)[m | Waiting for Response..
+18:07:07.071|[32m INFO[m |> --- [  HTTP-worker-4] [36mc.r.s.Protocol      (83)[m | 
+.
+├── bin
+│   ├── Debug
+│   │   └── net6.0
+│   │       ├── BouncyCastle.Crypto.dll
+│   │       ├── Cevsn
+│   │       ├── Cevsn.deps.json
+│   │       ├── Cevsn.dll
+│   │       ├── Cevsn.pdb
+│   │       ├── Cevsn.runtimeconfig.json
+│   │       ├── ICSharpCode.SharpZipLib.dll
+│   │       ├── ref
+│   │       │   └── Cevsn.dll
+│   │       └── win-x64
+│   │           ├── api-ms-win-core-console-l1-1-0.dll
+│   │           ├── api-ms-win-core-console-l1-2-0.dll
+│   │           ├── api-ms-win-core-datetime-l1-1-0.dll
+│   │           ├── api-ms-win-core-debug-l1-1-0.dll
+│   │           ├── api-ms-win-core-errorhandling-l1-1-0.dll
+│   │           ├── api-ms-win-core-file-l1-1-0.dll
+│   │           ├── api-ms-win-core-file-l1-2-0.dll
+│   │           ├── api-ms-win-core-file-l2-1-0.dll
+│   │           ├── api-ms-win-core-handle-l1-1-0.dll
+│   │           ├── api-ms-win-core-heap-l1-1-0.dll
+│   │           ├── api-ms-win-core-interlocked-l1-1-0.dll
+│   │           ├── api-ms-win-core-libraryloader-l1-1-0.dll
+│   │           ├── api-ms-win-core-localization-l1-2-0.dll
+│   │           ├── api-ms-win-core-memory-l1-1-0.dll
+│   │           ├── api-ms-win-core-namedpipe-l1-1-0.dll
+│   │           ├── api-ms-win-core-processenvironment-l1-1-0.dll
+│   │           ├── api-ms-win-core-processthreads-l1-1-0.dll
+│   │           ├── api-ms-win-core-processthreads-l1-1-1.dll
+│   │           ├── api-ms-win-core-profile-l1-1-0.dll
+│   │           ├── api-ms-win-core-rtlsupport-l1-1-0.dll
+│   │           ├── api-ms-win-core-string-l1-1-0.dll
+│   │           ├── api-ms-win-core-synch-l1-1-0.dll
+│   │           ├── api-ms-win-core-synch-l1-2-0.dll
+│   │           ├── api-ms-win-core-sysinfo-l1-1-0.dll
+│   │           ├── api-ms-win-core-timezone-l1-1-0.dll
+│   │           ├── api-ms-win-core-util-l1-1-0.dll
+│   │           ├── api-ms-win-crt-conio-l1-1-0.dll
+│   │           ├── api-ms-win-crt-convert-l1-1-0.dll
+│   │           ├── api-ms-win-crt-environment-l1-1-0.dll
+│   │           ├── api-ms-win-crt-filesystem-l1-1-0.dll
+│   │           ├── api-ms-win-crt-heap-l1-1-0.dll
+│   │           ├── api-ms-win-crt-locale-l1-1-0.dll
+│   │           ├── api-ms-win-crt-math-l1-1-0.dll
+│   │           ├── api-ms-win-crt-multibyte-l1-1-0.dll
+│   │           ├── api-ms-win-crt-private-l1-1-0.dll
+│   │           ├── api-ms-win-crt-process-l1-1-0.dll
+│   │           ├── api-ms-win-crt-runtime-l1-1-0.dll
+│   │           ├── api-ms-win-crt-stdio-l1-1-0.dll
+│   │           ├── api-ms-win-crt-string-l1-1-0.dll
+│   │           ├── api-ms-win-crt-time-l1-1-0.dll
+│   │           ├── api-ms-win-crt-utility-l1-1-0.dll
+│   │           ├── BouncyCastle.Crypto.dll
+│   │           ├── Cevsn.deps.json
+│   │           ├── Cevsn.dll
+│   │           ├── Cevsn.exe
+│   │           ├── Cevsn.pdb
+│   │           ├── Cevsn.runtimeconfig.json
+│   │           ├── clretwrc.dll
+│   │           ├── clrjit.dll
+│   │           ├── coreclr.dll
+│   │           ├── createdump.exe
+│   │           ├── dbgshim.dll
+│   │           ├── hostfxr.dll
+│   │           ├── hostpolicy.dll
+│   │           ├── Microsoft.CSharp.dll
+│   │           ├── Microsoft.DiaSymReader.Native.amd64.dll
+│   │           ├── Microsoft.VisualBasic.Core.dll
+│   │           ├── Microsoft.VisualBasic.dll
+│   │           ├── Microsoft.Win32.Primitives.dll
+│   │           ├── Microsoft.Win32.Registry.dll
+│   │           ├── mscordaccore_amd64_amd64_6.0.222.6406.dll
+│   │           ├── mscordaccore.dll
+│   │           ├── mscordbi.dll
+│   │           ├── mscorlib.dll
+│   │           ├── mscorrc.dll
+│   │           ├── msquic.dll
+│   │           ├── netstandard.dll
+│   │           ├── ref
+│   │           │   └── Cevsn.dll
+│   │           ├── System.AppContext.dll
+│   │           ├── System.Buffers.dll
+│   │           ├── System.Collections.Concurrent.dll
+│   │           ├── System.Collections.dll
+│   │           ├── System.Collections.Immutable.dll
+│   │           ├── System.Collections.NonGeneric.dll
+│   │           ├── System.Collections.Specialized.dll
+│   │           ├── System.ComponentModel.Annotations.dll
+│   │           ├── System.ComponentModel.DataAnnotations.dll
+│   │           ├── System.ComponentModel.dll
+│   │           ├── System.ComponentModel.EventBasedAsync.dll
+│   │           ├── System.ComponentModel.Primitives.dll
+│   │           ├── System.ComponentModel.TypeConverter.dll
+│   │           ├── System.Configuration.dll
+│   │           ├── System.Console.dll
+│   │           ├── System.Core.dll
+│   │           ├── System.Data.Common.dll
+│   │           ├── System.Data.DataSetExtensions.dll
+│   │           ├── System.Data.dll
+│   │           ├── System.Diagnostics.Contracts.dll
+│   │           ├── System.Diagnostics.Debug.dll
+│   │           ├── System.Diagnostics.DiagnosticSource.dll
+│   │           ├── System.Diagnostics.FileVersionInfo.dll
+│   │           ├── System.Diagnostics.Process.dll
+│   │           ├── System.Diagnostics.StackTrace.dll
+│   │           ├── System.Diagnostics.TextWriterTraceListener.dll
+│   │           ├── System.Diagnostics.Tools.dll
+│   │           ├── System.Diagnostics.TraceSource.dll
+│   │           ├── System.Diagnostics.Tracing.dll
+│   │           ├── System.dll
+│   │           ├── System.Drawing.dll
+│   │           ├── System.Drawing.Primitives.dll
+│   │           ├── System.Dynamic.Runtime.dll
+│   │           ├── System.Formats.Asn1.dll
+│   │           ├── System.Globalization.Calendars.dll
+│   │           ├── System.Globalization.dll
+│   │           ├── System.Globalization.Extensions.dll
+│   │           ├── System.IO.Compression.Brotli.dll
+│   │           ├── System.IO.Compression.dll
+│   │           ├── System.IO.Compression.FileSystem.dll
+│   │           ├── System.IO.Compression.Native.dll
+│   │           ├── System.IO.Compression.ZipFile.dll
+│   │           ├── System.IO.dll
+│   │           ├── System.IO.FileSystem.AccessControl.dll
+│   │           ├── System.IO.FileSystem.dll
+│   │           ├── System.IO.FileSystem.DriveInfo.dll
+│   │           ├── System.IO.FileSystem.Primitives.dll
+│   │           ├── System.IO.FileSystem.Watcher.dll
+│   │           ├── System.IO.IsolatedStorage.dll
+│   │           ├── System.IO.MemoryMappedFiles.dll
+│   │           ├── System.IO.Pipes.AccessControl.dll
+│   │           ├── System.IO.Pipes.dll
+│   │           ├── System.IO.UnmanagedMemoryStream.dll
+│   │           ├── System.Linq.dll
+│   │           ├── System.Linq.Expressions.dll
+│   │           ├── System.Linq.Parallel.dll
+│   │           ├── System.Linq.Queryable.dll
+│   │           ├── System.Memory.dll
+│   │           ├── System.Net.dll
+│   │           ├── System.Net.Http.dll
+│   │           ├── System.Net.Http.Json.dll
+│   │           ├── System.Net.HttpListener.dll
+│   │           ├── System.Net.Mail.dll
+│   │           ├── System.Net.NameResolution.dll
+│   │           ├── System.Net.NetworkInformation.dll
+│   │           ├── System.Net.Ping.dll
+│   │           ├── System.Net.Primitives.dll
+│   │           ├── System.Net.Quic.dll
+│   │           ├── System.Net.Requests.dll
+│   │           ├── System.Net.Security.dll
+│   │           ├── System.Net.ServicePoint.dll
+│   │           ├── System.Net.Sockets.dll
+│   │           ├── System.Net.WebClient.dll
+│   │           ├── System.Net.WebHeaderCollection.dll
+│   │           ├── System.Net.WebProxy.dll
+│   │           ├── System.Net.WebSockets.Client.dll
+│   │           ├── System.Net.WebSockets.dll
+│   │           ├── System.Numerics.dll
+│   │           ├── System.Numerics.Vectors.dll
+│   │           ├── System.ObjectModel.dll
+│   │           ├── System.Private.CoreLib.dll
+│   │           ├── System.Private.DataContractSerialization.dll
+│   │           ├── System.Private.Uri.dll
+│   │           ├── System.Private.Xml.dll
+│   │           ├── System.Private.Xml.Linq.dll
+│   │           ├── System.Reflection.DispatchProxy.dll
+│   │           ├── System.Reflection.dll
+│   │           ├── System.Reflection.Emit.dll
+│   │           ├── System.Reflection.Emit.ILGeneration.dll
+│   │           ├── System.Reflection.Emit.Lightweight.dll
+│   │           ├── System.Reflection.Extensions.dll
+│   │           ├── System.Reflection.Metadata.dll
+│   │           ├── System.Reflection.Primitives.dll
+│   │           ├── System.Reflection.TypeExtensions.dll
+│   │           ├── System.Resources.Reader.dll
+│   │           ├── System.Resources.ResourceManager.dll
+│   │           ├── System.Resources.Writer.dll
+│   │           ├── System.Runtime.CompilerServices.Unsafe.dll
+│   │           ├── System.Runtime.CompilerServices.VisualC.dll
+│   │           ├── System.Runtime.dll
+│   │           ├── System.Runtime.Extensions.dll
+│   │           ├── System.Runtime.Handles.dll
+│   │           ├── System.Runtime.InteropServices.dll
+│   │           ├── System.Runtime.InteropServices.RuntimeInformation.dll
+│   │           ├── System.Runtime.Intrinsics.dll
+│   │           ├── System.Runtime.Loader.dll
+│   │           ├── System.Runtime.Numerics.dll
+│   │           ├── System.Runtime.Serialization.dll
+│   │           ├── System.Runtime.Serialization.Formatters.dll
+│   │           ├── System.Runtime.Serialization.Json.dll
+│   │           ├── System.Runtime.Serialization.Primitives.dll
+│   │           ├── System.Runtime.Serialization.Xml.dll
+│   │           ├── System.Security.AccessControl.dll
+│   │           ├── System.Security.Claims.dll
+│   │           ├── System.Security.Cryptography.Algorithms.dll
+│   │           ├── System.Security.Cryptography.Cng.dll
+│   │           ├── System.Security.Cryptography.Csp.dll
+│   │           ├── System.Security.Cryptography.Encoding.dll
+│   │           ├── System.Security.Cryptography.OpenSsl.dll
+│   │           ├── System.Security.Cryptography.Primitives.dll
+│   │           ├── System.Security.Cryptography.X509Certificates.dll
+│   │           ├── System.Security.dll
+│   │           ├── System.Security.Principal.dll
+│   │           ├── System.Security.Principal.Windows.dll
+│   │           ├── System.Security.SecureString.dll
+│   │           ├── System.ServiceModel.Web.dll
+│   │           ├── System.ServiceProcess.dll
+│   │           ├── System.Text.Encoding.CodePages.dll
+│   │           ├── System.Text.Encoding.dll
+│   │           ├── System.Text.Encoding.Extensions.dll
+│   │           ├── System.Text.Encodings.Web.dll
+│   │           ├── System.Text.Json.dll
+│   │           ├── System.Text.RegularExpressions.dll
+│   │           ├── System.Threading.Channels.dll
+│   │           ├── System.Threading.dll
+│   │           ├── System.Threading.Overlapped.dll
+│   │           ├── System.Threading.Tasks.Dataflow.dll
+│   │           ├── System.Threading.Tasks.dll
+│   │           ├── System.Threading.Tasks.Extensions.dll
+│   │           ├── System.Threading.Tasks.Parallel.dll
+│   │           ├── System.Threading.Thread.dll
+│   │           ├── System.Threading.ThreadPool.dll
+│   │           ├── System.Threading.Timer.dll
+│   │           ├── System.Transactions.dll
+│   │           ├── System.Transactions.Local.dll
+│   │           ├── System.ValueTuple.dll
+│   │           ├── System.Web.dll
+│   │           ├── System.Web.HttpUtility.dll
+│   │           ├── System.Windows.dll
+│   │           ├── System.Xml.dll
+│   │           ├── System.Xml.Linq.dll
+│   │           ├── System.Xml.ReaderWriter.dll
+│   │           ├── System.Xml.Serialization.dll
+│   │           ├── System.Xml.XDocument.dll
+│   │           ├── System.Xml.XmlDocument.dll
+│   │           ├── System.Xml.XmlSerializer.dll
+│   │           ├── System.Xml.XPath.dll
+│   │           ├── System.Xml.XPath.XDocument.dll
+│   │           ├── ucrtbase.dll
+│   │           └── WindowsBase.dll
+│   └── Release
+│       └── net6.0
+│           └── win-x64
+│               ├── api-ms-win-core-console-l1-1-0.dll
+│               ├── api-ms-win-core-console-l1-2-0.dll
+│               ├── api-ms-win-core-datetime-l1-1-0.dll
+│               ├── api-ms-win-core-debug-l1-1-0.dll
+│               ├── api-ms-win-core-errorhandling-l1-1-0.dll
+│               ├── api-ms-win-core-file-l1-1-0.dll
+│               ├── api-ms-win-core-file-l1-2-0.dll
+│               ├── api-ms-win-core-file-l2-1-0.dll
+│               ├── api-ms-win-core-handle-l1-1-0.dll
+│               ├── api-ms-win-core-heap-l1-1-0.dll
+│               ├── api-ms-win-core-interlocked-l1-1-0.dll
+│               ├── api-ms-win-core-libraryloader-l1-1-0.dll
+│               ├── api-ms-win-core-localization-l1-2-0.dll
+│               ├── api-ms-win-core-memory-l1-1-0.dll
+│               ├── api-ms-win-core-namedpipe-l1-1-0.dll
+│               ├── api-ms-win-core-processenvironment-l1-1-0.dll
+│               ├── api-ms-win-core-processthreads-l1-1-0.dll
+│               ├── api-ms-win-core-processthreads-l1-1-1.dll
+│               ├── api-ms-win-core-profile-l1-1-0.dll
+│               ├── api-ms-win-core-rtlsupport-l1-1-0.dll
+│               ├── api-ms-win-core-string-l1-1-0.dll
+│               ├── api-ms-win-core-synch-l1-1-0.dll
+│               ├── api-ms-win-core-synch-l1-2-0.dll
+│               ├── api-ms-win-core-sysinfo-l1-1-0.dll
+│               ├── api-ms-win-core-timezone-l1-1-0.dll
+│               ├── api-ms-win-core-util-l1-1-0.dll
+│               ├── api-ms-win-crt-conio-l1-1-0.dll
+│               ├── api-ms-win-crt-convert-l1-1-0.dll
+│               ├── api-ms-win-crt-environment-l1-1-0.dll
+│               ├── api-ms-win-crt-filesystem-l1-1-0.dll
+│               ├── api-ms-win-crt-heap-l1-1-0.dll
+│               ├── api-ms-win-crt-locale-l1-1-0.dll
+│               ├── api-ms-win-crt-math-l1-1-0.dll
+│               ├── api-ms-win-crt-multibyte-l1-1-0.dll
+│               ├── api-ms-win-crt-private-l1-1-0.dll
+│               ├── api-ms-win-crt-process-l1-1-0.dll
+│               ├── api-ms-win-crt-runtime-l1-1-0.dll
+│               ├── api-ms-win-crt-stdio-l1-1-0.dll
+│               ├── api-ms-win-crt-string-l1-1-0.dll
+│               ├── api-ms-win-crt-time-l1-1-0.dll
+│               ├── api-ms-win-crt-utility-l1-1-0.dll
+│               ├── BouncyCastle.Crypto.dll
+│               ├── Cevsn.deps.json
+│               ├── Cevsn.dll
+│               ├── Cevsn.exe
+│               ├── Cevsn.pdb
+│               ├── Cevsn.runtimeconfig.json
+│               ├── clretwrc.dll
+│               ├── clrjit.dll
+│               ├── coreclr.dll
+│               ├── createdump.exe
+│               ├── dbgshim.dll
+│               ├── hostfxr.dll
+│               ├── hostpolicy.dll
+│               ├── Microsoft.CSharp.dll
+│               ├── Microsoft.DiaSymReader.Native.amd64.dll
+│               ├── Microsoft.VisualBasic.Core.dll
+│               ├── Microsoft.VisualBasic.dll
+│               ├── Microsoft.Win32.Primitives.dll
+│               ├── Microsoft.Win32.Registry.dll
+│               ├── mscordaccore_amd64_amd64_6.0.222.6406.dll
+│               ├── mscordaccore.dll
+│               ├── mscordbi.dll
+│               ├── mscorlib.dll
+│               ├── mscorrc.dll
+│               ├── msquic.dll
+│               ├── netstandard.dll
+│               ├── ref
+│               │   └── Cevsn.dll
+│               ├── System.AppContext.dll
+│               ├── System.Buffers.dll
+│               ├── System.Collections.Concurrent.dll
+│               ├── System.Collections.dll
+│               ├── System.Collections.Immutable.dll
+│               ├── System.Collections.NonGeneric.dll
+│               ├── System.Collections.Specialized.dll
+│               ├── System.ComponentModel.Annotations.dll
+│               ├── System.ComponentModel.DataAnnotations.dll
+│               ├── System.ComponentModel.dll
+│               ├── System.ComponentModel.EventBasedAsync.dll
+│               ├── System.ComponentModel.Primitives.dll
+│               ├── System.ComponentModel.TypeConverter.dll
+│               ├── System.Configuration.dll
+│               ├── System.Console.dll
+│               ├── System.Core.dll
+│               ├── System.Data.Common.dll
+│               ├── System.Data.DataSetExtensions.dll
+│               ├── System.Data.dll
+│               ├── System.Diagnostics.Contracts.dll
+│               ├── System.Diagnostics.Debug.dll
+│               ├── System.Diagnostics.DiagnosticSource.dll
+│               ├── System.Diagnostics.FileVersionInfo.dll
+│               ├── System.Diagnostics.Process.dll
+│               ├── System.Diagnostics.StackTrace.dll
+│               ├── System.Diagnostics.TextWriterTraceListener.dll
+│               ├── System.Diagnostics.Tools.dll
+│               ├── System.Diagnostics.TraceSource.dll
+│               ├── System.Diagnostics.Tracing.dll
+│               ├── System.dll
+│               ├── System.Drawing.dll
+│               ├── System.Drawing.Primitives.dll
+│               ├── System.Dynamic.Runtime.dll
+│               ├── System.Formats.Asn1.dll
+│               ├── System.Globalization.Calendars.dll
+│               ├── System.Globalization.dll
+│               ├── System.Globalization.Extensions.dll
+│               ├── System.IO.Compression.Brotli.dll
+│               ├── System.IO.Compression.dll
+│               ├── System.IO.Compression.FileSystem.dll
+│               ├── System.IO.Compression.Native.dll
+│               ├── System.IO.Compression.ZipFile.dll
+│               ├── System.IO.dll
+│               ├── System.IO.FileSystem.AccessControl.dll
+│               ├── System.IO.FileSystem.dll
+│               ├── System.IO.FileSystem.DriveInfo.dll
+│               ├── System.IO.FileSystem.Primitives.dll
+│               ├── System.IO.FileSystem.Watcher.dll
+│               ├── System.IO.IsolatedStorage.dll
+│               ├── System.IO.MemoryMappedFiles.dll
+│               ├── System.IO.Pipes.AccessControl.dll
+│               ├── System.IO.Pipes.dll
+│               ├── System.IO.UnmanagedMemoryStream.dll
+│               ├── System.Linq.dll
+│               ├── System.Linq.Expressions.dll
+│               ├── System.Linq.Parallel.dll
+│               ├── System.Linq.Queryable.dll
+│               ├── System.Memory.dll
+│               ├── System.Net.dll
+│               ├── System.Net.Http.dll
+│               ├── System.Net.Http.Json.dll
+│               ├── System.Net.HttpListener.dll
+│               ├── System.Net.Mail.dll
+│               ├── System.Net.NameResolution.dll
+│               ├── System.Net.NetworkInformation.dll
+│               ├── System.Net.Ping.dll
+│               ├── System.Net.Primitives.dll
+│               ├── System.Net.Quic.dll
+│               ├── System.Net.Requests.dll
+│               ├── System.Net.Security.dll
+│               ├── System.Net.ServicePoint.dll
+│               ├── System.Net.Sockets.dll
+│               ├── System.Net.WebClient.dll
+│               ├── System.Net.WebHeaderCollection.dll
+│               ├── System.Net.WebProxy.dll
+│               ├── System.Net.WebSockets.Client.dll
+│               ├── System.Net.WebSockets.dll
+│               ├── System.Numerics.dll
+│               ├── System.Numerics.Vectors.dll
+│               ├── System.ObjectModel.dll
+│               ├── System.Private.CoreLib.dll
+│               ├── System.Private.DataContractSerialization.dll
+│               ├── System.Private.Uri.dll
+│               ├── System.Private.Xml.dll
+│               ├── System.Private.Xml.Linq.dll
+│               ├── System.Reflection.DispatchProxy.dll
+│               ├── System.Reflection.dll
+│               ├── System.Reflection.Emit.dll
+│               ├── System.Reflection.Emit.ILGeneration.dll
+│               ├── System.Reflection.Emit.Lightweight.dll
+│               ├── System.Reflection.Extensions.dll
+│               ├── System.Reflection.Metadata.dll
+│               ├── System.Reflection.Primitives.dll
+│               ├── System.Reflection.TypeExtensions.dll
+│               ├── System.Resources.Reader.dll
+│               ├── System.Resources.ResourceManager.dll
+│               ├── System.Resources.Writer.dll
+│               ├── System.Runtime.CompilerServices.Unsafe.dll
+│               ├── System.Runtime.CompilerServices.VisualC.dll
+│               ├── System.Runtime.dll
+│               ├── System.Runtime.Extensions.dll
+│               ├── System.Runtime.Handles.dll
+│               ├── System.Runtime.InteropServices.dll
+│               ├── System.Runtime.InteropServices.RuntimeInformation.dll
+│               ├── System.Runtime.Intrinsics.dll
+│               ├── System.Runtime.Loader.dll
+│               ├── System.Runtime.Numerics.dll
+│               ├── System.Runtime.Serialization.dll
+│               ├── System.Runtime.Serialization.Formatters.dll
+│               ├── System.Runtime.Serialization.Json.dll
+│               ├── System.Runtime.Serialization.Primitives.dll
+│               ├── System.Runtime.Serialization.Xml.dll
+│               ├── System.Security.AccessControl.dll
+│               ├── System.Security.Claims.dll
+│               ├── System.Security.Cryptography.Algorithms.dll
+│               ├── System.Security.Cryptography.Cng.dll
+│               ├── System.Security.Cryptography.Csp.dll
+│               ├── System.Security.Cryptography.Encoding.dll
+│               ├── System.Security.Cryptography.OpenSsl.dll
+│               ├── System.Security.Cryptography.Primitives.dll
+│               ├── System.Security.Cryptography.X509Certificates.dll
+│               ├── System.Security.dll
+│               ├── System.Security.Principal.dll
+│               ├── System.Security.Principal.Windows.dll
+│               ├── System.Security.SecureString.dll
+│               ├── System.ServiceModel.Web.dll
+│               ├── System.ServiceProcess.dll
+│               ├── System.Text.Encoding.CodePages.dll
+│               ├── System.Text.Encoding.dll
+│               ├── System.Text.Encoding.Extensions.dll
+│               ├── System.Text.Encodings.Web.dll
+│               ├── System.Text.Json.dll
+│               ├── System.Text.RegularExpressions.dll
+│               ├── System.Threading.Channels.dll
+│               ├── System.Threading.dll
+│               ├── System.Threading.Overlapped.dll
+│               ├── System.Threading.Tasks.Dataflow.dll
+│               ├── System.Threading.Tasks.dll
+│               ├── System.Threading.Tasks.Extensions.dll
+│               ├── System.Threading.Tasks.Parallel.dll
+│               ├── System.Threading.Thread.dll
+│               ├── System.Threading.ThreadPool.dll
+│               ├── System.Threading.Timer.dll
+│               ├── System.Transactions.dll
+│               ├── System.Transactions.Local.dll
+│               ├── System.ValueTuple.dll
+│               ├── System.Web.dll
+│               ├── System.Web.HttpUtility.dll
+│               ├── System.Windows.dll
+│               ├── System.Xml.dll
+│               ├── System.Xml.Linq.dll
+│               ├── System.Xml.ReaderWriter.dll
+│               ├── System.Xml.Serialization.dll
+│               ├── System.Xml.XDocument.dll
+│               ├── System.Xml.XmlDocument.dll
+│               ├── System.Xml.XmlSerializer.dll
+│               ├── System.Xml.XPath.dll
+│               ├── System.Xml.XPath.XDocument.dll
+│               ├── ucrtbase.dll
+│               └── WindowsBase.dll
+├── cevsn
+│   ├── api-ms-win-core-console-l1-1-0.dll
+│   ├── api-ms-win-core-console-l1-2-0.dll
+│   ├── api-ms-win-core-datetime-l1-1-0.dll
+│   ├── api-ms-win-core-debug-l1-1-0.dll
+│   ├── api-ms-win-core-errorhandling-l1-1-0.dll
+│   ├── api-ms-win-core-file-l1-1-0.dll
+│   ├── api-ms-win-core-file-l1-2-0.dll
+│   ├── api-ms-win-core-file-l2-1-0.dll
+│   ├── api-ms-win-core-handle-l1-1-0.dll
+│   ├── api-ms-win-core-heap-l1-1-0.dll
+│   ├── api-ms-win-core-interlocked-l1-1-0.dll
+│   ├── api-ms-win-core-libraryloader-l1-1-0.dll
+│   ├── api-ms-win-core-localization-l1-2-0.dll
+│   ├── api-ms-win-core-memory-l1-1-0.dll
+│   ├── api-ms-win-core-namedpipe-l1-1-0.dll
+│   ├── api-ms-win-core-processenvironment-l1-1-0.dll
+│   ├── api-ms-win-core-processthreads-l1-1-0.dll
+│   ├── api-ms-win-core-processthreads-l1-1-1.dll
+│   ├── api-ms-win-core-profile-l1-1-0.dll
+│   ├── api-ms-win-core-rtlsupport-l1-1-0.dll
+│   ├── api-ms-win-core-string-l1-1-0.dll
+│   ├── api-ms-win-core-synch-l1-1-0.dll
+│   ├── api-ms-win-core-synch-l1-2-0.dll
+│   ├── api-ms-win-core-sysinfo-l1-1-0.dll
+│   ├── api-ms-win-core-timezone-l1-1-0.dll
+│   ├── api-ms-win-core-util-l1-1-0.dll
+│   ├── api-ms-win-crt-conio-l1-1-0.dll
+│   ├── api-ms-win-crt-convert-l1-1-0.dll
+│   ├── api-ms-win-crt-environment-l1-1-0.dll
+│   ├── api-ms-win-crt-filesystem-l1-1-0.dll
+│   ├── api-ms-win-crt-heap-l1-1-0.dll
+│   ├── api-ms-win-crt-locale-l1-1-0.dll
+│   ├── api-ms-win-crt-math-l1-1-0.dll
+│   ├── api-ms-win-crt-multibyte-l1-1-0.dll
+│   ├── api-ms-win-crt-private-l1-1-0.dll
+│   ├── api-ms-win-crt-process-l1-1-0.dll
+│   ├── api-ms-win-crt-runtime-l1-1-0.dll
+│   ├── api-ms-win-crt-stdio-l1-1-0.dll
+│   ├── api-ms-win-crt-string-l1-1-0.dll
+│   ├── api-ms-win-crt-time-l1-1-0.dll
+│   ├── api-ms-win-crt-utility-l1-1-0.dll
+│   ├── BouncyCastle.Crypto.dll
+│   ├── Cevsn.deps.json
+│   ├── Cevsn.dll
+│   ├── Cevsn.exe
+│   ├── Cevsn.pdb
+│   ├── Cevsn.runtimeconfig.json
+│   ├── clretwrc.dll
+│   ├── clrjit.dll
+│   ├── coreclr.dll
+│   ├── createdump.exe
+│   ├── dbgshim.dll
+│   ├── hostfxr.dll
+│   ├── hostpolicy.dll
+│   ├── Microsoft.CSharp.dll
+│   ├── Microsoft.DiaSymReader.Native.amd64.dll
+│   ├── Microsoft.VisualBasic.Core.dll
+│   ├── Microsoft.VisualBasic.dll
+│   ├── Microsoft.Win32.Primitives.dll
+│   ├── Microsoft.Win32.Registry.dll
+│   ├── mscordaccore_amd64_amd64_6.0.222.6406.dll
+│   ├── mscordaccore.dll
+│   ├── mscordbi.dll
+│   ├── mscorlib.dll
+│   ├── mscorrc.dll
+│   ├── msquic.dll
+│   ├── netstandard.dll
+│   ├── System.AppContext.dll
+│   ├── System.Buffers.dll
+│   ├── System.Collections.Concurrent.dll
+│   ├── System.Collections.dll
+│   ├── System.Collections.Immutable.dll
+│   ├── System.Collections.NonGeneric.dll
+│   ├── System.Collections.Specialized.dll
+│   ├── System.ComponentModel.Annotations.dll
+│   ├── System.ComponentModel.DataAnnotations.dll
+│   ├── System.ComponentModel.dll
+│   ├── System.ComponentModel.EventBasedAsync.dll
+│   ├── System.ComponentModel.Primitives.dll
+│   ├── System.ComponentModel.TypeConverter.dll
+│   ├── System.Configuration.dll
+│   ├── System.Console.dll
+│   ├── System.Core.dll
+│   ├── System.Data.Common.dll
+│   ├── System.Data.DataSetExtensions.dll
+│   ├── System.Data.dll
+│   ├── System.Diagnostics.Contracts.dll
+│   ├── System.Diagnostics.Debug.dll
+│   ├── System.Diagnostics.DiagnosticSource.dll
+│   ├── System.Diagnostics.FileVersionInfo.dll
+│   ├── System.Diagnostics.Process.dll
+│   ├── System.Diagnostics.StackTrace.dll
+│   ├── System.Diagnostics.TextWriterTraceListener.dll
+│   ├── System.Diagnostics.Tools.dll
+│   ├── System.Diagnostics.TraceSource.dll
+│   ├── System.Diagnostics.Tracing.dll
+│   ├── System.dll
+│   ├── System.Drawing.dll
+│   ├── System.Drawing.Primitives.dll
+│   ├── System.Dynamic.Runtime.dll
+│   ├── System.Formats.Asn1.dll
+│   ├── System.Globalization.Calendars.dll
+│   ├── System.Globalization.dll
+│   ├── System.Globalization.Extensions.dll
+│   ├── System.IO.Compression.Brotli.dll
+│   ├── System.IO.Compression.dll
+│   ├── System.IO.Compression.FileSystem.dll
+│   ├── System.IO.Compression.Native.dll
+│   ├── System.IO.Compression.ZipFile.dll
+│   ├── System.IO.dll
+│   ├── System.IO.FileSystem.AccessControl.dll
+│   ├── System.IO.FileSystem.dll
+│   ├── System.IO.FileSystem.DriveInfo.dll
+│   ├── System.IO.FileSystem.Primitives.dll
+│   ├── System.IO.FileSystem.Watcher.dll
+│   ├── System.IO.IsolatedStorage.dll
+│   ├── System.IO.MemoryMappedFiles.dll
+│   ├── System.IO.Pipes.AccessControl.dll
+│   ├── System.IO.Pipes.dll
+│   ├── System.IO.UnmanagedMemoryStream.dll
+│   ├── System.Linq.dll
+│   ├── System.Linq.Expressions.dll
+│   ├── System.Linq.Parallel.dll
+│   ├── System.Linq.Queryable.dll
+│   ├── System.Memory.dll
+│   ├── System.Net.dll
+│   ├── System.Net.Http.dll
+│   ├── System.Net.Http.Json.dll
+│   ├── System.Net.HttpListener.dll
+│   ├── System.Net.Mail.dll
+│   ├── System.Net.NameResolution.dll
+│   ├── System.Net.NetworkInformation.dll
+│   ├── System.Net.Ping.dll
+│   ├── System.Net.Primitives.dll
+│   ├── System.Net.Quic.dll
+│   ├── System.Net.Requests.dll
+│   ├── System.Net.Security.dll
+│   ├── System.Net.ServicePoint.dll
+│   ├── System.Net.Sockets.dll
+│   ├── System.Net.WebClient.dll
+│   ├── System.Net.WebHeaderCollection.dll
+│   ├── System.Net.WebProxy.dll
+│   ├── System.Net.WebSockets.Client.dll
+│   ├── System.Net.WebSockets.dll
+│   ├── System.Numerics.dll
+│   ├── System.Numerics.Vectors.dll
+│   ├── System.ObjectModel.dll
+│   ├── System.Private.CoreLib.dll
+│   ├── System.Private.DataContractSerialization.dll
+│   ├── System.Private.Uri.dll
+│   ├── System.Private.Xml.dll
+│   ├── System.Private.Xml.Linq.dll
+│   ├── System.Reflection.DispatchProxy.dll
+│   ├── System.Reflection.dll
+│   ├── System.Reflection.Emit.dll
+│   ├── System.Reflection.Emit.ILGeneration.dll
+│   ├── System.Reflection.Emit.Lightweight.dll
+│   ├── System.Reflection.Extensions.dll
+│   ├── System.Reflection.Metadata.dll
+│   ├── System.Reflection.Primitives.dll
+│   ├── System.Reflection.TypeExtensions.dll
+│   ├── System.Resources.Reader.dll
+│   ├── System.Resources.ResourceManager.dll
+│   ├── System.Resources.Writer.dll
+│   ├── System.Runtime.CompilerServices.Unsafe.dll
+│   ├── System.Runtime.CompilerServices.VisualC.dll
+│   ├── System.Runtime.dll
+│   ├── System.Runtime.Extensions.dll
+│   ├── System.Runtime.Handles.dll
+│   ├── System.Runtime.InteropServices.dll
+│   ├── System.Runtime.InteropServices.RuntimeInformation.dll
+│   ├── System.Runtime.Intrinsics.dll
+│   ├── System.Runtime.Loader.dll
+│   ├── System.Runtime.Numerics.dll
+│   ├── System.Runtime.Serialization.dll
+│   ├── System.Runtime.Serialization.Formatters.dll
+│   ├── System.Runtime.Serialization.Json.dll
+│   ├── System.Runtime.Serialization.Primitives.dll
+│   ├── System.Runtime.Serialization.Xml.dll
+│   ├── System.Security.AccessControl.dll
+│   ├── System.Security.Claims.dll
+│   ├── System.Security.Cryptography.Algorithms.dll
+│   ├── System.Security.Cryptography.Cng.dll
+│   ├── System.Security.Cryptography.Csp.dll
+│   ├── System.Security.Cryptography.Encoding.dll
+│   ├── System.Security.Cryptography.OpenSsl.dll
+│   ├── System.Security.Cryptography.Primitives.dll
+│   ├── System.Security.Cryptography.X509Certificates.dll
+│   ├── System.Security.dll
+│   ├── System.Security.Principal.dll
+│   ├── System.Security.Principal.Windows.dll
+│   ├── System.Security.SecureString.dll
+│   ├── System.ServiceModel.Web.dll
+│   ├── System.ServiceProcess.dll
+│   ├── System.Text.Encoding.CodePages.dll
+│   ├── System.Text.Encoding.dll
+│   ├── System.Text.Encoding.Extensions.dll
+│   ├── System.Text.Encodings.Web.dll
+│   ├── System.Text.Json.dll
+│   ├── System.Text.RegularExpressions.dll
+│   ├── System.Threading.Channels.dll
+│   ├── System.Threading.dll
+│   ├── System.Threading.Overlapped.dll
+│   ├── System.Threading.Tasks.Dataflow.dll
+│   ├── System.Threading.Tasks.dll
+│   ├── System.Threading.Tasks.Extensions.dll
+│   ├── System.Threading.Tasks.Parallel.dll
+│   ├── System.Threading.Thread.dll
+│   ├── System.Threading.ThreadPool.dll
+│   ├── System.Threading.Timer.dll
+│   ├── System.Transactions.dll
+│   ├── System.Transactions.Local.dll
+│   ├── System.ValueTuple.dll
+│   ├── System.Web.dll
+│   ├── System.Web.HttpUtility.dll
+│   ├── System.Windows.dll
+│   ├── System.Xml.dll
+│   ├── System.Xml.Linq.dll
+│   ├── System.Xml.ReaderWriter.dll
+│   ├── System.Xml.Serialization.dll
+│   ├── System.Xml.XDocument.dll
+│   ├── System.Xml.XmlDocument.dll
+│   ├── System.Xml.XmlSerializer.dll
+│   ├── System.Xml.XPath.dll
+│   ├── System.Xml.XPath.XDocument.dll
+│   ├── ucrtbase.dll
+│   └── WindowsBase.dll
+├── Cevsn.cs
+├── Cevsn.csproj
+├── Encrn
+│   ├── AES.cs
+│   └── RSA.cs
+├── Hevsn.cs
+├── Litty
+│   ├── Cevsn.exe
+│   └── Cevsn.pdb
+├── obj
+│   ├── Cevsn.csproj.nuget.dgspec.json
+│   ├── Cevsn.csproj.nuget.g.props
+│   ├── Cevsn.csproj.nuget.g.targets
+│   ├── Debug
+│   │   └── net6.0
+│   │       ├── apphost
+│   │       ├── Cevsn.AssemblyInfo.cs
+│   │       ├── Cevsn.AssemblyInfoInputs.cache
+│   │       ├── Cevsn.assets.cache
+│   │       ├── Cevsn.csproj.AssemblyReference.cache
+│   │       ├── Cevsn.csproj.CopyComplete
+│   │       ├── Cevsn.csproj.CoreCompileInputs.cache
+│   │       ├── Cevsn.csproj.FileListAbsolute.txt
+│   │       ├── Cevsn.dll
+│   │       ├── Cevsn.GeneratedMSBuildEditorConfig.editorconfig
+│   │       ├── Cevsn.genruntimeconfig.cache
+│   │       ├── Cevsn.GlobalUsings.g.cs
+│   │       ├── Cevsn.pdb
+│   │       ├── ref
+│   │       │   └── Cevsn.dll
+│   │       ├── refint
+│   │       └── win-x64
+│   │           ├── apphost.exe
+│   │           ├── Cevsn.AssemblyInfo.cs
+│   │           ├── Cevsn.AssemblyInfoInputs.cache
+│   │           ├── Cevsn.assets.cache
+│   │           ├── Cevsn.csproj.AssemblyReference.cache
+│   │           ├── Cevsn.csproj.CopyComplete
+│   │           ├── Cevsn.csproj.CoreCompileInputs.cache
+│   │           ├── Cevsn.csproj.FileListAbsolute.txt
+│   │           ├── Cevsn.dll
+│   │           ├── Cevsn.GeneratedMSBuildEditorConfig.editorconfig
+│   │           ├── Cevsn.genruntimeconfig.cache
+│   │           ├── Cevsn.GlobalUsings.g.cs
+│   │           ├── Cevsn.pdb
+│   │           ├── PublishOutputs.c846b0d818.txt
+│   │           └── ref
+│   │               └── Cevsn.dll
+│   ├── project.assets.json
+│   ├── project.nuget.cache
+│   └── Release
+│       └── net6.0
+│           └── win-x64
+│               ├── Cevsn.AssemblyInfo.cs
+│               ├── Cevsn.AssemblyInfoInputs.cache
+│               ├── Cevsn.assets.cache
+│               ├── Cevsn.csproj.AssemblyReference.cache
+│               ├── Cevsn.csproj.CopyComplete
+│               ├── Cevsn.csproj.CoreCompileInputs.cache
+│               ├── Cevsn.csproj.FileListAbsolute.txt
+│               ├── Cevsn.deps.json
+│               ├── Cevsn.dll
+│               ├── Cevsn.GeneratedMSBuildEditorConfig.editorconfig
+│               ├── Cevsn.genruntimeconfig.cache
+│               ├── Cevsn.GlobalUsings.g.cs
+│               ├── Cevsn.pdb
+│               ├── linked
+│               │   ├── BouncyCastle.Crypto.dll
+│               │   ├── Cevsn.dll
+│               │   ├── Cevsn.pdb
+│               │   ├── Link.semaphore
+│               │   ├── Microsoft.Win32.Primitives.dll
+│               │   ├── Microsoft.Win32.Registry.dll
+│               │   ├── mscorlib.dll
+│               │   ├── System.Collections.Concurrent.dll
+│               │   ├── System.Collections.dll
+│               │   ├── System.Collections.Immutable.dll
+│               │   ├── System.Collections.NonGeneric.dll
+│               │   ├── System.ComponentModel.Primitives.dll
+│               │   ├── System.ComponentModel.TypeConverter.dll
+│               │   ├── System.Console.dll
+│               │   ├── System.Diagnostics.DiagnosticSource.dll
+│               │   ├── System.Diagnostics.Process.dll
+│               │   ├── System.Diagnostics.StackTrace.dll
+│               │   ├── System.dll
+│               │   ├── System.Formats.Asn1.dll
+│               │   ├── System.IO.Compression.Brotli.dll
+│               │   ├── System.IO.Compression.dll
+│               │   ├── System.IO.MemoryMappedFiles.dll
+│               │   ├── System.Net.Http.dll
+│               │   ├── System.Net.NameResolution.dll
+│               │   ├── System.Net.NetworkInformation.dll
+│               │   ├── System.Net.Primitives.dll
+│               │   ├── System.Net.Quic.dll
+│               │   ├── System.Net.Security.dll
+│               │   ├── System.Net.Sockets.dll
+│               │   ├── System.ObjectModel.dll
+│               │   ├── System.Private.CoreLib.dll
+│               │   ├── System.Private.Uri.dll
+│               │   ├── System.Reflection.Metadata.dll
+│               │   ├── System.Runtime.CompilerServices.Unsafe.dll
+│               │   ├── System.Runtime.dll
+│               │   ├── System.Runtime.Numerics.dll
+│               │   ├── System.Security.Claims.dll
+│               │   ├── System.Security.Cryptography.Algorithms.dll
+│               │   ├── System.Security.Cryptography.Cng.dll
+│               │   ├── System.Security.Cryptography.Csp.dll
+│               │   ├── System.Security.Cryptography.Encoding.dll
+│               │   ├── System.Security.Cryptography.Primitives.dll
+│               │   ├── System.Security.Cryptography.X509Certificates.dll
+│               │   ├── System.Security.Principal.Windows.dll
+│               │   ├── System.Threading.Channels.dll
+│               │   └── System.Threading.Thread.dll
+│               ├── PublishOutputs.bdb32bfdea.txt
+│               ├── ref
+│               │   └── Cevsn.dll
+│               └── singlefilehost.exe
+└── Tevsn.cs
+
+25 directories, 795 files
+
+18:24:26.401|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+18:24:26.412|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (155)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+18:26:59.820|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (266)[m | Server is shutting down
+18:26:59.821|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (84)[m | Error in TCP Listener Thread!
+18:27:15.322|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+18:27:15.335|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (155)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+18:29:47.581|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+18:29:47.632|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (155)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+18:36:04.484|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+18:36:04.496|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (155)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+18:36:12.675|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (50)[m | 
+11fc0a24-c5c3-4481-8428-f397c714f36b: just arrived to vacation on: Windows
+18:36:12.677|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (387)[m | 
+Added Session Nr. 1 to the session list!
+
+18:36:12.679|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+18:36:28.771|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (50)[m | 
+11fc0a24-c5c3-4481-8428-f397c714f36b: just arrived to vacation on: Windows
+18:36:36.827|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (50)[m | 
+11fc0a24-c5c3-4481-8428-f397c714f36b: just arrived to vacation on: Windows
+18:36:47.849|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (50)[m | 
+11fc0a24-c5c3-4481-8428-f397c714f36b: just arrived to vacation on: Windows
+18:37:05.168|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (50)[m | 
+11fc0a24-c5c3-4481-8428-f397c714f36b: just arrived to vacation on: Windows
+18:37:45.539|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (50)[m | 
+11fc0a24-c5c3-4481-8428-f397c714f36b: just arrived to vacation on: Windows
+18:37:53.266|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (50)[m | 
+11fc0a24-c5c3-4481-8428-f397c714f36b: just arrived to vacation on: Windows
+18:38:00.989|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (50)[m | 
+11fc0a24-c5c3-4481-8428-f397c714f36b: just arrived to vacation on: Windows
+18:38:13.601|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Protocol      (50)[m | 
+11fc0a24-c5c3-4481-8428-f397c714f36b: just arrived to vacation on: Windows
+18:38:34.037|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (186)[m | Switch done!
+18:38:34.037|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.h.HTTPServer  (23)[m | HTTP Server started on port: 8082
+18:38:42.077|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (92)[m | Waiting for Response..
+18:38:42.581|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (92)[m | Waiting for Response..
+18:38:47.580|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (92)[m | Waiting for Response..
+18:38:47.979|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (92)[m | Waiting for Response..
+18:38:48.302|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (92)[m | Waiting for Response..
+18:38:58.636|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (92)[m | Waiting for Response..
+18:38:58.958|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.h.HTTPHandler (92)[m | Waiting for Response..
+18:39:21.948|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (266)[m | Server is shutting down
+18:39:21.950|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (84)[m | Error in TCP Listener Thread!
+18:39:22.165|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+18:39:22.168|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.Server        (155)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+18:39:29.894|[32m INFO[m |> --- [       Thread-4] [36mc.r.s.Protocol      (50)[m | 
+2d857153-6b81-4600-aa57-798ed22dfc55: just arrived to vacation on: Windows
+18:39:29.896|[32m INFO[m |> --- [       Thread-4] [36mc.r.s.Server        (387)[m | 
+Added Session Nr. 1 to the session list!
+
+18:39:29.896|[32m INFO[m |> --- [       Thread-4] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+18:40:02.256|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.Protocol      (50)[m | 
+2d857153-6b81-4600-aa57-798ed22dfc55: just arrived to vacation on: Windows
+18:40:09.977|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.Protocol      (50)[m | 
+2d857153-6b81-4600-aa57-798ed22dfc55: just arrived to vacation on: Windows
+18:40:17.700|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.Protocol      (50)[m | 
+2d857153-6b81-4600-aa57-798ed22dfc55: just arrived to vacation on: Windows
+18:40:25.426|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.Protocol      (50)[m | 
+2d857153-6b81-4600-aa57-798ed22dfc55: just arrived to vacation on: Windows
+18:48:03.748|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+18:48:03.759|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (155)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+18:48:16.634|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Protocol      (50)[m | 
+7d7503ee-b9cb-41a3-ae7e-1f2c9ed5fee7: just arrived to vacation on: Windows
+18:48:16.635|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (387)[m | 
+Added Session Nr. 1 to the session list!
+
+18:48:16.637|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+18:48:28.890|[31mERROR[m |> --- [       Thread-0] [36mc.r.s.Server        (290)[m | Failed to send command: 'dir'!
+18:48:51.463|[32m INFO[m |> --- [       Thread-0] [36mc.r.s.Server        (266)[m | Server is shutting down
+18:48:51.466|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (84)[m | Error in TCP Listener Thread!
+18:48:53.604|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.t.Listener    (51)[m | TCP Socket is up on Port: 1331
+18:48:53.607|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.Server        (155)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+18:49:08.027|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.Protocol      (50)[m | 
+b3ffac92-ace9-4ce2-a3a4-4429553e44a9: just arrived to vacation on: Windows
+18:49:08.028|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.Server        (387)[m | 
+Added Session Nr. 1 to the session list!
+
+18:49:08.029|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.t.Listener    (76)[m | Connection received from localhost:1331
+18:49:16.186|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.Protocol      (54)[m | 
+ Volume in Laufwerk C: hat keine Bezeichnung.
+ Volumeseriennummer: 9AA8-CCC5
+
+ Verzeichnis von C:\
+
+15.09.2021  10:43    <DIR>          Autodesk
+02.05.2021  16:19    <DIR>          PerfLogs
+11.03.2022  18:20    <DIR>          Program Files
+10.01.2022  00:01    <DIR>          Program Files (x86)
+11.06.2021  12:34    <DIR>          Python39
+12.01.2022  07:53    <DIR>          Riot Games
+02.05.2021  21:51    <DIR>          temp
+02.05.2021  15:54    <DIR>          Users
+11.02.2022  02:21    <DIR>          Windows
+               0 Datei(en),              0 Bytes
+               9 Verzeichnis(se), 401.764.663.296 Bytes frei
+
+18:49:39.471|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.Protocol      (54)[m | 
+ Volume in Laufwerk C: hat keine Bezeichnung.
+ Volumeseriennummer: 9AA8-CCC5
+
+ Verzeichnis von C:\Users
+
+02.05.2021  15:54    <DIR>          .
+02.05.2021  15:54    <DIR>          ..
+11.03.2022  18:21    <DIR>          annan
+02.05.2021  15:38    <DIR>          Public
+               0 Datei(en),              0 Bytes
+               4 Verzeichnis(se), 401.764.532.224 Bytes frei
+
+18:50:44.802|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.Protocol      (54)[m | 
+C:\Windows\System32
+
+18:50:55.376|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.Protocol      (54)[m | 
+C:\Windows\System32
+
+18:51:07.250|[32m INFO[m |> --- [       Thread-2] [36mc.r.s.Server        (266)[m | Server is shutting down
+18:51:07.252|[32m INFO[m |> --- [       Thread-3] [36mc.r.s.t.Listener    (84)[m | Error in TCP Listener Thread!

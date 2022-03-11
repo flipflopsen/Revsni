@@ -236,3 +236,4 @@
 /home/shorida/Projekte/Revsni/Cevsn/obj/Release/net6.0/win-x64/ref/Cevsn.dll
 /home/shorida/Projekte/Revsni/Cevsn/obj/Release/net6.0/win-x64/Cevsn.pdb
 /home/shorida/Projekte/Revsni/Cevsn/obj/Release/net6.0/win-x64/Cevsn.genruntimeconfig.cache
+/home/shorida/Projekte/Revsni/Cevsn/bin/Release/net6.0/win-x64/ICSharpCode.SharpZipLib.dll

@@ -18,11 +18,10 @@ Shell-Types
 		-Switch between Async and normal
 
 Encryption
-	-All except RSA
+	-All except RSA und AES
 
 Make Builder compatible for small Payloads -> Modular
 
 ---Notes---
 
-AES läuft nur mit Java-Java
 Detection welcher Client connected, ob .NET oder Java

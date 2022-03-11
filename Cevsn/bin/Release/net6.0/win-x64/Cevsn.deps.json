@@ -10,6 +10,7 @@
       "Cevsn/1.0.0": {
         "dependencies": {
           "BouncyCastle": "1.8.9",
+          "SharpZipLib": "1.3.3",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "6.0.2"
         },
         "runtime": {
@@ -857,6 +858,14 @@
             "fileVersion": "1.8.20343.1"
           }
         }
+      },
+      "SharpZipLib/1.3.3": {
+        "runtime": {
+          "lib/netstandard2.1/ICSharpCode.SharpZipLib.dll": {
+            "assemblyVersion": "1.3.3.11",
+            "fileVersion": "1.3.3.11"
+          }
+        }
       }
     }
   },
@@ -877,6 +886,13 @@
       "sha512": "sha512-axnBgvdD5n+FnEG6efk/tfKuMFru7R/EoISH9zjh319yb3HD24TEHSAbNN/lTRT2ulOGRxDgOsCjkuk08iwWPg==",
       "path": "bouncycastle/1.8.9",
       "hashPath": "bouncycastle.1.8.9.nupkg.sha512"
+    },
+    "SharpZipLib/1.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-N8+hwhsKZm25tDJfWpBSW7EGhH/R7EMuiX+KJ4C4u+fCWVc1lJ5zg1u3S1RPPVYgTqhx/C3hxrqUpi6RwK5+Tg==",
+      "path": "sharpziplib/1.3.3",
+      "hashPath": "sharpziplib.1.3.3.nupkg.sha512"
     }
   },
   "runtimes": {

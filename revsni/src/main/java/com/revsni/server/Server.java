@@ -122,7 +122,8 @@ public class Server implements Runnable{
         //this.ip = ip;
         //this.pass = password;
         //this.salt = saltForPass;
-        updater = new Updater(ip, port, initEncri);
+        //tcp://2.tcp.ngrok.io:18816
+        updater = new Updater("13.59.15.185", 18816, initEncri);
 
         try {
             updater.generateOutputString(configuration.getEncMode());
