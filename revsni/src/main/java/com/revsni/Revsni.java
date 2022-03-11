@@ -68,76 +68,8 @@ public class Revsni {
         System.out.print("Revsn [MENU] » ");
         InputStreamReader inputStreamReader = new InputStreamReader(System.in);
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-        String decision = bufferedReader.readLine();
         System.out.println();
-        switch(decision) {
-            case("0"): printUsage(); break;
-            case("1"): configs(); break;
-            case("2"): try {
-                    if(servero == null) {
-                        try {
-                            configuration.getMode();
-                            servero = new Server(Mode.TCP.lHost, Mode.TCP.lPort, "lol123", "lol123", threadMonitor, sessionNumberStart, loaded, configuration);
-                        } catch (NoSuchAlgorithmException | InvalidKeySpecException e1) {
-                            servero = null;
-                        }
-                    }
-                    listenHandle(servero);
-                } catch (NoSuchAlgorithmException | InvalidKeySpecException e) {
-                    System.out.println("Exception");
-                    e.printStackTrace();
-                } break;
-            case("3"): break;
-            case("4"): 
-                if(servero == null) {
-                    System.out.println("Please start a Listener first before you want to save sessions.");
-                } else if(serverino != null && serverino.getState().equals(Thread.State.WAITING)) {
-                    System.out.print("Specify a filename to save sessions (leave empty for standard name): ");
-                    String name = bufferedReader.readLine();
-                    if(name.equals("")) {
-                        servero.saveSessions();
-                        break;
-                    } else {
-                        servero.saveSessions(name);
-                        break;
-                    }
-                }
-            case("5"): 
-                System.out.print("Specify a filename to load sessions (leave empty for standard name): ");
-                String name = bufferedReader.readLine();
-                try {
-                    servero = new Server(Mode.TCP.lHost, Mode.TCP.lPort, "lol123", "lol123", threadMonitor, sessionNumberStart, true, configuration);
-                } catch (NoSuchAlgorithmException | InvalidKeySpecException e1) {
-                    // TODO Auto-generated catch block
-                    e1.printStackTrace();
-                }
-                if(name.equals("")) {
-                    if(servero.loadSessions()) {
-                        loaded = true;
-                    } else {
-                        loaded = false;
-                    }
-                    
-                } else {
-                    if(servero.loadSessions(name)) {
-                        loaded = true;
-                    } else {
-                        loaded = false;
-                    }
-                }
-                if(loaded) {
-                    try {
-                        listenHandle(servero);
-                    } catch (NoSuchAlgorithmException | InvalidKeySpecException e) {
-                        
-                    }
-                }
-                break;
-            case("6"): clearFilehost(); break;
-            case("7"): clearKeyFolder(); break;
-            case("exit"): System.exit(1); break;
-            default:
-        }
+        menu(bufferedReader);
         bufferedReader.close();
         inputStreamReader.close();
     }
@@ -276,6 +208,80 @@ public class Revsni {
                           +"\nRecommendend:\n\tjava -jar server.jar <Server-IP> <Server-Port> <Password> <Salt>\n"
                           +"\nIt's okay to not specify a salt as it will be generated anyways. :) \n"
                           +"\n");
+    }
+
+    public static void menu(BufferedReader bufferedReader) throws IOException {
+        BufferedReader buffRead = bufferedReader;
+        String decision = buffRead.readLine();
+        switch(decision) {
+            case("0"): printUsage(); break;
+            case("1"): configs(); break;
+            case("2"): try {
+                    if(servero == null) {
+                        try {
+                            configuration.getMode();
+                            servero = new Server(Mode.TCP.lHost, Mode.TCP.lPort, "lol123", "lol123", threadMonitor, sessionNumberStart, loaded, configuration);
+                        } catch (NoSuchAlgorithmException | InvalidKeySpecException e1) {
+                            servero = null;
+                        }
+                    }
+                    listenHandle(servero);
+                } catch (NoSuchAlgorithmException | InvalidKeySpecException e) {
+                    System.out.println("Exception");
+                    e.printStackTrace();
+                } break;
+            case("3"): break;
+            case("4"): 
+                if(servero == null) {
+                    System.out.println("Please start a Listener first before you want to save sessions.");
+                } else if(serverino != null && serverino.getState().equals(Thread.State.WAITING)) {
+                    System.out.print("Specify a filename to save sessions (leave empty for standard name): ");
+                    String name = bufferedReader.readLine();
+                    if(name.equals("")) {
+                        servero.saveSessions();
+                        break;
+                    } else {
+                        servero.saveSessions(name);
+                        break;
+                    }
+                }
+            case("5"): 
+                System.out.print("Specify a filename to load sessions (leave empty for standard name): ");
+                String name = bufferedReader.readLine();
+                try {
+                    servero = new Server(Mode.TCP.lHost, Mode.TCP.lPort, "lol123", "lol123", threadMonitor, sessionNumberStart, true, configuration);
+                } catch (NoSuchAlgorithmException | InvalidKeySpecException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
+                if(name.equals("")) {
+                    if(servero.loadSessions()) {
+                        loaded = true;
+                    } else {
+                        loaded = false;
+                    }
+                    
+                } else {
+                    if(servero.loadSessions(name)) {
+                        loaded = true;
+                    } else {
+                        loaded = false;
+                    }
+                }
+                if(loaded) {
+                    try {
+                        listenHandle(servero);
+                    } catch (NoSuchAlgorithmException | InvalidKeySpecException e) {
+                        
+                    }
+                }
+                break;
+            case("6"): clearFilehost(); break;
+            case("7"): clearKeyFolder(); break;
+            case("exit"): System.exit(1); break;
+            default:
+                menu(buffRead);
+        }
     }
 
 

@@ -53,7 +53,7 @@ namespace cevsn
                             cont = getContent();
                         }
                         parseHostInformation(cont);
-                        Thread.Sleep(1000);
+                        Thread.Sleep(3500);
                     }
                     Boolean checker = false;
                     while(gotHostInformation)
@@ -128,8 +128,12 @@ namespace cevsn
                                 }
                             }
                         }
+                        if(Type.Equals("HTTP"))
+                        {
+                            
+                        }
                         counter++;
-                        Thread.Sleep(1000);
+                        Thread.Sleep(2000);
 
                     }
                 }

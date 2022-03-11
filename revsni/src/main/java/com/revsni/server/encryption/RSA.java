@@ -224,8 +224,13 @@ public class RSA implements Encri {
         try {
             decryptedMessageBytes = decryptCipher.doFinal(decryptedMessageBytes);
             decrypted = new String(decoder.decode(decryptedMessageBytes), StandardCharsets.UTF_8);
-        } catch (IllegalBlockSizeException | BadPaddingException e) {
-            logger.error("Failed to decrypt RSA message!");
+        } catch (IllegalBlockSizeException | BadPaddingException | ArrayIndexOutOfBoundsException e) {
+            
+            if(e instanceof ArrayIndexOutOfBoundsException) {
+                return decrypted += "\nOutput too long for RSA...";
+            } else {
+                logger.error("Failed to decrypt RSA message!");
+            }
         }
         return decrypted;
     }

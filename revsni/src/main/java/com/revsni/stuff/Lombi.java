@@ -21,7 +21,7 @@ public class Lombi {
 
     public void addStuff() {
         Triplet<String, Integer, UUID> trip = new Triplet<String,Integer,UUID>("linux", 2, uuid);
-        Quadmap<String, String, Integer, Triplet<String, Integer, UUID>> quad = new Quadmap<String,String,Integer,Triplet<String,Integer,UUID>>("philip", "127.0.0.1", Integer.valueOf(1337), trip);
+        Quadmap<String, String, Integer, Triplet<String, Integer, UUID>> quad = new Quadmap<String,String,Integer,Triplet<String,Integer,UUID>>("flip", "127.0.0.1", Integer.valueOf(1337), trip);
         stuff.put(10, quad);
     }
 

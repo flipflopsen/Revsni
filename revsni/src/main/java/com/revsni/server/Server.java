@@ -235,6 +235,7 @@ public class Server implements Runnable{
                                             try {
                                                 send(sessionNumber, message, sessNumUUID.get(sessionNumber));
                                             } catch(Exception e) {
+                                                e.printStackTrace();
                                                 logger.error("Failed to send command: '"+message+"'!");
                                                 
                                                 if(sessionHandlers.keySet().isEmpty()) {
