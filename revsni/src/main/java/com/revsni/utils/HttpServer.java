@@ -221,7 +221,7 @@ public class HttpServer {
 						throw HttpError.HTTP_404;
 					}
 					sendFile(fis, out, fisLength, lastModified, !"HEAD".equals(METHOD));
-                    System.out.println("with success");
+                    System.out.println(" with success");
 				}
 			} catch (HttpError e) {
 				sendError(out, e, e.getHttpText());

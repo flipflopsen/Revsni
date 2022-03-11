@@ -45,6 +45,7 @@ public class Handler implements Interaction{
                 | NoSuchPaddingException e) {
             e.printStackTrace();
         }
+        server.setProtocol(protocol);
 
         dataIn = new DataInputStream(connection.getInputStream());
         dataOut = new DataOutputStream(connection.getOutputStream());

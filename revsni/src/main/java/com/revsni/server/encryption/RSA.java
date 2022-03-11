@@ -45,17 +45,7 @@ public class RSA implements Encri {
     private Cipher decryptCipher;
     private Cipher encryptCipher;
     private EncMode mode = EncMode.RSA;
-
-    public static void main(String[] args) {
-        Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
-        RSA rsa = new RSA();
-        rsa.generateHostKeyPair();
-        rsa.saveHostKeyPair();
-        rsa.loadHostKeyPair();
-        rsa.loadClientKeys();
-        rsa.initDecryptionCipher();
-    }
-
+    
     public RSA() {
         Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
         //generateHostKeyPair();
@@ -169,7 +159,7 @@ public class RSA implements Encri {
             File folder = new File("revsni/keys/rsa");
             for(File file : folder.listFiles()) {
                 if(!(file.getName().equals("privhost.key") || file.getName().equals("pubhost.key"))) {
-                    String type = file.getName().split(".")[0].split(",")[0];
+                    String type = file.getName().split(",")[0];
                     String uuid = file.getName().split(".")[0].split(",")[1];
                     if(type.equals("public")) {
                         File publicKeyFile = new File(folder + "/" + file.getName());
@@ -227,6 +217,8 @@ public class RSA implements Encri {
         } catch (IllegalBlockSizeException | BadPaddingException | ArrayIndexOutOfBoundsException e) {
             
             if(e instanceof ArrayIndexOutOfBoundsException) {
+                logger.error(message + "\n");
+                e.printStackTrace();
                 return decrypted += "\nOutput too long for RSA...";
             } else {
                 logger.error("Failed to decrypt RSA message!");
@@ -243,12 +235,17 @@ public class RSA implements Encri {
         try {
             encryptedMessageBytes = encryptionCipher.doFinal(messageBytes);
             encrypted = Base64.getEncoder().encodeToString(encryptedMessageBytes);
-        } catch (IllegalBlockSizeException | BadPaddingException e) {
+        } catch (IllegalBlockSizeException | BadPaddingException | IllegalStateException e) {
+            if(e instanceof IllegalStateException) {
+                loadClientKeys();
+            }
             logger.error("Failed to encrypt message: '"+message+"' with RSA for UUID: " + uuid);
             e.printStackTrace();
         }
         return encrypted;
     }
+
+    
 
     public String encrypt(String message) {
         return "";

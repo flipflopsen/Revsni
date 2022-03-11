@@ -8,7 +8,7 @@ import java.util.HashMap;
 import javax.crypto.NoSuchPaddingException;
 
 import com.revsni.common.Configuration.EncMode;
-import com.revsni.server.encryption.AES;
+//import com.revsni.server.encryption.AES;
 import com.revsni.server.encryption.Encri;
 
 import org.apache.logging.log4j.LogManager;
@@ -40,24 +40,51 @@ public class Protocol {
             message = Server.initEncri.decrypt(msg);
         }
         if(!message.equals("")){
-            logger.info("\n" + message);
+            if(message.equals("errxuk")) {
+                System.out.println("Failed to decrypt message!");
+                return false;
+            } else if(message.contains("arrived to vacation")) {
+                String[] splitted = message.split(":");
+                this.uuid = splitted[0];
+                this.os = splitted[2].replaceAll("\\s","");
+                logger.info("\n" + message);
+            } else if(message.equals("give")) {
+
+            } else {
+                logger.info("\n" + message);
+            }
         }
 
-        if(message.equals("errxuk")) {
-            System.out.println("Failed to decrypt message!");
-            return false;
-        }
-        
-        if(message.contains("arrived to vacation")) {
-            String[] splitted = message.split(":");
-            this.uuid = splitted[0];
-            this.os = splitted[2].replaceAll("\\s","");
-            //this.mode = splitted[3].replaceAll("\\s","");
-            //newClientEncryption(sessionNumber);
-        }
-        //System.out.println("Revsn [TCP]["+ ip +"]["+sessionNumber+"] » ");
         return true;
-        
+    }
+
+    public String processMessage(String msg, int sessionNumber) {
+        updateEncryptionModes();
+        String message;
+        if(clientEnc.containsKey(sessionNumber)) {
+            message = clientEnc.get(sessionNumber).decrypt(msg);
+        } else {
+            message = Server.initEncri.decrypt(msg);
+        }
+        if(!message.equals("")){
+            if(message.equals("errxuk")) {
+                return "Failed to decrypt message!";
+            } else if(message.contains("arrived to vacation")) {
+                String[] splitted = message.split(":");
+                this.uuid = splitted[0];
+                this.os = splitted[2].replaceAll("\\s","");
+                logger.info("\n" + message);
+                return message;
+            } else if(message.equals("give")) {
+                return "give";
+            } else if(message.equals("est")) {
+                return "est";
+            } else {
+                logger.info("\n" + message);
+                return message;
+            }
+        }
+        return "Empty answer.";
     }
 
     public String prepareMessage(String msg, int sessionNumber) {

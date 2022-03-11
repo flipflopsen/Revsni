@@ -61,7 +61,7 @@ public class Configuration {
     }
 
     private Mode mode = Mode.TCP;
-    private EncMode encMode = EncMode.RSA;
+    private EncMode encMode = EncMode.AES;
 
     //private String configurationName = "";
     

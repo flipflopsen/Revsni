@@ -1,11 +1,13 @@
 package com.revsni.server.http;
 
+//import java.io.File;
 import java.io.IOException;
 
 import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
 
 import com.revsni.server.Interaction;
+import com.revsni.server.Protocol;
 import com.revsni.common.Configuration.Mode;
 
 import org.apache.logging.log4j.LogManager;
@@ -36,6 +38,26 @@ public class HTTPShell implements Interaction {
         final int port = portIn;
         this.port = port;
         handler = new HTTPHandler(key, iv ,sessionNumber);
+        server.setHandler(handler);
+        server.setup(port);
+
+        new Thread() {
+            @Override
+            public void run() {
+                try {
+                    server.main(port, handler);
+                } catch (Exception e) {
+                    logger.info("Could not start HTTP Server.");
+                    System.exit(1);
+                }
+            }
+        }.start();
+    }
+
+    public HTTPShell(int portIn, int sessionNumber, Protocol protocol) throws IOException {
+        final int port = portIn;
+        this.port = port;
+        handler = new HTTPHandler(sessionNumber, protocol);
         server.setHandler(handler);
         server.setup(port);
 

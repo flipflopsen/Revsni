@@ -4,7 +4,6 @@ import java.nio.charset.StandardCharsets;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
 import java.util.Base64;
@@ -12,7 +11,6 @@ import java.util.Base64;
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
@@ -24,7 +22,7 @@ import com.revsni.common.Configuration.EncMode;
 public class AES implements Encri {
 
     private final String password;
-    private final String salt;
+    private final byte[] salt;
     private SecretKeySpec key;
     private IvParameterSpec iv;
     private SecretKey keyS;
@@ -34,27 +32,21 @@ public class AES implements Encri {
 
     public AES(String password, String salt) {
         this.password = password;
-        this.salt = salt;
+        this.salt = new byte[]{-84, -119, 25, 56, -100, 100, -120, -45, 84, 67, 96, 10, 24, 111, 112, -119, 3};
         this.iv = generateIv();
         try {
             this.keyS = generateKey();
         } catch (NoSuchAlgorithmException | InvalidKeySpecException e) {
             e.printStackTrace();
         }
+        initCiphers();
     }
     
     public SecretKey generateKey() throws NoSuchAlgorithmException, InvalidKeySpecException {
-        SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
-        KeySpec spec = new PBEKeySpec(this.password.toCharArray(), this.salt.getBytes(), 65536, 256);
+        SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
+        KeySpec spec = new PBEKeySpec(this.password.toCharArray(), salt, 1024, 128);
         key = new SecretKeySpec(factory.generateSecret(spec)
             .getEncoded(), "AES");
-        return key;
-    }
-
-    public SecretKey generateKeyRandom(int n) throws NoSuchAlgorithmException {
-        KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
-        keyGenerator.init(n);
-        SecretKey key = keyGenerator.generateKey();
         return key;
     }
 
@@ -72,16 +64,26 @@ public class AES implements Encri {
     }
 
     public String encrypt(String uuid, String message) {
-        return "";
+        String message1 = "-";
+        try {
+            byte[] data = Base64.getEncoder().encode(message.getBytes(StandardCharsets.UTF_8));
+            message  = Base64.getEncoder()
+                .encodeToString(encryptCipher.doFinal(data));
+            return message;
+        } catch (IllegalBlockSizeException | BadPaddingException e) {
+            e.printStackTrace();
+        }
+        return message1;
     }
 
     public String decrypt(String encrypted) {
         try {
+            //System.out.println("In AES Dec: " + encrypted);
             byte[] replaced1 = Base64.getDecoder().decode(encrypted.getBytes(StandardCharsets.UTF_8));
             byte[] decodedB64;
             decodedB64 = decryptCipher.doFinal(replaced1);
-            String repl2 = new String(decodedB64);
-            String message = new String(Base64.getDecoder().decode(repl2), StandardCharsets.UTF_8);
+            String message = new String(Base64.getDecoder().decode(decodedB64), StandardCharsets.UTF_8);
+            //System.out.println("In AES Dec: " + message);
             return message;
         } catch (IllegalBlockSizeException | BadPaddingException e) {
             e.printStackTrace();
@@ -91,9 +93,9 @@ public class AES implements Encri {
 
 
     public IvParameterSpec generateIv() {
-        byte[] iv = new byte[16];
-        new SecureRandom().nextBytes(iv);
-        return new IvParameterSpec(iv);
+        byte[] iv = new byte[] {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
+        this.iv = new IvParameterSpec(iv);
+        return this.iv;
     }
 
     public void initCiphers() {
@@ -134,7 +136,7 @@ public class AES implements Encri {
         return this.iv;
     }
 
-    public String getSalt() {
+    public byte[] getSalt() {
         return this.salt;
     }
     public String getPassword() {

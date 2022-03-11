@@ -11,6 +11,9 @@ using Org.BouncyCastle.Security;
 using Org.BouncyCastle.Crypto.Parameters;
 using Org.BouncyCastle.Crypto.Engines;
 using Org.BouncyCastle.Asn1.Pkcs;
+using cevsn.encrn.rsa;
+using RSA = cevsn.encrn.rsa.RSA;
+using cevsn.encrn;
 
 namespace tevsn
 {
@@ -19,17 +22,25 @@ namespace tevsn
         public String IP { get;set; }
         public IPEndPoint ServerAddress {get;set;}
         public int Port { get;set; }
-        public string Key { get;set; }
-        public string? PrivKey { get;set; }
         private BinaryReader? reader;
         private BinaryWriter? writer;
         public TcpClient tcpClient = new TcpClient();
+        private RSA? rsa;
+        private AES? aes;
         
-        public Tevsn(string ip, int port, string key)
+        public Tevsn(string ip, int port, RSA rsa)
         {
             this.IP = ip;
+            this.rsa = rsa;
             this.Port = port;
-            this.Key = key;
+            this.ServerAddress = new IPEndPoint(IPAddress.Parse(ip), port);
+        }
+
+        public Tevsn(string ip, int port, AES aes)
+        {
+            this.IP = ip;
+            this.aes = aes;
+            this.Port = port;
             this.ServerAddress = new IPEndPoint(IPAddress.Parse(ip), port);
         }
 
@@ -48,6 +59,17 @@ namespace tevsn
             }
         }
 
+        //write disconnect method
+        public void Disconnect()
+        {
+            if (tcpClient.Connected)
+            {
+                writer!.Close();
+                reader!.Close();
+                tcpClient.Close();
+            }
+        }
+
         public bool Fallback()
         {
             try
@@ -55,7 +77,7 @@ namespace tevsn
                 tcpClient.Close();
                 return true;
             } catch (Exception) {
-                Console.Write("wtf.");
+                Console.Write("wtf." + "\n");
                 return false;
             }
         }
@@ -77,7 +99,7 @@ namespace tevsn
             }
             catch (Exception)
             {
-                Console.Write("Client isn't connected anymore!");
+                Console.Write("Client isn't connected anymore!" + "\n");
                 return false;
             }
         }
@@ -88,7 +110,8 @@ namespace tevsn
 
             writer = new BinaryWriter(clientStream);
 
-            string toSend = Encrypt(data);
+            //string toSend = rsa.Encrypt(data);
+            string toSend = aes!.encrypt(data);
             byte[] toSendBytes = Encoding.UTF8.GetBytes(toSend);
             byte[] lenBytes = BitConverter.GetBytes(toSendBytes.Length);
 
@@ -120,7 +143,8 @@ namespace tevsn
                     string str = Encoding.UTF8.GetString(bytes);
                     byte[] b64 = Convert.FromBase64String(str);
 
-                    message = Decrypt(b64);
+                    //message = rsa.Decrypt(b64);
+                    message = aes!.decrypt(str);
                     Console.Write("Received: " + message + "\n");
 
                     return message;
@@ -154,43 +178,6 @@ namespace tevsn
             Console.Write("Console Output: " + output + "\n");
 
             return output;
-        }
-
-        public string Decrypt(byte[] data)
-        {
-            RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
-
-            string keyBase64 = PrivKey!.Replace("\r", "").Replace("\n", "").Replace(" ", "");
-            byte[] privateInfoByte = Convert.FromBase64String(Encoding.UTF8.GetString(Convert.FromBase64String(keyBase64)));
-
-            rsa.ImportPkcs8PrivateKey(new ReadOnlySpan<byte>(privateInfoByte), out _);
-
-            byte[] decryptedData = rsa.Decrypt(data, RSAEncryptionPadding.Pkcs1);
-            
-            return Encoding.UTF8.GetString(decryptedData);
-        }
-
-        public string Encrypt(string data)
-        {
-            try {
-                RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
-            
-                string keyBase64 = Key.Replace("\r", "").Replace("\n", "").Replace(" ", "");
-                byte[] publicInfoByte = Convert.FromBase64String(Encoding.UTF8.GetString(Convert.FromBase64String(keyBase64)));
-
-                Asn1Object pubKeyObj = Asn1Object.FromByteArray(publicInfoByte);
-                AsymmetricKeyParameter pubKey = PublicKeyFactory.CreateKey(publicInfoByte);
-                RSAParameters rsaParams = DotNetUtilities.ToRSAParameters((RsaKeyParameters)pubKey);
-
-                rsa.ImportParameters(rsaParams);
-
-                byte[] dataToEncrypt = Encoding.UTF8.GetBytes(Convert.ToBase64String(Encoding.UTF8.GetBytes(data)));
-                byte[] encryptedData = rsa.Encrypt(dataToEncrypt, false);
-
-                return Convert.ToBase64String(encryptedData);
-            } catch (Exception) {
-                return Convert.ToBase64String(Encoding.UTF8.GetBytes(Encrypt("Output was too long.. :)")));
-            }
         }
 
     }

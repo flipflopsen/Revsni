@@ -65,7 +65,6 @@ public class Revsni {
                           +"Type 'exit' to leave\n"
                           +"\n");
 
-        System.out.print("Revsn [MENU] » ");
         InputStreamReader inputStreamReader = new InputStreamReader(System.in);
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
         System.out.println();
@@ -211,6 +210,7 @@ public class Revsni {
     }
 
     public static void menu(BufferedReader bufferedReader) throws IOException {
+        System.out.print("Revsn [MENU] » ");
         BufferedReader buffRead = bufferedReader;
         String decision = buffRead.readLine();
         switch(decision) {

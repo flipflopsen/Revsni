@@ -41,6 +41,10 @@
             "BouncyCastle": {
               "target": "Package",
               "version": "[1.8.9, )"
+            },
+            "SharpZipLib": {
+              "target": "Package",
+              "version": "[1.3.3, )"
             }
           },
           "imports": [
