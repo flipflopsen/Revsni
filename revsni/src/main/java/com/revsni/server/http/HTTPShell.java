@@ -86,6 +86,15 @@ public class HTTPShell implements Interaction {
         return handler.getConnInf();
     }
 
+    public void shutdown() {
+        int port = server.getPort();
+        if(server.closeServer()) {
+            logger.info("HTTP Server on Port: " + port + " closed successfully!");
+        } else {
+            logger.error("Error while trying to close HTTP Server on Port: " + port);
+        }
+    }
+
     public int getPort() {
         return this.port;
     }

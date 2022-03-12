@@ -4,23 +4,23 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
+import java.io.ObjectInputFilter.Config;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Base64;
 
+import com.revsni.common.Configuration;
 import com.revsni.common.Configuration.EncMode;
 import com.revsni.server.encryption.AES;
 import com.revsni.server.encryption.Encri;
 import com.revsni.server.encryption.RSA;
 
-//import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Updater {
 
-    //private static final Logger logger = LogManager.getLogger(Updater.class);
-    //private Logger LOG = parentLogger;
-    
+    private static final Logger logger = LogManager.getLogger(Updater.class);
 
     private String output;
 
@@ -29,48 +29,43 @@ public class Updater {
     private Encri initEncri;
     private String privKey = null;
     private String pubKey = null;
+    private Configuration configuration;
 
 
-    public Updater(String ip, int port, AES init) {
+    public Updater(String ip, int port, Encri init, Configuration config) {
         address[0] = ip;
         address[1] = Integer.toString(port);
         initEncri = init;
-        this.shellType = "TCP";
+        this.configuration = config;
+        this.shellType = config.getMode().name();
 
-    }
-
-    public Updater(String ip, int port, RSA init) {
-        address[0] = ip;
-        address[1] = Integer.toString(port);
-        initEncri = init;
-        this.shellType = "TCP";
     }
 
     public String generateOutputString(EncMode mode) throws IOException{
-        switch(mode) {
-            case RSA:
-                if(privKey == null && pubKey == null) {
-                    output = null;
-                    String pubkey = Files.readString(Path.of("revsni/keys/rsa/pubhost.key"));
-                    output = address[0] + ";" + address[1] + ";" + Base64.getEncoder().encodeToString(shellType.getBytes()) + ";" + pubkey;
-                    pubkey = null;
-                    privKey = null;
-                    return output;
-                } else {
-                    output = null;
-                    String pubkey = Files.readString(Path.of("revsni/keys/rsa/pubhost.key"));
-                    output = address[0] + ";" + address[1] + ";" + Base64.getEncoder().encodeToString(shellType.getBytes()) + ";" + pubkey + ";" + privKey;
-                    pubkey = null;
-                    privKey = null;
-                    return output;
-                }
-            case AES:
-                AES aesReal = (AES) initEncri;
+        if(mode.name().contains("RSA")) {
+            if(privKey == null && pubKey == null) {
                 output = null;
-                output = address[0] + ";" + address[1] + ";" + Base64.getEncoder().encodeToString(shellType.getBytes()) + ";" + Base64.getEncoder().encodeToString(aesReal.getIV().getIV()) + ";" + aesReal.getPassword()+ ";" + Base64.getEncoder().encodeToString(aesReal.getSalt());
+                String pubkey = Files.readString(Path.of("revsni/keys/rsa/pubhost.key"));
+                output = address[0] + ";" + address[1] + ";" + Base64.getEncoder().encodeToString(shellType.getBytes()) + ";" + pubkey;
+                pubkey = null;
+                privKey = null;
                 return output;
-            default:
-                return "";
+            } else {
+                output = null;
+                String pubkey = Files.readString(Path.of("revsni/keys/rsa/pubhost.key"));
+                output = address[0] + ";" + address[1] + ";" + Base64.getEncoder().encodeToString(shellType.getBytes()) + ";" + pubkey + ";" + privKey;
+                pubkey = null;
+                privKey = null;
+                return output;
+            }
+        } else if(mode.name().contains("AES")) {
+            logger.info("In AES Producing! IP: "+address[0]+" Port: "+address[1]);
+            AES aesReal = (AES) initEncri;
+            output = null;
+            output = address[0] + ";" + address[1] + ";" + Base64.getEncoder().encodeToString(shellType.getBytes()) + ";" + Base64.getEncoder().encodeToString(aesReal.getIV().getIV()) + ";" + aesReal.getPassword()+ ";" + Base64.getEncoder().encodeToString(aesReal.getSalt());
+            return output;
+        } else {
+            return "";
         }
     }
 
@@ -109,9 +104,10 @@ public class Updater {
         }
     }
 
-    public void setShellType(String type, String port) {
+    public void setShellType(String type, String ip, String port) {
         this.shellType = type;
         this.address[1] = port;
+        this.address[0] = ip;
     }
 
     public Encri getInitEnc() {
@@ -137,6 +133,10 @@ public class Updater {
                 file.delete();
             }
         }
+    }
+
+    public void setConfiguration(Configuration config) {
+        this.configuration = config;
     }
 
 }

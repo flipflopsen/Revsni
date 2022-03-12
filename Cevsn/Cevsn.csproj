@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <EntryPointType>Windows Application</EntryPointType>
+    <EntryPointType>Console</EntryPointType>
     <TargetFramework>net47</TargetFramework>
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>

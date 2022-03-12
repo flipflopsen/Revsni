@@ -10,6 +10,7 @@ import java.security.spec.InvalidKeySpecException;
 import com.revsni.common.Configuration;
 import com.revsni.common.Configuration.Mode;
 import com.revsni.server.Server;
+import com.revsni.stuff.ShutDownHookThread;
 import com.revsni.utils.ThreadMonitor;
 
 
@@ -46,6 +47,8 @@ public class Revsni {
             System.exit(0);
         }
         */
+
+        Runtime.getRuntime().addShutdownHook(new ShutDownHookThread());
         
         System.out.println("\n"
                           +"-----------"
@@ -220,7 +223,7 @@ public class Revsni {
                     if(servero == null) {
                         try {
                             configuration.getMode();
-                            servero = new Server(Mode.TCP.lHost, Mode.TCP.lPort, "lol123", "lol123", threadMonitor, sessionNumberStart, loaded, configuration);
+                            servero = new Server("lol123", "lol123", threadMonitor, sessionNumberStart, loaded, configuration);
                         } catch (NoSuchAlgorithmException | InvalidKeySpecException e1) {
                             servero = null;
                         }
@@ -249,7 +252,7 @@ public class Revsni {
                 System.out.print("Specify a filename to load sessions (leave empty for standard name): ");
                 String name = bufferedReader.readLine();
                 try {
-                    servero = new Server(Mode.TCP.lHost, Mode.TCP.lPort, "lol123", "lol123", threadMonitor, sessionNumberStart, true, configuration);
+                    servero = new Server("lol123", "lol123", threadMonitor, sessionNumberStart, true, configuration);
                 } catch (NoSuchAlgorithmException | InvalidKeySpecException e1) {
                     // TODO Auto-generated catch block
                     e1.printStackTrace();

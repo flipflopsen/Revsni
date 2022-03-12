@@ -13,6 +13,7 @@ namespace cevsn.encrn
         {
             this.pass = pass;
             this.iv = iv;
+            
             generateKey(pass);
             init();
         }
@@ -21,10 +22,12 @@ namespace cevsn.encrn
         {
             byte[] salt = new byte[]{172, 137, 25, 56, 156, 100, 136, 211, 84, 67, 96, 10, 24, 111, 112, 137, 3};
             int iterations = 1024;
-            var rfc2898 =
-            new System.Security.Cryptography.Rfc2898DeriveBytes(pass, salt, iterations);
+            var rfc2898 = new System.Security.Cryptography.Rfc2898DeriveBytes(pass, salt, iterations);
+
             key = rfc2898.GetBytes(16);
+
             String keyB64 = Convert.ToBase64String(key);
+
             System.Console.WriteLine("Key: " + keyB64);
         }
 
@@ -52,10 +55,13 @@ namespace cevsn.encrn
         public string decrypt(string enc)
         {
             Console.Write("Trying to decrypt: " + enc + "\n");
+
             byte[] decoded = Convert.FromBase64String(enc);
             ICryptoTransform decryptTransform = aesCipher.CreateDecryptor();
             byte[] plainText = decryptTransform.TransformFinalBlock(decoded, 0, decoded.Length);
+
             System.Console.WriteLine("Decrypted: " + Encoding.UTF8.GetString(Convert.FromBase64String(Encoding.UTF8.GetString(plainText))) + "\n");
+
             return Encoding.UTF8.GetString(Convert.FromBase64String(Encoding.UTF8.GetString(plainText)));
         }
     }

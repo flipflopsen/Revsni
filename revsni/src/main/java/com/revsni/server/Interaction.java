@@ -12,4 +12,6 @@ public interface Interaction {
 
     public int getPort();
 
+    public void shutdown();
+
 }

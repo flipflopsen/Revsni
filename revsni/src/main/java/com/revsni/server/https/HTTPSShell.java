@@ -68,4 +68,8 @@ public class HTTPSShell implements Interaction {
         this.mode = Mode.HTTPSAsync;
     }
 
+    public void shutdown() {
+        logger.error("Shutdown for HTTPS not yet implemented!");
+    }
+
 }

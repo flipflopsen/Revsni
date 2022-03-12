@@ -6,6 +6,7 @@ import java.net.Socket;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import com.revsni.common.Configuration;
 import com.revsni.server.Server;
 
 import org.apache.logging.log4j.LogManager;
@@ -15,7 +16,7 @@ import org.apache.logging.log4j.Logger;
 public class Listener implements Runnable{
     private static final Logger logger = LogManager.getLogger(Listener.class);
 
-    Map<String, Integer> handlerinos = new ConcurrentHashMap<>();
+    Map<Integer, Handler> handlerinos = new ConcurrentHashMap<>();
     
     public volatile int sessionNumber;
     private ServerSocket serverSocket;
@@ -46,7 +47,22 @@ public class Listener implements Runnable{
         this.sessionNumber = sessionNumber;
 
         try {
-            serverSocket = new ServerSocket(server.getPort(), 10);
+            serverSocket = new ServerSocket(Configuration.localPortTCP, 10);
+            server.setRunning(true);
+            logger.info("TCP Socket is up on Port: {}", server.getPort());
+
+        }
+        catch (IOException e) {
+            server.setRunning(false);
+            e.printStackTrace();
+        }
+    }
+    public Listener(Server server, int port, int sessionNumber) {
+        this.server = server;
+        this.sessionNumber = sessionNumber;
+
+        try {
+            serverSocket = new ServerSocket(port, 10);
             server.setRunning(true);
             logger.info("TCP Socket is up on Port: {}", server.getPort());
 
@@ -66,6 +82,7 @@ public class Listener implements Runnable{
                 //Handler connectionHandler = new Handler(server,connection);
                 Handler connectionHandler = new Handler(server,connection,sessionNumber);
 
+                handlerinos.putIfAbsent(sessionNumber, connectionHandler);
                 server.setInteraction(sessionNumber, connectionHandler);
                 server.addSession(connection.getInetAddress().getHostAddress(), connection.getLocalPort(),connectionHandler, sessionNumber);
                 connectionHandler.callAddSessionHandler();
@@ -77,11 +94,13 @@ public class Listener implements Runnable{
                 server.addToPrint(sessionNumber);
                 server.deliverNewFile(sessionNumber);
                 connectionHandler.setNewEnc(sessionNumber);
+                server.updateSessionInfo();
                 sessionNumber++;
 
             }
             catch (IOException e) {
                 logger.info("Error in TCP Listener Thread!");
+                stopListening();
                 //server.setRunning(false);
             }
         }
@@ -92,6 +111,9 @@ public class Listener implements Runnable{
      */
     public void stopListening() {
         try {
+            for(Handler han : handlerinos.values()) {
+                han.shutdown();
+            }
             serverSocket.close();
         } 
         catch (IOException e) {

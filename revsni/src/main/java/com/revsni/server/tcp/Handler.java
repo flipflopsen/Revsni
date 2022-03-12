@@ -76,7 +76,20 @@ public class Handler implements Interaction{
         (freeMemory + (maxMemory - allocatedMemory)) / 1024);  
     }
 
-
+    public void shutdown() {
+        try {
+            server.removeSession(sessionNumber);
+            dataIn.close();
+            dataOut.close();
+            connection.close();
+        }
+        catch(IOException e) {
+            if(e instanceof SocketException) {
+                server.removeSession(sessionNumber);
+                
+            }
+        }
+    }
 
     private void closeConnection() {
         //logger.info("Closing Connection - " + connection.getRemoteSocketAddress());

@@ -52,6 +52,7 @@ namespace cevsn.encrn.rsa
 
                 return Convert.ToBase64String(encryptedData);
             } catch (Exception) {
+                
                 return Convert.ToBase64String(Encoding.UTF8.GetBytes(Encrypt("Output was too long.. :)" + "\n")));
             }
         }

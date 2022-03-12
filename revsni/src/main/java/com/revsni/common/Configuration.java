@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 public class Configuration {
 
     public enum EncMode {
-        AES,
+        AES, //Pass and Salt!
         RSA,
         TWOFISH,
         SERPENT,
@@ -65,26 +65,26 @@ public class Configuration {
 
     //private String configurationName = "";
     
-    private static String localAddrTCP = "127.0.0.1";
-    private static String localAddrUDP = "127.0.0.1";
-    private static String srvAddrHTTP = "127.0.0.1";
-    private static String localAddrHTTP = "127.0.0.1";
-    private static String srvAddrHTTPS = "127.0.0.1";
-    private static String localAddrHTTPS = "127.0.0.1";
+    public static String localAddrTCP = "192.168.62.131";
+    public static String localAddrUDP = "192.168.62.131";
+    public static String srvAddrHTTP = "192.168.62.131";
+    public static String localAddrHTTP = "192.168.62.131";
+    public static String srvAddrHTTPS = "192.168.62.131";
+    public static String localAddrHTTPS = "192.168.62.131";
 
     public static int localPortTCP = 1331;
-    private static int localPortUDP = 1332;
-    private static int localPortHTTP = 8085;
-    private static int localPortHTTPS = 8443;
+    public static int localPortUDP = 1332;
+    public static int localPortHTTP = 8085;
+    public static int localPortHTTPS = 8443;
 
-    private static int srvPortHTTP = 8081;
-    private static int srvPortHTTPS = 443;
+    public static int srvPortHTTP = 8081;
+    public static int srvPortHTTPS = 443;
 
-    private static int asynchrRandomizeGradeHTTP = 1;
-    private static int asynchrRandomizeGradeHTTPS = 1;
+    public static int asynchrRandomizeGradeHTTP = 1;
+    public static int asynchrRandomizeGradeHTTPS = 1;
 
-    private static String endpointHTTP = "/lit";
-    private static String endpointHTTPS = "/litS";
+    public static String endpointHTTP = "/lit";
+    public static String endpointHTTPS = "/litS";
 
     public Configuration() {
     }
@@ -273,10 +273,8 @@ public class Configuration {
         Getter
     */
 
-    public String getTCPConf() {
-        String conf = "";
-
-        return conf;
+    public Mode getTCPConf() {
+        return Mode.TCP;
     }
 
     public String getUDPConf() {

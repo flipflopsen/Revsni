@@ -3,56 +3,28 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch Websn",
+            "name": "Websn",
             "request": "launch",
             "mainClass": "com.revsni.websn.Websn",
             "projectName": "revsn"
         },
         {
             "type": "java",
-            "name": "Launch RSA",
-            "request": "launch",
-            "mainClass": "com.revsni.client.Encri.RSA",
-            "projectName": "revsn"
-        },
-        {
-            "type": "java",
-            "name": "Launch App",
+            "name": "Geffsn",
             "request": "launch",
             "mainClass": "com.geffsn/com.geffsn.App",
             "projectName": ""
         },
         {
             "type": "java",
-            "name": "Launch Ouchie",
+            "name": "Ouchie",
             "request": "launch",
             "mainClass": "com.revsni.client.Ouchie",
             "projectName": "revsn"
         },
         {
             "type": "java",
-            "name": "Launch Webserver",
-            "request": "launch",
-            "mainClass": "com.revsni.Webserver",
-            "projectName": "revsn"
-        },
-        {
-            "type": "java",
-            "name": "Launch RSA",
-            "request": "launch",
-            "mainClass": "com.revsni.server.encryption.RSA",
-            "projectName": "revsn"
-        },
-        {
-            "type": "java",
-            "name": "Launch Revsni",
-            "request": "launch",
-            "mainClass": "com.revsni.Revsni",
-            "projectName": ""
-        },
-        {
-            "type": "java",
-            "name": "Launch Revsni",
+            "name": "Revsni",
             "request": "launch",
             "mainClass": "com.revsni.Revsni",
             "projectName": "revsn"

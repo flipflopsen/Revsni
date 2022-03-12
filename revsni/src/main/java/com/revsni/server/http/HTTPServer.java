@@ -54,11 +54,25 @@ public class HTTPServer {
         this.handler = handler;
     }
 
+    public boolean closeServer() {
+        try {
+            server.shutdown(5, TimeUnit.SECONDS);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
     public HTTPHandler getHandler() {
         return this.handler;
     }
 
     public void sendCommand(String command) {
         this.handler.sendCommand(command);
+    }
+
+    public int getPort() {
+        return this.port;
     }
 }

@@ -90,6 +90,10 @@ namespace tevsn
         {
             try
             {
+                if(!tcpClient.Connected)
+                {
+                    return false;
+                }
                 if (tcpClient.Client.Poll(0, SelectMode.SelectRead))
                 {
                     byte[] buff = new byte[1];
@@ -131,6 +135,7 @@ namespace tevsn
             {
                 String message;
                 NetworkStream clientStream = tcpClient.GetStream();
+                tcpClient.ReceiveTimeout = 20000;
 
                 reader = new BinaryReader(clientStream);
 
