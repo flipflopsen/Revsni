@@ -47,10 +47,10 @@ namespace cevsn
         public static async Task Main(string[] args)
         {
             osName = getOsName();
-            if(osName.Contains("Windows"))
+            if(osName.Contains("Win"))
             {
                 IntPtr h = Process.GetCurrentProcess().MainWindowHandle;
-                ShowWindow(h, 0);
+                //ShowWindow(h, 0);
             }
             gotHostInformation = false;
             Running = true;

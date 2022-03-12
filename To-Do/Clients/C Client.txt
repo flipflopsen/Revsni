@@ -1,0 +1,4 @@
+Rawvsn
+    -Low level shit his dad (see Plusni but in more hardcore and lighter lul)
+    - Create Shellcode for Shellcode Injection through Cevsn
+    - Create unmanaged DLL for (reflective) DLL injection through Cevsn

@@ -1,0 +1,3 @@
+Plusni:
+    - Lightweight C++ Client for advanced AV Evasion, Proc Injection etc. pp.
+    - Create unmanaged DLL for (reflective) DLL injection through Cevsn

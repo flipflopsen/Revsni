@@ -85,7 +85,7 @@ public class AES implements Encri {
             String message = new String(Base64.getDecoder().decode(decodedB64), StandardCharsets.UTF_8);
             //System.out.println("In AES Dec: " + message);
             return message;
-        } catch (IllegalBlockSizeException | BadPaddingException | IllegalArgumentException e) {
+        } catch (IllegalBlockSizeException | BadPaddingException | IllegalArgumentException | OutOfMemoryError e) {
             if(e instanceof IllegalArgumentException) {
                 return "errxuk";
             }

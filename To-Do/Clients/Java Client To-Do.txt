@@ -1,0 +1,27 @@
+Features
+	-OS detection
+	-Persistence
+		-New File create
+		-Obfuscated
+		-Evasion
+		-Depends on OS etc.
+	-Process Injection
+	-Different Exec
+		-Powershell
+		-CMD exec
+		-Bash
+		-Sh
+
+Shell-Types
+	-Asynchronous HTTP(S)
+		-Randomized Time-Delays
+		-Switch between Async and normal
+
+Encryption
+	-All except RSA und AES
+
+Make Builder compatible for small Payloads -> Modular
+
+---Notes---
+
+Detection welcher Client connected, ob .NET oder Java
