@@ -96,7 +96,7 @@ namespace Cevsn
 
         public void injectDLL()
         {
-            //Todo: Get dll form Webserver
+            //Todo: Get dll from Webserver
             String dir = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             String dllName = dir + "\\cevsn.dll";
 
@@ -111,7 +111,7 @@ namespace Cevsn
             Boolean res = WriteProcessMemory(hProcess, addr, System.Text.Encoding.Default.GetBytes(dllName), dllName.Length, out outSize);
 
             //Locate address
-            IntPtr loadLib = GetProcAddress(GetModuleHandle("kernel32.dll"), "LoadLibraryA");
+            IntPtr loadLib = GetProcAddress(GetModuleHandle("kernel32.dll"), "Cevsn");
 
             IntPtr hThread = CreateRemoteThread(hProcess, IntPtr.Zero, 0, loadLib, addr, 0, IntPtr.Zero);
         }
