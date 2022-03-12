@@ -1,20 +1,10 @@
 using System.Text;
-using System.Security.Cryptography;
-using System.Globalization;
-//imports for http get
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net.Http;
-using System.Threading;
-using System.Threading.Tasks;
-using tevsn;
 using System.Net;
+
+using tevsn;
 using hevsn;
 using cevsn.encrn.rsa;
 using cevsn.encrn;
-using System.Runtime.InteropServices;
 
 using System.Runtime.InteropServices;
 using System.Diagnostics;

