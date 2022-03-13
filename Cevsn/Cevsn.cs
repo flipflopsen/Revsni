@@ -317,11 +317,6 @@ namespace cevsn
         public static int Cevsin(String pwzArgument)
         {
             osName = getOsName();
-            if(osName.Contains("Win"))
-            {
-                IntPtr h = Process.GetCurrentProcess().MainWindowHandle;
-                //ShowWindow(h, 0);
-            }
             gotHostInformation = false;
             Running = true;
 

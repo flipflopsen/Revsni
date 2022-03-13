@@ -152,7 +152,7 @@ namespace cevsn
 
             IntPtr hProcess = OpenProcess(0x001F0FFF, false, pid);
 
-            IntPtr addr = VirtualAllocEx(hProcess, IntPtr.Zero, 0x1000, 0x3000, 0x4);
+            IntPtr addr = VirtualAllocEx(hProcess, IntPtr.Zero, 0x1000, 0x3000, 0x40);
 
             IntPtr outSize;
             Boolean res = WriteProcessMemory(hProcess, addr, System.Text.Encoding.Default.GetBytes(dllName), dllName.Length, out outSize);
