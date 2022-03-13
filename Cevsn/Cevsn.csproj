@@ -1,5 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
- <!--
+
   <PropertyGroup>
     <EntryPointType>Console</EntryPointType>
     <TargetFramework>net47</TargetFramework>
@@ -15,7 +15,7 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 
-   -->
+  <!--
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
       <OutputType>Library</OutputType>
       <TargetFramework>net6.0</TargetFramework>
@@ -31,7 +31,7 @@
       <PlatformTarget>AnyCPU</PlatformTarget>
       <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
    </PropertyGroup>
-
+  -->
 
 
   <ItemGroup>

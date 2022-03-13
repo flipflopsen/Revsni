@@ -63,6 +63,7 @@ namespace cevsn
             while(true)
             {
                 Thread.Sleep(3000);
+                Console.Write("running..");
             }
         }
 
@@ -328,7 +329,8 @@ namespace cevsn
             osName = getOsName();
             gotHostInformation = false;
             Running = true;
-            Task.Factory.StartNew(() => 
+            var taskList = new List<Task>();
+            taskList.Add(Task.Factory.StartNew(() => 
             {
                 while(Running)
                 {
@@ -494,11 +496,8 @@ namespace cevsn
                     }
                 }
 
-            });
-            while(true)
-            {
-                Thread.Sleep(3000);
-            }
+            }));
+            Task.WaitAll(taskList.ToArray());
             return 0;
         }
     }
