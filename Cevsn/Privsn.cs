@@ -106,7 +106,7 @@ namespace cevsn
 
         public Privsn()
         {
-            injectShellcode();
+            //injectShellcode();
             injectDLL();
         }
 
