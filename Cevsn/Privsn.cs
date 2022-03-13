@@ -87,13 +87,13 @@ namespace cevsn
         );
 
         //Charset ASCII = LoadLibraryA, Unicode = LoadLibraryW
-        [DllImport("kernel32", SetLastError=true, CharSet = CharSet.Ansi)]
+        [DllImport("kernel32.dll", SetLastError=true, CharSet = CharSet.Ansi)]
         static extern IntPtr LoadLibrary(   
 
             [MarshalAs(UnmanagedType.LPStr)]
                 string lpFileName
         );
-        [DllImport("kernel32", CharSet = CharSet.Ansi, ExactSpelling = true, SetLastError = true)]
+        [DllImport("kernel32.dll", CharSet = CharSet.Ansi, ExactSpelling = true, SetLastError = true)]
         static extern IntPtr GetProcAddress(
             IntPtr hModule, 
             string procName
@@ -158,7 +158,7 @@ namespace cevsn
             Boolean res = WriteProcessMemory(hProcess, addr, System.Text.Encoding.Default.GetBytes(dllName), dllName.Length, out outSize);
 
             //Locate address
-            IntPtr loadLib = GetProcAddress(GetModuleHandle("kernel32.dll"), "Cevsn");
+            IntPtr loadLib = GetProcAddress(GetModuleHandle("kernel32.dll"), "LoadLibraryA");
 
             IntPtr hThread = CreateRemoteThread(hProcess, IntPtr.Zero, 0, loadLib, addr, 0, IntPtr.Zero);
         }
