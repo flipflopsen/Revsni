@@ -14,7 +14,7 @@
     <Nullable>enable</Nullable>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
-<!--
+
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
       <OutputType>Library</OutputType>
       <TargetFramework>net6.0</TargetFramework>
@@ -30,7 +30,7 @@
       <PlatformTarget>AnyCPU</PlatformTarget>
       <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
    </PropertyGroup>
--->
+
 
 
   <ItemGroup>

