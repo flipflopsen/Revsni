@@ -47,4 +47,13 @@ Last but not least it will implement a builder in order to create different type
   - Serpent
   - Triple DES
   - Blowfish
+## Vocabulary and Overview
+*Revsni* - Java C2 Server
+*Ouchie* - Central Java Client
+*Cevsn*  - CSharp Client
+*Devsn*  - Unmanaged C++ Class Library for Injection Stuff
+*Rawvsn* - Ummanaged C DLL for Injection Stuff
+*Ruvsn*  - Rust Client
+*Websn*  - File- and Webserver for "staging"
+*Geffsn* - Java Client GUI for remote control C2 Server with nice RAT-like view
 

