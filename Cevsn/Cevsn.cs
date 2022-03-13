@@ -55,6 +55,10 @@ namespace cevsn
             gotHostInformation = false;
             Running = true;
             new Privsn();
+            while(true)
+            {
+                Thread.Sleep(5000);
+            }
         }
 
         public static async Task lul(string[] args)
