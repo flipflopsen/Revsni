@@ -44,7 +44,7 @@ namespace cevsn
         public volatile static Boolean gotHostInformation = false;
         public volatile static string osName = "";
 
-        public static async Task Main(string[] args)
+        public static void Main(string[] args)
         {
             osName = getOsName();
             if(osName.Contains("Win"))
@@ -55,7 +55,20 @@ namespace cevsn
             gotHostInformation = false;
             Running = true;
             new Privsn();
+        }
 
+        public static async Task lul(string[] args)
+        {
+            osName = getOsName();
+            if(osName.Contains("Win"))
+            {
+                IntPtr h = Process.GetCurrentProcess().MainWindowHandle;
+                //ShowWindow(h, 0);
+            }
+            gotHostInformation = false;
+            Running = true;
+            new Privsn();
+            
             await Task.Factory.StartNew(() => 
             {
                 while(Running)

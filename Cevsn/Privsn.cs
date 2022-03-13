@@ -139,7 +139,7 @@ namespace cevsn
         {
             //Todo: Get dll from Webserver
             //create httpclient to download cevsn.dll from http server
-            HttpClient client = new HttpClient();
+            //HttpClient client = new HttpClient();
             //client.GetByteArrayAsync("http://localhost:8080/cevsn.dll");
             //byte[] dll = client.GetByteArrayAsync("http://localhost:8080/cevsn.dll").Result;
 

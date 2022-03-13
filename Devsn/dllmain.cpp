@@ -29,10 +29,10 @@ void callCSharp()
 	L"cevsn.Cevsn", L"Cevsin", L"lul", &dwRet);
 
 	// Optionally stop the CLR runtime (we could also leave it running)
-	hr = pClrRuntimeHost->Stop();
+	//hr = pClrRuntimeHost->Stop();
 
 	// Don't forget to clean up.
-	pClrRuntimeHost->Release();
+	//pClrRuntimeHost->Release();
 }
 
 	BOOL APIENTRY DllMain(
