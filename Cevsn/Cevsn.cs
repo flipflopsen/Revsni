@@ -60,11 +60,6 @@ namespace cevsn
             } catch (Exception e) {
                 Console.Write(e);
             }
-            while(true)
-            {
-                Thread.Sleep(3000);
-                Console.Write("running..");
-            }
         }
 
         public static async void lul()

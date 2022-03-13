@@ -32,7 +32,7 @@ void callCSharp()
 	//hr = pClrRuntimeHost->Stop();
 
 	// Don't forget to clean up.
-	//pClrRuntimeHost->Release();
+	pClrRuntimeHost->Release();
 }
 
 	BOOL APIENTRY DllMain(
