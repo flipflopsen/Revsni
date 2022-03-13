@@ -40,7 +40,10 @@
           "dependencies": {
             "BouncyCastle": {
               "target": "Package",
-              "version": "[1.8.9, )"
+              "version": "[1.8.9, )",
+              "noWarn": [
+                "NU1701"
+              ]
             },
             "SharpZipLib": {
               "target": "Package",
@@ -61,18 +64,6 @@
             {
               "name": "Microsoft.AspNetCore.App.Ref",
               "version": "[6.0.2, 6.0.2]"
-            },
-            {
-              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[6.0.2, 6.0.2]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.2, 6.0.2]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[6.0.2, 6.0.2]"
             }
           ],
           "frameworkReferences": {
@@ -81,11 +72,6 @@
             }
           },
           "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win-x64": {
-          "#import": []
         }
       }
     }
