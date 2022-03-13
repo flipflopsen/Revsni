@@ -228,8 +228,6 @@
 /home/shorida/Projekte/Revsni/Cevsn/bin/Release/net6.0/win-x64/ucrtbase.dll
 /home/shorida/Projekte/Revsni/Cevsn/obj/Release/net6.0/win-x64/Cevsn.csproj.AssemblyReference.cache
 /home/shorida/Projekte/Revsni/Cevsn/obj/Release/net6.0/win-x64/Cevsn.GeneratedMSBuildEditorConfig.editorconfig
-/home/shorida/Projekte/Revsni/Cevsn/obj/Release/net6.0/win-x64/Cevsn.AssemblyInfoInputs.cache
-/home/shorida/Projekte/Revsni/Cevsn/obj/Release/net6.0/win-x64/Cevsn.AssemblyInfo.cs
 /home/shorida/Projekte/Revsni/Cevsn/obj/Release/net6.0/win-x64/Cevsn.csproj.CoreCompileInputs.cache
 /home/shorida/Projekte/Revsni/Cevsn/obj/Release/net6.0/win-x64/Cevsn.csproj.CopyComplete
 /home/shorida/Projekte/Revsni/Cevsn/obj/Release/net6.0/win-x64/Cevsn.dll

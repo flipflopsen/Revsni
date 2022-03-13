@@ -1,0 +1,3 @@
+/home/shorida/Projekte/Revsni/Cevsn/obj/Release/net47/win-x64/Cevsn.csproj.AssemblyReference.cache
+/home/shorida/Projekte/Revsni/Cevsn/obj/Release/net47/win-x64/Cevsn.GeneratedMSBuildEditorConfig.editorconfig
+/home/shorida/Projekte/Revsni/Cevsn/obj/Release/net47/win-x64/Cevsn.csproj.CoreCompileInputs.cache
