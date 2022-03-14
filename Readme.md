@@ -56,4 +56,5 @@ Last but not least it will implement a builder in order to create different type
 - **Ruvsn**       -     Rust Client
 - **Websn**       -     File- and Webserver for "staging"
 - **Geffsn**      -     Java Client GUI for remote control C2 Server with nice RAT-like view
+- **Plusn**       -     C++ Client for Revsn
 
