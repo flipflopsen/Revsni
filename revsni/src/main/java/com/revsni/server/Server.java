@@ -486,17 +486,13 @@ public class Server implements Runnable{
     }
 
     public void printIn(int sessionNumber) {
-        if(!(sessionNumber == 0)) {
-            if(getMode(sessionNumber) != Mode.HTTP) {
-                try {
-                    System.out.print("Revsn [" + getMode(sessionNumber).toString() + "]["+ getIp(sessionNumber) +"]["+sessionNumber+"]» ");
-                } catch(Exception e) {
-                    System.out.print("Revsn [None][None][None]» ");
-                }
-            } 
-        } else {
-            System.out.println("Revsn [None][None][0]");
-        }
+        if(getMode(sessionNumber) != Mode.HTTP) {
+            try {
+                System.out.print("Revsn [" + getMode(sessionNumber).toString() + "]["+ getIp(sessionNumber) +"]["+sessionNumber+"]» ");
+            } catch(Exception e) {
+                System.out.print("Revsn [None][None][None]» ");
+            }
+        } 
         
         
     }

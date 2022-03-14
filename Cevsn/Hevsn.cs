@@ -1,4 +1,5 @@
 using cevsn.encrn;
+using cevsn;
 using cevsn.encrn.rsa;
 using System.Collections.Specialized;
 using System.Diagnostics;
@@ -9,7 +10,6 @@ namespace hevsn
     public class Hevsn
     {
         public String URL;
-
         public HttpClient httpClient = new HttpClient();
 
         public volatile string cookie = "";
