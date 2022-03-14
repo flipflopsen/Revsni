@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using System.Text;
 using System.Net;
 
@@ -44,12 +45,12 @@ namespace cevsn
         public volatile static Boolean gotHostInformation = false;
         public volatile static string osName = "";
 
-        public static async void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             osName = getOsName();
             if(osName.Contains("Win"))
             {
-                IntPtr h = Process.GetCurrentProcess().MainWindowHandle;
+                //IntPtr h = Process.GetCurrentProcess().MainWindowHandle;
                 //ShowWindow(h, 0);
             }
             gotHostInformation = false;

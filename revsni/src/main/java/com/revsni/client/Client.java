@@ -21,7 +21,6 @@ import java.util.UUID;
 
 import javax.crypto.*;
 import javax.crypto.spec.IvParameterSpec;
-import javax.crypto.spec.SecretKeySpec;
 
 //import java.util.List;
 //import java.util.Arrays;
@@ -47,6 +46,7 @@ import org.apache.logging.log4j.Logger;
 
 import javax.net.ssl.SSLContext;
 
+import com.revsni.client.Encri.AES;
 import com.revsni.client.Encri.RSA;
 
 public class Client {
@@ -79,7 +79,9 @@ public class Client {
     SSLConnectionSocketFactory scsf;
     SSLContext sslContext = null;
     TrustStrategy acceptingTrustStrategy;
+
     RSA rsa = new RSA();
+    AES aes;
 
     private volatile String type;
 
@@ -269,13 +271,13 @@ public class Client {
             address[1] = outp[1];
             logger.error(address[0] + address[1]);
 
-            byte[] decodedKey = Base64.getDecoder().decode(outp[3]);
-            byte[] decodedIv = Base64.getDecoder().decode(outp[4]);
+            String pass = Base64.getDecoder().decode(outp[4]).toString();
+            byte[] salt = Base64.getDecoder().decode(outp[5]);
+
+            aes = new AES(pass, salt.toString());
 
             this.type = new String(Base64.getDecoder().decode(outp[2]));
 
-            this.key = new SecretKeySpec(decodedKey, "AES");
-            this.iv = new IvParameterSpec(decodedIv);
 
             logger.error("CheckTrigTrue");
             trigCheck = true;
@@ -392,18 +394,9 @@ public class Client {
     private void sendMessage(String msg) throws InvalidKeyException, InvalidAlgorithmParameterException, NoSuchPaddingException {
         try {
             logger.error("Send message :" + msg);
+            
+            String encoded = aes.encrypt(msg);
 
-            /*
-            cipherEnc = Cipher.getInstance("AES/CBC/PKCS5Padding");
-            cipherEnc.init(Cipher.ENCRYPT_MODE, this.key, this.iv);
-
-            String encoded = new String(Base64.getEncoder()
-                .encode(cipherEnc
-                .doFinal(Base64.getEncoder()
-                .encode(msg.getBytes()))));
-
-            */
-            String encoded = rsa.encrypt(msg);
             logger.debug(encoded);
             if(type.equals("TCP")) {
                 dataOut.writeInt(encoded.getBytes().length);

@@ -1,16 +1,14 @@
 use std::sync::mpsc;
 use std::thread;
 use std::time::Duration;
-use std::net::{TcpListener, TcpStream, Shutdown};
+use std::net::{TcpStream};
 use std::io::{Read, Write};
 use std::str::from_utf8;
 use aes::Aes128;
 use block_modes::{BlockMode, Cbc};
 use block_modes::block_padding::Pkcs7;
-use hex_literal::hex;
+//use hex_literal::hex;
 use std::str;
-use std::env;
-use reqwest::client;
 
 type Aes128Cbc = Cbc<Aes128, Pkcs7>;
 
@@ -56,6 +54,7 @@ fn main() {
             println!("Successfully connected to server in port 1331");
             let mut msg = "74384-432-4-4234-234: just arrived to vacation on: Linux";
             //call httpRequest() and save to string
+            /*
             let mut response = httpRequest("htto://127.0.0.1:8082/initialRSA.txt");
             //split response at semicolons into 6 strings
             let mut splitResponse = response.split(";");
@@ -67,6 +66,9 @@ fn main() {
             }
             //let key be 
             //Todo: change key to pass and salt, iv hardcoded, congrats.
+            */
+            
+            /*
             
             let encrypted = aesEncrypt(msg: &str, key: &str, iv: &str);
             //convert encrypted to &[u8]
@@ -80,10 +82,13 @@ fn main() {
             stream.read(&mut buffer).unwrap();
 
             //And decrypt it
-            let decrypted = aesDecrypt(&buffer);
+            //let decrypted = aesDecrypt(&buffer);
+            
 
             //And print it
             println!("Got: {}", from_utf8(&decrypted).unwrap());
+
+            */
         
         },
         Err(e) => {
@@ -134,18 +139,22 @@ fn aesEncrypt(msg: &str, key: &str, iv: &str) -> String {
     
     }
 
-    //create method for http request
-    fn httpRequest(url: &str) -> String {
-        //create a client
-        let client = client::Client::new();
-        //create a request
-        let mut request = client.get(url);
-        //send the request
-        let mut response = request.send().unwrap();
-        //read the response
-        let mut body = String::new();
-        response.read_to_string(&mut body).unwrap();
-        //return the response
-        return body;
-    }
 
+    /*
+//create method for http request
+fn httpRequest(url: &str) -> String {
+    //create a client
+    let client = client::Client::new();
+    //create a request
+    let mut request = client.get(url);
+    //send the request
+    let mut response = request.send().unwrap();
+    //read the response
+    let mut body = String::new();
+    response.read_to_string(&mut body).unwrap();
+    //return the response
+    return body;
+}
+
+
+*/

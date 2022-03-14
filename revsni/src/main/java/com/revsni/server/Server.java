@@ -17,6 +17,7 @@ import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
 
 import com.revsni.Revsni;
+import com.revsni.server.encryption.RSA;
 import com.revsni.common.Configuration;
 import com.revsni.common.Sessionerino;
 import com.revsni.common.Configuration.EncMode;
@@ -86,10 +87,10 @@ public class Server implements Runnable{
 
     public static HashMap<Integer, Encri> clientEnc = new HashMap<>();
 
-    //public static AES initEncri = new AES("lol123", "lol123");
-    //public static RSA initEncri = new RSA();
+    public static AES initEncri = new AES("lol123", "lol123");
+    //public static Encri initEncri = new RSA();
 
-    public static Encri initEncri = new AES("lol123", "lol123");
+    //public static Encri initEncri = new AES("lol123", "lol123");
 
     public static Configuration configserv;
 

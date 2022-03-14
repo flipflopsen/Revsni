@@ -1,5 +1,3 @@
-
-
 #include "pch.h"
 #include <metahost.h>
 #pragma comment(lib, "mscoree.lib")
