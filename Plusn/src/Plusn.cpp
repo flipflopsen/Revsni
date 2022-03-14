@@ -29,7 +29,7 @@ class Tuvsn : public AES, public Huvsn
 class AES
 {
 	public:
-		AES() {}
+		AES() { cout << "AES constructor for encryption" << endl; }
 		string Encrypt() {}
 		string Decrypt() {}
 		void initCiphers(string pass, byte salt[], byte iv[]) {}

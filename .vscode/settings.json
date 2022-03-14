@@ -4,6 +4,7 @@
         "revsni/src/main/java"
     ],
     "files.associations": {
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "iostream": "cpp"
     }
 }
