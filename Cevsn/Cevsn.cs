@@ -205,7 +205,7 @@ namespace cevsn
                                                 first = false;
                                                 hevsn = null;
                                             } else if(comm.Equals("httpSw")) {
-                                                firstHTTP = false;
+                                                
                                             } else {
                                                 hevsn.SendOutp(hevsn.makeOutp(hevsn.exec(comm)));
                                             }

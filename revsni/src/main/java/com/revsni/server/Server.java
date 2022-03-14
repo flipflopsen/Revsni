@@ -157,7 +157,7 @@ public class Server implements Runnable{
                         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
                         
                         if(sessionHandlers.keySet().isEmpty()) { sessionNumber = 0; }
-                        printIn();
+                        printIn(sessionNumber);
                         message = bufferedReader.readLine();
 
                         switch(message) {
@@ -168,7 +168,7 @@ public class Server implements Runnable{
                                 if(sessionNumber == 0) {  logger.error("No clients connected for switch!\n"); break; } 
                                 printSwitch();
                                 System.out.println("---Enter anything else to leave this menu.---\n");
-                                printIn();
+                                printIn(sessionNumber);
                                 String tmp = bufferedReader.readLine();
                                 switch(tmp) {
                                     case("tcp"):
@@ -200,7 +200,7 @@ public class Server implements Runnable{
                                         updater.setShellType("HTTPS", getIp(sessionNumber), String.valueOf(getInteraction(sessionNumber).getPort()));
                                         updater.generateOutputString(clientEnc.get(sessionNumber).getEncryption());
                                         updater.writeOut(getUUID(sessionNumber));
-                                        senderino("httpsSw", sessionNumber);;
+                                        senderino("httpsSw", sessionNumber);
                                         setInteraction(sessionNumber, httpsShell);
                                         setMode(sessionNumber, Mode.HTTPS);
                                         break;
@@ -475,7 +475,7 @@ public class Server implements Runnable{
         ipOs.put(sessNr, new CouplePair<String,String>(tmpIp, tmpOs));
         modePortUUID.put(sessNr, new Triplet<Mode, Integer, String>(tmpMode, tmpPort, tmpUUID));
         updateSessionInfo();
-        printIn();
+        printIn(sessNr);
     }
 
     public void setInteraction(int sessioNumber, Interaction interaction) {
@@ -485,12 +485,19 @@ public class Server implements Runnable{
         sessionHandlers.replace(sessioNumber, interaction);
     }
 
-    public void printIn() {
-        try {
-            System.out.print("Revsn [" + getMode(sessionNumber).toString() + "]["+ getIp(sessionNumber) +"]["+sessionNumber+"]» ");
-        } catch(Exception e) {
-            System.out.print("Revsn [None][None][None]» ");
+    public void printIn(int sessionNumber) {
+        if(!(sessionNumber == 0)) {
+            if(getMode(sessionNumber) != Mode.HTTP) {
+                try {
+                    System.out.print("Revsn [" + getMode(sessionNumber).toString() + "]["+ getIp(sessionNumber) +"]["+sessionNumber+"]» ");
+                } catch(Exception e) {
+                    System.out.print("Revsn [None][None][None]» ");
+                }
+            } 
+        } else {
+            System.out.println("Revsn [None][None][0]");
         }
+        
         
     }
 

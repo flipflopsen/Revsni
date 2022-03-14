@@ -59,7 +59,6 @@ public class Updater {
                 return output;
             }
         } else if(mode.name().contains("AES")) {
-            logger.info("In AES Producing! IP: "+address[0]+" Port: "+address[1]);
             AES aesReal = (AES) initEncri;
             output = null;
             output = address[0] + ";" + address[1] + ";" + Base64.getEncoder().encodeToString(shellType.getBytes()) + ";" + Base64.getEncoder().encodeToString(aesReal.getIV().getIV()) + ";" + aesReal.getPassword()+ ";" + Base64.getEncoder().encodeToString(aesReal.getSalt());
