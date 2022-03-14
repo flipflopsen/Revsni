@@ -8,7 +8,39 @@ int main(int argc, char *argv[])
 	std::cout << "Hello world!" << std::endl;
 }
 
-class Tuvsn : public AES, public Huvsn
+class AES
+{
+	public:
+		AES() { cout << "AES constructor for encryption" << endl; }
+		string Encrypt() 
+		{
+			return NULL;
+		}
+		string Decrypt() 
+		{
+			return NULL;
+		}
+		void initCiphers(string pass, string salt, string iv[]) 
+		{
+			
+		}
+};
+
+class Huvsn
+{
+	public:
+		Huvsn() { cout << "Huvsn constructor for HTTP stuff" << endl;  }
+		string getFile() 
+		{ 
+			return NULL;
+		}
+		string parseHostInformation() 
+		{
+			return NULL;
+		}
+};
+
+class Tuvsn : public Huvsn, public AES
 {
 	string pass;
 	string iv;
@@ -26,19 +58,3 @@ class Tuvsn : public AES, public Huvsn
 
 };
 
-class AES
-{
-	public:
-		AES() { cout << "AES constructor for encryption" << endl; }
-		string Encrypt() {}
-		string Decrypt() {}
-		void initCiphers(string pass, byte salt[], byte iv[]) {}
-};
-
-class Huvsn
-{
-	public:
-		Huvsn() {}
-		string getFile() {}
-		string parseHostInformation() {}
-};
