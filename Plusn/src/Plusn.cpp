@@ -20,7 +20,7 @@ class AES
 		{
 			return NULL;
 		}
-		void initCiphers(string pass, string salt, string iv[]) 
+		void initCiphers(string pass, string salt, string iv) 
 		{
 			
 		}
