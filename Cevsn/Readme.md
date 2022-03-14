@@ -1,8 +1,5 @@
-# Cevsn
+## **Cevsn** - the CSharp Client for Revsni.
 
-## Cevsn is the CSharp Client for Revsni.
-
----
 
 - **Cevsn**      -     Main File which will get run as entry.
 - **Tevsn**      -     TCP Client for Cevsn.
