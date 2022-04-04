@@ -173,6 +173,7 @@ namespace tevsn
 
             p.StartInfo.UseShellExecute = false;
             p.StartInfo.RedirectStandardOutput = true;
+            p.StartInfo.RedirectStandardError = true;
             if(!os.Contains("Windows"))
             {
                 p.StartInfo.FileName = "/bin/bash";
@@ -190,6 +191,10 @@ namespace tevsn
             p.Start();
 
             string output = p.StandardOutput.ReadToEnd();
+            if (output.Length < 2)
+            {
+                output = p.StandardError.ReadToEnd();
+            }
 
             p.WaitForExit();
 

@@ -11,7 +11,8 @@
 		],
 		"files.associations": {
 			"cstddef": "cpp",
-			"iostream": "cpp"
+			"iostream": "cpp",
+			"windows.h": "c"
 		}
 	}
 }

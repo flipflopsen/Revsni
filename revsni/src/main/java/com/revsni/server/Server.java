@@ -400,6 +400,8 @@ public class Server implements Runnable{
             logger.error("Failed to write Updater file!");
         }
         senderino("tcpSw", sessionNumber);
+        //TODO: set Interaction for switch.
+        //setInteraction(sessionNumber, get);
         logger.info("Switch done!");
     }
 
