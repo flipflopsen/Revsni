@@ -8,6 +8,11 @@
 		"java.configuration.updateBuildConfiguration": "automatic",
 		"java.project.sourcePaths": [
 			"revsni/src/main/java"
-		]
+		],
+		"files.associations": {
+			"cstddef": "cpp",
+			"iostream": "cpp",
+			"windows.h": "c"
+		}
 	}
 }

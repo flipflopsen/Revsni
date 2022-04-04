@@ -87,10 +87,7 @@ public class Server implements Runnable{
 
     public static HashMap<Integer, Encri> clientEnc = new HashMap<>();
 
-    public static AES initEncri = new AES("lol123", "lol123");
-    //public static Encri initEncri = new RSA();
-
-    //public static Encri initEncri = new AES("lol123", "lol123");
+    public static Encri initEncri;
 
     public static Configuration configserv;
 
@@ -104,6 +101,12 @@ public class Server implements Runnable{
         this.sessionNumber = sessionNumber;
         this.sessionNumberStart = sessionNumber;
         configserv = configuration;
+        EncMode initEncMode = configuration.getEncMode();
+        switch(initEncMode.name()) {
+            case("RSA"): initEncri = new RSA(/* Add configuration stuff */); break;
+            case("AES"): initEncri = new AES(configuration.getEncMode().pass, configuration.getEncMode().salt); break;
+        }
+
         
         this.threadMonitor = monitor;
 
@@ -397,6 +400,8 @@ public class Server implements Runnable{
             logger.error("Failed to write Updater file!");
         }
         senderino("tcpSw", sessionNumber);
+        //TODO: set Interaction for switch.
+        //setInteraction(sessionNumber, get);
         logger.info("Switch done!");
     }
 

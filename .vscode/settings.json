@@ -2,5 +2,9 @@
     "java.configuration.updateBuildConfiguration": "automatic",
     "java.project.sourcePaths": [
         "revsni/src/main/java"
-    ]
+    ],
+    "files.associations": {
+        "xstring": "cpp",
+        "iostream": "cpp"
+    }
 }

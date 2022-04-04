@@ -7,13 +7,29 @@ import java.io.InputStreamReader;
 public class Configuration {
 
     public enum EncMode {
-        AES, //Pass and Salt!
-        RSA,
-        TWOFISH,
-        SERPENT,
-        SSL,
-        BLOWFISH,
-        TRIPLE_DES
+        AES(saltAES, passwordAES), //Pass and Salt!
+        RSA(passwordRSA, rsaPrivPath, rsaPubPath),
+        TWOFISH(),
+        SERPENT(),
+        SSL(),
+        BLOWFISH(),
+        TRIPLE_DES();
+
+        public String salt;
+        public String pass;
+        public String privPath;
+        public String pubPath;
+
+        private EncMode(String salt, String pass) {
+            this.salt = salt;
+            this.pass = pass;
+        }
+        private EncMode(String pass, String privPath, String pubPath) {
+            this.pass = pass;
+            this.privPath = privPath;
+            this.pubPath = pubPath;
+        }
+        private EncMode() {}
     }
 
     public enum Mode {
@@ -71,6 +87,14 @@ public class Configuration {
     public static String localAddrHTTP = "192.168.62.131";
     public static String srvAddrHTTPS = "192.168.62.131";
     public static String localAddrHTTPS = "192.168.62.131";
+
+    public static String passwordAES = "lol123";
+    public static String saltAES = "lol123";
+
+    public static String passwordRSA = "lol123";
+
+    public static String rsaPrivPath = "revsni\\keys\\rsa\\privhost.key"; 
+    public static String rsaPubPath = "revsni\\keys\\rsa\\pubhost.key";
 
     public static int localPortTCP = 1331;
     public static int localPortUDP = 1332;
