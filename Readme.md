@@ -47,6 +47,7 @@ Last but not least it will implement a builder in order to create different type
   - Serpent
   - Triple DES
   - Blowfish
+  - Chaskey
 ## Vocabulary and Overview
 - **Revsni**      -     Java C2 Server
 - **Ouchie**      -     Central Java Client
@@ -57,4 +58,6 @@ Last but not least it will implement a builder in order to create different type
 - **Websn**       -     File- and Webserver for "staging"
 - **Geffsn**      -     Java Client GUI for remote control C2 Server with nice RAT-like view
 - **Plusn**       -     C++ Client for Revsn
+- **Suvsn**       -     Windows Shellcode based Agent using Chaskey
+- **Pyvsn**       -     Python Server for Windows DLL and Shellcode Agents using Chaskey
 
