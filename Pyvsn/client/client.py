@@ -9,15 +9,6 @@ SRVCONN = ('localhost', 8870)
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 OS = platform.system()
 
-
-class stdout:
-    def __init__(self):
-        self.result = []
-    def write(self, str):
-        self.result = str.split('\n')
-    
-
-
 def initConn(connectionString):
     sock.connect(connectionString)
     
