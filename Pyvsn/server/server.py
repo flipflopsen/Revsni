@@ -17,7 +17,10 @@ class Server:
 
     def start_server(self):
         self.server_activate()
+        print("--Server started...")
+
         conn, addr = self.get_request()
+
         with conn:
             print(f"Connected by {addr}")
             while True:
@@ -26,5 +29,9 @@ class Server:
                     break
                 conn.sendall(data)
 
+    def talk(self):
+        pass
+
     def server_close(self):
         self.socket.close()
+        print("...Server Stopped--")
