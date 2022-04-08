@@ -1,7 +1,7 @@
 import socket
 
 
-class Server:
+class BaseServer:
     port = 8866
     host = "localhost"
 
@@ -12,14 +12,12 @@ class Server:
         self.socket.bind((self.host, self.port))
         self.socket.listen()
 
-    def get_request(self):
-        return self.socket.accept()
-
     def start_server(self):
         self.server_activate()
         print("--Server started...")
 
-        conn, addr = self.get_request()
+    def talk(self):
+        conn, addr = self.socket.accept()
 
         with conn:
             print(f"Connected by {addr}")
@@ -28,9 +26,6 @@ class Server:
                 if not data:
                     break
                 conn.sendall(data)
-
-    def talk(self):
-        pass
 
     def server_close(self):
         self.socket.close()

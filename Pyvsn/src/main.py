@@ -1,8 +1,8 @@
-import server.server as server
+from server.multi_server import MultiServer
 
 if __name__ == "__main__":
 
-    print("""\   _______________                        |*\_/*|________
+    print("""   _______________                        |*\_/*|________
   |  ___________  |     .-.     .-.      ||_/-\_|______  |
   | |           | |    .****. .****.     | |           | |
   | |   0   0   | |    .*****.*****.     | |   0   0   | |
@@ -15,7 +15,7 @@ if __name__ == "__main__":
  /  ************  \                      /  ************  \
 --------------------                    --------------------""")
 
-    server = server.Server()
+    server = MultiServer()
     try:
         server.start_server()
     except KeyboardInterrupt:
@@ -23,5 +23,5 @@ if __name__ == "__main__":
     except Exception as e:
         print(e)
     finally:
-        server.server_close()
+        print("...Server Stopped--")
 
