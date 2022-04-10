@@ -1,13 +1,8 @@
 import socket
 
 
-<<<<<<< HEAD:Pyvsn/src/server/base_server.py
-class BaseServer:
-    port = 8866
-=======
 class Server:
     port = 8866
->>>>>>> 86ca6a6 (Blowfish implemented):Pyvsn/server/server.py
     host = "localhost"
 
     def __init__(self):
