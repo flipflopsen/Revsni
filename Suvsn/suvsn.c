@@ -1,5 +1,4 @@
 #include <windows.h>
-#include <iostream>
 #include <stdlib.h>
 
 char code[] = 

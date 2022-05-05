@@ -96,5 +96,9 @@ public class Blowfish implements Encri {
     public Cipher getDecCipher() {
         return this.cipherDec;
     }
+
+    public byte[] getKeyBytes() {
+        return this.key;
+    }
     
 }

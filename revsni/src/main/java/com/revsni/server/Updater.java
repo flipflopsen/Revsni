@@ -14,6 +14,7 @@ import com.revsni.common.Configuration.EncMode;
 import com.revsni.server.encryption.AES;
 import com.revsni.server.encryption.Encri;
 import com.revsni.server.encryption.RSA;
+import com.revsni.server.encryption.Blowfish;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -62,6 +63,11 @@ public class Updater {
             AES aesReal = (AES) initEncri;
             output = null;
             output = address[0] + ";" + address[1] + ";" + Base64.getEncoder().encodeToString(shellType.getBytes()) + ";" + Base64.getEncoder().encodeToString(aesReal.getIV().getIV()) + ";" + aesReal.getPassword()+ ";" + Base64.getEncoder().encodeToString(aesReal.getSalt());
+            return output;
+        } else if(mode.name().contains("Blow")) {
+            Blowfish bf = (Blowfish) initEncri;
+            output = null;
+            output = address[0] + ";" + address[1] + ";" + Base64.getEncoder().encodeToString(shellType.getBytes()) + ";" + Base64.getEncoder().encodeToString(bf.getKeyBytes());
             return output;
         } else {
             return "";
