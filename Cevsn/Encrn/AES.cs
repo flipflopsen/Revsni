@@ -9,6 +9,7 @@ namespace cevsn.encrn
         private byte[] iv;
         private string pass;
         private Aes aesCipher = Aes.Create();
+        
         public AES(string pass, byte[] iv)
         {
             this.pass = pass;

@@ -34,6 +34,7 @@ namespace cevsn
         public volatile static Hevsn? hevsn = null;
         public volatile static cevsn.encrn.rsa.RSA? rsa = null;
         public volatile static AES? aes = null;
+        public volatile static Blowfish? bf = null;
         public volatile static Boolean IsConnected = false;
         public volatile static Boolean Running = false;
         public volatile static Boolean first = false;

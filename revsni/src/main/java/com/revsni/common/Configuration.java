@@ -6,19 +6,40 @@ import java.io.InputStreamReader;
 
 public class Configuration {
 
+    public enum OperationalMode {
+        STEALTH(Mode.HTTPAsync, EncMode.AES),
+        MINIMAL(Mode.TCP, EncMode.BLOWFISH),
+        FULL(Mode.TCP, EncMode.AES),
+        NOENC(Mode.TCP, EncMode.NONE),
+        DEV(Mode.TCP, EncMode.BLOWFISH);
+
+        public Mode mode;
+        public EncMode encMode;
+
+        private OperationalMode(Mode mode, EncMode encMode) {
+            this.mode = mode;
+            this.encMode = encMode;
+        }
+    }
+
     public enum EncMode {
+        NONE(),
         AES(saltAES, passwordAES), //Pass and Salt!
         RSA(passwordRSA, rsaPrivPath, rsaPubPath),
         TWOFISH(),
         SERPENT(),
         SSL(),
-        BLOWFISH(),
+        BLOWFISH(keyGeneral),
         TRIPLE_DES();
 
         public String salt;
         public String pass;
         public String privPath;
         public String pubPath;
+
+        private EncMode(String pass) {
+            this.pass = pass;
+        }
 
         private EncMode(String salt, String pass) {
             this.salt = salt;
@@ -77,7 +98,8 @@ public class Configuration {
     }
 
     private Mode mode = Mode.TCP;
-    private EncMode encMode = EncMode.AES;
+    private EncMode encMode = EncMode.BLOWFISH;
+    private OperationalMode opMode = OperationalMode.DEV;
 
     //private String configurationName = "";
     
@@ -87,6 +109,8 @@ public class Configuration {
     public static String localAddrHTTP = "192.168.62.131";
     public static String srvAddrHTTPS = "192.168.62.131";
     public static String localAddrHTTPS = "192.168.62.131";
+
+    public static String keyGeneral = "lol123";
 
     public static String passwordAES = "lol123";
     public static String saltAES = "lol123";
@@ -331,6 +355,10 @@ public class Configuration {
     /*
         Menu
     */
+
+    public void printOperational() throws IOException {
+        
+    }
     public void printConf() throws IOException {
         boolean back = false;
         InputStreamReader inputStreamReader = new InputStreamReader(System.in);
