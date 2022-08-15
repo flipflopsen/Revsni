@@ -1,24 +1,14 @@
 Builder
 	-Different Clients with usage of Configuration.java
 		-.NET Clients
-		-Java Clients
+		- Java Clients
 
 Encryption
-	-RSA
 	-Twofish
 	-Serpent
-	-Blowfish
 	-TripleDES
 
-Configuration
-	-Make use of it in Server
-
-Ansychronous HTTP(S)
-	-Randomized Time-Delays
-
-Shells
-	-Ansychronous HTTP(S)
-		-Randomized Time-Delays
+Shell Types
 	-SMB
 	-DNS
 	-UDP
@@ -26,5 +16,9 @@ Shells
 
 General
 	-Detection welcher Client connected, ob .NET oder Java
+
+Updater
+	- Add EncMode String after ShelllType
+		-> Client can detect how to split string and how long to read it for conn inf
 
 
