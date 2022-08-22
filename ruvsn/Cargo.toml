@@ -1,5 +1,5 @@
 [package]
-name = "ruvsn"
+name = "serv_cent"
 version = "0.1.0"
 edition = "2021"
 

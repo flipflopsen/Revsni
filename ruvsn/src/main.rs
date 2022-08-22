@@ -97,7 +97,6 @@ fn main() -> io::Result<()> {
                     }
                 }
             },
-            "help" => { menu(); },
             "exit" => { interrupted = true; },
             _ => { println!("Please enter a valid choice!")}
         }
@@ -144,9 +143,6 @@ fn print_configuration() {
         },
         CommunicationMode::Udp => {
             println!("Protocol: UDP");
-        },
-        CommunicationMode::Http => {
-            println!("Protocol: HTTP");
         },
     }
 
