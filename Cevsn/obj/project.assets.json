@@ -65,19 +65,19 @@
     ]
   },
   "packageFolders": {
-    "/home/shorida/.nuget/packages/": {}
+    "/home/lance/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/shorida/Projekte/Revsni/Cevsn/Cevsn.csproj",
+      "projectUniqueName": "/home/lance/Projects/Revsni/Cevsn/Cevsn.csproj",
       "projectName": "Cevsn",
-      "projectPath": "/home/shorida/Projekte/Revsni/Cevsn/Cevsn.csproj",
-      "packagesPath": "/home/shorida/.nuget/packages/",
-      "outputPath": "/home/shorida/Projekte/Revsni/Cevsn/obj/",
+      "projectPath": "/home/lance/Projects/Revsni/Cevsn/Cevsn.csproj",
+      "packagesPath": "/home/lance/.nuget/packages/",
+      "outputPath": "/home/lance/Projects/Revsni/Cevsn/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/shorida/.nuget/NuGet/NuGet.Config"
+        "/home/lance/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -123,7 +123,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.8, 6.0.8]"
+            "version": "[6.0.2, 6.0.2]"
           }
         ],
         "frameworkReferences": {
@@ -131,7 +131,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.108/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
       }
     }
   },

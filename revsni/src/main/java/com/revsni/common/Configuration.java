@@ -101,14 +101,16 @@ public class Configuration {
     private EncMode encMode = EncMode.AES;
     private OperationalMode opMode = OperationalMode.DEV;
 
+    private static final String IP_ADDR = "192.168.24.148";
+
     //private String configurationName = "";
     
-    public static String localAddrTCP = "192.168.62.131";
-    public static String localAddrUDP = "192.168.62.131";
-    public static String srvAddrHTTP = "192.168.62.131";
-    public static String localAddrHTTP = "192.168.62.131";
-    public static String srvAddrHTTPS = "192.168.62.131";
-    public static String localAddrHTTPS = "192.168.62.131";
+    public static String localAddrTCP = IP_ADDR;
+    public static String localAddrUDP = IP_ADDR;
+    public static String srvAddrHTTP = IP_ADDR;
+    public static String localAddrHTTP = IP_ADDR;
+    public static String srvAddrHTTPS = IP_ADDR;
+    public static String localAddrHTTPS = IP_ADDR;
 
     public static String keyGeneral = "lol123";
 
