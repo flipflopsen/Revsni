@@ -7113,3 +7113,23 @@ src
 target
 
 20:21:14.086|[32m INFO[m |> --- [           main] [36mc.r.c.Client        (315)[m | http://127.0.0.1:8994/lit
+13:02:38.277|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (52)[m | TCP Socket is up on Port: 1331
+13:02:38.281|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+13:06:54.098|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (52)[m | TCP Socket is up on Port: 1331
+13:06:54.103|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+22:28:20.842|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (52)[m | TCP Socket is up on Port: 1331
+22:28:20.847|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+
+22:32:55.773|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.t.Listener    (52)[m | TCP Socket is up on Port: 1331
+22:32:55.777|[32m INFO[m |> --- [       Thread-1] [36mc.r.s.Server        (153)[m | Enter 'help' if you dont know what to do.
+
+Listening...
+

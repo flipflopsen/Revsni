@@ -29,6 +29,14 @@ namespace tevsn
         private AES? aes;
         private string os;
         
+        public Tevsn(string ip, int port, string os)
+        {
+            this.IP = ip;
+            this.Port = port;
+            this.os = os;
+            this.ServerAddress = new IPEndPoint(IPAddress.Parse(ip), port);
+        }
+
         public Tevsn(string ip, int port, RSA rsa, string os)
         {
             this.IP = ip;
@@ -118,7 +126,8 @@ namespace tevsn
             writer = new BinaryWriter(clientStream);
 
             //string toSend = rsa.Encrypt(data);
-            string toSend = aes!.encrypt(data);
+            //string toSend = aes!.encrypt(data);
+            string toSend = data;
             byte[] toSendBytes = Encoding.UTF8.GetBytes(toSend);
             byte[] lenBytes = BitConverter.GetBytes(toSendBytes.Length);
 
@@ -149,10 +158,11 @@ namespace tevsn
                 if(bytes.Length > 1)
                 {
                     string str = Encoding.UTF8.GetString(bytes);
-                    byte[] b64 = Convert.FromBase64String(str);
+                    //byte[] b64 = Convert.FromBase64String(str);
 
                     //message = rsa.Decrypt(b64);
-                    message = aes!.decrypt(str);
+                    //message = aes!.decrypt(str);
+                    message = str;
                     Console.Write("Received: " + message + "\n");
 
                     return message;

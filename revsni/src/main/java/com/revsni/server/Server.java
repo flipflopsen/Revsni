@@ -102,9 +102,9 @@ public class Server implements Runnable{
         this.sessionNumberStart = sessionNumber;
         configserv = configuration;
         EncMode initEncMode = configuration.getEncMode();
-        switch(initEncMode.name()) {
-            case("RSA"): initEncri = new RSA(/* Add configuration stuff */); break;
-            case("AES"): initEncri = new AES(configuration.getEncMode().pass, configuration.getEncMode().salt); break;
+        switch (initEncMode.name()) {
+            case ("RSA") -> initEncri = new RSA(/* Add configuration stuff */);
+            case ("AES") -> initEncri = new AES(configuration.getEncMode().pass, configuration.getEncMode().salt);
         }
 
         
@@ -121,7 +121,7 @@ public class Server implements Runnable{
         
     }
 
-    public boolean initServer(String ip, int port, String password, String saltForPass) {
+    public void initServer(String ip, int port, String password, String saltForPass) {
         this.port = port;
 
         updater = new Updater(ip, port, initEncri, configserv);
@@ -130,13 +130,10 @@ public class Server implements Runnable{
             updater.generateOutputString(configserv.getEncMode());
             if(updater.writeOut("initialRSA")) {
                 logger.debug("File initialRSA wrote!");
-                return true;
             } else {
-                return false;
             }
         } catch (IOException e) {
             e.printStackTrace();
-            return false;
         }
     }
 
@@ -355,8 +352,7 @@ public class Server implements Runnable{
         CharacterRule splCharRule = new CharacterRule(specialChars);
         splCharRule.setNumberOfCharacters(2);
     
-        String password = gen.generatePassword(10, splCharRule, lowerCaseRule, 
-          upperCaseRule, digitRule);
+        String password = gen.generatePassword(10, splCharRule, lowerCaseRule, upperCaseRule, digitRule);
         return password;
     }
 

@@ -98,7 +98,7 @@ public class Configuration {
     }
 
     private Mode mode = Mode.TCP;
-    private EncMode encMode = EncMode.BLOWFISH;
+    private EncMode encMode = EncMode.AES;
     private OperationalMode opMode = OperationalMode.DEV;
 
     //private String configurationName = "";

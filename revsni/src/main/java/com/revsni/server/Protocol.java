@@ -34,10 +34,12 @@ public class Protocol {
     public boolean processMessage(String msg, String ip, int sessionNumber) {
         updateEncryptionModes();
         String message;
-        if(clientEnc.containsKey(sessionNumber)) {
+        if(clientEnc.containsKey(sessionNumber) && clientEnc.get(sessionNumber).getEncryption() != EncMode.NONE) {
             message = clientEnc.get(sessionNumber).decrypt(msg);
-        } else {
+        } else if (server.getConfiguration().getEncMode() != EncMode.NONE){
             message = Server.initEncri.decrypt(msg);
+        } else {
+            message = msg;
         }
         if(!message.equals("")){
             if(message.equals("errxuk")) {
