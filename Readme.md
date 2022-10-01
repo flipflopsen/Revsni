@@ -5,8 +5,11 @@
 ---
 ## Introduction
 
-Revsni aka. **REVerse Shell Noteable Impact** aims to be a **Java-Based** Framework like Application for different Types of Command & Control.
-Furthermore it should be able to switch between different types of communication and encryption whereas encryption will be nestable and interchangeable.
+Revsni aka. **REVerse Shell Noteable Impact** aims to be a **Java-Based-Framework** type of application for different sorts of Command & Control (C2).
+Furthermore it should be able to switch between different communication channels and encryption algorithms whereas encryption will be nestable (cascading) and interchangeable with open connection.
+
+One of the main features is definetily the "switch" command, with which you can switch the communication channel and later the encryption as well.
+
 Last but not least it will implement a builder in order to create different types of payloads and handlers, compatible with the same central server.
 
 ---
